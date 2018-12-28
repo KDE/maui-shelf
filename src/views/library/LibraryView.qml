@@ -7,27 +7,33 @@ import LibraryList 1.0
 
 Maui.Page
 {
-id: control
+    id: control
 
-Maui.GridBrowser
-{
-    id: _gridBrowser
-    anchors.fill: parent
-itemSize : iconSizes.huge + fontSizes.default
-model: _libraryModel
+    Maui.GridBrowser
+    {
+        id: _gridBrowser
+        anchors.fill: parent
+        itemSize : iconSizes.huge + fontSizes.default
+        model: _libraryModel
 
-}
+        onItemClicked:
+        {
+            var item = _libraryList.get(index)
+//            viewerView.open("file://"+item.url)
+            Maui.FM.openUrl(item.url)
+        }
+    }
 
-LibraryModel
-{
-    id: _libraryModel
-    list: _libraryList
-}
+    LibraryModel
+    {
+        id: _libraryModel
+        list: _libraryList
+    }
 
-LibraryList
-{
-    id: _libraryList
-    query: "select *, title as label from documents"
-}
+    LibraryList
+    {
+        id: _libraryList
+        query: "select *, title as label from documents"
+    }
 
 }

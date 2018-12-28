@@ -3,5 +3,7 @@
         <file>main.qml</file>
         <file>views/library/LibraryView.qml</file>
         <file>views/Viewer/Viewer.qml</file>
+        <file>views/Viewer/WebView_Android.qml</file>
+        <file>views/Viewer/WebView.qml</file>
     </qresource>
 </RCC>

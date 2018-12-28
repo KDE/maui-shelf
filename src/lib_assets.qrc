@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>assets/library.svg</file>
         <file>db/script.sql</file>
+        <file>views/Viewer/pdfjs/web/viewer.html</file>
     </qresource>
 </RCC>

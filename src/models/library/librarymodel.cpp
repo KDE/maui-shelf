@@ -50,7 +50,7 @@ void LibraryModel::populateDB(const QStringList &paths)
 
 void LibraryModel::refreshCollection()
 {
-    this->populateDB({FMH::DesktopPath, FMH::DownloadsPath, FMH::DocumentsPath, FMH::CloudCachePath});
+    this->populateDB({/*FMH::DesktopPath,*/ FMH::DownloadsPath, FMH::DocumentsPath, FMH::CloudCachePath});
 }
 
 void LibraryModel::setSortBy(const uint &sort)

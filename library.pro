@@ -4,7 +4,7 @@ QT += quickcontrols2
 QT += sql
 QT += widgets
 
-TARGET = pix
+TARGET = library
 TEMPLATE = app
 
 CONFIG += ordered

@@ -43,17 +43,13 @@ int main(int argc, char *argv[])
     app.setApplicationDisplayName(LIB::AppName);
     app.setWindowIcon(QIcon(":/assets/library.svg"));
 
-    Library library;
+//    Library library;
 
     QQmlApplicationEngine engine;
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated, [&]()
-    {
-//        if(!pics.isEmpty())
-//            pix.openPics(pics);
-    });
+
 
     auto context = engine.rootContext();
-    context->setContextProperty("library", &library);
+//    context->setContextProperty("library", &library);
 
     qmlRegisterUncreatableType<BaseList>("BaseList", 1, 0, "BaseList", QStringLiteral("BaseList should not be created in QML"));
 

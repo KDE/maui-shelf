@@ -1,21 +1,17 @@
 import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.4
+import QtQuick.Controls 2.3
 import org.kde.mauikit 1.0 as Maui
 
 import StoreList 1.0
 
 import "views/library/"
+import "views/Viewer/"
 
 Maui.ApplicationWindow
 {
     id: root
-    visible: true
-    width: 640
-    height: 480
-    title: qsTr("Hello World")
-
     about.appDescription: qsTr("Library is a documents viewer and collection manager.\nLibrary allows you to browse your local and cloud collection, and also allows you to download new content from the integrated store.")
     about.appIcon: "qrc:/assets/library.svg"
 
@@ -133,6 +129,8 @@ Maui.ApplicationWindow
                 list.category: StoreList.EBOOKS
                 list.provider: StoreList.OPENDESKTOPCC
                 fitPreviews: true
+
+                onOpenFile: Maui.FM.openUrl(filePath)
             }
         }
 
