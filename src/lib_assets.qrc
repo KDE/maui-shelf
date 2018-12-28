@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/library.svg</file>
+        <file>db/script.sql</file>
+    </qresource>
+</RCC>
