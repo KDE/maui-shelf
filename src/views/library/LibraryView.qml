@@ -22,7 +22,9 @@ Maui.Page
         {
             var item = _libraryList.get(index)
 //            viewerView.open("file://"+item.url)
-            Maui.FM.openUrl(item.url)
+//            Maui.FM.openUrl(item.url)
+
+            viewerView.open(item.url)
         }
     }
 

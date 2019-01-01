@@ -10,6 +10,8 @@ TEMPLATE = app
 CONFIG += ordered
 CONFIG += c++11
 
+include($$PWD/src/PDFViewer/poppler-qml-plugin/poppler-plugin.pri)
+
 linux:unix:!android {
 
     message(Building for Linux KDE)
@@ -54,9 +56,9 @@ SOURCES += \
     $$PWD/src/models/basemodel.cpp \
     $$PWD/src/models/baselist.cpp \
     $$PWD/src/library.cpp \
-    $$PWD/src/PDFViewer/pdfviewer.cpp \
-    $$PWD/src/PDFViewer/pdfdocument.cpp \
-    $$PWD/src/PDFViewer/polynomial.cpp
+#    $$PWD/src/PDFViewer/pdfviewer.cpp \
+#    $$PWD/src/PDFViewer/pdfdocument.cpp \
+#    $$PWD/src/PDFViewer/polynomial.cpp
 
 
 HEADERS += \
@@ -68,9 +70,9 @@ HEADERS += \
     $$PWD/src/models/baselist.h \
     $$PWD/src/models/library/librarymodel.h \
     $$PWD/src/library.h \
-    $$PWD/src/PDFViewer/pdfviewer.h \
-    $$PWD/src/PDFViewer/pdfdocument.h \
-    $$PWD/src/PDFViewer/polynomial.h
+#    $$PWD/src/PDFViewer/pdfviewer.h \
+#    $$PWD/src/PDFViewer/pdfdocument.h \
+#    $$PWD/src/PDFViewer/polynomial.h
 
 RESOURCES += $$PWD/src/qml.qrc \
     $$PWD/src/lib_assets.qrc

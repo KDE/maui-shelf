@@ -3,134 +3,154 @@ import QtQuick.Window 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.3
 import org.kde.mauikit 1.0 as Maui
-import org.kde.okular 2.0 as Okular
-import org.kde.kirigami 2.1 as Kirigami
+
+import StoreList 1.0
+
+import "views/library/"
+import "views/Viewer/"
 
 Maui.ApplicationWindow
 {
     id: root
+    about.appDescription: qsTr("Library is a documents viewer and collection manager.\nLibrary allows you to browse your local and cloud collection, and also allows you to download new content from the integrated store.")
+    about.appIcon: "qrc:/assets/library.svg"
 
-    Maui.FileDialog
-    {
-        id: fileDialog
-        mode: modes.OPEN
-    }
-   title: documentItem.windowTitleForDocument;
-    headBar.leftContent: Maui.ToolButton
-    {
-        iconName: "document-open"
-        onClicked:
+    readonly property var views :({
+                             viewer : 0,
+                             library: 1,
+                             cloud: 2,
+                             store: 3,
+                             search: 4
+                         })
+
+    property int currentView : views.library
+
+    headBar.middleContent: [
+        Maui.ToolButton
         {
-            fileDialog.show(function(paths)
+            id: _viewerButton
+            iconName: "document-preview-archive"
+            text: qsTr("Viewer")
+            onClicked: currentView = views.viewer
+            iconColor: currentView === views.viewer ? highlightColor : headBarFGColor
+
+        },
+
+        Maui.ToolButton
+        {
+            id: _libraryButton
+            iconName: "view-books"
+            text: qsTr("Library")
+            onClicked: currentView = views.library
+            iconColor: currentView === views.library ? highlightColor : headBarFGColor
+
+        },
+
+        Maui.ToolButton
+        {
+            id: _storeButton
+            iconName: "nx-software-center"
+            text: qsTr("Store")
+            onClicked: currentView = views.store
+            iconColor: currentView === views.store ? highlightColor : headBarFGColor
+
+        },
+
+        Maui.ToolButton
+        {
+            id: _cloudButton
+            iconName: "folder-cloud"
+            text: qsTr("Cloud")
+            iconColor: currentView === views.cloud ? highlightColor : headBarFGColor
+            onClicked: currentView = views.cloud
+        }
+    ]
+
+    content: ColumnLayout
+    {
+        id: mainPage
+        anchors.fill: parent
+
+        SwipeView
+        {
+            id: swipeView
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            interactive: isMobile
+            currentIndex: currentView
+
+            onCurrentIndexChanged: currentView = currentIndex
+
+            Viewer
             {
-                documentItem.path = paths[0];
-                console.log(paths)
-            })
+                id: viewerView
+            }
+
+            LibraryView
+            {
+                id: libraryView
+            }
+
+            Loader
+            {
+                id: cloudViewLoader
+            }
+
+            Loader
+            {
+                id: storeViewLoader
+            }
+
+            Maui.Page
+            {
+                id: searchView
+            }
+        }
+
+        /*** Components ***/
+
+        Component
+        {
+            id: _cloudViewComponent
+            Maui.Page
+            {
+                anchors.fill : parent
+            }
+        }
+
+        Component
+        {
+            id: _storeViewComponent
+
+            Maui.Store
+            {
+                anchors.fill : parent
+                detailsView: false
+                list.category: StoreList.EBOOKS
+                list.provider: StoreList.OPENDESKTOPCC
+                fitPreviews: true
+
+                onOpenFile: Maui.FM.openUrl(filePath)
+                onFileReady: libraryView.list.insert(item.url)
+            }
+        }
+
+        Maui.SelectionBar
+        {
+            id: selectionBox
+            Layout.fillWidth : true
+            Layout.leftMargin: space.big
+            Layout.rightMargin: space.big
+            Layout.bottomMargin: space.big
+            Layout.topMargin: space.small
         }
     }
 
-    Okular.DocumentItem {
-           id: documentItem
-   //         onWindowTitleForDocumentChanged: {
-   //             fileBrowserRoot.title = windowTitleForDocument
-   //         }
-           onOpenedChanged: {
-               if(opened === true) {
-                   root.loadingCompleted(true);
-                   initialPageChange.start();
-               }
-           }
-           onCurrentPageChanged: {
-               if(root.currentPage !== currentPage) {
-                   root.currentPage = currentPage;
-               }
-           }
-       }
 
-       ListView {
-           id: imageBrowser
-           anchors.fill: parent;
-           model: documentItem.matchingPages;
+    Component.onCompleted:
+    {
+//        cloudViewLoader.sourceComponent = _cloudViewComponent
+        storeViewLoader.sourceComponent= _storeViewComponent
+    }
 
-           property int imageWidth: root.width + Kirigami.Units.largeSpacing;
-           property int imageHeight: root.height;
-
-           orientation: ListView.Horizontal
-           snapMode: ListView.SnapOneItem
-
-           // This ensures that the current index is always up to date, which we need to ensure we can track the current page
-           // as required by the thumbnail navigator, and the resume-reading-from functionality
-           onMovementEnded: {
-               var indexHere = indexAt(contentX + width / 2, contentY + height / 2);
-               if(currentIndex !== indexHere) {
-                   currentIndex = indexHere;
-               }
-           }
-
-           delegate: Flickable {
-               id: flick
-               width: imageBrowser.imageWidth
-               height: imageBrowser.imageHeight
-               contentWidth: imageBrowser.imageWidth
-               contentHeight: imageBrowser.imageHeight
-               interactive: contentWidth > width || contentHeight > height
-               onInteractiveChanged: imageBrowser.interactive = !interactive;
-               z: interactive ? 1000 : 0
-               PinchArea {
-                   width: Math.max(flick.contentWidth, flick.width)
-                   height: Math.max(flick.contentHeight, flick.height)
-
-                   property real initialWidth
-                   property real initialHeight
-
-                   onPinchStarted: {
-                       initialWidth = flick.contentWidth
-                       initialHeight = flick.contentHeight
-                   }
-
-                   onPinchUpdated: {
-                       // adjust content pos due to drag
-                       flick.contentX += pinch.previousCenter.x - pinch.center.x
-                       flick.contentY += pinch.previousCenter.y - pinch.center.y
-
-                       // resize content
-                       flick.resizeContent(Math.max(imageBrowser.imageWidth, initialWidth * pinch.scale), Math.max(imageBrowser.imageHeight, initialHeight * pinch.scale), pinch.center)
-                   }
-
-                   onPinchFinished: {
-                       // Move its content within bounds.
-                       flick.returnToBounds();
-                   }
-
-                   Item {
-                       Okular.PageItem {
-                           id: page;
-                           document: documentItem;
-                           pageNumber: index;
-                           anchors.centerIn: parent;
-                           property real pageRatio: implicitWidth / implicitHeight
-                           property bool sameOrientation: root.width / root.height > pageRatio
-                           width: sameOrientation ? parent.height * pageRatio : parent.width
-                           height: !sameOrientation ? parent.width / pageRatio : parent.height
-                       }
-                       implicitWidth: page.implicitWidth
-                       implicitHeight: page.implicitHeight
-                       width: flick.contentWidth
-                       height: flick.contentHeight
-                       MouseArea {
-                           anchors.fill: parent
-                           onClicked: startToggleControls();
-                           onDoubleClicked: {
-                               abortToggleControls();
-                               if (flick.interactive) {
-                                   flick.resizeContent(imageBrowser.imageWidth, imageBrowser.imageHeight, {x: imageBrowser.imageWidth/2, y: imageBrowser.imageHeight/2});
-                               } else {
-                                   flick.resizeContent(imageBrowser.imageWidth * 2, imageBrowser.imageHeight * 2, {x: mouse.x, y: mouse.y});
-                               }
-                           }
-                       }
-                   }
-               }
-           }
-   }
 }

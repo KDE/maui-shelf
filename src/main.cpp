@@ -22,8 +22,8 @@
 #include "./mauikit/src/mauikit.h"
 #endif
 
-#include "pdfviewer.h"
 #include "pdfdocument.h"
+//#include "verticalview.h"
 
 #include "lib.h"
 #include "library.h"
@@ -45,15 +45,17 @@ int main(int argc, char *argv[])
     app.setApplicationDisplayName(LIB::AppName);
     app.setWindowIcon(QIcon(":/assets/library.svg"));
 
-//    Library library;
+    //    Library library;
 
     QQmlApplicationEngine engine;
 
     auto context = engine.rootContext();
-//    context->setContextProperty("library", &library);
+    //    context->setContextProperty("library", &library);
 
-    qmlRegisterType<pdf_viewer::PdfDocument>("PdfViewing", 1, 0, "PdfDocument");
-      qmlRegisterType<pdf_viewer::PdfViewer>("PdfViewing", 1, 0, "PdfViewer");
+
+    //@uri DocumentViewer.PDF
+    qmlRegisterType<PdfDocument>("PDF", 1, 0, "Document");
+    //        qmlRegisterType<VerticalView>("PDF", 1, 0, "VerticalView");
 
     qmlRegisterUncreatableType<BaseList>("BaseList", 1, 0, "BaseList", QStringLiteral("BaseList should not be created in QML"));
 

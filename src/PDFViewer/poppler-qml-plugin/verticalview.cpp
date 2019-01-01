@@ -558,7 +558,7 @@ VerticalView::ListItem *VerticalView::createItem(int modelIndex, bool asynchrono
         return nullptr;
 
     m_asyncRequestedIndex = -1;
-    QObject* object = m_delegateModel->object(modelIndex, asynchronous);
+    QObject* object = m_delegateModel->object(modelIndex, asynchronous ? QQmlIncubator::IncubationMode::Asynchronous :  QQmlIncubator::IncubationMode::Synchronous);
     QQuickItem *item = qmlobject_cast<QQuickItem*>(object);
     if (!item) {
         if (object) {

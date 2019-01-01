@@ -32,6 +32,7 @@ class PdfDocument : public QAbstractListModel
     Q_OBJECT
     Q_DISABLE_COPY(PdfDocument)
     Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
+    Q_PROPERTY(int pages READ pageCount NOTIFY pagesCountChanged)
     Q_PROPERTY(int providersNumber READ providersNumber NOTIFY providersNumberChanged)
     Q_PROPERTY(QObject* tocModel READ tocModel NOTIFY tocModelChanged)
 
@@ -47,6 +48,7 @@ public:
     QString path() const { return m_path; }
     void setPath(QString &pathName);
 
+    int pageCount() const;
     int providersNumber() const { return m_providersNumber; }
 
     QHash<int, QByteArray> roleNames() const;
@@ -65,6 +67,7 @@ Q_SIGNALS:
     void pagesLoaded();
     void providersNumberChanged();
     void tocModelChanged();
+    void pagesCountChanged();
 
 private slots:
     void _q_populate(PdfPagesList pagesList);
@@ -72,8 +75,9 @@ private slots:
 private:
     QString m_path;
     int m_providersNumber;
+    int pages;
 
-    bool loadDocument(QString &pathNAme);
+    bool loadDocument(QString &pathName);
     void loadProvider();
     bool loadPages();
 

@@ -1,96 +1,117 @@
 import QtQuick 2.0
+import QtQuick.Controls 2.2
+
 import org.kde.mauikit 1.0 as Maui
-import PdfViewing 1.0
+import PDF 1.0 as PDF
 
 Maui.Page
 {
     id: control
-    headBarTitle: pdf.info.title
-height: 500
-width: 200
+    headBarTitle: poppler.info.title
+    height: 500
+    width: 200
 
-Rectangle
-{
-    anchors.fill: parent
-    color: "yellow"
-}
+    Rectangle
+    {
+        anchors.fill: parent
+        color: "yellow"
+        opacity: 0.5
+    }
 
-    PdfViewer {
-           id: pdf
+    PDF.Document
+    {
+        id: poppler
 
-           Rectangle
-           {
-               anchors.fill: parent
-               color: "yellow"
-           }
+        property bool isLoading: true
 
-           anchors.top: parent.top
-           anchors.bottom: buttons.top
-           anchors.right: parent.right
-           anchors.left: parent.left
-           backgroundColor: "#eee"
-           renderImageAntiAliased: true
-           renderTextAntiAliased: true
+        onPagesLoaded: {
+            isLoading = false;
 
-           onZoomChanged: zoomSlider.value = (zoom - pdf.fitZoom) / (maxZoom - 1)
+            var title = getDocumentInfo("Title")
+            if (title !== "")
+                headBarTitle = title;
+        }
+    }
 
-           Keys.onPressed: {
+    ListView
+    {
+        id: _listView
+        anchors.fill: parent
+        model: poppler
+        clip: true
+        focus: true
+        interactive: false
+        //        highlightFollowsCurrentItem: true
+        //        highlightMoveDuration: 0
+        snapMode: ListView.SnapOneItem
+        spacing: space.big
+        cacheBuffer: height * poppler.providersNumber
 
-                   switch(event.key)
-                   {
-                   case Qt.Key_W:
-                       pdf.pan.y += 10
-                       break
+        property int currentPage: 0
 
-                   case Qt.Key_S:
-                       pdf.pan.y -= 10
-                       break
+        delegate: ItemDelegate
+        {
+            id: delegate
+            width: parent.width
+            height: width * (model.height / model.width)
+            property int page : index
 
-                   case Qt.Key_A:
-                       pdf.pan.x += 10
-                       break
+            Image
+            {
+                id: pageImg
+                anchors.fill: parent
 
-                   case Qt.Key_D:
-                       pdf.pan.x -= 10
-                       break
+                cache: false
+                //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + _listView.currentPage;
+//                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index;
+                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + _listView.currentPage;
+//                                source: "image://poppler/page/" + _listView.currentPage;
+                sourceSize.width: delegate.width
+                fillMode: Image.PreserveAspectFit
 
-                   case Qt.Key_E:
-                       pdf.rotatePageClockwise()
-                       break
+                //                onSourceChanged: console.log(source)
+            }
 
-                   case Qt.Key_Q:
-                       pdf.rotatePageCounterClockwise()
-                       break
 
-                   case Qt.Key_Plus:
-                       pdf.zoomIn(1.1)
-                       break
 
-                   case Qt.Key_Minus:
-                       pdf.zoomOut(1.1)
-                       break
+            //            onIndexChanged: console.log("DELEGATE INDEX", index)
 
-                   case Qt.Key_Y:
-                       pdf.pageNumber--
-                       break
+        }
+    }
 
-                   case Qt.Key_X:
-                       pdf.pageNumber++
-                       break
+    footBar.floating: true;
+    footBarOverlap: true
 
-                   case Qt.Key_R:
-                       pdf.zoom = pdf.fitZoom
-                       pdf.pan = pdf.fitPan
-                       break
+    footBar.middleContent: [
+        Maui.ToolButton
+        {
+            iconName: "go-previous"
+            onClicked:
+            {
+                if(  _listView.currentPage > 0)
+                _listView.currentPage =  _listView.currentPage - 1
+            }
+        },
 
-                   case Qt.Key_F:
-                       pdf.zoom = pdf.coverZoom
-                       pdf.pan = pdf.coverPan
-                       break
+        Maui.ToolButton
+        {
+            iconName: "go-next"
+            onClicked:
+            {
+                if( _listView.currentPage +1 < poppler.pages)
+                _listView.currentPage = _listView.currentPage + 1
+            }
+        }
+    ]
 
-                   default:
-                       break
-                   }
-               }
-       }
+    function open(filePath)
+    {
+        if(Maui.FM.fileExists(filePath))
+        {
+            currentView = views.viewer
+            _listView.currentPage = 0
+            //            _listView.currentItem.page = 0
+            poppler.path = filePath
+        }
+    }
 }

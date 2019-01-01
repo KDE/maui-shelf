@@ -72,6 +72,7 @@ void PdfDocument::setPath(QString &pathName)
     if (pathName.isEmpty())
         return;
 
+    m_pages.clear();
     m_path = pathName;
     Q_EMIT pathChanged();
 
@@ -79,12 +80,19 @@ void PdfDocument::setPath(QString &pathName)
         return;
 
     // Init toc model
+//    if(!m_tocModel)
     m_tocModel = new PdfTocModel;
+
     m_tocModel->setDocument(m_document);
     Q_EMIT tocModelChanged();
 
     loadPages();
     loadProvider();
+}
+
+int PdfDocument::pageCount() const
+{
+    return this->pages;
 }
 
 bool PdfDocument::loadDocument(QString &pathName)
@@ -107,6 +115,9 @@ bool PdfDocument::loadDocument(QString &pathName)
     }
 
     qDebug() << "Document loaded successfully !";
+
+    this->pages = this->m_document->numPages();
+    emit this->pagesCountChanged();
 
     m_document->setRenderHint(Poppler::Document::Antialiasing, true);
     m_document->setRenderHint(Poppler::Document::TextAntialiasing, true);
@@ -145,6 +156,7 @@ bool PdfDocument::loadPages()
     if (!m_document)
         return false;
 
+    qDebug() << m_document->title() << m_document->numPages();
     Poppler::Document* document = m_document;
     QtConcurrent::run( [=] {
         PdfPagesList pages;

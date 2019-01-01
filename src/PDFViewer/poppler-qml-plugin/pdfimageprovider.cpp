@@ -48,7 +48,10 @@ QImage PdfImageProvider::requestImage(const QString & id, QSize * size, const QS
             int numPage = id.section("/", 1, 1).toInt();
 
             // Useful for debugging, keep commented unless you need it.
-            //  qDebug() << "Page" << numPage + 1 << "requested";
+              qDebug() << "Page" << numPage + 1 << "requested";
+
+//            if(numPage + 1 > document->numPages())
+//                numPage = 0;
 
             page = document->page(numPage);
 
