@@ -16,7 +16,9 @@ linux:unix:!android {
     QT += KService KNotifications KNotifications KI18n
     QT += KIOCore KIOFileWidgets KIOWidgets KNTLM
     LIBS += -lMauiKit
+    LIBS += -lpoppler-qt5
 
+    INCLUDEPATH  += /usr/include/poppler/qt5
 } else:android {
 
     message(Building helpers for Android)
@@ -41,6 +43,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+INCLUDEPATH  += $$PWD/src/PDFViewer/
+
+
 SOURCES += \
     $$PWD/src/main.cpp \
     $$PWD/src/db/db.cpp \
@@ -48,7 +53,11 @@ SOURCES += \
     $$PWD/src/models/library/librarymodel.cpp \
     $$PWD/src/models/basemodel.cpp \
     $$PWD/src/models/baselist.cpp \
-    $$PWD/src/library.cpp
+    $$PWD/src/library.cpp \
+    $$PWD/src/PDFViewer/pdfviewer.cpp \
+    $$PWD/src/PDFViewer/pdfdocument.cpp \
+    $$PWD/src/PDFViewer/polynomial.cpp
+
 
 HEADERS += \
     $$PWD/src/lib.h \
@@ -58,7 +67,10 @@ HEADERS += \
     $$PWD/src/models/basemodel.h \
     $$PWD/src/models/baselist.h \
     $$PWD/src/models/library/librarymodel.h \
-    $$PWD/src/library.h
+    $$PWD/src/library.h \
+    $$PWD/src/PDFViewer/pdfviewer.h \
+    $$PWD/src/PDFViewer/pdfdocument.h \
+    $$PWD/src/PDFViewer/polynomial.h
 
 RESOURCES += $$PWD/src/qml.qrc \
     $$PWD/src/lib_assets.qrc
@@ -73,5 +85,4 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-
 

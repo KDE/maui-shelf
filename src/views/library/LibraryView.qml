@@ -9,6 +9,8 @@ Maui.Page
 {
     id: control
 
+    property alias list : _libraryList
+
     Maui.GridBrowser
     {
         id: _gridBrowser

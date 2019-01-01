@@ -54,6 +54,8 @@ public slots:
     void refresh();
     void clear();
 
+    void insert(const QString &url);
+
     void populateDB(const QStringList &paths);
 
 };

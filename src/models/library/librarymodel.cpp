@@ -243,3 +243,16 @@ void LibraryModel::clear()
     this->list.clear();
     emit this->postListChanged();
 }
+
+void LibraryModel::insert(const QString &url)
+{
+    if(!FMH::fileExists(url))
+        return;
+
+    if(this->dba->addDoc(url))
+    {
+        emit this->preItemAppended();
+        this->list << FMH::getFileInfoModel(url);
+        emit this->postItemAppended();
+    }
+}

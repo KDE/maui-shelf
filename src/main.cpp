@@ -1,4 +1,3 @@
-#include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
 #include <QQmlApplicationEngine>
@@ -22,6 +21,9 @@
 #ifdef STATIC_MAUIKIT
 #include "./mauikit/src/mauikit.h"
 #endif
+
+#include "pdfviewer.h"
+#include "pdfdocument.h"
 
 #include "lib.h"
 #include "library.h"
@@ -47,9 +49,11 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-
     auto context = engine.rootContext();
 //    context->setContextProperty("library", &library);
+
+    qmlRegisterType<pdf_viewer::PdfDocument>("PdfViewing", 1, 0, "PdfDocument");
+      qmlRegisterType<pdf_viewer::PdfViewer>("PdfViewing", 1, 0, "PdfViewer");
 
     qmlRegisterUncreatableType<BaseList>("BaseList", 1, 0, "BaseList", QStringLiteral("BaseList should not be created in QML"));
 

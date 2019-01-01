@@ -1,0 +1,2 @@
+module DocumentViewer.PDF
+plugin popplerqmlplugin
