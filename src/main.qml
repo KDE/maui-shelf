@@ -8,6 +8,7 @@ import StoreList 1.0
 
 import "views/library/"
 import "views/Viewer/"
+import "views/cloud/"
 
 Maui.ApplicationWindow
 {
@@ -48,21 +49,21 @@ Maui.ApplicationWindow
 
         Maui.ToolButton
         {
+            id: _cloudButton
+            iconName: "folder-cloud"
+            text: qsTr("Cloud")
+            iconColor: currentView === views.cloud ? highlightColor : headBarFGColor
+            onClicked: currentView = views.cloud
+        },
+
+        Maui.ToolButton
+        {
             id: _storeButton
             iconName: "nx-software-center"
             text: qsTr("Store")
             onClicked: currentView = views.store
             iconColor: currentView === views.store ? highlightColor : headBarFGColor
 
-        },
-
-        Maui.ToolButton
-        {
-            id: _cloudButton
-            iconName: "folder-cloud"
-            text: qsTr("Cloud")
-            iconColor: currentView === views.cloud ? highlightColor : headBarFGColor
-            onClicked: currentView = views.cloud
         }
     ]
 
@@ -112,7 +113,7 @@ Maui.ApplicationWindow
         Component
         {
             id: _cloudViewComponent
-            Maui.Page
+            CloudView
             {
                 anchors.fill : parent
             }
@@ -130,8 +131,13 @@ Maui.ApplicationWindow
                 list.provider: StoreList.OPENDESKTOPCC
                 fitPreviews: true
 
-                onOpenFile: Maui.FM.openUrl(filePath)
-                onFileReady: libraryView.list.insert(item.url)
+                onOpenFile:  viewerView.open(filePath)
+
+                onFileReady:
+                {
+                    viewerView.open("file://"+item.url)
+//                    libraryView.list.insert(item.url)
+                }
             }
         }
 
@@ -149,7 +155,7 @@ Maui.ApplicationWindow
 
     Component.onCompleted:
     {
-//        cloudViewLoader.sourceComponent = _cloudViewComponent
+        cloudViewLoader.sourceComponent = _cloudViewComponent
         storeViewLoader.sourceComponent= _storeViewComponent
     }
 

@@ -17,7 +17,6 @@
  */
 
 #include "pdfitem.h"
-#include <poppler/qt5/poppler-qt5.h>
 
 PdfItem::PdfItem(Poppler::Page *page)
 {

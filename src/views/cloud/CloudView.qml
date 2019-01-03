@@ -8,11 +8,67 @@ Maui.Page
 {
     id: control
 
-    Maui.GridBrowser
-    {
-        id: _gridGrowser
+    headBarExit: false
 
-    }
+    headBar.leftContent: [
+
+        Maui.ToolButton
+        {
+            iconName: "view-list-icons"
+         },
+        Maui.ToolButton
+        {
+            iconName: "view-sort"
+            onClicked: sortMenu.popup()
+
+            Maui.Menu
+            {
+                id: sortMenu
+
+                Maui.MenuItem
+                {
+                    text: qsTr("Title")
+                    checkable: true
+                }
+
+                Maui.MenuItem
+                {
+                    text: qsTr("Add date")
+                    checkable: true
+                }
+
+                Maui.MenuItem
+                {
+                    text: qsTr("Creation date")
+                    checkable: true
+                }
+
+                Maui.MenuItem
+                {
+                    text: qsTr("Format")
+                    checkable: true
+                 }
+
+                Maui.MenuItem
+                {
+                    text: qsTr("Size")
+                    checkable: true
+                }
+            }
+        }
+    ]
+
+    headBar.rightContent:[
+        Maui.ToolButton
+        {
+            iconName: "item-select"
+        },
+        Maui.ToolButton
+        {
+            id: menuBtn
+            iconName: "overflow-menu"
+        }
+    ]
 
     LibraryModel
     {
@@ -23,6 +79,29 @@ Maui.Page
     CloudList
     {
         id: _cloudList
+        account: currentAccount
+        onWarning:
+        {
+            notify("dialog-information", "An error happened", error)
+        }
+
+        onCloudItemReady:
+        {
+            viewerView.open(item.url)
+        }
+    }
+
+    Maui.GridBrowser
+    {
+        id: _gridBrowser
+        anchors.fill: parent
+        itemSize : iconSizes.huge + fontSizes.default
+        model: _cloudModel
+
+        onItemClicked:
+        {
+            _cloudList.requestItem(index)
+        }
     }
 
 }

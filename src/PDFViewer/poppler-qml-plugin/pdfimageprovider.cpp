@@ -17,7 +17,6 @@
  *         Stefano Verzegnassi <stefano92.100@gmail.com
  */
 
-#include <poppler/qt5/poppler-qt5.h>
 #include <QQuickImageProvider>
 #include <QDebug>
 

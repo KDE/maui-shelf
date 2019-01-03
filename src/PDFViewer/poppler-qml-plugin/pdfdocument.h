@@ -21,7 +21,9 @@
 #define PDFDOCUMENT_H
 
 #include <QAbstractListModel>
+
 #include <poppler/qt5/poppler-qt5.h>
+
 #include "pdfitem.h"
 #include "pdftocmodel.h"
 

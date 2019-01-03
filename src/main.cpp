@@ -6,7 +6,6 @@
 #include <QIcon>
 #include <QCommandLineParser>
 #include <QFileInfo>
-
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
 #include <QIcon>
@@ -29,6 +28,7 @@
 #include "library.h"
 #include "./src/models/basemodel.h"
 #include "./src/models/library/librarymodel.h"
+#include "./src/models/cloud/cloud.h"
 
 int main(int argc, char *argv[])
 {
@@ -61,6 +61,8 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<BaseModel>("LibraryModel", 1, 0, "LibraryModel");
     qmlRegisterType<LibraryModel>("LibraryList", 1, 0, "LibraryList");
+    qmlRegisterType<Cloud>("CloudList", 1, 0, "CloudList");
+
 
 #ifdef STATIC_KIRIGAMI
     KirigamiPlugin::getInstance().registerTypes();

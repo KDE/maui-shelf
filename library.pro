@@ -10,8 +10,6 @@ TEMPLATE = app
 CONFIG += ordered
 CONFIG += c++11
 
-include($$PWD/src/PDFViewer/poppler-qml-plugin/poppler-plugin.pri)
-
 linux:unix:!android {
 
     message(Building for Linux KDE)
@@ -24,6 +22,7 @@ linux:unix:!android {
 } else:android {
 
     message(Building helpers for Android)
+#    include($$PWD/src/PDFViewer/poppler.pri)
     include($$PWD/mauikit/mauikit.pri)
     include($$PWD/3rdparty/kirigami/kirigami.pri)
 
@@ -32,6 +31,8 @@ linux:unix:!android {
 } else {
     message("Unknown configuration")
 }
+
+include($$PWD/src/PDFViewer/poppler-qml-plugin/poppler-plugin.pri)
 
 
 # The following define makes your compiler emit warnings if you use
@@ -53,12 +54,10 @@ SOURCES += \
     $$PWD/src/db/db.cpp \
     $$PWD/src/db/dbactions.cpp \
     $$PWD/src/models/library/librarymodel.cpp \
+    $$PWD/src/models/cloud/cloud.cpp \
     $$PWD/src/models/basemodel.cpp \
     $$PWD/src/models/baselist.cpp \
     $$PWD/src/library.cpp \
-#    $$PWD/src/PDFViewer/pdfviewer.cpp \
-#    $$PWD/src/PDFViewer/pdfdocument.cpp \
-#    $$PWD/src/PDFViewer/polynomial.cpp
 
 
 HEADERS += \
@@ -69,10 +68,8 @@ HEADERS += \
     $$PWD/src/models/basemodel.h \
     $$PWD/src/models/baselist.h \
     $$PWD/src/models/library/librarymodel.h \
+    $$PWD/src/models/cloud/cloud.h \
     $$PWD/src/library.h \
-#    $$PWD/src/PDFViewer/pdfviewer.h \
-#    $$PWD/src/PDFViewer/pdfdocument.h \
-#    $$PWD/src/PDFViewer/polynomial.h
 
 RESOURCES += $$PWD/src/qml.qrc \
     $$PWD/src/lib_assets.qrc
@@ -87,4 +84,3 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-

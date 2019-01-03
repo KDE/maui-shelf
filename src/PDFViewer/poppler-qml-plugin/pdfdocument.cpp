@@ -20,7 +20,6 @@
 #include "pdfdocument.h"
 #include "pdfimageprovider.h"
 
-#include <poppler/qt5/poppler-qt5.h>
 #include <QDebug>
 #include <QQmlEngine>
 #include <QQmlContext>

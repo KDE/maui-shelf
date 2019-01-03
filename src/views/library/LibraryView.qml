@@ -11,6 +11,68 @@ Maui.Page
 
     property alias list : _libraryList
 
+    headBarExit: false
+
+    headBar.leftContent: [
+
+        Maui.ToolButton
+        {
+            iconName: "view-list-icons"
+         },
+        Maui.ToolButton
+        {
+            iconName: "view-sort"
+            onClicked: sortMenu.popup()
+
+            Maui.Menu
+            {
+                id: sortMenu
+
+                Maui.MenuItem
+                {
+                    text: qsTr("Title")
+                    checkable: true
+                }
+
+                Maui.MenuItem
+                {
+                    text: qsTr("Add date")
+                    checkable: true
+                }
+
+                Maui.MenuItem
+                {
+                    text: qsTr("Creation date")
+                    checkable: true
+                }
+
+                Maui.MenuItem
+                {
+                    text: qsTr("Format")
+                    checkable: true
+                 }
+
+                Maui.MenuItem
+                {
+                    text: qsTr("Size")
+                    checkable: true
+                }
+            }
+        }
+    ]
+
+    headBar.rightContent:[
+        Maui.ToolButton
+        {
+            iconName: "item-select"
+        },
+        Maui.ToolButton
+        {
+            id: menuBtn
+            iconName: "overflow-menu"
+        }
+    ]
+
     Maui.GridBrowser
     {
         id: _gridBrowser
