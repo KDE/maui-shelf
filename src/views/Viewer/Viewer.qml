@@ -68,15 +68,15 @@ Maui.Page
         anchors.fill: parent
     }
 
-    Component
-    {
-        id: _pdfComponent
+//    Component
+//    {
+//        id: _pdfComponent
 
-        Viewer_PDF
-        {
-            anchors.fill: parent
-        }
-    }
+//        Viewer_PDF
+//        {
+//            anchors.fill: parent
+//        }
+//    }
 
     Component
     {
@@ -97,10 +97,11 @@ Maui.Page
             currentView = views.viewer
             //            _listView.currentItem.page = 0
             control.currentPath = filePath
-            if(filePath.endsWith(".pdf"))
+           /* if(filePath.endsWith(".pdf"))
                 _viewerLoader.sourceComponent = _pdfComponent
-            else
+            else */if(filePath.endsWith(".txt"))
                 _viewerLoader.sourceComponent = _txtComponent
+            else return;
 
             viewer.open(control.currentPath)
 

@@ -22,7 +22,7 @@ linux:unix:!android {
 } else:android {
 
     message(Building helpers for Android)
-#    include($$PWD/src/PDFViewer/poppler.pri)
+    include($$PWD/src/PDFViewer/poppler.pri)
     include($$PWD/mauikit/mauikit.pri)
     include($$PWD/3rdparty/kirigami/kirigami.pri)
 

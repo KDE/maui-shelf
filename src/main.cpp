@@ -19,10 +19,10 @@
 
 #ifdef STATIC_MAUIKIT
 #include "./mauikit/src/mauikit.h"
+#include <QStyleHints>
 #endif
 
-#include "pdfdocument.h"
-//#include "verticalview.h"
+//#include "pdfdocument.h"
 
 #include "lib.h"
 #include "library.h"
@@ -36,6 +36,7 @@ int main(int argc, char *argv[])
 
 #ifdef Q_OS_ANDROID
     QGuiApplication app(argc, argv);
+    QGuiApplication::styleHints()->setMousePressAndHoldInterval(2000); // in [ms]
 #else
     QApplication app(argc, argv);
 #endif
@@ -53,9 +54,7 @@ int main(int argc, char *argv[])
     //    context->setContextProperty("library", &library);
 
 
-    //@uri DocumentViewer.PDF
-    qmlRegisterType<PdfDocument>("PDF", 1, 0, "Document");
-    //        qmlRegisterType<VerticalView>("PDF", 1, 0, "VerticalView");
+//    qmlRegisterType<PdfDocument>("PDF", 1, 0, "Document");
 
     qmlRegisterUncreatableType<BaseList>("BaseList", 1, 0, "BaseList", QStringLiteral("BaseList should not be created in QML"));
 

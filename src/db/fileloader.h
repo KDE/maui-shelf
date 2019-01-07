@@ -77,7 +77,7 @@ public slots:
         for(auto path : paths)
             if (QFileInfo(path).isDir())
             {
-                QDirIterator it(path, FMH::FILTER_LIST[FMH::FILTER_TYPE::DOCUMENT], QDir::Files, QDirIterator::Subdirectories);
+                QDirIterator it(path, FMH::FILTER_LIST[FMH::FILTER_TYPE::DOCUMENT] , QDir::Files, QDirIterator::Subdirectories);
 
                 while (it.hasNext())
                     urls << it.next();
