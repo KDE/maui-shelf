@@ -70,6 +70,7 @@ void PdfDocument::setPath(QString &pathName)
 {
     if (pathName.isEmpty())
         return;
+    beginResetModel();
 
     m_pages.clear();
     m_path = pathName;
@@ -87,6 +88,7 @@ void PdfDocument::setPath(QString &pathName)
 
     loadPages();
     loadProvider();
+    endResetModel();
 }
 
 int PdfDocument::pageCount() const

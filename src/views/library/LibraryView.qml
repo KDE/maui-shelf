@@ -10,6 +10,7 @@ Maui.Page
     id: control
 
     property alias list : _libraryList
+property alias currentIndex: _gridBrowser.currentIndex
 
     headBarExit: false
 
@@ -86,7 +87,7 @@ Maui.Page
 //            viewerView.open("file://"+item.url)
 //            Maui.FM.openUrl(item.url)
 
-            viewerView.open(item.url)
+            viewerView.open(item)
         }
     }
 

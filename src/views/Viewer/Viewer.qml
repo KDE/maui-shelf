@@ -8,47 +8,53 @@ Maui.Page
     id: control
 
     property string currentPath : ""
-    headBarTitle: poppler.info.title
-    height: 500
-    width: 200
+    property bool currentPathFav : false
+    property var currentItem : ({})
+
     headBarExit: false
+    margins: 0
 
     property alias viewer : _viewerLoader.item
+
+    Maui.NewDialog
+    {
+        id: _newBookmarkDialog
+
+        title: qsTr("New Bookmark...")
+        rejectButton.visible: false
+        textEntry.text: "Bookmark #"
+       message: qsTr("Save new bookmark as")
+       acceptButton.text: qsTr("Save")
+        onAccepted:
+        {
+            console.log(viewer.currentPage)
+            libraryView.list.bookmark(libraryView.currentIndex, viewer.currentPage)
+        }
+    }
 
     headBar.leftContent:[
         Maui.ToolButton
         {
             iconName: "love"
+            iconColor: currentPathFav ? "#f84172" : control.colorScheme.textColor
+            onClicked:
+            {
+                if(libraryView.list.fav(libraryView.currentIndex, !currentPathFav))
+                currentPathFav= !currentPathFav
+            }
         },
 
         Maui.ToolButton
         {
             iconName:  "bookmark-new"
-        },
-
-        Maui.ToolButton
-        {
-            iconName:  "zoom-fit-width"
+            onClicked:
+            {
+                _newBookmarkDialog.open()
+            }
         }
     ]
 
     headBar.rightContent: [
-        Maui.ToolButton
-        {
-            iconName: "zoom-original"
-        },
-
-
-
-        Maui.ToolButton
-        {
-            iconName:  "zoom-fit-height"
-        },
-
-        Maui.ToolButton
-        {
-            iconName:  "zoom-fit-width"
-        },
 
         Maui.ToolButton
         {
@@ -60,23 +66,21 @@ Maui.Page
         }
     ]
 
-
-
     Loader
     {
         id: _viewerLoader
         anchors.fill: parent
     }
 
-//    Component
-//    {
-//        id: _pdfComponent
+    Component
+    {
+        id: _pdfComponent
 
-//        Viewer_PDF
-//        {
-//            anchors.fill: parent
-//        }
-//    }
+        Viewer_PDF
+        {
+            anchors.fill: parent
+        }
+    }
 
     Component
     {
@@ -88,19 +92,34 @@ Maui.Page
         }
     }
 
-
-    function open(filePath)
+    Component
     {
-        console.log("trying to open", filePath)
-        if(Maui.FM.fileExists(filePath))
+        id: _epubComponent
+
+        Viewer_EPUB
+        {
+            anchors.fill: parent
+        }
+    }
+
+
+    function open(item)
+    {
+        control.currentItem = item
+        control.currentPath = currentItem.url
+        control.currentPathFav = currentItem.fav == "1"
+
+        console.log("openinf file:", control.currentPath)
+        if(Maui.FM.fileExists(  control.currentPath))
         {
             currentView = views.viewer
             //            _listView.currentItem.page = 0
-            control.currentPath = filePath
-           /* if(filePath.endsWith(".pdf"))
+            if(control.currentPath.endsWith(".pdf"))
                 _viewerLoader.sourceComponent = _pdfComponent
-            else */if(filePath.endsWith(".txt"))
+            else if(control.currentPath.endsWith(".txt"))
                 _viewerLoader.sourceComponent = _txtComponent
+            else if(control.currentPath.endsWith(".epub"))
+                _viewerLoader.sourceComponent = _epubComponent
             else return;
 
             viewer.open(control.currentPath)

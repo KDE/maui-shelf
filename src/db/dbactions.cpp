@@ -73,7 +73,7 @@ bool DBActions::insertDoc(const FMH::MODEL &doc)
     auto date = doc[FMH::MODEL_KEY::DATE];
     auto format = doc[FMH::MODEL_KEY::FORMAT];
 
-    qDebug()<< "writting to db: "<<title<<url;
+    qDebug()<< "writting to db: "<<title<<url<<format <<fav;
     /* first needs to insert album and artist*/
     QVariantMap sourceMap {{FMH::MODEL_NAME[FMH::MODEL_KEY::URL], sourceUrl}};
     this->insert(LIB::TABLEMAP[LIB::TABLE::SOURCES], sourceMap);
@@ -84,8 +84,8 @@ bool DBActions::insertDoc(const FMH::MODEL &doc)
                         {FMH::MODEL_NAME[FMH::MODEL_KEY::TITLE], title},
                         {FMH::MODEL_NAME[FMH::MODEL_KEY::RATE], rate},
                         {FMH::MODEL_NAME[FMH::MODEL_KEY::FAV], fav},
-                        {FMH::MODEL_NAME[FMH::MODEL_KEY::FORMAT], format},
                         {FMH::MODEL_NAME[FMH::MODEL_KEY::DATE], date},
+                        {FMH::MODEL_NAME[FMH::MODEL_KEY::FORMAT], format},
                         {FMH::MODEL_NAME[FMH::MODEL_KEY::MODIFIED], modified}};
 
     return this->insert(LIB::TABLEMAP[LIB::TABLE::DOCUMENTS], docMap);
@@ -153,17 +153,27 @@ bool DBActions::deleteDoc(const QString &url)
 
 bool DBActions::favDoc(const QString &url, const bool &fav )
 {
-    if(!this->checkExistance("images", "url", url))
+    if(!this->checkExistance("documents", "url", url))
         if(!this->addDoc(url))
             return false;
 
-    FMH::MODEL favedPic = {{FMH::MODEL_KEY::FAV, fav ? "1" : "0"}};
-     return this->update(LIB::TABLEMAP[LIB::TABLE::DOCUMENTS], favedPic, QVariantMap({{FMH::MODEL_NAME[FMH::MODEL_KEY::URL], url}}) );
+    const FMH::MODEL faved = {{FMH::MODEL_KEY::FAV, fav ? "1" : "0"}};
+    return this->update(LIB::TABLEMAP[LIB::TABLE::DOCUMENTS], faved, QVariantMap({{FMH::MODEL_NAME[FMH::MODEL_KEY::URL], url}}) );
+}
+
+bool DBActions::bookmarkDoc(const QString &url, const int &value )
+{
+    if(!this->checkExistance("documents", "url", url))
+        if(!this->addDoc(url))
+            return false;
+
+    const QVariantMap map = {{FMH::MODEL_NAME[FMH::MODEL_KEY::BOOKMARK], QString::number(value)}, {FMH::MODEL_NAME[FMH::MODEL_KEY::URL], url}};
+    return this->insert(LIB::TABLEMAP[LIB::TABLE::BOOKMARKS], map);
 }
 
 bool DBActions::isFav(const QString &url)
 {
-    auto data = this->getDBData(QString("select * from images where url = '%1'").arg(url));
+    const auto data = this->getDBData(QString("select * from images where url = '%1'").arg(url));
 
     if (data.isEmpty()) return false;
 
@@ -189,11 +199,11 @@ bool DBActions::cleanTags()
 
 QVariantList DBActions::searchFor(const QStringList &queries, const QString &queryTxt)
 {
-//    QVariantList res;
-//    for(auto query : queries)
-//        res <<  this->get(PIX::getQuery("searchFor_").arg(query));
+    //    QVariantList res;
+    //    for(auto query : queries)
+    //        res <<  this->get(PIX::getQuery("searchFor_").arg(query));
 
-//    return res;
+    //    return res;
 }
 
 FMH::MODEL_LIST DBActions::getFolders(const QString &query)

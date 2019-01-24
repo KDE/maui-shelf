@@ -3,8 +3,8 @@
 
 #ANDROID_EXTRA_LIBS += $$PWD/poppler/libfreetype.so
 ANDROID_EXTRA_LIBS += $$PWD/poppler/libfreetype.so
-#ANDROID_EXTRA_LIBS += $$PWD/poppler/libpoppler.so
-#ANDROID_EXTRA_LIBS += $$PWD/poppler/libpoppler-qt5.so
+ANDROID_EXTRA_LIBS += $$PWD/poppler/libpoppler.so
+ANDROID_EXTRA_LIBS += $$PWD/poppler/libpoppler-qt5.so
 
 INCLUDEPATH  += $$PWD/poppler/qt5/ \
 

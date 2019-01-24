@@ -49,6 +49,7 @@ public slots:
     bool remove(const int &index) override;
     bool deleteAt(const int &index);
     bool fav(const int &index, const bool &value);
+    bool bookmark(const int &index, const int &value);
     void append(const QVariantMap &pic);
     void append(const QString &url);
     void refresh();

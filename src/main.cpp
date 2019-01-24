@@ -22,7 +22,8 @@
 #include <QStyleHints>
 #endif
 
-//#include "pdfdocument.h"
+#include "pdfdocument.h"
+#include "epubreader.h"
 
 #include "lib.h"
 #include "library.h"
@@ -54,7 +55,8 @@ int main(int argc, char *argv[])
     //    context->setContextProperty("library", &library);
 
 
-//    qmlRegisterType<PdfDocument>("PDF", 1, 0, "Document");
+    qmlRegisterType<PdfDocument>("PDF", 1, 0, "Document");
+    qmlRegisterType<EpubReader>("EPUB", 1, 0, "Document");
 
     qmlRegisterUncreatableType<BaseList>("BaseList", 1, 0, "BaseList", QStringLiteral("BaseList should not be created in QML"));
 

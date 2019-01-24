@@ -53,6 +53,9 @@ QImage PdfImageProvider::requestImage(const QString & id, QSize * size, const QS
 //                numPage = 0;
 
             page = document->page(numPage);
+            if(!page)
+                return result;
+
 
             pageSize = page->pageSizeF();
             pageSizePhys.setWidth(pageSize.width() / 72);

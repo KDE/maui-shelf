@@ -34,8 +34,8 @@ class Tagging;
 class DBActions : public DB
 {
     Q_OBJECT
-public:
 
+public:
     static DBActions *getInstance();
     Tagging *tag;
 
@@ -58,6 +58,7 @@ public:
 
 public slots:
     bool favDoc(const QString &url, const bool &fav);
+    bool bookmarkDoc(const QString &url, const int &value);
     bool isFav(const QString &url);
     bool deleteDoc(const QString &url);
 
@@ -66,6 +67,7 @@ private:
     explicit DBActions(QObject *parent = nullptr);
     ~DBActions();
     void init();
+
 signals:
     void tagAdded(QString tag);
     void docRemoved();

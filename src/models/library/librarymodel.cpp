@@ -18,7 +18,7 @@ LibraryModel::LibraryModel(QObject *parent) : BaseList(parent)
     connect(this, &LibraryModel::orderChanged, this, &LibraryModel::sortList);
 
     connect(this, &LibraryModel::queryChanged, this, &LibraryModel::setList);
-    connect(this, &LibraryModel::sortByChanged, this, &LibraryModel::setList);
+//    connect(this, &LibraryModel::sortByChanged, this, &LibraryModel::setList);
 
     this->fileLoader = new FileLoader;
     connect(this->fileLoader, &FileLoader::finished, [this](int newDocs)
@@ -212,6 +212,14 @@ bool LibraryModel::fav(const int &index, const bool &value)
     }
 
     return false;
+}
+
+bool LibraryModel::bookmark(const int &index, const int &value)
+{
+    if(index >= this->list.size() || index < 0)
+        return false;
+
+    return this->dba->bookmarkDoc(this->list[index][FMH::MODEL_KEY::URL], value);
 }
 
 void LibraryModel::append(const QVariantMap &pic)

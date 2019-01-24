@@ -33,6 +33,7 @@ linux:unix:!android {
 }
 
 include($$PWD/src/PDFViewer/poppler-qml-plugin/poppler-plugin.pri)
+include($$PWD/src/epubreader/epub.pri)
 
 
 # The following define makes your compiler emit warnings if you use
