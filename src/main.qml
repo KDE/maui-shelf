@@ -25,6 +25,9 @@ Maui.ApplicationWindow
                          })
 
     property int currentView : views.library
+    headBar.implicitHeight: toolBarHeight * 1.5
+    headBarBGColor: viewBackgroundColor
+    headBar.drawBorder: false
 
     headBar.middleContent: [
         Maui.ToolButton

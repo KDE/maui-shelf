@@ -12,6 +12,7 @@ Maui.Page
     property var currentItem : ({})
 
     headBarExit: false
+    headBar.drawBorder: false
     margins: 0
 
     property alias viewer : _viewerLoader.item

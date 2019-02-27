@@ -10,16 +10,17 @@ Maui.Page
     id: control
 
     property alias list : _libraryList
-property alias currentIndex: _gridBrowser.currentIndex
+    property alias currentIndex: _gridBrowser.currentIndex
 
     headBarExit: false
+    headBar.drawBorder: false
 
     headBar.leftContent: [
 
         Maui.ToolButton
         {
             iconName: "view-list-icons"
-         },
+        },
         Maui.ToolButton
         {
             iconName: "view-sort"
@@ -51,7 +52,7 @@ property alias currentIndex: _gridBrowser.currentIndex
                 {
                     text: qsTr("Format")
                     checkable: true
-                 }
+                }
 
                 Maui.MenuItem
                 {
@@ -84,8 +85,8 @@ property alias currentIndex: _gridBrowser.currentIndex
         onItemClicked:
         {
             var item = _libraryList.get(index)
-//            viewerView.open("file://"+item.url)
-//            Maui.FM.openUrl(item.url)
+            //            viewerView.open("file://"+item.url)
+            //            Maui.FM.openUrl(item.url)
 
             viewerView.open(item)
         }
