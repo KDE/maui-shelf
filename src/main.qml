@@ -3,6 +3,7 @@ import QtQuick.Window 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.3
 import org.kde.mauikit 1.0 as Maui
+import org.kde.kirigami 2.7 as Kirigami
 
 import StoreList 1.0
 
@@ -25,52 +26,49 @@ Maui.ApplicationWindow
                          })
 
     property int currentView : views.library
-    headBar.implicitHeight: toolBarHeight * 1.5
-    headBarBGColor: viewBackgroundColor
-    headBar.drawBorder: false
 
-    headBar.middleContent: [
-        Maui.ToolButton
-        {
-            id: _viewerButton
-            iconName: "document-preview-archive"
-            text: qsTr("Viewer")
-            onClicked: currentView = views.viewer
-            iconColor: currentView === views.viewer ? highlightColor : headBarFGColor
+    headBar.middleContent: Kirigami.ActionToolBar
+    {
+        Layout.fillWidth: true
+        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
 
-        },
+        actions:  [
+            Action
+            {
+                id: _viewerButton
+                icon.name: "document-preview-archive"
+                text: qsTr("Viewer")
+                onTriggered: currentView = views.viewer
 
-        Maui.ToolButton
-        {
-            id: _libraryButton
-            iconName: "view-books"
-            text: qsTr("Library")
-            onClicked: currentView = views.library
-            iconColor: currentView === views.library ? highlightColor : headBarFGColor
+            },
 
-        },
+            Action
+            {
+                id: _libraryButton
+                icon.name: "view-books"
+                text: qsTr("Library")
+                onTriggered: currentView = views.library
+            },
 
-        Maui.ToolButton
-        {
-            id: _cloudButton
-            iconName: "folder-cloud"
-            text: qsTr("Cloud")
-            iconColor: currentView === views.cloud ? highlightColor : headBarFGColor
-            onClicked: currentView = views.cloud
-        },
+            Action
+            {
+                id: _cloudButton
+                icon.name: "folder-cloud"
+                text: qsTr("Cloud")
+                onTriggered: currentView = views.cloud
+            },
 
-        Maui.ToolButton
-        {
-            id: _storeButton
-            iconName: "nx-software-center"
-            text: qsTr("Store")
-            onClicked: currentView = views.store
-            iconColor: currentView === views.store ? highlightColor : headBarFGColor
+            Action
+            {
+                id: _storeButton
+                icon.name: "nx-software-center"
+                text: qsTr("Store")
+                onTriggered: currentView = views.store
+            }
+        ]
+    }
 
-        }
-    ]
-
-    content: ColumnLayout
+    ColumnLayout
     {
         id: mainPage
         anchors.fill: parent

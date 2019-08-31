@@ -1,4 +1,6 @@
 import QtQuick 2.0
+import QtQuick.Controls 2.5
+
 import org.kde.mauikit 1.0 as Maui
 
 import CloudList 1.0
@@ -8,48 +10,46 @@ Maui.Page
 {
     id: control
 
-    headBarExit: false
-
     headBar.leftContent: [
 
-        Maui.ToolButton
+        ToolButton
         {
-            iconName: "view-list-icons"
+            icon.name: "view-list-icons"
          },
-        Maui.ToolButton
+        ToolButton
         {
-            iconName: "view-sort"
+            icon.name: "view-sort"
             onClicked: sortMenu.popup()
 
-            Maui.Menu
+            Menu
             {
                 id: sortMenu
 
-                Maui.MenuItem
+                MenuItem
                 {
                     text: qsTr("Title")
                     checkable: true
                 }
 
-                Maui.MenuItem
+                MenuItem
                 {
                     text: qsTr("Add date")
                     checkable: true
                 }
 
-                Maui.MenuItem
+                MenuItem
                 {
                     text: qsTr("Creation date")
                     checkable: true
                 }
 
-                Maui.MenuItem
+                MenuItem
                 {
                     text: qsTr("Format")
                     checkable: true
                  }
 
-                Maui.MenuItem
+                MenuItem
                 {
                     text: qsTr("Size")
                     checkable: true
@@ -59,14 +59,14 @@ Maui.Page
     ]
 
     headBar.rightContent:[
-        Maui.ToolButton
+        ToolButton
         {
-            iconName: "item-select"
+            icon.name: "item-select"
         },
-        Maui.ToolButton
+        ToolButton
         {
             id: menuBtn
-            iconName: "overflow-menu"
+            icon.name: "overflow-menu"
         }
     ]
 

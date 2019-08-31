@@ -1,5 +1,5 @@
 import QtQuick 2.9
-import QtQuick.Controls 2.2
+import QtQuick.Controls 2.5
 import org.kde.mauikit 1.0 as Maui
 
 import LibraryModel 1.0
@@ -12,49 +12,46 @@ Maui.Page
     property alias list : _libraryList
     property alias currentIndex: _gridBrowser.currentIndex
 
-    headBarExit: false
-    headBar.drawBorder: false
-
     headBar.leftContent: [
 
-        Maui.ToolButton
+        ToolButton
         {
-            iconName: "view-list-icons"
+            icon.name: "view-list-icons"
         },
-        Maui.ToolButton
+        ToolButton
         {
-            iconName: "view-sort"
+            icon.name: "view-sort"
             onClicked: sortMenu.popup()
 
-            Maui.Menu
+            Menu
             {
                 id: sortMenu
 
-                Maui.MenuItem
+                MenuItem
                 {
                     text: qsTr("Title")
                     checkable: true
                 }
 
-                Maui.MenuItem
+                MenuItem
                 {
                     text: qsTr("Add date")
                     checkable: true
                 }
 
-                Maui.MenuItem
+                MenuItem
                 {
                     text: qsTr("Creation date")
                     checkable: true
                 }
 
-                Maui.MenuItem
+                MenuItem
                 {
                     text: qsTr("Format")
                     checkable: true
                 }
 
-                Maui.MenuItem
+                MenuItem
                 {
                     text: qsTr("Size")
                     checkable: true
@@ -64,14 +61,14 @@ Maui.Page
     ]
 
     headBar.rightContent:[
-        Maui.ToolButton
+        ToolButton
         {
-            iconName: "item-select"
+            icon.name: "item-select"
         },
-        Maui.ToolButton
+        ToolButton
         {
             id: menuBtn
-            iconName: "overflow-menu"
+            icon.name: "overflow-menu"
         }
     ]
 

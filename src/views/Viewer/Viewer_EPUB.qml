@@ -14,7 +14,7 @@ Maui.Page
     property int pageCount;
     property var pagesModel;
 
-     headBarTitle: documentItem.windowTitleForDocument;
+     title: documentItem.windowTitleForDocument;
  onFileChanged: documentItem.url = "file://"+file;
     Okular.DocumentItem
     {

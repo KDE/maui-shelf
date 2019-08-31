@@ -40,8 +40,8 @@ public:
     FileLoader() : QObject()
     {
         this->dba = DBActions::getInstance();
-        qRegisterMetaType<LIB::TABLE>("PIX::TABLE");
-        qRegisterMetaType<QMap<LIB::TABLE, bool>>("QMap<PIX::TABLE,bool>");
+        qRegisterMetaType<LIB::TABLE>("LIB::TABLE");
+        qRegisterMetaType<QMap<LIB::TABLE, bool>>("QMap<LIB::TABLE,bool>");
         this->moveToThread(&t);
         t.start();
     }
@@ -80,10 +80,10 @@ public slots:
                 QDirIterator it(path, FMH::FILTER_LIST[FMH::FILTER_TYPE::DOCUMENT] , QDir::Files, QDirIterator::Subdirectories);
 
                 while (it.hasNext())
-                    urls << it.next();
+                    urls << QUrl::fromLocalFile(it.next()).toString();
 
             }else if (QFileInfo(path).isFile())
-                urls << path;
+                urls << QUrl::fromLocalFile(path).toString();
 
         int newDocs = 0;
 

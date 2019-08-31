@@ -11,9 +11,7 @@ Maui.Page
     property bool currentPathFav : false
     property var currentItem : ({})
 
-    headBarExit: false
-    headBar.drawBorder: false
-    margins: 0
+    padding: 0
 
     property alias viewer : _viewerLoader.item
 
@@ -34,10 +32,10 @@ Maui.Page
     }
 
     headBar.leftContent:[
-        Maui.ToolButton
+        ToolButton
         {
-            iconName: "love"
-            iconColor: currentPathFav ? "#f84172" : control.colorScheme.textColor
+            icon.name: "love"
+            icon.color: currentPathFav ? "#f84172" : control.colorScheme.textColor
             onClicked:
             {
                 if(libraryView.list.fav(libraryView.currentIndex, !currentPathFav))
@@ -45,9 +43,9 @@ Maui.Page
             }
         },
 
-        Maui.ToolButton
+        ToolButton
         {
-            iconName:  "bookmark-new"
+            icon.name:  "bookmark-new"
             onClicked:
             {
                 _newBookmarkDialog.open()
@@ -57,13 +55,13 @@ Maui.Page
 
     headBar.rightContent: [
 
-        Maui.ToolButton
+        ToolButton
         {
-            iconName: "view-fullscreen"
+            icon.name: "view-fullscreen"
         },
-        Maui.ToolButton
+        ToolButton
         {
-            iconName:  "edit-find"
+            icon.name:  "edit-find"
         }
     ]
 

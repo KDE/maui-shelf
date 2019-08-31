@@ -13,13 +13,13 @@ Maui.Page
 
     headBar.visible: false
 
-    margins: 0
+    padding: 0
 
     footBar.middleContent: [
-        Maui.ToolButton
+        ToolButton
         {
             enabled: _listView.currentIndex > 0
-            iconName:  _listView.orientation === ListView.Horizontal ? "go-previous" : "go-up"
+            icon.name:  _listView.orientation === ListView.Horizontal ? "go-previous" : "go-up"
             onClicked:
             {
                 if( _listView.currentIndex > 0)
@@ -37,10 +37,10 @@ Maui.Page
             anchors.verticalCenter: parent.verticalCenter
         },
 
-        Maui.ToolButton
+        ToolButton
         {
             enabled: _listView.currentIndex +1 < poppler.pages
-            iconName:  _listView.orientation === ListView.Horizontal ? "go-next" : "go-down"
+            icon.name:  _listView.orientation === ListView.Horizontal ? "go-next" : "go-down"
             onClicked:
             {
                 if( _listView.currentIndex +1 < poppler.pages)
@@ -51,9 +51,9 @@ Maui.Page
 
     footBar.leftContent:[
 
-        Maui.ToolButton
+        ToolButton
         {
-            iconName:  "zoom-fit-width"
+            icon.name:  "zoom-fit-width"
             checkable: true
             checked: control.fitWidth
             onClicked:
@@ -64,9 +64,9 @@ Maui.Page
     ]
 
     footBar.rightContent: [
-        Maui.ToolButton
+        ToolButton
         {
-            iconName: "view-right-new"
+            icon.name: "view-right-new"
             checkable: true
             checked:  _listView.orientation === ListView.Horizontal
             onClicked:
@@ -89,8 +89,8 @@ Maui.Page
 
             var title = getDocumentInfo("Title")
             if (title !== "")
-                control.headBarTitle = title;
-            else control.headBarTitle = Maui.FM.getFileInfo(control.currentPath).label
+                control.title = title;
+            else control.title = Maui.FM.getFileInfo(control.currentPath).label
         }
     }
 
@@ -152,6 +152,6 @@ Maui.Page
     }
     function open(filePath)
     {
-        poppler.path = filePath
+        poppler.path = filePath.replace("file://", "")
     }
 }

@@ -11,27 +11,27 @@ Maui.Editor
 
     body.readOnly: true    
 
-    footBar.middleContent:[
+//    footBar.middleContent:[
 
-        Maui.ToolButton
-        {
-            iconName:  "zoom-in"
-            onClicked:
-            {
-                body.font.pointSize = body.font.pointSize + fontSizes.small
-            }
-        },
+//        ToolButton
+//        {
+//            icon.name:  "zoom-in"
+//            onClicked:
+//            {
+//                body.font.pointSize = body.font.pointSize + fontSizes.small
+//            }
+//        },
 
-        Maui.ToolButton
-        {
-            iconName:  "zoom-out"
-            onClicked:
-            {
-                body.font.pointSize = body.font.pointSize - fontSizes.small
+//        ToolButton
+//        {
+//            icon.name:  "zoom-out"
+//            onClicked:
+//            {
+//                body.font.pointSize = body.font.pointSize - fontSizes.small
 
-            }
-        }
-    ]
+//            }
+//        }
+//    ]
 
     function open(filePath)
     {
