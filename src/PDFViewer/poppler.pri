@@ -1,6 +1,3 @@
-
-
-
 #ANDROID_EXTRA_LIBS += $$PWD/poppler/libfreetype.so
 ANDROID_EXTRA_LIBS += $$PWD/poppler/libfreetype.so
 ANDROID_EXTRA_LIBS += $$PWD/poppler/libpoppler.so

@@ -32,7 +32,7 @@ Cloud::Cloud(QObject *parent) : BaseList (parent)
         newItem[FMH::MODEL_KEY::SOURCE] = FMH::fileExists(thumbnail)? thumbnail : item[FMH::MODEL_KEY::PATH];
         newItem[FMH::MODEL_KEY::TITLE] = item[FMH::MODEL_KEY::LABEL];
 
-        this->update(FM::toMap(newItem), this->pending.take(QString(item[FMH::MODEL_KEY::PATH]).replace(FMH::CloudCachePath+"opendesktop", FMH::PATHTYPE_NAME[FMH::PATHTYPE_KEY::CLOUD_PATH])));
+        this->update(FM::toMap(newItem), this->pending.take(QString(item[FMH::MODEL_KEY::PATH]).replace(FMH::CloudCachePath+"opendesktop", FMH::PATHTYPE_URI[FMH::PATHTYPE_KEY::CLOUD_PATH])));
         emit this->cloudItemReady(FM::toMap(newItem));
     });
 }
@@ -62,7 +62,7 @@ void Cloud::setList()
 {
     emit this->preListChanged();
     this->list.clear();
-    this->fm->getCloudServerContent(FMH::PATHTYPE_NAME[FMH::PATHTYPE_KEY::CLOUD_PATH]+"/"+this->account, FMH::FILTER_LIST[FMH::FILTER_TYPE::DOCUMENT], 3);
+    this->fm->getCloudServerContent(FMH::PATHTYPE_URI[FMH::PATHTYPE_KEY::CLOUD_PATH]+"/"+this->account, FMH::FILTER_LIST[FMH::FILTER_TYPE::DOCUMENT], 3);
     emit this->postListChanged();
 }
 

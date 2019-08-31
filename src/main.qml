@@ -158,7 +158,7 @@ Maui.ApplicationWindow
 
     Component.onCompleted:
     {
-        cloudViewLoader.sourceComponent = _cloudViewComponent
+//        cloudViewLoader.sourceComponent = _cloudViewComponent
         storeViewLoader.sourceComponent= _storeViewComponent
     }
 
