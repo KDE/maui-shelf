@@ -2,11 +2,18 @@
 #define GALLERY_H
 
 #include <QObject>
-#include "./src/models/baselist.h"
+
+#ifdef STATIC_MAUIKIT
+#include "fmh.h"
+#include "mauilist.h"
+#else
+#include <MauiKit/fmh.h>
+#include <MauiKit/mauilist.h>
+#endif
 
 class FileLoader;
 class DBActions;
-class LibraryModel : public BaseList
+class LibraryModel : public MauiList
 {
     Q_OBJECT
     Q_PROPERTY(QString query READ getQuery WRITE setQuery NOTIFY queryChanged())
@@ -42,11 +49,11 @@ signals:
     void sortByChanged();
 
 public slots:    
-    QVariantMap get(const int &index) const override;
-    bool update(const int &index, const QVariant &value, const int &role) override; //deprecrated
-    bool update(const QVariantMap &data, const int &index) override;
-    bool update(const FMH::MODEL &pic) override;
-    bool remove(const int &index) override;
+    QVariantMap get(const int &index) const;
+    bool update(const int &index, const QVariant &value, const int &role); //deprecrated
+    bool update(const QVariantMap &data, const int &index);
+    bool update(const FMH::MODEL &pic);
+    bool remove(const int &index);
     bool deleteAt(const int &index);
     bool fav(const int &index, const bool &value);
     bool bookmark(const int &index, const int &value);

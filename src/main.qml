@@ -1,8 +1,9 @@
-import QtQuick 2.9
-import QtQuick.Window 2.2
+import QtQuick 2.13
 import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.3
+import QtQuick.Controls 2.13
 import org.kde.mauikit 1.0 as Maui
+import org.kde.mauikit 1.1 as MauiLab
+
 import org.kde.kirigami 2.7 as Kirigami
 
 import StoreList 1.0
@@ -14,9 +15,11 @@ import "views/cloud/"
 Maui.ApplicationWindow
 {
     id: root
-    about.appDescription: qsTr("Library is a documents viewer and collection manager.\nLibrary allows you to browse your local and cloud collection, and also allows you to download new content from the integrated store.")
-    about.appIcon: "qrc:/assets/library.svg"
+    title: viewerView.title
+    Maui.App.description: qsTr("Library is a documents viewer and collection manager.\nLibrary allows you to browse your local and cloud collection, and also allows you to download new content from the integrated store.")
+    Maui.App.iconName: "qrc:/assets/library.svg"
 
+    property bool selectionMode: false
     readonly property var views :({
                              viewer : 0,
                              library: 1,
@@ -25,47 +28,14 @@ Maui.ApplicationWindow
                              search: 4
                          })
 
-    property int currentView : views.library
-
-    headBar.middleContent: Kirigami.ActionToolBar
+    headBar.rightContent: ToolButton
     {
-        Layout.fillWidth: true
-        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
-
-        actions:  [
-            Action
-            {
-                id: _viewerButton
-                icon.name: "document-preview-archive"
-                text: qsTr("Viewer")
-                onTriggered: currentView = views.viewer
-
-            },
-
-            Action
-            {
-                id: _libraryButton
-                icon.name: "view-books"
-                text: qsTr("Library")
-                onTriggered: currentView = views.library
-            },
-
-            Action
-            {
-                id: _cloudButton
-                icon.name: "folder-cloud"
-                text: qsTr("Cloud")
-                onTriggered: currentView = views.cloud
-            },
-
-            Action
-            {
-                id: _storeButton
-                icon.name: "nx-software-center"
-                text: qsTr("Store")
-                onTriggered: currentView = views.store
-            }
-        ]
+//        visible: Maui.Handy.isTouch
+        icon.name: "item-select"
+        checkable: true
+        checked: root.selectionMode
+        onClicked: root.selectionMode = !root.selectionMode
+//        onPressAndHold: currentBrowser.selectAll()
     }
 
     ColumnLayout
@@ -73,83 +43,109 @@ Maui.ApplicationWindow
         id: mainPage
         anchors.fill: parent
 
-        SwipeView
+        MauiLab.AppViews
         {
             id: swipeView
             Layout.fillHeight: true
             Layout.fillWidth: true
-            interactive: isMobile
-            currentIndex: currentView
-
-            onCurrentIndexChanged: currentView = currentIndex
 
             Viewer
             {
                 id: viewerView
+               MauiLab.AppView.iconName: "document-preview-archive"
+                MauiLab.AppView.title: qsTr("Viewer")
             }
 
             LibraryView
             {
                 id: libraryView
+                MauiLab.AppView.iconName: "view-books"
+                MauiLab.AppView.title: qsTr("Library")
             }
 
-            Loader
-            {
-                id: cloudViewLoader
-            }
+//            Loader
+//            {
+//                id: cloudViewLoader
+//            }
 
-            Loader
-            {
-                id: storeViewLoader
-            }
+//            Loader
+//            {
+//                id: storeViewLoader
+//            }
 
-            Maui.Page
-            {
-                id: searchView
-            }
+//            Maui.Page
+//            {
+//                id: searchView
+//            }
         }
 
         /*** Components ***/
 
-        Component
+//        Component
+//        {
+//            id: _cloudViewComponent
+//            CloudView
+//            {
+//                anchors.fill : parent
+//            }
+//        }
+
+//        Component
+//        {
+//            id: _storeViewComponent
+
+//            Maui.Store
+//            {
+//                anchors.fill : parent
+//                detailsView: false
+//                list.category: StoreList.EBOOKS
+//                list.provider: StoreList.OPENDESKTOPCC
+//                fitPreviews: true
+
+//                onOpenFile:  viewerView.open(filePath)
+
+//                onFileReady:
+//                {
+//                    viewerView.open("file://"+item.url)
+////                    libraryView.list.insert(item.url)
+//                }
+//            }
+//        }
+
+        MauiLab.SelectionBar
         {
-            id: _cloudViewComponent
-            CloudView
+            id: _selectionbar
+            Layout.alignment: Qt.AlignHCenter
+            Layout.preferredWidth: Math.min(parent.width, implicitWidth)
+            Layout.margins: Maui.Style.space.medium
+            onItemClicked : console.log(index)
+
+            onExitClicked: clear()
+
+            Action
             {
-                anchors.fill : parent
-            }
-        }
-
-        Component
-        {
-            id: _storeViewComponent
-
-            Maui.Store
-            {
-                anchors.fill : parent
-                detailsView: false
-                list.category: StoreList.EBOOKS
-                list.provider: StoreList.OPENDESKTOPCC
-                fitPreviews: true
-
-                onOpenFile:  viewerView.open(filePath)
-
-                onFileReady:
+                text: qsTr("Open")
+                icon.name: "document-open"
+                onTriggered:
                 {
-                    viewerView.open("file://"+item.url)
-//                    libraryView.list.insert(item.url)
+                    for(var item of _selectionbar.items)
+                        viewerView.open(item)
+
+                    _selectionbar.clear()
                 }
             }
-        }
 
-        Maui.SelectionBar
-        {
-            id: selectionBox
-            Layout.fillWidth : true
-            Layout.leftMargin: space.big
-            Layout.rightMargin: space.big
-            Layout.bottomMargin: space.big
-            Layout.topMargin: space.small
+            Action
+            {
+                text: qsTr("Share")
+                icon.name: "document-share"
+            }
+
+            Action
+            {
+                text: qsTr("Export")
+                icon.name: "document-export"
+            }
         }
     }
 
@@ -157,7 +153,7 @@ Maui.ApplicationWindow
     Component.onCompleted:
     {
 //        cloudViewLoader.sourceComponent = _cloudViewComponent
-        storeViewLoader.sourceComponent= _storeViewComponent
+//        storeViewLoader.sourceComponent= _storeViewComponent
     }
 
 }

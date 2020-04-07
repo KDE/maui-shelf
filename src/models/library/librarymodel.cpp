@@ -8,7 +8,7 @@
 #include <MauiKit/fmh.h>
 #endif
 
-LibraryModel::LibraryModel(QObject *parent) : BaseList(parent)
+LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
 {
     qDebug()<< "CREATING GALLERY LIST";
     this->dba = DBActions::getInstance();

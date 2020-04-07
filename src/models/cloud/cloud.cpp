@@ -5,36 +5,36 @@ Cloud::Cloud(QObject *parent) : BaseList (parent)
     this->fm = new FM(this);
     this->setList();
 
-    connect(this->fm, &FM::cloudServerContentReady, [this](const FMH::MODEL_LIST &list, const QString &url)
-    {
-        Q_UNUSED(url);
-        emit this->preListChanged();
-        this->list = list;
-//        this->formatList();
-        emit this->postListChanged();
-    });    
+//    connect(this->fm, &FM::cloudServerContentReady, [this](const FMH::MODEL_LIST &list, const QString &url)
+//    {
+//        Q_UNUSED(url);
+//        emit this->preListChanged();
+//        this->list = list;
+////        this->formatList();
+//        emit this->postListChanged();
+//    });
 
-    connect(this->fm, &FM::warningMessage, [this](const QString &message)
-    {
-        emit this->warning(message);
-    });
+//    connect(this->fm, &FM::warningMessage, [this](const QString &message)
+//    {
+//        emit this->warning(message);
+//    });
 
-    connect(this->fm, &FM::cloudItemReady, [this](const FMH::MODEL &item, const QString &path)
-    {
-        qDebug()<< "REQUESTED CLOUD IMAGE READY << " << item;
-        Q_UNUSED(path);
-        auto newItem = item;
-        auto url = item[FMH::MODEL_KEY::URL];
-        auto thumbnail = item[FMH::MODEL_KEY::THUMBNAIL];
+//    connect(this->fm, &FM::cloudItemReady, [this](const FMH::MODEL &item, const QString &path)
+//    {
+//        qDebug()<< "REQUESTED CLOUD IMAGE READY << " << item;
+//        Q_UNUSED(path);
+//        auto newItem = item;
+//        auto url = item[FMH::MODEL_KEY::URL];
+//        auto thumbnail = item[FMH::MODEL_KEY::THUMBNAIL];
 
-        newItem[FMH::MODEL_KEY::FAV] = QString("0");
-        newItem[FMH::MODEL_KEY::URL] = FMH::fileExists(thumbnail)? thumbnail : item[FMH::MODEL_KEY::URL];
-        newItem[FMH::MODEL_KEY::SOURCE] = FMH::fileExists(thumbnail)? thumbnail : item[FMH::MODEL_KEY::PATH];
-        newItem[FMH::MODEL_KEY::TITLE] = item[FMH::MODEL_KEY::LABEL];
+//        newItem[FMH::MODEL_KEY::FAV] = QString("0");
+//        newItem[FMH::MODEL_KEY::URL] = FMH::fileExists(thumbnail)? thumbnail : item[FMH::MODEL_KEY::URL];
+//        newItem[FMH::MODEL_KEY::SOURCE] = FMH::fileExists(thumbnail)? thumbnail : item[FMH::MODEL_KEY::PATH];
+//        newItem[FMH::MODEL_KEY::TITLE] = item[FMH::MODEL_KEY::LABEL];
 
-        this->update(FM::toMap(newItem), this->pending.take(QString(item[FMH::MODEL_KEY::PATH]).replace(FMH::CloudCachePath+"opendesktop", FMH::PATHTYPE_URI[FMH::PATHTYPE_KEY::CLOUD_PATH])));
-        emit this->cloudItemReady(FM::toMap(newItem));
-    });
+//        this->update(FMH::toMap(newItem), this->pending.take(QString(item[FMH::MODEL_KEY::PATH]).replace(FMH::CloudCachePath+"opendesktop", FMH::PATHTYPE_URI[FMH::PATHTYPE_KEY::CLOUD_PATH])));
+//        emit this->cloudItemReady(FMH::toMap(newItem));
+//    });
 }
 
 FMH::MODEL_LIST Cloud::items() const
@@ -102,7 +102,7 @@ void Cloud::requestItem(const int &index)
     this->pending.insert(this->list[index][FMH::MODEL_KEY::PATH], index);
     qDebug()<< "1-PEDNIGN CLOUD"<< this->pending;
 
-    this->fm->getCloudItem(FM::toMap(this->list[index]));
+    this->fm->getCloudItem(FMH::toMap(this->list[index]));
 }
 
 bool Cloud::update(const QVariantMap &data, const int &index)

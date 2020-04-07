@@ -1,6 +1,9 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.2
+import QtQuick.Layouts 1.3
+
 import org.kde.mauikit 1.0 as Maui
+import org.kde.kirigami 2.7 as Kirigami
 
 import PDF 1.0 as PDF
 
@@ -29,12 +32,14 @@ Maui.Page
 
         Label
         {
-            color: control.colorScheme.textColor
+            Layout.fillWidth: false
+            Layout.fillHeight: true
+
+            color: Kirigami.Theme.textColor
             text:  _listView.currentIndex +" / "+ poppler.pages
             font.bold: false
             font.weight: Font.Thin
-            font.pointSize: fontSizes.medium
-            anchors.verticalCenter: parent.verticalCenter
+            font.pointSize: Maui.Style.fontSizes.medium
         },
 
         ToolButton
@@ -90,7 +95,10 @@ Maui.Page
             var title = getDocumentInfo("Title")
             if (title !== "")
                 control.title = title;
-            else control.title = Maui.FM.getFileInfo(control.currentPath).label
+            else control.title = Maui.FM.getFileInfo("file://"+poppler.path).label
+
+            console.log(poppler.path, control.title)
+
         }
     }
 
@@ -106,7 +114,7 @@ Maui.Page
         //        highlightFollowsCurrentItem: true
         //        highlightMoveDuration: 0
         snapMode: control.fitWidth ? ListView.NoSnap : ListView.SnapOneItem
-        spacing: space.big
+        spacing: Maui.Style.space.big
         //        cacheBuffer: control.fitWidth ? poppler.providersNumber *  : height * poppler.providersNumber
 
         onMovementEnded:

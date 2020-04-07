@@ -1,7 +1,8 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.2
+import QtQuick 2.13
+import QtQuick.Controls 2.13
 
 import org.kde.mauikit 1.0 as Maui
+import org.kde.kirigami 2.7 as Kirigami
 
 Maui.Page
 {
@@ -10,7 +11,9 @@ Maui.Page
     property string currentPath : ""
     property bool currentPathFav : false
     property var currentItem : ({})
+    property  alias currentViewer: _viewerLoader.item
 
+    title: currentViewer ? currentViewer.title : ""
     padding: 0
 
     property alias viewer : _viewerLoader.item
@@ -31,27 +34,33 @@ Maui.Page
         }
     }
 
-    headBar.leftContent:[
-        ToolButton
+    headBar.leftContent: Maui.ToolActions
+    {
+        autoExclusive: false
+        expanded: true
+        checkable: true
+
+        Action
         {
             icon.name: "love"
-            icon.color: currentPathFav ? "#f84172" : control.colorScheme.textColor
-            onClicked:
+            icon.color: currentPathFav ? "#f84172" : Kirigami.Theme.textColor
+            onTriggered:
             {
                 if(libraryView.list.fav(libraryView.currentIndex, !currentPathFav))
                 currentPathFav= !currentPathFav
             }
-        },
+        }
 
-        ToolButton
+        Action
         {
             icon.name:  "bookmark-new"
-            onClicked:
+            onTriggered:
             {
                 _newBookmarkDialog.open()
             }
         }
-    ]
+    }
+
 
     headBar.rightContent: [
 
@@ -101,7 +110,6 @@ Maui.Page
         }
     }
 
-
     function open(item)
     {
         control.currentItem = item
@@ -111,7 +119,7 @@ Maui.Page
         console.log("openinf file:", control.currentPath)
         if(Maui.FM.fileExists(  control.currentPath))
         {
-            currentView = views.viewer
+            swipeView.currentIndex = views.viewer
             //            _listView.currentItem.page = 0
             if(control.currentPath.endsWith(".pdf"))
                 _viewerLoader.sourceComponent = _pdfComponent
@@ -122,7 +130,6 @@ Maui.Page
             else return;
 
             viewer.open(control.currentPath)
-
         }
     }
 }

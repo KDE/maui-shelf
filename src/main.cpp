@@ -27,9 +27,8 @@
 
 #include "lib.h"
 #include "library.h"
-#include "./src/models/basemodel.h"
 #include "./src/models/library/librarymodel.h"
-#include "./src/models/cloud/cloud.h"
+//#include "./src/models/cloud/cloud.h"
 
 int main(int argc, char *argv[])
 {
@@ -57,12 +56,8 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<PdfDocument>("PDF", 1, 0, "Document");
     qmlRegisterType<EpubReader>("EPUB", 1, 0, "Document");
-
-    qmlRegisterUncreatableType<BaseList>("BaseList", 1, 0, "BaseList", QStringLiteral("BaseList should not be created in QML"));
-
-    qmlRegisterType<BaseModel>("LibraryModel", 1, 0, "LibraryModel");
     qmlRegisterType<LibraryModel>("LibraryList", 1, 0, "LibraryList");
-    qmlRegisterType<Cloud>("CloudList", 1, 0, "CloudList");
+//    qmlRegisterType<Cloud>("CloudList", 1, 0, "CloudList");
 
 
 #ifdef STATIC_KIRIGAMI
