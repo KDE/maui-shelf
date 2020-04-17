@@ -34,6 +34,8 @@ Maui.Page
         }
     }
 
+    floatingHeader: true
+    autoHideHeader: true
     headBar.leftContent: Maui.ToolActions
     {
         autoExclusive: false
