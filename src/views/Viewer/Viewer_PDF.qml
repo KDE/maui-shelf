@@ -14,16 +14,13 @@ Maui.Page
 
     property bool fitWidth: false
     property int currentPage : _listView.currentIndex
-    property bool doodle: false
     headBar.visible: false
 
     padding: 0
 
     MauiLab.Doodle
     {
-        anchors.fill: parent
-        visible: control.doodle
-        z: parent.z + 99999
+        id: doodle
         sourceItem: _listView.currentItem
     }
 
@@ -81,8 +78,7 @@ Maui.Page
         ToolButton
         {
             icon.name: "tool_pen"
-            onClicked: control.doodle =!control.doodle
-            checked: control.doodle
+            onClicked: doodle.open()
         },
 
         ToolButton
