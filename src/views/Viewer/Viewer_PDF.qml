@@ -1,8 +1,9 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.2
+import QtQuick 2.13
+import QtQuick.Controls 2.13
 import QtQuick.Layouts 1.3
 
 import org.kde.mauikit 1.0 as Maui
+import org.kde.mauikit 1.1 as MauiLab
 import org.kde.kirigami 2.7 as Kirigami
 
 import PDF 1.0 as PDF
@@ -13,10 +14,18 @@ Maui.Page
 
     property bool fitWidth: false
     property int currentPage : _listView.currentIndex
-
+    property bool doodle: false
     headBar.visible: false
 
     padding: 0
+
+    MauiLab.Doodle
+    {
+        anchors.fill: parent
+        visible: control.doodle
+        z: parent.z + 99999
+        sourceItem: _listView.currentItem
+    }
 
     footBar.middleContent: [
         ToolButton
@@ -26,7 +35,7 @@ Maui.Page
             onClicked:
             {
                 if( _listView.currentIndex > 0)
-                _listView.currentIndex = _listView.currentIndex - 1
+                    _listView.currentIndex = _listView.currentIndex - 1
             }
         },
 
@@ -49,7 +58,7 @@ Maui.Page
             onClicked:
             {
                 if( _listView.currentIndex +1 < poppler.pages)
-                _listView.currentIndex = _listView.currentIndex + 1
+                    _listView.currentIndex = _listView.currentIndex + 1
             }
         }
     ]
@@ -71,13 +80,20 @@ Maui.Page
     footBar.rightContent: [
         ToolButton
         {
+            icon.name: "tool_pen"
+            onClicked: control.doodle =!control.doodle
+            checked: control.doodle
+        },
+
+        ToolButton
+        {
             icon.name: "view-right-new"
             checkable: true
             checked:  _listView.orientation === ListView.Horizontal
             onClicked:
             {
                 //                _listView.orientation = checked ? ListView.Horizontal :  ListView.Vertical
-              _listView.orientation = _listView.orientation === ListView.Horizontal ? ListView.Vertical : ListView.Horizontal
+                _listView.orientation = _listView.orientation === ListView.Horizontal ? ListView.Vertical : ListView.Horizontal
             }
         }
     ]
