@@ -16,7 +16,6 @@ Maui.ApplicationWindow
 {
     id: root
     title: viewerView.title
-    Maui.App.description: qsTr("Library is a documents viewer and collection manager.\nLibrary allows you to browse your local and cloud collection, and also allows you to download new content from the integrated store.")
     Maui.App.iconName: "qrc:/assets/library.svg"
 
     property bool selectionMode: false

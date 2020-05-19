@@ -11,24 +11,27 @@
 
 namespace LIB
 {
-const QString AppName = "Library";
-const QString AppVersion = "1.0.0";
-const QString AppComment = "Documents collection manager";
+inline const static QString AppName = "Library";
+inline const static QString AppVersion = "1.0.0";
+inline const static QString AppComment = "Documents collection manager";
+inline const static QString orgName = QStringLiteral("Maui");
+inline const static QString orgDomain = QStringLiteral("org.maui.pix");
+
 const QString DBName = "collection.db";
 const QString CollectionDBPath = FMH::DataPath+"/Library/";
 
 enum class TABLE : uint8_t
 {
-    SOURCES,
-    DOCUMENTS,
-    BOOKMARKS
+	SOURCES,
+	DOCUMENTS,
+	BOOKMARKS
 };
 
 static const QMap<TABLE,QString> TABLEMAP =
 {
-    {TABLE::SOURCES,"sources"},
-    {TABLE::DOCUMENTS,"documents"},
-    {TABLE::BOOKMARKS,"bookmarks"},
+	{TABLE::SOURCES,"sources"},
+	{TABLE::DOCUMENTS,"documents"},
+	{TABLE::BOOKMARKS,"bookmarks"},
 };
 
 }
