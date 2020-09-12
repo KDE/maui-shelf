@@ -33,6 +33,8 @@
 #include "./src/models/library/librarymodel.h"
 //#include "./src/models/cloud/cloud.h"
 
+#define LIBRARY_URI "org.maui.library"
+
 int main(int argc, char *argv[])
 {
 	QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -48,23 +50,17 @@ int main(int argc, char *argv[])
 	app.setApplicationVersion(LIB::AppVersion);
 	app.setApplicationDisplayName(LIB::AppName);
 	app.setOrganizationName(LIB::orgName);
-	app.setOrganizationDomain(LIB::orgDomain);
+    app.setOrganizationDomain(LIBRARY_URI);
 	app.setWindowIcon(QIcon(":/assets/library.svg"));
 	MauiApp::instance()->setHandleAccounts(false); //for now index can not handle cloud accounts
 	MauiApp::instance()->setCredits ({QVariantMap({{"name", "Camilo Higuita"}, {"email", "milo.h@aol.com"}, {"year", "2019-2020"}})});
 	MauiApp::instance()->setDescription ("Library is a documents viewer and collection manager.\nLibrary allows you to browse your local and cloud collection, and also allows you to download new content from the integrated store.");
 
-	//    Library library;
-
-	QQmlApplicationEngine engine;
-
-	auto context = engine.rootContext();
-	//    context->setContextProperty("library", &library);
-
-
+    //    Library library;
+    QQmlApplicationEngine engine;
 	qmlRegisterType<PdfDocument>("PDF", 1, 0, "Document");
 	qmlRegisterType<EpubReader>("EPUB", 1, 0, "Document");
-	qmlRegisterType<LibraryModel>("LibraryList", 1, 0, "LibraryList");
+    qmlRegisterType<LibraryModel>(LIBRARY_URI, 1, 0, "LibraryList");
 //    qmlRegisterType<Cloud>("CloudList", 1, 0, "CloudList");
 
 

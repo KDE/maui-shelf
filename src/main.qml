@@ -6,7 +6,7 @@ import org.kde.mauikit 1.1 as MauiLab
 
 import org.kde.kirigami 2.7 as Kirigami
 
-import StoreList 1.0
+//import StoreList 1.0
 
 import "views/library/"
 import "views/Viewer/"

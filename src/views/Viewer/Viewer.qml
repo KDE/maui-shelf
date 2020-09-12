@@ -115,7 +115,7 @@ Maui.Page
     function open(item)
     {
         control.currentItem = item
-        control.currentPath = currentItem.url
+        control.currentPath = currentItem.path
         control.currentPathFav = currentItem.fav == "1"
 
         console.log("openinf file:", control.currentPath)
