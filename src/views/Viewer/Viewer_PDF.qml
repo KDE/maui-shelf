@@ -146,7 +146,7 @@ Maui.Page
                 color: "transparent"
             }
 
-            Image
+            Maui.ImageViewer
             {
                 id: pageImg
                 asynchronous: true
@@ -160,8 +160,9 @@ Maui.Page
                 //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index;
                 source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index
                 //                                source: "image://poppler/page/" + _listView.currentPage;
-                sourceSize.width: delegate.width
+//                sourceSize.width: delegate.width
                 //                sourceSize.height: delegate.height
+                imageWidth:  delegate.width
                 fillMode: Image.PreserveAspectFit
 
                 //                onSourceChanged: console.log(source)
