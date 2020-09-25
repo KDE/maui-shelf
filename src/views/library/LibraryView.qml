@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.3
 
 import org.kde.mauikit 1.2 as Maui
 
-import org.maui.library 1.0
+import org.maui.shelf 1.0
 
 Maui.AltBrowser
 {

@@ -2,9 +2,8 @@ QT += qml
 QT += quick
 QT += quickcontrols2
 QT += sql
-QT += widgets
 
-TARGET = library
+TARGET = shelf
 TEMPLATE = app
 
 CONFIG += ordered
@@ -52,25 +51,15 @@ INCLUDEPATH  += $$PWD/src/PDFViewer/
 
 SOURCES += \
     $$PWD/src/main.cpp \
-    $$PWD/src/db/db.cpp \
-    $$PWD/src/db/dbactions.cpp \
     $$PWD/src/models/library/librarymodel.cpp \
-    $$PWD/src/models/cloud/cloud.cpp \
-    $$PWD/src/models/basemodel.cpp \
-    $$PWD/src/models/baselist.cpp \
-    $$PWD/src/library.cpp \
+#    $$PWD/src/models/cloud/cloud.cpp \
+    $$PWD/src/library.cpp
 
 
 HEADERS += \
-    $$PWD/src/lib.h \
-    $$PWD/src/db/db.h \
-    $$PWD/src/db/dbactions.h \
-    $$PWD/src/db/fileloader.h \
-    $$PWD/src/models/basemodel.h \
-    $$PWD/src/models/baselist.h \
     $$PWD/src/models/library/librarymodel.h \
-    $$PWD/src/models/cloud/cloud.h \
-    $$PWD/src/library.h \
+#    $$PWD/src/models/cloud/cloud.h \
+    $$PWD/src/library.h
 
 RESOURCES += $$PWD/src/qml.qrc \
     $$PWD/src/lib_assets.qrc

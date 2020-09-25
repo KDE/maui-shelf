@@ -28,12 +28,14 @@
 #include "pdfdocument.h"
 #include "epubreader.h"
 
-#include "lib.h"
 #include "library.h"
 #include "./src/models/library/librarymodel.h"
 //#include "./src/models/cloud/cloud.h"
 
-#define LIBRARY_URI "org.maui.library"
+#include <KLocalizedContext>
+#include <KLocalizedString>
+
+#define SHELF_URI "org.maui.shelf"
 
 int main(int argc, char *argv[])
 {
@@ -46,21 +48,35 @@ int main(int argc, char *argv[])
 	QApplication app(argc, argv);
 #endif
 
-	app.setApplicationName(LIB::AppName);
-	app.setApplicationVersion(LIB::AppVersion);
-	app.setApplicationDisplayName(LIB::AppName);
-	app.setOrganizationName(LIB::orgName);
-    app.setOrganizationDomain(LIBRARY_URI);
+    app.setOrganizationName("Maui");
 	app.setWindowIcon(QIcon(":/assets/library.svg"));
-	MauiApp::instance()->setHandleAccounts(false); //for now index can not handle cloud accounts
-	MauiApp::instance()->setCredits ({QVariantMap({{"name", "Camilo Higuita"}, {"email", "milo.h@aol.com"}, {"year", "2019-2020"}})});
-	MauiApp::instance()->setDescription ("Library is a documents viewer and collection manager.\nLibrary allows you to browse your local and cloud collection, and also allows you to download new content from the integrated store.");
+
+    MauiApp::instance ()->setIconName ("qrc:/assets/library.svg");
+    MauiApp::instance ()->setHandleAccounts (false);
+
+    KLocalizedString::setApplicationDomain("shelf");
+    KAboutData about(QStringLiteral("shelf"), i18n("Shelf"), "1.0.0", i18n("Shelf is a documents viewer and collection manager.\nLibrary allows you to browse your local and cloud collection, and also allows you to download new content from the integrated store."),
+                     KAboutLicense::LGPL_V3, i18n("© 2019-2020 Nitrux Development Team"));
+    about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
+    about.setHomepage("https://mauikit.org");
+    about.setProductName("maui/shelf");
+    about.setBugAddress("https://invent.kde.org/maui/shelf/-/issues");
+    about.setOrganizationDomain(SHELF_URI);
+    about.setProgramLogo(app.windowIcon());
+
+    KAboutData::setApplicationData(about);
+
+    QCommandLineParser parser;
+    parser.process(app);
+
+    about.setupCommandLine(&parser);
+    about.processCommandLine(&parser);
 
     //    Library library;
     QQmlApplicationEngine engine;
 	qmlRegisterType<PdfDocument>("PDF", 1, 0, "Document");
 	qmlRegisterType<EpubReader>("EPUB", 1, 0, "Document");
-    qmlRegisterType<LibraryModel>(LIBRARY_URI, 1, 0, "LibraryList");
+    qmlRegisterType<LibraryModel>(SHELF_URI, 1, 0, "LibraryList");
 //    qmlRegisterType<Cloud>("CloudList", 1, 0, "CloudList");
 
 
