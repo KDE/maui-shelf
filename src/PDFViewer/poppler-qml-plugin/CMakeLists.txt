@@ -8,10 +8,10 @@ find_package(Qt5Xml)
 find_package(Qt5Concurrent)
 
 include_directories(
-	${CMAKE_CURRENT_SOURCE_DIR}
-	${CMAKE_CURRENT_BINARY_DIR}
-	${Qt5Quick_PRIVATE_INCLUDE_DIRS}
-	${Qt5Qml_PRIVATE_INCLUDE_DIRS}
+        ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_BINARY_DIR}
+        ${Qt5Quick_PRIVATE_INCLUDE_DIRS}
+        ${Qt5Qml_PRIVATE_INCLUDE_DIRS}
 )
 
 #add the sources to compile
