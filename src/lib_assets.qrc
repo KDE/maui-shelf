@@ -1,5 +1,8 @@
 <RCC>
     <qresource prefix="/">
         <file>assets/library.svg</file>
+        <file>assets/draw-watercolor.svg</file>
+        <file>assets/document-open.svg</file>
+        <file>assets/document-new.svg</file>
     </qresource>
 </RCC>

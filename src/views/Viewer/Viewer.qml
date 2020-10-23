@@ -25,13 +25,22 @@ Maui.Page
         title: qsTr("New Bookmark...")
         rejectButton.visible: false
         textEntry.text: "Bookmark #"
-       message: qsTr("Save new bookmark as")
-       acceptButton.text: qsTr("Save")
+        message: qsTr("Save new bookmark as")
+        acceptButton.text: qsTr("Save")
         onAccepted:
         {
             console.log(viewer.currentPage)
             libraryView.list.bookmark(libraryView.currentIndex, viewer.currentPage)
         }
+    }
+
+    Maui.Holder
+    {
+        visible: !viewer
+        emoji: "qrc:/assets/draw-watercolor.svg"
+        title : i18n("Nothing here")
+        body: i18n("Drop or open a document to view.")
+        emojiSize: Maui.Style.iconSizes.huge
     }
 
     floatingHeader: true
@@ -49,7 +58,7 @@ Maui.Page
             onTriggered:
             {
                 if(libraryView.list.fav(libraryView.currentIndex, !currentPathFav))
-                currentPathFav= !currentPathFav
+                    currentPathFav= !currentPathFav
             }
         }
 

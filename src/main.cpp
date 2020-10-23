@@ -35,6 +35,8 @@
 #include <KLocalizedContext>
 #include <KLocalizedString>
 
+#include "../shelf_version.h"
+
 #define SHELF_URI "org.maui.shelf"
 
 int main(int argc, char *argv[])
@@ -55,7 +57,7 @@ int main(int argc, char *argv[])
 	MauiApp::instance ()->setHandleAccounts (false);
 
 	KLocalizedString::setApplicationDomain("shelf");
-	KAboutData about(QStringLiteral("shelf"), i18n("Shelf"), "1.0.0", i18n("Shelf is a documents viewer and collection manager.\nLibrary allows you to browse your local and cloud collection, and also allows you to download new content from the integrated store."),
+    KAboutData about(QStringLiteral("shelf"), i18n("Shelf"), SHELF_VERSION_STRING, i18n("Shelf lets you browse and view your documents."),
 					 KAboutLicense::LGPL_V3, i18n("© 2019-2020 Nitrux Development Team"));
 	about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
 	about.setHomepage("https://mauikit.org");

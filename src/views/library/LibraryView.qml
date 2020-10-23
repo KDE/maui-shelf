@@ -34,6 +34,11 @@ Maui.AltBrowser
     model: Maui.BaseModel
     {
         id: _libraryModel
+        sort: "modified"
+        sortOrder: Qt.DescendingOrder
+        recursiveFilteringEnabled: true
+        sortCaseSensitivity: Qt.CaseInsensitive
+        filterCaseSensitivity: Qt.CaseInsensitive
         list: LibraryList
         {
             id: _libraryList
@@ -46,6 +51,7 @@ Maui.AltBrowser
         autoExclusive: true
         expanded: isWide
         currentIndex : control.viewType === Maui.AltBrowser.ViewType.List ? 0 : 1
+        cyclic: true
 
         Action
         {
@@ -62,44 +68,55 @@ Maui.AltBrowser
         }
     }
     headBar.rightContent:[
-        ToolButton
+        Maui.ToolButtonMenu
         {
             icon.name: "view-sort"
-            onClicked: sortMenu.popup()
-
-            Menu
+            MenuItem
             {
-                id: sortMenu
+                text: qsTr("Title")
+                checkable: true
+                checked: _libraryModel.sort === "label"
+                onTriggered: _libraryModel.sort = "label"
+            }
 
-                MenuItem
-                {
-                    text: qsTr("Title")
-                    checkable: true
-                }
+            MenuItem
+            {
+                text: qsTr("Date")
+                checkable: true
+                checked: _libraryModel.sort === "modified"
+                onTriggered: _libraryModel.sort = "modified"
+            }
 
-                MenuItem
-                {
-                    text: qsTr("Add date")
-                    checkable: true
-                }
+//            MenuItem
+//            {
+//                text: qsTr("Format")
+//                checkable: true
+//                checked: _libraryModel.sort === "mime"
+//                onTriggered: _libraryModel.sort = "mime"
+//            }
 
-                MenuItem
-                {
-                    text: qsTr("Creation date")
-                    checkable: true
-                }
+            MenuItem
+            {
+                text: qsTr("Size")
+                checkable: true
+                checked: _libraryModel.sort === "size"
+                onTriggered: _libraryModel.sort = "size"
+            }
 
-                MenuItem
-                {
-                    text: qsTr("Format")
-                    checkable: true
-                }
+            MenuSeparator {}
 
-                MenuItem
-                {
-                    text: qsTr("Size")
-                    checkable: true
-                }
+            MenuItem
+            {
+                text: i18n("Ascending")
+                checked: _libraryModel.sortOrder === Qt.AscendingOrder
+                onTriggered: _libraryModel.sortOrder = Qt.AscendingOrder
+            }
+
+            MenuItem
+            {
+                text: i18n("Descending")
+                checked: _libraryModel.sortOrder === Qt.DescendingOrder
+                onTriggered: _libraryModel.sortOrder = Qt.DescendingOrder
             }
         }
     ]
