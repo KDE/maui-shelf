@@ -11,7 +11,7 @@ Maui.Page
     property string currentPath : ""
     property bool currentPathFav : false
     property var currentItem : ({})
-    property  alias currentViewer: _viewerLoader.item
+    property alias currentViewer: _viewerLoader.item
 
     title: currentViewer ? currentViewer.title : ""
     padding: 0

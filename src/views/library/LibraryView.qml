@@ -10,7 +10,7 @@ Maui.AltBrowser
 {
     id: control
     enableLassoSelection: true
-
+//    selectionMode: root.selectionMode
     gridView.itemSize: 180
     gridView.topMargin: Maui.Style.contentMargins
     listView.topMargin: Maui.Style.contentMargins
@@ -168,7 +168,7 @@ Maui.AltBrowser
             iconSizeHint: height * 0.8
             imageHeight: iconSizeHint
             fillMode: Image.PreserveAspectFit
-            checkable: selectionMode
+            checkable: root.selectionMode
             checked: _selectionbar.contains(model.path)
             onToggled: _selectionbar.append(model.path, control.model.get(index))
         }
@@ -251,7 +251,7 @@ listDelegate: Maui.ItemDelegate
 
         iconSource: model.icon
         iconSizeHint: Maui.Style.iconSizes.big
-        checkable: selectionMode
+        checkable: root.selectionMode
         checked: _selectionbar.contains(model.path)
         onToggled: _selectionbar.append(model.path, control.model.get(index))
         isCurrentItem: _listDelegate.isCurrentItem

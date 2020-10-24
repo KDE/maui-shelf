@@ -16,7 +16,11 @@ Maui.ApplicationWindow
 {
     id: root
     title: viewerView.title
-    Maui.App.iconName: "qrc:/assets/library.svg"
+    flickable: swipeView.currentItem.flickable
+
+//    floatingHeader:
+    autoHideHeader: swipeView.currentIndex === views.viewer && swipeView.currentItem.currentViewer
+    floatingFooter: true
 
     property bool selectionMode: false
     readonly property var views :({
@@ -37,16 +41,10 @@ Maui.ApplicationWindow
 //        onPressAndHold: currentBrowser.selectAll()
     }
 
-    ColumnLayout
-    {
-        id: mainPage
-        anchors.fill: parent
-
-        MauiLab.AppViews
+    MauiLab.AppViews
         {
             id: swipeView
-            Layout.fillHeight: true
-            Layout.fillWidth: true
+           anchors.fill: parent
 
             Viewer
             {
@@ -61,6 +59,7 @@ Maui.ApplicationWindow
                 MauiLab.AppView.iconName: "view-books"
                 MauiLab.AppView.title: qsTr("Library")
             }
+        }
 
 //            Loader
 //            {
@@ -76,7 +75,7 @@ Maui.ApplicationWindow
 //            {
 //                id: searchView
 //            }
-        }
+
 
         /*** Components ***/
 
@@ -111,40 +110,44 @@ Maui.ApplicationWindow
 //            }
 //        }
 
-        MauiLab.SelectionBar
+
+
+
+    footer: MauiLab.SelectionBar
+    {
+        id: _selectionbar
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
+        padding: Maui.Style.space.big
+        maxListHeight: swipeView.height - Maui.Style.space.medium
+
+        onItemClicked : console.log(index)
+
+        onExitClicked: clear()
+
+        Action
         {
-            id: _selectionbar
-            Layout.alignment: Qt.AlignHCenter
-            Layout.preferredWidth: Math.min(parent.width, implicitWidth)
-            Layout.margins: Maui.Style.space.medium
-            onItemClicked : console.log(index)
-
-            onExitClicked: clear()
-
-            Action
+            text: qsTr("Open")
+            icon.name: "document-open"
+            onTriggered:
             {
-                text: qsTr("Open")
-                icon.name: "document-open"
-                onTriggered:
-                {
-                    for(var item of _selectionbar.items)
-                        viewerView.open(item)
+                for(var item of _selectionbar.items)
+                    viewerView.open(item)
 
-                    _selectionbar.clear()
-                }
+                _selectionbar.clear()
             }
+        }
 
-            Action
-            {
-                text: qsTr("Share")
-                icon.name: "document-share"
-            }
+        Action
+        {
+            text: qsTr("Share")
+            icon.name: "document-share"
+        }
 
-            Action
-            {
-                text: qsTr("Export")
-                icon.name: "document-export"
-            }
+        Action
+        {
+            text: qsTr("Export")
+            icon.name: "document-export"
         }
     }
 
