@@ -55,14 +55,14 @@ Maui.AltBrowser
 
         Action
         {
-            text: qsTr("List")
+            text: i18n("List")
             icon.name: "view-list-details"
             onTriggered: control.viewType = Maui.AltBrowser.ViewType.List
         }
 
         Action
         {
-            text: qsTr("Grid")
+            text: i18n("Grid")
             icon.name: "view-list-icons"
             onTriggered: control.viewType= Maui.AltBrowser.ViewType.Grid
         }
@@ -73,7 +73,7 @@ Maui.AltBrowser
             icon.name: "view-sort"
             MenuItem
             {
-                text: qsTr("Title")
+                text: i18n("Title")
                 checkable: true
                 checked: _libraryModel.sort === "label"
                 onTriggered: _libraryModel.sort = "label"
@@ -81,7 +81,7 @@ Maui.AltBrowser
 
             MenuItem
             {
-                text: qsTr("Date")
+                text: i18n("Date")
                 checkable: true
                 checked: _libraryModel.sort === "modified"
                 onTriggered: _libraryModel.sort = "modified"
@@ -89,7 +89,7 @@ Maui.AltBrowser
 
 //            MenuItem
 //            {
-//                text: qsTr("Format")
+//                text: i18n("Format")
 //                checkable: true
 //                checked: _libraryModel.sort === "mime"
 //                onTriggered: _libraryModel.sort = "mime"
@@ -97,7 +97,7 @@ Maui.AltBrowser
 
             MenuItem
             {
-                text: qsTr("Size")
+                text: i18n("Size")
                 checkable: true
                 checked: _libraryModel.sort === "size"
                 onTriggered: _libraryModel.sort = "size"
@@ -124,7 +124,7 @@ Maui.AltBrowser
     headBar.middleContent: Maui.TextField
     {
         Layout.fillWidth: true
-        placeholderText: qsTr("Filter...")
+        placeholderText: i18n("Filter...")
         onAccepted: control.model.filter = text
         onCleared:  control.model.filter = text
     }

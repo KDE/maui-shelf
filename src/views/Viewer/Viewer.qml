@@ -22,11 +22,11 @@ Maui.Page
     {
         id: _newBookmarkDialog
 
-        title: qsTr("New Bookmark...")
+        title: i18n("New Bookmark...")
         rejectButton.visible: false
         textEntry.text: "Bookmark #"
-        message: qsTr("Save new bookmark as")
-        acceptButton.text: qsTr("Save")
+        message: i18n("Save new bookmark as")
+        acceptButton.text: i18n("Save")
         onAccepted:
         {
             console.log(viewer.currentPage)

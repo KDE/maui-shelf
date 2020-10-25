@@ -18,7 +18,7 @@ Maui.ApplicationWindow
     title: viewerView.title
     flickable: swipeView.currentItem.flickable
 
-//    floatingHeader:
+    altHeader: Kirigami.Settings.isMobile
     autoHideHeader: swipeView.currentIndex === views.viewer && swipeView.currentItem.currentViewer
     floatingFooter: true
 
@@ -50,14 +50,14 @@ Maui.ApplicationWindow
             {
                 id: viewerView
                MauiLab.AppView.iconName: "document-preview-archive"
-                MauiLab.AppView.title: qsTr("Viewer")
+                MauiLab.AppView.title: i18n("Viewer")
             }
 
             LibraryView
             {
                 id: libraryView
                 MauiLab.AppView.iconName: "view-books"
-                MauiLab.AppView.title: qsTr("Library")
+                MauiLab.AppView.title: i18n("Library")
             }
         }
 
@@ -127,7 +127,7 @@ Maui.ApplicationWindow
 
         Action
         {
-            text: qsTr("Open")
+            text: i18n("Open")
             icon.name: "document-open"
             onTriggered:
             {
@@ -140,13 +140,13 @@ Maui.ApplicationWindow
 
         Action
         {
-            text: qsTr("Share")
+            text: i18n("Share")
             icon.name: "document-share"
         }
 
         Action
         {
-            text: qsTr("Export")
+            text: i18n("Export")
             icon.name: "document-export"
         }
     }

@@ -3,7 +3,7 @@
 #ifdef STATIC_MAUIKIT
 #include "tagging.h"
 #include "fmh.h"
-#include "fileloader.h
+#include "fileloader.h"
 #else
 #include <MauiKit/tagging.h>
 #include <MauiKit/fmh.h>
@@ -15,7 +15,7 @@ LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
   , m_fileLoader(new FMH::FileLoader())
 {
     qDebug()<< "CREATING GALLERY LIST";
-
+    qRegisterMetaType<LibraryModel*>("const LibraryModel*");
     connect(m_fileLoader, &FMH::FileLoader::itemsReady,[this](FMH::MODEL_LIST items)
     {
         emit this->preListChanged();

@@ -138,8 +138,8 @@ Maui.Page
         delegate: ItemDelegate
         {
             id: delegate
-            width: _listView.width
-            height: control.fitWidth ? pageImg.implicitHeight : _listView.height
+            width: ListView.view.width
+            height: ListView.view.height
 
             background: Rectangle
             {
@@ -162,7 +162,7 @@ Maui.Page
                 //                                source: "image://poppler/page/" + _listView.currentPage;
 //                sourceSize.width: delegate.width
                 //                sourceSize.height: delegate.height
-                imageWidth:  delegate.width
+                imageWidth: 1000
                 fillMode: Image.PreserveAspectFit
 
                 //                onSourceChanged: console.log(source)

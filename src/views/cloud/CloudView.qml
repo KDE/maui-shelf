@@ -27,31 +27,31 @@ Maui.Page
 
                 MenuItem
                 {
-                    text: qsTr("Title")
+                    text: i18n("Title")
                     checkable: true
                 }
 
                 MenuItem
                 {
-                    text: qsTr("Add date")
+                    text: i18n("Add date")
                     checkable: true
                 }
 
                 MenuItem
                 {
-                    text: qsTr("Creation date")
+                    text: i18n("Creation date")
                     checkable: true
                 }
 
                 MenuItem
                 {
-                    text: qsTr("Format")
+                    text: i18n("Format")
                     checkable: true
                  }
 
                 MenuItem
                 {
-                    text: qsTr("Size")
+                    text: i18n("Size")
                     checkable: true
                 }
             }
