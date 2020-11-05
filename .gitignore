@@ -4,6 +4,7 @@ mauikit/
 3rdparty/breeze-icons/
 3rdparty/openssl/
 .directory
+src/PDFViewer/poppler/
 
 *.kdev4
 *.*~
