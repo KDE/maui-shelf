@@ -1,10 +1,9 @@
-import QtQuick 2.13
-import QtQuick.Controls 2.13
+import QtQuick 2.14
+import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
-import org.kde.mauikit 1.0 as Maui
-import org.kde.mauikit 1.1 as MauiLab
-import org.kde.kirigami 2.7 as Kirigami
+import org.kde.mauikit 1.2 as Maui
+import org.kde.kirigami 2.9 as Kirigami
 
 import PDF 1.0 as PDF
 
@@ -18,7 +17,7 @@ Maui.Page
 
     padding: 0
 
-    MauiLab.Doodle
+    Maui.Doodle
     {
         id: doodle
         sourceItem: _listView.currentItem
@@ -42,7 +41,7 @@ Maui.Page
             Layout.fillHeight: true
 
             color: Kirigami.Theme.textColor
-            text:  _listView.currentIndex +" / "+ poppler.pages
+            text:  _listView.currentIndex + 1 +" / "+ poppler.pages
             font.bold: false
             font.weight: Font.Thin
             font.pointSize: Maui.Style.fontSizes.medium
@@ -94,7 +93,6 @@ Maui.Page
         }
     ]
 
-
     PDF.Document
     {
         id: poppler
@@ -114,62 +112,73 @@ Maui.Page
         }
     }
 
-    ListView
+    ScrollView
     {
-        id: _listView
         anchors.fill : parent
-        model: poppler
-        clip: true
-        focus: true
-        orientation: ListView.Vertical
-        //        interactive: false
-        //        highlightFollowsCurrentItem: true
-        //        highlightMoveDuration: 0
-        snapMode: control.fitWidth ? ListView.NoSnap : ListView.SnapOneItem
-        spacing: Maui.Style.space.big
-        //        cacheBuffer: control.fitWidth ? poppler.providersNumber *  : height * poppler.providersNumber
+        ScrollBar.horizontal.policy: ScrollBar.AsNeeded
+        ScrollBar.vertical.policy: ScrollBar.AsNeeded
+        ScrollBar.vertical.snapMode: ScrollBar.SnapAlways
+        ScrollBar.horizontal.snapMode: ScrollBar.SnapAlways
+//        ScrollBar.vertical.stepSize: _listView.height
 
-        onMovementEnded:
+        contentWidth: _listView.contentWidth
+        contentHeight: _listView.contentHeight
+
+        ListView
         {
-            var index = indexAt(contentX, contentY)
-            currentIndex = index
-        }
+            id: _listView
+            model: poppler
+            clip: true
+            focus: true
+            orientation: ListView.Vertical
+            interactive: Maui.Handy.isTouch
+            highlightFollowsCurrentItem: true
+            snapMode:  ListView.SnapOneItem
+            spacing: Maui.Style.space.big
+            //        cacheBuffer: control.fitWidth ? poppler.providersNumber *  : height * poppler.providersNumber
 
-        delegate: ItemDelegate
-        {
-            id: delegate
-            width: ListView.view.width
-            height: ListView.view.height
-
-            background: Rectangle
+            onMovementEnded:
             {
-                color: "transparent"
+                var index = indexAt(contentX, contentY)
+                currentIndex = index
             }
 
-            Maui.ImageViewer
+            delegate: ItemDelegate
             {
-                id: pageImg
-                asynchronous: true
+                id: delegate
+                width: ListView.view.width
+                height: ListView.view.height
 
-                anchors.centerIn: parent
-                height: fitWidth ? undefined : parent.height
-                width:  parent.width
+                background: Rectangle
+                {
+                    color: "transparent"
+                }
 
-                cache: false
-                //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + _listView.currentPage;
-                //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index;
-                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index
-                //                                source: "image://poppler/page/" + _listView.currentPage;
-//                sourceSize.width: delegate.width
-                //                sourceSize.height: delegate.height
-                imageWidth: 1000
-                fillMode: Image.PreserveAspectFit
+                Maui.ImageViewer
+                {
+                    id: pageImg
+                    asynchronous: true
 
-                //                onSourceChanged: console.log(source)
+                    anchors.centerIn: parent
+                    height: fitWidth ? undefined : parent.height
+                    width:  parent.width
+
+                    cache: false
+                    //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + _listView.currentPage;
+                    //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index;
+                    source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index
+                    //                                source: "image://poppler/page/" + _listView.currentPage;
+                    //                sourceSize.width: delegate.width
+                    //                sourceSize.height: delegate.height
+                    imageWidth: 1000
+                    fillMode: Image.PreserveAspectFit
+
+                    //                onSourceChanged: console.log(source)
+                }
             }
-        }
 
-        //         ScrollBar.vertical: ScrollBar {}
+            //         ScrollBar.vertical: ScrollBar {}
+        }
     }
     function open(filePath)
     {

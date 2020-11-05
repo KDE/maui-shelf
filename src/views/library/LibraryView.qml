@@ -12,9 +12,6 @@ Maui.AltBrowser
     enableLassoSelection: true
 //    selectionMode: root.selectionMode
     gridView.itemSize: 180
-    gridView.topMargin: Maui.Style.contentMargins
-    listView.topMargin: Maui.Style.contentMargins
-    listView.spacing: Maui.Style.space.medium
 
     property alias list : _libraryList
 
@@ -86,14 +83,6 @@ Maui.AltBrowser
                 checked: _libraryModel.sort === "modified"
                 onTriggered: _libraryModel.sort = "modified"
             }
-
-//            MenuItem
-//            {
-//                text: i18n("Format")
-//                checkable: true
-//                checked: _libraryModel.sort === "mime"
-//                onTriggered: _libraryModel.sort = "mime"
-//            }
 
             MenuItem
             {
@@ -229,10 +218,9 @@ listDelegate: Maui.ItemDelegate
     property alias checked :_listTemplate.checked
     isCurrentItem: ListView.isCurrentItem || checked
 
-    height: Maui.Style.rowHeight * 2
-    width: parent.width
-    leftPadding: Maui.Style.space.small
-    rightPadding: Maui.Style.space.small
+    height: Math.floor(Maui.Style.rowHeight * 1.6)
+    width: ListView.view.width
+
     draggable: true
     Drag.keys: ["text/uri-list"]
     Drag.mimeData: Drag.active ?
