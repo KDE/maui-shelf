@@ -33,10 +33,8 @@
 //#include "./src/models/cloud/cloud.h"
 
 #if defined Q_OS_MACOS || defined Q_OS_WIN
-#include <KF5/KI18n/KLocalizedContext>
 #include <KF5/KI18n/KLocalizedString>
 #else
-#include <KI18n/KLocalizedContext>
 #include <KI18n/KLocalizedString>
 #endif
 
@@ -48,27 +46,27 @@
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QCoreApplication::setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
-    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
-    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager, true);
+	QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+	QCoreApplication::setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
+	QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+	QCoreApplication::setAttribute(Qt::AA_DisableSessionManager, true);
 
 #ifdef Q_OS_ANDROID
 	QGuiApplication app(argc, argv);
-    if (!MAUIAndroid::checkRunTimePermissions({"android.permission.WRITE_EXTERNAL_STORAGE"}))
-        return -1;
+	if (!MAUIAndroid::checkRunTimePermissions({"android.permission.WRITE_EXTERNAL_STORAGE"}))
+		return -1;
 #else
 	QApplication app(argc, argv);
 #endif
 
 	app.setOrganizationName("Maui");
-	app.setWindowIcon(QIcon(":/assets/library.svg"));
+	app.setWindowIcon(QIcon(":/assets/shelf.svg"));
 
-	MauiApp::instance ()->setIconName ("qrc:/assets/library.svg");
+	MauiApp::instance ()->setIconName ("qrc:/assets/shelf.svg");
 	MauiApp::instance ()->setHandleAccounts (false);
 
 	KLocalizedString::setApplicationDomain("shelf");
-    KAboutData about(QStringLiteral("shelf"), i18n("Shelf"), SHELF_VERSION_STRING, i18n("Shelf lets you browse and view your documents."),
+	KAboutData about(QStringLiteral("shelf"), i18n("Shelf"), SHELF_VERSION_STRING, i18n("Shelf lets you browse and view your documents."),
 					 KAboutLicense::LGPL_V3, i18n("© 2019-2020 Nitrux Development Team"));
 	about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
 	about.setHomepage("https://mauikit.org");
@@ -87,7 +85,7 @@ int main(int argc, char *argv[])
 
 	//    Library library;
 	QQmlApplicationEngine engine;
-    qmlRegisterType<PdfDocument>("PDF", 1, 0, "Document");
+	qmlRegisterType<PdfDocument>("PDF", 1, 0, "Document");
 //	qmlRegisterType<EpubReader>("EPUB", 1, 0, "Document");
 	qmlRegisterType<LibraryModel>(SHELF_URI, 1, 0, "LibraryList");
 //    qmlRegisterType<Cloud>("CloudList", 1, 0, "CloudList");
@@ -99,8 +97,6 @@ int main(int argc, char *argv[])
 #ifdef STATIC_MAUIKIT
 	MauiKit::getInstance().registerTypes();
 #endif
-
-    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
 
 	engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 	if (engine.rootObjects().isEmpty())

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Shelf
+TryExec=shelf
+Exec=shelf %U
+Terminal=false
+Type=Application
+Categories=Qt;KDE;Graphics;Office;Viewer;
+GenericName=Document Viewer
+StartupNotify=true
+Icon=maui-shelf
+MimeType=application/x-pdf;application/pdf;application/x-gzpdf;application/x-bzpdf;application/x-wwf;
