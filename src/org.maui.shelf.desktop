@@ -1,6 +1,12 @@
 [Desktop Entry]
 Name=Shelf
 Name[ast]=Estante
+Name[ca]=Shelf
+Name[nl]=Shelf
+Name[nn]=Shelf
+Name[pt]=Prateleira
+Name[sk]=Shelf
+Name[sv]=Shelf
 Name[uk]=Shelf
 Name[x-test]=xxShelfxx
 TryExec=shelf
@@ -10,6 +16,12 @@ Type=Application
 Categories=Qt;KDE;Graphics;Office;Viewer;
 GenericName=Document Viewer
 GenericName[ast]=Visor de documentos
+GenericName[ca]=Visor de documents
+GenericName[nl]=Documentenviewer
+GenericName[nn]=Dokumentvisar
+GenericName[pt]=Visualizador de Documentos
+GenericName[sk]=Prehliadač dokumentov
+GenericName[sv]=Dokumentvisare
 GenericName[uk]=Переглядач документів
 GenericName[x-test]=xxDocument Viewerxx
 StartupNotify=true
