@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
 #endif
 
 #ifdef STATIC_MAUIKIT
-	MauiKit::getInstance().registerTypes();
+    MauiKit::getInstance().registerTypes(&engine);
 #endif
 
 	engine.load(QUrl(QStringLiteral("qrc:/main.qml")));

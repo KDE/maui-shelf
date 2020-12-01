@@ -33,7 +33,7 @@ void LibraryModel::refreshCollection()
     this->m_fileLoader->requestPath({/*FMH::DesktopPath,*/ FMH::DownloadsPath, FMH::DocumentsPath, FMH::CloudCachePath}, true, FMH::FILTER_LIST[FMH::FILTER_TYPE::DOCUMENT]);
 }
 
-FMH::MODEL_LIST LibraryModel::items() const
+const FMH::MODEL_LIST &LibraryModel::items() const
 {
     return this->list;
 }

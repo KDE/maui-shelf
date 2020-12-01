@@ -22,7 +22,7 @@ class LibraryModel : public MauiList
 
 public:
     explicit LibraryModel(QObject *parent = nullptr);
-    FMH::MODEL_LIST items() const override;
+    const FMH::MODEL_LIST &items() const override;
 
 private:
     FMH::FileLoader *m_fileLoader;
