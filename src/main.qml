@@ -1,9 +1,8 @@
 import QtQuick 2.13
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.13
-import org.kde.mauikit 1.0 as Maui
-import org.kde.mauikit 1.1 as MauiLab
 
+import org.kde.mauikit 1.3 as Maui
 import org.kde.kirigami 2.7 as Kirigami
 
 //import StoreList 1.0
@@ -24,96 +23,96 @@ Maui.ApplicationWindow
 
     property bool selectionMode: false
     readonly property var views :({
-                             viewer : 0,
-                             library: 1,
-                             cloud: 2,
-                             store: 3,
-                             search: 4
-                         })
+                                      viewer : 0,
+                                      library: 1,
+                                      cloud: 2,
+                                      store: 3,
+                                      search: 4
+                                  })
 
     headBar.rightContent: ToolButton
     {
-//        visible: Maui.Handy.isTouch
+        //        visible: Maui.Handy.isTouch
         icon.name: "item-select"
         checkable: true
         checked: root.selectionMode
         onClicked: root.selectionMode = !root.selectionMode
-//        onPressAndHold: currentBrowser.selectAll()
+        //        onPressAndHold: currentBrowser.selectAll()
     }
 
-    MauiLab.AppViews
+    Maui.AppViews
+    {
+        id: swipeView
+        anchors.fill: parent
+
+        Viewer
         {
-            id: swipeView
-           anchors.fill: parent
-
-            Viewer
-            {
-                id: viewerView
-               MauiLab.AppView.iconName: "document-preview-archive"
-                MauiLab.AppView.title: i18n("Viewer")
-            }
-
-            LibraryView
-            {
-                id: libraryView
-                MauiLab.AppView.iconName: "view-books"
-                MauiLab.AppView.title: i18n("Library")
-            }
+            id: viewerView
+            Maui.AppView.iconName: "document-preview-archive"
+            Maui.AppView.title: i18n("Viewer")
         }
 
-//            Loader
-//            {
-//                id: cloudViewLoader
-//            }
+        LibraryView
+        {
+            id: libraryView
+            Maui.AppView.iconName: "view-books"
+            Maui.AppView.title: i18n("Library")
+        }
+    }
 
-//            Loader
-//            {
-//                id: storeViewLoader
-//            }
+    //            Loader
+    //            {
+    //                id: cloudViewLoader
+    //            }
 
-//            Maui.Page
-//            {
-//                id: searchView
-//            }
+    //            Loader
+    //            {
+    //                id: storeViewLoader
+    //            }
 
-
-        /*** Components ***/
-
-//        Component
-//        {
-//            id: _cloudViewComponent
-//            CloudView
-//            {
-//                anchors.fill : parent
-//            }
-//        }
-
-//        Component
-//        {
-//            id: _storeViewComponent
-
-//            Maui.Store
-//            {
-//                anchors.fill : parent
-//                detailsView: false
-//                list.category: StoreList.EBOOKS
-//                list.provider: StoreList.OPENDESKTOPCC
-//                fitPreviews: true
-
-//                onOpenFile:  viewerView.open(filePath)
-
-//                onFileReady:
-//                {
-//                    viewerView.open("file://"+item.url)
-////                    libraryView.list.insert(item.url)
-//                }
-//            }
-//        }
+    //            Maui.Page
+    //            {
+    //                id: searchView
+    //            }
 
 
+    /*** Components ***/
+
+    //        Component
+    //        {
+    //            id: _cloudViewComponent
+    //            CloudView
+    //            {
+    //                anchors.fill : parent
+    //            }
+    //        }
+
+    //        Component
+    //        {
+    //            id: _storeViewComponent
+
+    //            Maui.Store
+    //            {
+    //                anchors.fill : parent
+    //                detailsView: false
+    //                list.category: StoreList.EBOOKS
+    //                list.provider: StoreList.OPENDESKTOPCC
+    //                fitPreviews: true
+
+    //                onOpenFile:  viewerView.open(filePath)
+
+    //                onFileReady:
+    //                {
+    //                    viewerView.open("file://"+item.url)
+    ////                    libraryView.list.insert(item.url)
+    //                }
+    //            }
+    //        }
 
 
-    footer: MauiLab.SelectionBar
+
+
+    footer: Maui.SelectionBar
     {
         id: _selectionbar
         anchors.horizontalCenter: parent.horizontalCenter
@@ -154,8 +153,8 @@ Maui.ApplicationWindow
 
     Component.onCompleted:
     {
-//        cloudViewLoader.sourceComponent = _cloudViewComponent
-//        storeViewLoader.sourceComponent= _storeViewComponent
+        //        cloudViewLoader.sourceComponent = _cloudViewComponent
+        //        storeViewLoader.sourceComponent= _storeViewComponent
     }
 
 }
