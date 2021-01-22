@@ -24,7 +24,7 @@ Maui.Page
 
         title: i18n("New Bookmark...")
         rejectButton.visible: false
-        textEntry.text: "Bookmark #"
+        textEntry.text: i18n("Bookmark #")
         message: i18n("Save new bookmark as")
         acceptButton.text: i18n("Save")
         onAccepted:
