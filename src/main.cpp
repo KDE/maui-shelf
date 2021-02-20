@@ -13,17 +13,7 @@
 #include <QApplication>
 #endif
 
-#ifdef STATIC_KIRIGAMI
-#include "./3rdparty/kirigami/src/kirigamiplugin.h"
-#endif
-
-#ifdef STATIC_MAUIKIT
-#include "./3rdparty/mauikit/src/mauikit.h"
-#include <QStyleHints>
-#include "mauiapp.h"
-#else
 #include <MauiKit/mauiapp.h>
-#endif
 
 #include "pdfdocument.h"
 //#include "epubreader.h"
@@ -38,9 +28,7 @@
 #include <KI18n/KLocalizedString>
 #endif
 
-#ifndef STATIC_MAUIKIT
 #include "../shelf_version.h"
-#endif
 
 #define SHELF_URI "org.maui.shelf"
 
@@ -88,14 +76,6 @@ int main(int argc, char *argv[])
 //	qmlRegisterType<EpubReader>("EPUB", 1, 0, "Document");
 	qmlRegisterType<LibraryModel>(SHELF_URI, 1, 0, "LibraryList");
 //    qmlRegisterType<Cloud>("CloudList", 1, 0, "CloudList");
-
-#ifdef STATIC_KIRIGAMI
-	KirigamiPlugin::getInstance().registerTypes();
-#endif
-
-#ifdef STATIC_MAUIKIT
-    MauiKit::getInstance().registerTypes(&engine);
-#endif
 
 	engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 	if (engine.rootObjects().isEmpty())
