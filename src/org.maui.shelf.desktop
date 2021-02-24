@@ -45,5 +45,5 @@ GenericName[sv]=Dokumentvisare
 GenericName[uk]=Переглядач документів
 GenericName[x-test]=xxDocument Viewerxx
 StartupNotify=true
-Icon=maui-shelf
+Icon=shelf
 MimeType=application/x-pdf;application/pdf;application/x-gzpdf;application/x-bzpdf;application/x-wwf;
