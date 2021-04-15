@@ -1,9 +1,10 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.2
 
-import org.kde.mauikit 1.0 as Maui
+import org.mauikit.controls 1.0 as Maui
+import org.mauikit.texteditor 1.0 as TE
 
-Maui.Editor
+TE.TextEditor
 {
     id: _editor
     headBar.visible: false

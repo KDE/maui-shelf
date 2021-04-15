@@ -2,7 +2,9 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
-import org.kde.mauikit 1.3 as Maui
+import org.mauikit.controls 1.3 as Maui
+import org.mauikit.filebrowsing 1.3 as FB
+
 import org.kde.kirigami 2.9 as Kirigami
 
 import PDF 1.0 as PDF
@@ -105,7 +107,7 @@ Maui.Page
             var title = getDocumentInfo("Title")
             if (title !== "")
                 control.title = title;
-            else control.title = Maui.FM.getFileInfo("file://"+poppler.path).label
+            else control.title = FB.FM.getFileInfo("file://"+poppler.path).label
 
             console.log(poppler.path, control.title)
 

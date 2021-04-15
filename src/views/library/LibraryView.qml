@@ -2,7 +2,7 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
-import org.kde.mauikit 1.2 as Maui
+import org.mauikit.controls 1.2 as Maui
 
 import org.maui.shelf 1.0
 

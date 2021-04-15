@@ -13,7 +13,7 @@
 #include <QApplication>
 #endif
 
-#include <MauiKit/mauiapp.h>
+#include <MauiKit/Core/mauiapp.h>
 
 #include "pdfdocument.h"
 //#include "epubreader.h"
@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 	MauiApp::instance ()->setHandleAccounts (false);
 
 	KLocalizedString::setApplicationDomain("shelf");
-    KAboutData about(QStringLiteral("shelf"), i18n("Shelf"), SHELF_VERSION_STRING, i18n("Shelf lets you browse and view your documents."), KAboutLicense::LGPL_V3, i18n("© 2019-%1 Nitrux Development Team", QString::number(QDate::currentDate().year())));
+    KAboutData about(QStringLiteral("shelf"), i18n("Shelf"), SHELF_VERSION_STRING, i18n("Shelf lets you browse and view your documents."), KAboutLicense::LGPL_V3, i18n("© 2019-%1 Nitrux Development Team", QString::number(QDate::currentDate().year())), QString(GIT_BRANCH) + "/" + QString(GIT_COMMIT_HASH));
 	about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
 	about.setHomepage("https://mauikit.org");
 	about.setProductName("maui/shelf");

@@ -1,15 +1,10 @@
 #include "librarymodel.h"
 
-#ifdef STATIC_MAUIKIT
-#include "tagging.h"
-#include "fmh.h"
-#include "fileloader.h"
-#else
-#include <MauiKit/tagging.h>
-#include <MauiKit/fmh.h>
-#include <MauiKit/fileloader.h>
-#endif
+#include <MauiKit/FileBrowsing/tagging.h>
+#include <MauiKit/FileBrowsing/fileloader.h>
+#include <MauiKit/FileBrowsing/fmstatic.h>
 
+#include <MauiKit/Core/fmh.h>
 
 LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
   , m_fileLoader(new FMH::FileLoader())
@@ -30,7 +25,7 @@ LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
 
 void LibraryModel::refreshCollection()
 {
-    this->m_fileLoader->requestPath({/*FMH::DesktopPath,*/ FMH::DownloadsPath, FMH::DocumentsPath, FMH::CloudCachePath}, true, FMH::FILTER_LIST[FMH::FILTER_TYPE::DOCUMENT]);
+    this->m_fileLoader->requestPath({/*FMH::DesktopPath,*/ FMStatic::DownloadsPath, FMStatic::DocumentsPath, FMStatic::CloudCachePath}, true, FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT]);
 }
 
 const FMH::MODEL_LIST &LibraryModel::items() const
@@ -108,7 +103,7 @@ void LibraryModel::append(const QString &url)
 {
     emit this->preItemAppended();
     qDebug()<< QString("select * from images where url = '%1'").arg(url);
-    this->list << FMH::getFileInfoModel(url);
+    this->list << FMStatic::getFileInfoModel(url);
     emit this->postItemAppended();
 }
 
