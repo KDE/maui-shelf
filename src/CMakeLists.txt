@@ -41,7 +41,7 @@ elseif(UNIX)
     target_link_libraries(${PROJECT_NAME} KF5::ConfigCore KF5::KIOCore KF5::KIOFileWidgets KF5::KIONTLM KF5::KIOWidgets)
 endif()
 
-target_link_libraries(${PROJECT_NAME} MauiKit Qt5::Sql Qt5::Quick Qt5::Core Qt5::Qml Qt5::Svg PkgConfig::PopplerQt5 Qt5::Concurrent KF5::SyntaxHighlighting KF5::CoreAddons KF5::I18n)
+target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Sql Qt5::Quick Qt5::Core Qt5::Qml Qt5::Svg Poppler::Qt5 Qt5::Concurrent KF5::SyntaxHighlighting KF5::CoreAddons KF5::I18n)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
 install(TARGETS shelf ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

@@ -1,7 +1,9 @@
 import QtQuick 2.13
 import QtQuick.Controls 2.13
 
-import org.kde.mauikit 1.0 as Maui
+import org.mauikit.controls 1.0 as Maui
+import org.mauikit.filebrowsing 1.0 as FB
+
 import org.kde.kirigami 2.7 as Kirigami
 
 Maui.Page
@@ -128,7 +130,7 @@ Maui.Page
         control.currentPathFav = currentItem.fav == "1"
 
         console.log("openinf file:", control.currentPath)
-        if(Maui.FM.fileExists(  control.currentPath))
+        if(FB.FM.fileExists(  control.currentPath))
         {
             swipeView.currentIndex = views.viewer
             //            _listView.currentItem.page = 0
