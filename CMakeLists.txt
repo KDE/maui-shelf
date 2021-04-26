@@ -19,13 +19,10 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
 find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Qml Quick Sql Svg QuickControls2 Concurrent)
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS I18n CoreAddons SyntaxHighlighting)
 
-#find_package(Poppler "0.12.1"  REQUIRED COMPONENTS Qt5)
-#set_package_properties("Poppler" PROPERTIES
-#        TYPE RECOMMENDED
-#        PURPOSE "Support for PDF files in okular.")
-
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(PopplerQt5 REQUIRED IMPORTED_TARGET poppler-qt5)
+find_package(Poppler "0.12.1"  REQUIRED COMPONENTS Qt5)
+set_package_properties("Poppler" PROPERTIES
+       TYPE RECOMMENDED
+       PURPOSE "Support for PDF files.")
 
 if(ANDROID)
     find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS AndroidExtras QuickControls2)
