@@ -5,7 +5,7 @@
 
 cmake_minimum_required(VERSION 3.14)
 
-set(SHELF_VERSION 1.1.1)
+set(SHELF_VERSION 2.0.0)
 set(CMAKE_CXX_STANDARD 17)
 
 project(shelf VERSION ${SHELF_VERSION})
@@ -19,7 +19,7 @@ set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
 find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Core Qml Quick Sql Svg QuickControls2 Concurrent)
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS I18n CoreAddons SyntaxHighlighting)
 
-find_package(Poppler "0.12.1"  REQUIRED COMPONENTS Qt5)
+find_package(Poppler REQUIRED COMPONENTS Qt5)
 set_package_properties("Poppler" PROPERTIES
        TYPE RECOMMENDED
        PURPOSE "Support for PDF files.")
