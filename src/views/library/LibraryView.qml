@@ -10,8 +10,9 @@ Maui.AltBrowser
 {
     id: control
     enableLassoSelection: true
-//    selectionMode: root.selectionMode
+    //    selectionMode: root.selectionMode
     gridView.itemSize: 180
+    gridView.itemHeight: 220
 
     property alias list : _libraryList
 
@@ -42,27 +43,17 @@ Maui.AltBrowser
         }
     }
 
-    headBar.leftContent: Maui.ToolActions
+    headBar.leftContent: ToolButton
     {
-        autoExclusive: true
-        expanded: isWide
-        currentIndex : control.viewType === Maui.AltBrowser.ViewType.List ? 0 : 1
-        cyclic: true
+        enabled: list.count > 0
+        icon.name: control.viewType === Maui.AltBrowser.ViewType.List ? "view-list-icons" : "view-list-details"
 
-        Action
+        onClicked:
         {
-            text: i18n("List")
-            icon.name: "view-list-details"
-            onTriggered: control.viewType = Maui.AltBrowser.ViewType.List
-        }
-
-        Action
-        {
-            text: i18n("Grid")
-            icon.name: "view-list-icons"
-            onTriggered: control.viewType= Maui.AltBrowser.ViewType.Grid
+            control.viewType =  control.viewType === Maui.AltBrowser.ViewType.List ? Maui.AltBrowser.ViewType.Grid : Maui.AltBrowser.ViewType.List
         }
     }
+
     headBar.rightContent:[
         Maui.ToolButtonMenu
         {
@@ -112,6 +103,7 @@ Maui.AltBrowser
     headBar.middleContent: Maui.TextField
     {
         Layout.fillWidth: true
+        Layout.maximumWidth: 500
         placeholderText: i18n("Filter...")
         onAccepted: control.model.filter = text
         onCleared:  control.model.filter = text
@@ -120,21 +112,19 @@ Maui.AltBrowser
 
     gridDelegate: Item
     {
-        id: _gridDelegate
-
         property bool isCurrentItem : GridView.isCurrentItem
 
         height: control.gridView.cellHeight
         width: control.gridView.cellWidth
 
-        Maui.ItemDelegate
+        Maui.GridBrowserDelegate
         {
-            id: _gridItemDelegate
-            padding: Maui.Style.space.tiny
-            isCurrentItem : GridView.isCurrentItem
-            anchors.centerIn: parent
-            height: parent.height- 10
-            width: control.gridView.itemSize - 10
+            id: _gridTemplate
+            anchors.fill: parent
+            anchors.margins: !root.isWide ? Maui.Style.space.tiny : Maui.Style.space.big
+
+            isCurrentItem: parent.isCurrentItem || checked
+
             draggable: true
             Drag.keys: ["text/uri-list"]
 
@@ -143,23 +133,15 @@ Maui.AltBrowser
                                    "text/uri-list": control.filterSelectedItems(model.path)
                                } : {}
 
-        background: Item {}
-        Maui.GridItemTemplate
-        {
-            id: _gridTemplate
-            isCurrentItem: _gridDelegate.isCurrentItem || checked
-            hovered: _gridItemDelegate.hovered || _gridItemDelegate.containsPress
-            anchors.fill: parent
-            label1.text: model.label
-            imageSource: model.thumbnail
-            iconSource: model.icon
-            iconSizeHint: height * 0.8
-            imageHeight: iconSizeHint
-            fillMode: Image.PreserveAspectFit
-            checkable: root.selectionMode
-            checked: _selectionbar.contains(model.path)
-            onToggled: _selectionbar.append(model.path, control.model.get(index))
-        }
+
+        label1.text: model.label
+        imageSource: model.thumbnail
+        iconSource: model.icon
+        template.fillMode: Image.PreserveAspectFit
+
+        checkable: root.selectionMode
+        checked: _selectionbar.contains(model.path)
+        onToggled: _selectionbar.append(model.path, control.model.get(index))
 
         Connections
         {
@@ -210,11 +192,10 @@ Maui.AltBrowser
     }
 }
 
-listDelegate: Maui.ItemDelegate
+listDelegate: Maui.ListBrowserDelegate
 {
     id: _listDelegate
 
-    property alias checked :_listTemplate.checked
     isCurrentItem: ListView.isCurrentItem || checked
 
     height: Math.floor(Maui.Style.rowHeight * 1.6)
@@ -227,22 +208,16 @@ listDelegate: Maui.ItemDelegate
                            "text/uri-list": control.filterSelectedItems(model.path)
                        } : {}
 
-    Maui.ListItemTemplate
-    {
-        id: _listTemplate
-        anchors.fill: parent
-        label1.text: model.label
-        label2.text: model.path
+    label1.text: model.label
+    label2.text: model.path
 
-        label3.text: Qt.formatDateTime(new Date(model.modified), "d MMM yyyy")
+    label3.text: Qt.formatDateTime(new Date(model.modified), "d MMM yyyy")
 
-        iconSource: model.icon
-        iconSizeHint: Maui.Style.iconSizes.big
-        checkable: root.selectionMode
-        checked: _selectionbar.contains(model.path)
-        onToggled: _selectionbar.append(model.path, control.model.get(index))
-        isCurrentItem: _listDelegate.isCurrentItem
-    }
+    iconSource: model.icon
+    iconSizeHint: Maui.Style.iconSizes.big
+    checkable: root.selectionMode
+    checked: _selectionbar.contains(model.path)
+    onToggled: _selectionbar.append(model.path, control.model.get(index))
 
     Connections
     {
@@ -250,13 +225,13 @@ listDelegate: Maui.ItemDelegate
         function onUriRemoved(uri)
         {
             if(uri === model.path)
-            _listDelegate.checked = false
+                _listDelegate.checked = false
         }
 
         function onUriAdded(uri)
         {
             if(uri === model.path)
-            _listDelegate.checked = true
+                _listDelegate.checked = true
         }
 
         function onCleared()
