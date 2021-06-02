@@ -51,7 +51,6 @@ int main(int argc, char *argv[])
 	app.setWindowIcon(QIcon(":/assets/shelf.svg"));
 
 	MauiApp::instance ()->setIconName ("qrc:/assets/shelf.svg");
-	MauiApp::instance ()->setHandleAccounts (false);
 
 	KLocalizedString::setApplicationDomain("shelf");
     KAboutData about(QStringLiteral("shelf"), i18n("Shelf"), SHELF_VERSION_STRING, i18n("Browse and view your documents."), KAboutLicense::LGPL_V3, i18n("© 2019-%1 Nitrux Development Team", QString::number(QDate::currentDate().year())), QString(GIT_BRANCH) + "/" + QString(GIT_COMMIT_HASH));
