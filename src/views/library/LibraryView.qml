@@ -10,11 +10,11 @@ Maui.AltBrowser
 {
     id: control
     enableLassoSelection: true
-    //    selectionMode: root.selectionMode
     gridView.itemSize: 180
     gridView.itemHeight: 220
 
     property alias list : _libraryList
+    viewType: root.isWide ? Maui.AltBrowser.ViewType.Grid : Maui.AltBrowser.ViewType.List
 
     Connections
     {
@@ -214,7 +214,7 @@ listDelegate: Maui.ListBrowserDelegate
     label3.text: Qt.formatDateTime(new Date(model.modified), "d MMM yyyy")
 
     iconSource: model.icon
-    iconSizeHint: Maui.Style.iconSizes.big
+    iconSizeHint: Maui.Style.iconSizes.medium
     checkable: root.selectionMode
     checked: _selectionbar.contains(model.path)
     onToggled: _selectionbar.append(model.path, control.model.get(index))
@@ -266,6 +266,47 @@ listDelegate: Maui.ListBrowserDelegate
         }
     }
 }
+
+
+
+footer: Maui.SelectionBar
+{
+    id: _selectionbar
+    anchors.horizontalCenter: parent.horizontalCenter
+    width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
+    padding: Maui.Style.space.big
+    maxListHeight: swipeView.height - Maui.Style.space.medium
+
+    onItemClicked : console.log(index)
+
+    onExitClicked: clear()
+
+    Action
+    {
+        text: i18n("Open")
+        icon.name: "document-open"
+        onTriggered:
+        {
+            for(var item of _selectionbar.items)
+            viewerView.open(item)
+
+            _selectionbar.clear()
+        }
+    }
+
+    Action
+    {
+        text: i18n("Share")
+        icon.name: "document-share"
+    }
+
+    Action
+    {
+        text: i18n("Export")
+        icon.name: "document-export"
+    }
+}
+
 
 
 function filterSelectedItems(path)

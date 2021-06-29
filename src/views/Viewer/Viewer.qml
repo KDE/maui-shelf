@@ -47,6 +47,13 @@ Maui.Page
 
     floatingHeader: true
     autoHideHeader: true
+
+    headBar.farLeftContent: ToolButton
+    {
+        icon.name: "go-previous"
+        onClicked: _stackView.pop()
+    }
+
     headBar.leftContent: Maui.ToolActions
     {
         autoExclusive: false
@@ -132,7 +139,7 @@ Maui.Page
         console.log("openinf file:", control.currentPath)
         if(FB.FM.fileExists(  control.currentPath))
         {
-            swipeView.currentIndex = views.viewer
+            _stackView.push(viewerView)
             //            _listView.currentItem.page = 0
             if(control.currentPath.endsWith(".pdf"))
                 _viewerLoader.sourceComponent = _pdfComponent

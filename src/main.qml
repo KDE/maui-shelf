@@ -15,48 +15,25 @@ Maui.ApplicationWindow
 {
     id: root
     title: viewerView.title
-    flickable: swipeView.currentItem.flickable
 
-    altHeader: Kirigami.Settings.isMobile
-    autoHideHeader: swipeView.currentIndex === views.viewer && swipeView.currentItem.currentViewer
-    floatingFooter: true
+    headBar.visible: false
 
     property bool selectionMode: false
-    readonly property var views :({
-                                      viewer : 0,
-                                      library: 1,
-                                      cloud: 2,
-                                      store: 3,
-                                      search: 4
-                                  })
 
-    headBar.rightContent: ToolButton
+   StackView
     {
-        //        visible: Maui.Handy.isTouch
-        icon.name: "item-select"
-        checkable: true
-        checked: root.selectionMode
-        onClicked: root.selectionMode = !root.selectionMode
-        //        onPressAndHold: currentBrowser.selectAll()
-    }
-
-    Maui.AppViews
-    {
-        id: swipeView
+        id: _stackView
         anchors.fill: parent
 
         Viewer
         {
             id: viewerView
-            Maui.AppView.iconName: "document-preview-archive"
-            Maui.AppView.title: i18n("Viewer")
+            visible: StackView.status === StackView.Active
         }
 
-        LibraryView
+        initialItem: LibraryView
         {
             id: libraryView
-            Maui.AppView.iconName: "view-books"
-            Maui.AppView.title: i18n("Library")
         }
     }
 
@@ -110,45 +87,6 @@ Maui.ApplicationWindow
     //        }
 
 
-
-
-    footer: Maui.SelectionBar
-    {
-        id: _selectionbar
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
-        padding: Maui.Style.space.big
-        maxListHeight: swipeView.height - Maui.Style.space.medium
-
-        onItemClicked : console.log(index)
-
-        onExitClicked: clear()
-
-        Action
-        {
-            text: i18n("Open")
-            icon.name: "document-open"
-            onTriggered:
-            {
-                for(var item of _selectionbar.items)
-                    viewerView.open(item)
-
-                _selectionbar.clear()
-            }
-        }
-
-        Action
-        {
-            text: i18n("Share")
-            icon.name: "document-share"
-        }
-
-        Action
-        {
-            text: i18n("Export")
-            icon.name: "document-export"
-        }
-    }
 
 
     Component.onCompleted:
