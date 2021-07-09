@@ -29,6 +29,12 @@ Maui.AltBrowser
         }
     }
 
+    holder.visible: control.list.count == 0
+    holder.title: i18n("Nothing here!")
+    holder.body: i18n("Add new sources to manage your documents.")
+    holder.emoji: "qrc:/assets/document-new.svg"
+    holder.emojiSize: Maui.Style.iconSizes.huge
+
     model: Maui.BaseModel
     {
         id: _libraryModel
@@ -43,21 +49,55 @@ Maui.AltBrowser
         }
     }
 
-    headBar.leftContent: ToolButton
+    headBar.enabled: control.list.count > 0
+    headBar.leftContent: Maui.ToolButtonMenu
     {
-        enabled: list.count > 0
-        icon.name: control.viewType === Maui.AltBrowser.ViewType.List ? "view-list-icons" : "view-list-details"
-
-        onClicked:
+        icon.name: "application-menu"
+        MenuItem
         {
-            control.viewType =  control.viewType === Maui.AltBrowser.ViewType.List ? Maui.AltBrowser.ViewType.Grid : Maui.AltBrowser.ViewType.List
+            text: i18n("About")
+            icon.name: "documentinfo"
+            onTriggered: root.about()
         }
     }
 
     headBar.rightContent:[
         Maui.ToolButtonMenu
         {
-            icon.name: "view-sort"
+            icon.name: control.viewType === Maui.AltBrowser.ViewType.List ? "view-list-details" : "view-list-icons"
+
+            Maui.LabelDelegate
+            {
+                isSection: true
+                label: i18n("View type")
+                width: ListView.view.width
+            }
+
+            MenuItem
+            {
+                text: i18n("List")
+                checkable: true
+                icon.name: "view-list-details"
+                checked: control.viewType === Maui.AltBrowser.ViewType.List
+                onTriggered:  control.viewType = Maui.AltBrowser.ViewType.List
+            }
+
+            MenuItem
+            {
+                text: i18n("Grid")
+                checkable: true
+                icon.name: "view-list-icons"
+                checked: control.viewType === Maui.AltBrowser.ViewType.Grid
+                onTriggered:  control.viewType = Maui.AltBrowser.ViewType.Grid
+            }
+
+            Maui.LabelDelegate
+            {
+                isSection: true
+                label: i18n("Sort by")
+                width: ListView.view.width
+            }
+
             MenuItem
             {
                 text: i18n("Title")
@@ -112,10 +152,8 @@ Maui.AltBrowser
 
     gridDelegate: Item
     {
-        property bool isCurrentItem : GridView.isCurrentItem
-
-        height: control.gridView.cellHeight
-        width: control.gridView.cellWidth
+        height: GridView.view.cellHeight
+        width: GridView.view.cellWidth
 
         Maui.GridBrowserDelegate
         {
@@ -123,7 +161,10 @@ Maui.AltBrowser
             anchors.fill: parent
             anchors.margins: !root.isWide ? Maui.Style.space.tiny : Maui.Style.space.big
 
-            isCurrentItem: parent.isCurrentItem || checked
+            imageHeight: control.gridView.itemSize
+            imageWidth: control.gridView.itemSize
+
+            isCurrentItem: parent.GridView.isCurrentItem || checked
 
             draggable: true
             Drag.keys: ["text/uri-list"]
@@ -267,8 +308,6 @@ listDelegate: Maui.ListBrowserDelegate
     }
 }
 
-
-
 footer: Maui.SelectionBar
 {
     id: _selectionbar
@@ -306,8 +345,6 @@ footer: Maui.SelectionBar
         icon.name: "document-export"
     }
 }
-
-
 
 function filterSelectedItems(path)
 {

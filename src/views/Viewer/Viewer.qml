@@ -1,8 +1,9 @@
 import QtQuick 2.13
 import QtQuick.Controls 2.13
+import QtQuick.Window 2.12
 
-import org.mauikit.controls 1.0 as Maui
-import org.mauikit.filebrowsing 1.0 as FB
+import org.mauikit.controls 1.3 as Maui
+import org.mauikit.filebrowsing 1.3 as FB
 
 import org.kde.kirigami 2.7 as Kirigami
 
@@ -20,20 +21,11 @@ Maui.Page
 
     property alias viewer : _viewerLoader.item
 
-    Maui.NewDialog
+    Maui.Doodle
     {
-        id: _newBookmarkDialog
-
-        title: i18n("New Bookmark...")
-        rejectButton.visible: false
-        textEntry.text: i18n("Bookmark #")
-        message: i18n("Save new bookmark as")
-        acceptButton.text: i18n("Save")
-        onAccepted:
-        {
-            console.log(viewer.currentPage)
-            libraryView.list.bookmark(libraryView.currentIndex, viewer.currentPage)
-        }
+        id: doodle
+        sourceItem: currentViewer.currentItem
+        hint: 1
     }
 
     Maui.Holder
@@ -47,6 +39,7 @@ Maui.Page
 
     floatingHeader: true
     autoHideHeader: true
+    headBar.forceCenterMiddleContent: root.isWide
 
     headBar.farLeftContent: ToolButton
     {
@@ -54,43 +47,75 @@ Maui.Page
         onClicked: _stackView.pop()
     }
 
-    headBar.leftContent: Maui.ToolActions
-    {
-        autoExclusive: false
-        expanded: true
-        checkable: true
-
-        Action
-        {
-            icon.name: "love"
-            icon.color: currentPathFav ? "#f84172" : Kirigami.Theme.textColor
-            onTriggered:
-            {
-                if(libraryView.list.fav(libraryView.currentIndex, !currentPathFav))
-                    currentPathFav= !currentPathFav
-            }
-        }
-
-        Action
-        {
-            icon.name:  "bookmark-new"
-            onTriggered:
-            {
-                _newBookmarkDialog.open()
-            }
-        }
-    }
-
-
     headBar.rightContent: [
 
         ToolButton
         {
-            icon.name: "view-fullscreen"
+            icon.name: "love"
+            icon.color: currentPathFav ? "#f84172" : Kirigami.Theme.textColor
+            onClicked:
+            {
+                if(FB.Tagging.fav(control.currentPath))
+                    currentPathFav= FB.Tagging.isFav(control.currentPath)
+            }
         },
+
         ToolButton
         {
-            icon.name:  "edit-find"
+            icon.name: "document-share"
+            onClicked:
+            {
+                Maui.Platform.shareFiles([control.currentPath])
+            }
+        },
+
+        Maui.ToolButtonMenu
+        {
+            icon.name: "overflow-menu"
+
+            MenuItem
+            {
+                icon.name: "tool_pen"
+                text: i18n("Doodle")
+
+                onTriggered: doodle.open()
+            }
+
+            MenuSeparator {}
+
+            MenuItem
+            {
+                icon.name: "view-right-new"
+                text: i18n("Browse Horizontally")
+
+                checkable: true
+                checked:  currentViewer.orientation === ListView.Horizontal
+                onClicked:
+                {
+                    currentViewer.orientation = currentViewer.orientation === ListView.Horizontal ? ListView.Vertical : ListView.Horizontal
+                }
+            }
+
+            MenuItem
+            {
+                icon.name:  "zoom-fit-width"
+                text: i18n("Fill")
+                checkable: true
+                checked: currentViewer.fitWidth
+                onTriggered:
+                {
+                    currentViewer.fitWidth= !currentViewer.fitWidth
+                }
+            }
+
+            MenuItem
+            {
+                text: i18n("Fullscreen")
+                checkable: true
+                checked: root.visibility === Window.FullScreen
+                icon.name: "view-fullscreen"
+                onTriggered: root.visibility = (root.visibility === Window.FullScreen  ? Window.Windowed : Window.FullScreen)
+            }
         }
     ]
 

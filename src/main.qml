@@ -20,7 +20,7 @@ Maui.ApplicationWindow
 
     property bool selectionMode: false
 
-   StackView
+    StackView
     {
         id: _stackView
         anchors.fill: parent
@@ -36,63 +36,4 @@ Maui.ApplicationWindow
             id: libraryView
         }
     }
-
-    //            Loader
-    //            {
-    //                id: cloudViewLoader
-    //            }
-
-    //            Loader
-    //            {
-    //                id: storeViewLoader
-    //            }
-
-    //            Maui.Page
-    //            {
-    //                id: searchView
-    //            }
-
-
-    /*** Components ***/
-
-    //        Component
-    //        {
-    //            id: _cloudViewComponent
-    //            CloudView
-    //            {
-    //                anchors.fill : parent
-    //            }
-    //        }
-
-    //        Component
-    //        {
-    //            id: _storeViewComponent
-
-    //            Maui.Store
-    //            {
-    //                anchors.fill : parent
-    //                detailsView: false
-    //                list.category: StoreList.EBOOKS
-    //                list.provider: StoreList.OPENDESKTOPCC
-    //                fitPreviews: true
-
-    //                onOpenFile:  viewerView.open(filePath)
-
-    //                onFileReady:
-    //                {
-    //                    viewerView.open("file://"+item.url)
-    ////                    libraryView.list.insert(item.url)
-    //                }
-    //            }
-    //        }
-
-
-
-
-    Component.onCompleted:
-    {
-        //        cloudViewLoader.sourceComponent = _cloudViewComponent
-        //        storeViewLoader.sourceComponent= _storeViewComponent
-    }
-
 }

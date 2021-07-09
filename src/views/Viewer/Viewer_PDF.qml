@@ -15,87 +15,51 @@ Maui.Page
 
     property bool fitWidth: false
     property int currentPage : _listView.currentIndex
+    property alias currentItem :_listView.currentItem
+    property alias orientation : _listView.orientation
+
     headBar.visible: false
+    footBar.visible: !Kirigami.Settings.isMobile
 
     padding: 0
 
-    Maui.Doodle
-    {
-        id: doodle
-        sourceItem: _listView.currentItem
-    }
-
     footBar.middleContent: [
-        ToolButton
+        Maui.ToolActions
         {
-            enabled: _listView.currentIndex > 0
-            icon.name:  _listView.orientation === ListView.Horizontal ? "go-previous" : "go-up"
-            onClicked:
+            expanded: true
+            autoExclusive: false
+            checkable: false
+
+            Action
             {
-                if( _listView.currentIndex > 0)
+                enabled: _listView.currentIndex > 0
+                icon.name:  _listView.orientation === ListView.Horizontal ? "go-previous" : "go-up"
+                onTriggered:
+                {
+                    if( _listView.currentIndex > 0)
                     _listView.currentIndex = _listView.currentIndex - 1
+                }
             }
-        },
 
-        Label
-        {
-            Layout.fillWidth: false
-            Layout.fillHeight: true
-
-            color: Kirigami.Theme.textColor
-            text:  _listView.currentIndex + 1 +" / "+ poppler.pages
-            font.bold: false
-            font.weight: Font.Thin
-            font.pointSize: Maui.Style.fontSizes.medium
-        },
-
-        ToolButton
-        {
-            enabled: _listView.currentIndex +1 < poppler.pages
-            icon.name:  _listView.orientation === ListView.Horizontal ? "go-next" : "go-down"
-            onClicked:
+            Action
             {
-                if( _listView.currentIndex +1 < poppler.pages)
+                text:  _listView.currentIndex + 1 +" / "+ poppler.pages
+            }
+
+            Action
+            {
+                enabled: _listView.currentIndex +1 < poppler.pages
+                icon.name:  _listView.orientation === ListView.Horizontal ? "go-next" : "go-down"
+                onTriggered:
+                {
+                    if( _listView.currentIndex +1 < poppler.pages)
                     _listView.currentIndex = _listView.currentIndex + 1
+                }
             }
         }
     ]
 
-    footBar.leftContent:[
-
-        ToolButton
-        {
-            icon.name:  "zoom-fit-width"
-            checkable: true
-            checked: control.fitWidth
-            onClicked:
-            {
-                control.fitWidth= !control.fitWidth
-            }
-        }
-    ]
-
-    footBar.rightContent: [
-        ToolButton
-        {
-            icon.name: "tool_pen"
-            onClicked: doodle.open()
-        },
-
-        ToolButton
-        {
-            icon.name: "view-right-new"
-            checkable: true
-            checked:  _listView.orientation === ListView.Horizontal
-            onClicked:
-            {
-                //                _listView.orientation = checked ? ListView.Horizontal :  ListView.Vertical
-                _listView.orientation = _listView.orientation === ListView.Horizontal ? ListView.Vertical : ListView.Horizontal
-            }
-        }
-    ]
-
-    PDF.Document
+      PDF.Document
     {
         id: poppler
 
@@ -110,18 +74,17 @@ Maui.Page
             else control.title = FB.FM.getFileInfo("file://"+poppler.path).label
 
             console.log(poppler.path, control.title)
-
         }
     }
 
     ScrollView
     {
         anchors.fill : parent
-        ScrollBar.horizontal.policy: ScrollBar.AsNeeded
-        ScrollBar.vertical.policy: ScrollBar.AsNeeded
+        ScrollBar.horizontal.policy: _listView.orientation === ListView.Vertical ? ScrollBar.AlwaysOff : ScrollBar.AsNeeded
+        ScrollBar.vertical.policy:  _listView.orientation === ListView.Horizontal ? ScrollBar.AlwaysOff : ScrollBar.AsNeeded
+
         ScrollBar.vertical.snapMode: ScrollBar.SnapAlways
         ScrollBar.horizontal.snapMode: ScrollBar.SnapAlways
-//        ScrollBar.vertical.stepSize: _listView.height
 
         contentWidth: _listView.contentWidth
         contentHeight: _listView.contentHeight
@@ -135,8 +98,8 @@ Maui.Page
             orientation: ListView.Vertical
             interactive: Maui.Handy.isTouch
             highlightFollowsCurrentItem: true
-            snapMode:  ListView.SnapOneItem
-            spacing: Maui.Style.space.big
+            snapMode: ListView.SnapOneItem
+            spacing: 0
             //        cacheBuffer: control.fitWidth ? poppler.providersNumber *  : height * poppler.providersNumber
 
             onMovementEnded:
@@ -170,10 +133,10 @@ Maui.Page
                     //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index;
                     source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index
                     //                                source: "image://poppler/page/" + _listView.currentPage;
-                                    sourceSize.width: delegate.width
-                                    sourceSize.height: delegate.height
-//                    imageWidth: 1000
-//                    imageHeight: 1000
+                    sourceSize.width: delegate.width
+                    sourceSize.height: delegate.height
+                    //                    imageWidth: 1000
+                    //                    imageHeight: 1000
                     fillMode: Image.PreserveAspectFit
 
                     //                onSourceChanged: console.log(source)
