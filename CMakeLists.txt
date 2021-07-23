@@ -19,6 +19,12 @@ set(REQUIRED_KF5_VERSION 5.60)
 if(ANDROID)
     set(ANDROID_PACKAGE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android_files)
     set(ANDROID_ABIS "armeabi-v7a")
+endif()
+
+find_package(ECM ${REQUIRED_KF5_VERSION} REQUIRED NO_MODULE)
+set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
+
+if(ANDROID)
     find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS AndroidExtras QuickControls2)
 elseif(UNIX)
     find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS Config KIO)
@@ -27,9 +33,6 @@ elseif(UNIX)
         TYPE RECOMMENDED
         PURPOSE "Support for PDF files.")
 endif()
-
-find_package(ECM ${REQUIRED_KF5_VERSION} REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
 
 find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Qml Xml Quick QuickControls2 Concurrent)
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS I18n CoreAddons)
@@ -44,12 +47,11 @@ if(UNIX AND NOT APPLE AND NOT ANDROID)
     include(ECMAddAppIcon)
 endif()
 
-#include(KDECompilerSettings NO_POLICY_SCOPE)
+#include(KDECompilerSettings NO_POLICY_SCOPE) //this makes android app launch crash by not finding the main method
 include(KDEClangFormat)
 include(ECMSetupVersion)
 include(ECMSourceVersionControl)
 include(FeatureSummary)
-
 
 if(${ECM_SOURCE_UNDER_VERSION_CONTROL})
     execute_process(
