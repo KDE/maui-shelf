@@ -314,7 +314,7 @@ footer: Maui.SelectionBar
     anchors.horizontalCenter: parent.horizontalCenter
     width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
     padding: Maui.Style.space.big
-    maxListHeight: swipeView.height - Maui.Style.space.medium
+    maxListHeight: _stackView.height - Maui.Style.space.medium
 
     onItemClicked : console.log(index)
 

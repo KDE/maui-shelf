@@ -1,15 +1,10 @@
-import QtQuick 2.13
-import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.13
+import QtQuick 2.15
+import QtQuick.Controls 2.15
 
 import org.mauikit.controls 1.3 as Maui
-import org.kde.kirigami 2.7 as Kirigami
-
-//import StoreList 1.0
 
 import "views/library/"
 import "views/Viewer/"
-import "views/cloud/"
 
 Maui.ApplicationWindow
 {

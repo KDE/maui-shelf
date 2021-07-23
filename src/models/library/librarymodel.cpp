@@ -61,7 +61,7 @@ bool LibraryModel::deleteAt(const int &index)
     return false;
 }
 
-bool LibraryModel::bookmark(const int &index, const int &value)
+bool LibraryModel::bookmark(const int &index, const int &)
 {
     if(index >= this->list.size() || index < 0)
         return false;

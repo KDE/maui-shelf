@@ -1,9 +1,8 @@
 #include "cloud.h"
 
-Cloud::Cloud(QObject *parent) : BaseList (parent)
+Cloud::Cloud(QObject *parent) : QObject (parent)
 {
-    this->fm = new FM(this);
-    this->setList();
+
 
 //    connect(this->fm, &FM::cloudServerContentReady, [this](const FMH::MODEL_LIST &list, const QString &url)
 //    {
@@ -35,93 +34,4 @@ Cloud::Cloud(QObject *parent) : BaseList (parent)
 //        this->update(FMH::toMap(newItem), this->pending.take(QString(item[FMH::MODEL_KEY::PATH]).replace(FMH::CloudCachePath+"opendesktop", FMH::PATHTYPE_URI[FMH::PATHTYPE_KEY::CLOUD_PATH])));
 //        emit this->cloudItemReady(FMH::toMap(newItem));
 //    });
-}
-
-FMH::MODEL_LIST Cloud::items() const
-{
-    return this->list;
-}
-
-void Cloud::setAccount(const QString value)
-{
-    if(this->account == value)
-        return;
-
-    this->account = value;
-    emit this->accountChanged();
-
-    this->setList();
-}
-
-QString Cloud::getAccount() const
-{
-    return this->account;
-}
-
-void Cloud::setList()
-{
-    emit this->preListChanged();
-    this->list.clear();
-    this->fm->getCloudServerContent(FMH::PATHTYPE_URI[FMH::PATHTYPE_KEY::CLOUD_PATH]+"/"+this->account, FMH::FILTER_LIST[FMH::FILTER_TYPE::DOCUMENT], 3);
-    emit this->postListChanged();
-}
-
-void Cloud::formatList()
-{
-    for(auto &item : this->list)
-    {
-        auto url = item[FMH::MODEL_KEY::URL];
-        auto thumbnail = item[FMH::MODEL_KEY::THUMBNAIL];
-
-        item[FMH::MODEL_KEY::FAV] = QString("0");
-        item[FMH::MODEL_KEY::URL] = FMH::fileExists(thumbnail)? thumbnail : item[FMH::MODEL_KEY::URL];
-        item[FMH::MODEL_KEY::SOURCE] = FMH::fileExists(thumbnail)? thumbnail : item[FMH::MODEL_KEY::PATH];
-        item[FMH::MODEL_KEY::TITLE] = item[FMH::MODEL_KEY::LABEL];
-    }
-}
-
-QVariantMap Cloud::get(const int &index) const
-{
-    if(index >= this->list.size() || index < 0)
-        return QVariantMap();
-
-    QVariantMap res;
-    const auto pic = this->list.at(index);
-
-    for(auto key : pic.keys())
-        res.insert(FMH::MODEL_NAME[key], pic[key]);
-
-    return res;
-}
-
-void Cloud::requestItem(const int &index)
-{
-    if(index < 0 || index >= this->list.size())
-        return;
-
-    this->pending.insert(this->list[index][FMH::MODEL_KEY::PATH], index);
-    qDebug()<< "1-PEDNIGN CLOUD"<< this->pending;
-
-    this->fm->getCloudItem(FMH::toMap(this->list[index]));
-}
-
-bool Cloud::update(const QVariantMap &data, const int &index)
-{
-    if(index < 0 || index >= this->list.size())
-        return false;
-
-    auto newData = this->list[index];
-    QVector<int> roles;
-
-    for(auto key : data.keys())
-        if(newData[FMH::MODEL_NAME_KEY[key]] != data[key].toString())
-        {
-            newData.insert(FMH::MODEL_NAME_KEY[key], data[key].toString());
-            roles << FMH::MODEL_NAME_KEY[key];
-        }
-
-    this->list[index] = newData;
-
-    emit this->updateModel(index, roles);
-    return true;
 }

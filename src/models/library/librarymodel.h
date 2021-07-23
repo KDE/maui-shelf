@@ -1,5 +1,5 @@
-#ifndef GALLERY_H
-#define GALLERY_H
+#ifndef LIBRARYMODEL_H
+#define LIBRARYMODEL_H
 
 #include <QObject>
 
@@ -33,4 +33,4 @@ public slots:
     void clear();
 };
 
-#endif // GALLERY_H
+#endif // LIBRARYMODEL_H

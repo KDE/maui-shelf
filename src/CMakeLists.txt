@@ -19,35 +19,49 @@ set(popplerqmlplugin_SRCS
 
 set(shelf_SRCS
     main.cpp
-    models/library/librarymodel.cpp
     library.cpp
+    models/library/librarymodel.cpp
+)
+
+set(shelf_ASSETS
     qml.qrc
     lib_assets.qrc
-)
+    )
 
 if(ANDROID)
     add_library(${PROJECT_NAME} SHARED
         ${popplerqmlplugin_SRCS}
-        ${shelf_SRCS} )
+        ${shelf_SRCS}
+        ${shelf_ASSETS}
+        )
 else()
     add_executable(${PROJECT_NAME}
         ${popplerqmlplugin_SRCS}
-        ${shelf_SRCS} )
+        ${shelf_SRCS}
+        ${shelf_ASSETS}
+        )
 endif()
 
 if (ANDROID)
-    target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2)
+    add_library( poppler SHARED IMPORTED GLOBAL)
+    set_target_properties( poppler PROPERTIES IMPORTED_LOCATION "/home/camilo/Qt5152/5.15.2/android/lib/libpoppler_armeabi-v7a.so" )
+
+    add_library( poppler-qt5 SHARED IMPORTED GLOBAL)
+    set_target_properties( poppler-qt5 PROPERTIES IMPORTED_LOCATION "/home/camilo/Qt5152/5.15.2/android/lib/libpoppler-qt5_armeabi-v7a.so" )
+
+    target_include_directories(${PROJECT_NAME} PUBLIC "/home/camilo/Qt5152/5.15.2/android/include/")
+
+    target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2 poppler-qt5)
 elseif(UNIX)
-    target_link_libraries(${PROJECT_NAME} KF5::ConfigCore KF5::KIOCore KF5::KIOFileWidgets KF5::KIONTLM KF5::KIOWidgets)
+    target_link_libraries(${PROJECT_NAME} KF5::ConfigCore KF5::KIOCore KF5::KIOFileWidgets KF5::KIOWidgets Poppler::Qt5)
 endif()
 
-target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Sql Qt5::Quick Qt5::Core Qt5::Qml Qt5::Svg Poppler::Qt5 Qt5::Concurrent KF5::SyntaxHighlighting KF5::CoreAddons KF5::I18n)
+target_compile_definitions(${PROJECT_NAME}
+    PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
+
+target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Quick Qt5::Xml Qt5::Qml KF5::CoreAddons KF5::I18n )
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
-install(TARGETS shelf ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES org.maui.shelf.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
-
-#TODO: port to ecm_install_icons()
-install(FILES assets/shelf.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
-# install(FILES org.kde.index.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+    install(TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+    install(FILES assets/shelf.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps)
 endif()
