@@ -53,7 +53,7 @@ if (ANDROID)
 
     target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2 poppler-qt5)
 elseif(UNIX)
-    target_link_libraries(${PROJECT_NAME} KF5::ConfigCore KF5::KIOCore KF5::KIOFileWidgets KF5::KIOWidgets Poppler::Qt5)
+    target_link_libraries(${PROJECT_NAME} KF5::ConfigCore KF5::KIOCore KF5::KIOFileWidgets Poppler::Qt5)
 endif()
 
 target_compile_definitions(${PROJECT_NAME}

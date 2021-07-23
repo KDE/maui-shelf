@@ -34,7 +34,7 @@ elseif(UNIX)
         PURPOSE "Support for PDF files.")
 endif()
 
-find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Qml Xml Quick QuickControls2 Concurrent)
+find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Qml Xml Quick QuickControls2)
 find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS I18n CoreAddons)
 
 find_package(MauiKit REQUIRED COMPONENTS FileBrowsing)
