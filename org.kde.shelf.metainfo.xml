@@ -9,29 +9,45 @@ SPDX-License-Identifier: CC0-1.0
   <project_license>LGPL-3.0</project_license>
   <name>Shelf</name>
   <name xml:lang="ca">Shelf</name>
+  <name xml:lang="ca-valencia">Shelf</name>
+  <name xml:lang="cs">Shelf</name>
   <name xml:lang="en-GB">Shelf</name>
+  <name xml:lang="es">Shelf</name>
+  <name xml:lang="hi">शेल्फ़</name>
   <name xml:lang="nl">Shelf</name>
   <name xml:lang="pt">Shelf</name>
+  <name xml:lang="sk">Shelf</name>
   <name xml:lang="sv">Shelf</name>
   <name xml:lang="uk">Шафа</name>
   <name xml:lang="x-test">xxShelfxx</name>
+  <name xml:lang="zh-CN">Shelf</name>
   <summary>Browse and view your documents</summary>
   <summary xml:lang="ca">Navegueu i visualitzeu els vostres documents</summary>
+  <summary xml:lang="ca-valencia">Navegueu i visualitzeu els vostres documents</summary>
+  <summary xml:lang="cs">Procházejte a prohlížejte svoje dokumenty</summary>
   <summary xml:lang="en-GB">Browse and view your documents</summary>
+  <summary xml:lang="es">Explore y vea sus documentos</summary>
+  <summary xml:lang="hi">अपने दस्तावेज़ों का विचरण एवं प्रदर्शन करें।</summary>
   <summary xml:lang="nl">Uw documenten door bladeren en bekijken.</summary>
   <summary xml:lang="pt">Navegue e veja os seus documentos</summary>
   <summary xml:lang="sv">Bläddra bland och visa dina dokument</summary>
   <summary xml:lang="uk">Навігація вашими документами та перегляд документів</summary>
   <summary xml:lang="x-test">xxBrowse and view your documentsxx</summary>
+  <summary xml:lang="zh-CN">浏览并查看文档</summary>
   <description>
     <p>Shelf is a simple PDF and EPUB document browser and viewer.</p>
     <p xml:lang="ca">El Shelf és un navegador i visor de documents PDF and EPUB.</p>
+    <p xml:lang="ca-valencia">El Shelf és un navegador i visor de documents PDF and EPUB.</p>
+    <p xml:lang="cs">Shelf je jednoduchý prohlížeč dokumentů PDF a EPUB.</p>
     <p xml:lang="en-GB">Shelf is a simple PDF and EPUB document browser and viewer.</p>
+    <p xml:lang="es">Shelf es un sencillo explorador y visor de documentos PDF y EPUB.</p>
+    <p xml:lang="hi">शेल्फ़ एक साधारण पीडीएफ और इ-पब दस्तावेज़ ब्राउज़र और प्रदर्शक है।</p>
     <p xml:lang="nl">Shelf is een eenvoudige PDF en EPUB documentbrowser en viewer.</p>
     <p xml:lang="pt">O Shelf é um navegador e visualizador simples de documentos PDF e EPUB.</p>
     <p xml:lang="sv">Shelf är en enkel PDF- och EPUB-dokumentbläddrare och visare.</p>
     <p xml:lang="uk">«Шафа» проста програма для навігації збіркою документів PDF та EPUB та перегляду документів.</p>
     <p xml:lang="x-test">xxShelf is a simple PDF and EPUB document browser and viewer.xx</p>
+    <p xml:lang="zh-CN">Shelf 是一款简易 PDF 和 EPUB 文档浏览器和查看器。</p>
   </description>
   <url type="homepage">https://mauikit.org/</url>
   <url type="bugtracker">https://invent.kde.org/maui/shelf/-/issues</url>
@@ -40,12 +56,18 @@ SPDX-License-Identifier: CC0-1.0
     <screenshot type="default">
       <caption>Shelf</caption>
       <caption xml:lang="ca">Shelf</caption>
+      <caption xml:lang="ca-valencia">Shelf</caption>
+      <caption xml:lang="cs">Shelf</caption>
       <caption xml:lang="en-GB">Shelf</caption>
+      <caption xml:lang="es">Shelf</caption>
+      <caption xml:lang="hi">शेल्फ़</caption>
       <caption xml:lang="nl">Shelf</caption>
       <caption xml:lang="pt">Shelf</caption>
+      <caption xml:lang="sk">Shelf</caption>
       <caption xml:lang="sv">Shelf</caption>
       <caption xml:lang="uk">Шафа</caption>
       <caption xml:lang="x-test">xxShelfxx</caption>
+      <caption xml:lang="zh-CN">Shelf</caption>
       <image type="source" width="2464" height="1929">
         https://cdn.kde.org/screenshots/shelf/shelf.png
       </image>
