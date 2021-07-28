@@ -59,7 +59,7 @@ Maui.Page
         }
     ]
 
-      PDF.Document
+    PDF.Document
     {
         id: poppler
 

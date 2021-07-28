@@ -30,6 +30,7 @@ Maui.Page
 
     Maui.Holder
     {
+        anchors.fill: parent
         visible: !viewer
         emoji: "qrc:/assets/draw-watercolor.svg"
         title : i18n("Nothing here")
