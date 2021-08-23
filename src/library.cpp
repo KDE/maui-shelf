@@ -5,19 +5,20 @@ Library::Library(QObject *parent) : QObject(parent)
 {   
 }
 
-void Library::openFiles(QList<QUrl> files)
+void Library::openFiles(QStringList files)
 {
     QList<QUrl> res;
     for(const auto &file : files)
     {
-        if(FMStatic::isDir(file))
+        const auto url = QUrl::fromUserInput(file);
+        if(FMStatic::isDir(url))
         {
             continue;
         }else
         {
-            if(FMStatic::checkFileType(FMStatic::FILTER_TYPE::DOCUMENT, FMStatic::getMime(file)))
+            if(FMStatic::checkFileType(FMStatic::FILTER_TYPE::DOCUMENT, FMStatic::getMime(url)))
             {
-                res << file;
+                res << url;
             }
         }
     }

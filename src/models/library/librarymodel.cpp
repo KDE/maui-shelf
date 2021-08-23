@@ -1,6 +1,5 @@
 #include "librarymodel.h"
 
-#include <MauiKit/FileBrowsing/tagging.h>
 #include <MauiKit/FileBrowsing/fileloader.h>
 #include <MauiKit/FileBrowsing/fmstatic.h>
 
@@ -9,7 +8,6 @@
 LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
   , m_fileLoader(new FMH::FileLoader(parent))
 {
-    qDebug()<< "CREATING GALLERY LIST";
     qRegisterMetaType<LibraryModel*>("const LibraryModel*");
 
     connect(m_fileLoader, &FMH::FileLoader::itemsReady,[this](FMH::MODEL_LIST items)
@@ -19,7 +17,6 @@ LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
         emit this->postItemAppended();
         emit this->countChanged();
     });
-
 }
 
 void LibraryModel::setList()
@@ -75,6 +72,7 @@ void LibraryModel::clear()
     emit this->preListChanged();
     this->list.clear();
     emit this->postListChanged();
+    emit this->countChanged();
 }
 
 void LibraryModel::componentComplete()

@@ -43,7 +43,7 @@ Maui.ApplicationWindow
 
         onRequestedFiles:
         {
-            viewerView.open({path: files[0], fav: "0"})
+            viewerView.open(files[0])
         }
     }
 

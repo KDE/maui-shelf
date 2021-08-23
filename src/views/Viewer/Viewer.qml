@@ -13,7 +13,6 @@ Maui.Page
 
     property string currentPath : ""
     property bool currentPathFav : false
-    property var currentItem : ({})
     property alias currentViewer: _viewerLoader.item
 
     title: currentViewer ? currentViewer.title : ""
@@ -38,13 +37,13 @@ Maui.Page
         emojiSize: Maui.Style.iconSizes.huge
     }
 
-//    floatingHeader: true
-//    autoHideHeader: true
     headBar.forceCenterMiddleContent: root.isWide
 
     headBar.farLeftContent: ToolButton
     {
         icon.name: "go-previous"
+        text: i18n("Browser")
+        display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
         onClicked: _stackView.pop()
     }
 
@@ -53,11 +52,12 @@ Maui.Page
         ToolButton
         {
             icon.name: "love"
+            checked: currentPathFav
             icon.color: currentPathFav ? "#f84172" : Kirigami.Theme.textColor
             onClicked:
             {
-                if(FB.Tagging.fav(control.currentPath))
-                    currentPathFav= FB.Tagging.isFav(control.currentPath)
+                FB.Tagging.toggleFav(control.currentPath)
+                currentPathFav = FB.Tagging.isFav(control.currentPath)
             }
         },
 
@@ -156,17 +156,15 @@ Maui.Page
         }
     }
 
-    function open(item)
+    function open(path)
     {
-        control.currentItem = item
-        control.currentPath = currentItem.path
-        control.currentPathFav = currentItem.fav == "1"
+        control.currentPath = path
+        control.currentPathFav = FB.Tagging.isFav(path)
 
         console.log("openinf file:", control.currentPath)
         if(FB.FM.fileExists(  control.currentPath))
         {
             _stackView.push(viewerView)
-            //            _listView.currentItem.page = 0
             if(control.currentPath.endsWith(".pdf"))
                 _viewerLoader.sourceComponent = _pdfComponent
             else if(control.currentPath.endsWith(".txt"))

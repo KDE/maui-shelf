@@ -10,7 +10,7 @@ public:
     explicit Library(QObject *parent = nullptr);
 
 public slots:
-    void openFiles(QList<QUrl> files);
+    void openFiles(QStringList files);
 
 signals:
     void requestedFiles(QList<QUrl> files);

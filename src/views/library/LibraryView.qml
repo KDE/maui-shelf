@@ -261,7 +261,7 @@ Maui.AltBrowser
 
             }else if(Maui.Handy.singleClick)
             {
-                viewerView.open(item)
+                viewerView.open(item.path)
             }
         }
 
@@ -271,7 +271,7 @@ Maui.AltBrowser
             if(!Maui.Handy.singleClick && !selectionMode)
             {
                 const item = control.model.get(control.currentIndex)
-                viewerView.open(item)
+                viewerView.open(item.path)
             }
         }
     }
@@ -336,7 +336,7 @@ listDelegate: Maui.ListBrowserDelegate
 
         }else if(Maui.Handy.singleClick)
         {
-            viewerView.open(item)
+            viewerView.open(item.path)
         }
     }
 
@@ -347,7 +347,7 @@ listDelegate: Maui.ListBrowserDelegate
         if(!Maui.Handy.singleClick && !selectionMode)
         {
             const item = control.model.get(control.currentIndex)
-            viewerView.open(item)
+            viewerView.open(item.path)
         }
     }
 }
@@ -366,14 +366,11 @@ footer: Maui.SelectionBar
 
     Action
     {
-        text: i18n("Open")
-        icon.name: "document-open"
+        text: i18n("Tag")
+        icon.name: "tag"
         onTriggered:
         {
-            for(var item of _selectionbar.items)
-            viewerView.open(item)
 
-            _selectionbar.clear()
         }
     }
 
