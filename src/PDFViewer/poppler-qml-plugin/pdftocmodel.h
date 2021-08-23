@@ -23,8 +23,6 @@
 
 #include <poppler/qt5/poppler-qt5.h>
 
-#include <QDomNode>
-
 class TocEntry
 {
 public:
@@ -69,7 +67,7 @@ private:
     Poppler::Document* m_document;
     QList<TocEntry> m_entries;
 
-    void recursiveGetEntries(QDomNode node, int nodeLevel);
+    void recursiveGetEntries(QVector<Poppler::OutlineItem> node, int nodeLevel);
 
 };
 

@@ -43,10 +43,10 @@ else()
 endif()
 
 if (ANDROID)
-    add_library( poppler SHARED IMPORTED GLOBAL)
+    add_library(poppler SHARED IMPORTED GLOBAL)
     set_target_properties( poppler PROPERTIES IMPORTED_LOCATION "/home/camilo/Qt5152/5.15.2/android/lib/libpoppler_armeabi-v7a.so" )
 
-    add_library( poppler-qt5 SHARED IMPORTED GLOBAL)
+    add_library(poppler-qt5 SHARED IMPORTED GLOBAL)
     set_target_properties( poppler-qt5 PROPERTIES IMPORTED_LOCATION "/home/camilo/Qt5152/5.15.2/android/lib/libpoppler-qt5_armeabi-v7a.so" )
 
     target_include_directories(${PROJECT_NAME} PUBLIC "/home/camilo/Qt5152/5.15.2/android/include/")
@@ -59,7 +59,7 @@ endif()
 target_compile_definitions(${PROJECT_NAME}
     PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
-target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Quick Qt5::Xml Qt5::Qml KF5::CoreAddons KF5::I18n )
+target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Quick Qt5::Qml KF5::CoreAddons KF5::I18n)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install(TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

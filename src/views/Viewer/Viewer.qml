@@ -38,8 +38,8 @@ Maui.Page
         emojiSize: Maui.Style.iconSizes.huge
     }
 
-    floatingHeader: true
-    autoHideHeader: true
+//    floatingHeader: true
+//    autoHideHeader: true
     headBar.forceCenterMiddleContent: root.isWide
 
     headBar.farLeftContent: ToolButton

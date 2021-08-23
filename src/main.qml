@@ -4,6 +4,8 @@ import QtQuick.Controls 2.15
 import org.kde.kirigami 2.14 as Kirigami
 import org.mauikit.controls 1.3 as Maui
 
+import org.maui.shelf 1.0 as Shelf
+
 import "views/library/"
 import "views/Viewer/"
 
@@ -30,6 +32,18 @@ Maui.ApplicationWindow
         initialItem: LibraryView
         {
             id: libraryView
+        }
+    }
+
+    Connections
+    {
+        target: Shelf.Library
+
+        ignoreUnknownSignals: true
+
+        onRequestedFiles:
+        {
+            viewerView.open({path: files[0], fav: "0"})
         }
     }
 

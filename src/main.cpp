@@ -1,11 +1,9 @@
 #include <QCommandLineParser>
 #include <QDate>
-#include <QFileInfo>
 #include <QIcon>
 
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
-
 
 #ifdef Q_OS_ANDROID
 #include <QGuiApplication>
@@ -32,9 +30,7 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QCoreApplication::setAttribute(Qt::AA_DontCreateNativeWidgetSiblings);
     QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
-    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager, true);
 
 #ifdef Q_OS_ANDROID
     QGuiApplication app(argc, argv);
@@ -66,12 +62,12 @@ int main(int argc, char *argv[])
     about.setupCommandLine(&parser);
     about.processCommandLine(&parser);
 
-    //    Library library;
+    Library library;
     QQmlApplicationEngine engine;
     qmlRegisterType<PdfDocument>("PDF", 1, 0, "Document");
 //	qmlRegisterType<EpubReader>("EPUB", 1, 0, "Document");
     qmlRegisterType<LibraryModel>(SHELF_URI, 1, 0, "LibraryList");
-//    qmlRegisterType<Cloud>("CloudList", 1, 0, "CloudList");
+    qmlRegisterSingletonInstance<Library>(SHELF_URI, 1, 0, "Library", &library);
 
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
     if (engine.rootObjects().isEmpty())

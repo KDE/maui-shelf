@@ -2,20 +2,18 @@
 #define LIBRARY_H
 
 #include <QObject>
-#include <QVariantMap>
 
-class FileLoader;
 class Library : public QObject
 {
     Q_OBJECT
 public:
     explicit Library(QObject *parent = nullptr);
 
-private:
-    FileLoader *fileLoader;
+public slots:
+    void openFiles(QList<QUrl> files);
 
 signals:
-    void refreshViews(QVariantMap tables);
+    void requestedFiles(QList<QUrl> files);
 
 public slots:
 };

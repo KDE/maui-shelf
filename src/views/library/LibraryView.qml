@@ -3,8 +3,9 @@ import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
 import org.mauikit.controls 1.2 as Maui
+import org.mauikit.filebrowsing 1.3 as FB
 
-import org.maui.shelf 1.0
+import org.maui.shelf 1.0 as Shelf
 
 Maui.AltBrowser
 {
@@ -12,9 +13,10 @@ Maui.AltBrowser
     enableLassoSelection: true
     gridView.itemSize: 180
     gridView.itemHeight: 220
+    floatingFooter: true
+    viewType: root.isWide ? Maui.AltBrowser.ViewType.Grid : Maui.AltBrowser.ViewType.List
 
     property alias list : _libraryList
-    viewType: root.isWide ? Maui.AltBrowser.ViewType.Grid : Maui.AltBrowser.ViewType.List
 
     Connections
     {
@@ -28,6 +30,27 @@ Maui.AltBrowser
             }
         }
     }
+
+    Component
+    {
+        id: _fileDialog
+        FB.FileDialog
+        {
+            mode: modes.OPEN
+            settings.filterType: FB.FMList.DOCUMENT
+            callback: function(paths)
+            {
+                console.log(paths)
+                Shelf.Library.openFiles(paths)
+            }
+        }
+    }
+
+    Loader
+    {
+        id: _dialogLoader
+    }
+
 
     holder.visible: control.list.count == 0
     holder.title: i18n("Nothing here!")
@@ -43,7 +66,7 @@ Maui.AltBrowser
         recursiveFilteringEnabled: true
         sortCaseSensitivity: Qt.CaseInsensitive
         filterCaseSensitivity: Qt.CaseInsensitive
-        list: LibraryList
+        list: Shelf.LibraryList
         {
             id: _libraryList
         }
@@ -53,6 +76,27 @@ Maui.AltBrowser
     headBar.leftContent: Maui.ToolButtonMenu
     {
         icon.name: "application-menu"
+
+        MenuItem
+        {
+            text: i18n("Open")
+            icon.name: "document-open"
+            onTriggered:
+            {
+                _dialogLoader.sourceComponent = _fileDialog
+                _dialogLoader.item.open()
+            }
+        }
+
+        MenuItem
+        {
+            text: i18n("Settings")
+            icon.name: "settings-configure"
+            onTriggered:
+            {
+            }
+        }
+
         MenuItem
         {
             text: i18n("About")
