@@ -13,6 +13,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="cs">Shelf</name>
   <name xml:lang="en-GB">Shelf</name>
   <name xml:lang="es">Shelf</name>
+  <name xml:lang="fi">Shelf</name>
   <name xml:lang="fr">Shelf</name>
   <name xml:lang="hi">शेल्फ़</name>
   <name xml:lang="it">Shelf</name>
@@ -31,6 +32,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="cs">Procházejte a prohlížejte svoje dokumenty</summary>
   <summary xml:lang="en-GB">Browse and view your documents</summary>
   <summary xml:lang="es">Explore y vea sus documentos</summary>
+  <summary xml:lang="fi">Selaa ja katsele tiedostoja.</summary>
   <summary xml:lang="fr">Naviguer et afficher vos documents</summary>
   <summary xml:lang="hi">अपने दस्तावेज़ों का विचरण एवं प्रदर्शन करें।</summary>
   <summary xml:lang="it">Sfoglia e visualizza i tuoi documenti</summary>
@@ -49,6 +51,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="cs">Shelf je jednoduchý prohlížeč dokumentů PDF a EPUB.</p>
     <p xml:lang="en-GB">Shelf is a simple PDF and EPUB document browser and viewer.</p>
     <p xml:lang="es">Shelf es un sencillo explorador y visor de documentos PDF y EPUB.</p>
+    <p xml:lang="fi">Shelf on yksinkertainen PDF- ja ePub-tiedostoselain ja -katselin.</p>
     <p xml:lang="fr">Shelf est un navigateur et un afficheur simple de documents « PDF » et « ePub ».</p>
     <p xml:lang="hi">शेल्फ़ एक साधारण पीडीएफ और इ-पब दस्तावेज़ ब्राउज़र और प्रदर्शक है।</p>
     <p xml:lang="it">Shelf è un semplice navigatore e visore di documenti PDF ed EPUB.</p>
@@ -72,6 +75,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="cs">Shelf</caption>
       <caption xml:lang="en-GB">Shelf</caption>
       <caption xml:lang="es">Shelf</caption>
+      <caption xml:lang="fi">Shelf</caption>
       <caption xml:lang="fr">Shelf</caption>
       <caption xml:lang="hi">शेल्फ़</caption>
       <caption xml:lang="it">Shelf</caption>
