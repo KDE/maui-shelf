@@ -3,10 +3,7 @@
         <file>main.qml</file>
         <file>views/library/LibraryView.qml</file>
         <file>views/Viewer/Viewer.qml</file>
-        <file>views/Viewer/WebView_Android.qml</file>
-        <file>views/Viewer/WebView.qml</file>
         <file>views/cloud/CloudView.qml</file>
-        <file>views/Viewer/Viewer_PDF.qml</file>
         <file>views/Viewer/Viewer_TXT.qml</file>
         <file>views/Viewer/Viewer_EPUB.qml</file>
     </qresource>

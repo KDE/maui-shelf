@@ -66,21 +66,22 @@ QVariant PdfDocument::data(const QModelIndex & index, int role) const
     }
 }
 
-void PdfDocument::setPath(QString &pathName)
+void PdfDocument::setPath(QUrl &pathName)
 {
     if (pathName.isEmpty())
         return;
+
     beginResetModel();
 
     m_pages.clear();
     m_path = pathName;
     Q_EMIT pathChanged();
 
-    if (!loadDocument(m_path))
+    if (!loadDocument(m_path.toLocalFile()))
         return;
 
     // Init toc model
-//    if(!m_tocModel)
+    if(!m_tocModel)
     m_tocModel = new PdfTocModel;
 
     m_tocModel->setDocument(m_document);
@@ -96,7 +97,7 @@ int PdfDocument::pageCount() const
     return this->pages;
 }
 
-bool PdfDocument::loadDocument(QString &pathName)
+bool PdfDocument::loadDocument(const QString &pathName, const QString &password, const QString &userPassword)
 {
     qDebug() << "Loading document...";
 
@@ -105,9 +106,9 @@ bool PdfDocument::loadDocument(QString &pathName)
         return false;
     }
 
-    m_document = Poppler::Document::load(pathName);
+    m_document = Poppler::Document::load(pathName, password.toUtf8(), userPassword.toUtf8());
 
-    if (!m_document || m_document->isLocked()) {
+    if (!m_document) {
         qDebug() << "ERROR : Can't open the document located at " + pathName;
         Q_EMIT error("Can't open the document located at " + pathName);
 
@@ -115,10 +116,20 @@ bool PdfDocument::loadDocument(QString &pathName)
         return false;
     }
 
+    if (m_document->isLocked()) {
+        qDebug() << "ERROR : Can't open the document located at beacuse it is locked" + pathName;
+        emit this->documentLocked();
+
+//        if(m_document)
+//            delete m_document;
+        return false;
+    }
+
     qDebug() << "Document loaded successfully !";
 
     this->pages = this->m_document->numPages();
     emit this->pagesCountChanged();
+    emit this->titleChanged();
 
     m_document->setRenderHint(Poppler::Document::Antialiasing, true);
     m_document->setRenderHint(Poppler::Document::TextAntialiasing, true);
@@ -137,7 +148,7 @@ QDateTime PdfDocument::getDocumentDate(QString data)
         return QDateTime();
 }
 
-QString PdfDocument::getDocumentInfo(QString data)
+QString PdfDocument::getDocumentInfo(QString data) const
 {
     if (!m_document)
         return QString("");
@@ -146,6 +157,21 @@ QString PdfDocument::getDocumentInfo(QString data)
         return m_document->info(data);
     else
         return QString("");
+}
+
+QString PdfDocument::title() const
+{
+    if (!m_document)
+        return QFileInfo(m_path.toLocalFile()).fileName();
+
+    QString res = this->m_document->title();
+
+    if(res.isEmpty())
+    {
+        res = QFileInfo(m_path.toLocalFile()).fileName();
+    }
+
+    return res;
 }
 
 bool PdfDocument::loadPages()
@@ -185,6 +211,22 @@ void PdfDocument::_q_populate(PdfPagesList pagesList)
     Q_EMIT pagesLoaded();
 }
 
+void PdfDocument::unlock(const QString &ownerPassword, const QString &password)
+{
+    if (! this->loadDocument(m_path.toLocalFile(), ownerPassword, password))
+        return;
+
+    // Init toc model
+    if(!m_tocModel)
+    m_tocModel = new PdfTocModel;
+
+    m_tocModel->setDocument(m_document);
+    Q_EMIT tocModelChanged();
+
+    loadPages();
+    loadProvider();
+}
+
 void PdfDocument::loadProvider()
 {
     // WORKAROUND: QQuickImageProvider should create multiple threads to load more images at the same time.
@@ -194,7 +236,7 @@ void PdfDocument::loadProvider()
     // WORKAROUND: ARM SoCs can disable some of their cores when the load is not particulary high.
     // This causes a wrong value for the "newProvidersNumber" variable.
     // We hard-code its value to 4 (which is the number of available core on all the supported devices).
-//    int newProvidersNumber = QThread::idealThreadCount();
+    //    int newProvidersNumber = QThread::idealThreadCount();
     int newProvidersNumber = 4;
 
     if (newProvidersNumber != m_providersNumber) {

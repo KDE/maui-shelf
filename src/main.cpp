@@ -14,7 +14,6 @@
 
 #include <MauiKit/Core/mauiapp.h>
 
-#include "pdfdocument.h"
 //#include "epubreader.h"
 
 #include "library.h"
@@ -81,7 +80,6 @@ int main(int argc, char *argv[])
     },
     Qt::QueuedConnection);
 
-    qmlRegisterType<PdfDocument>("PDF", 1, 0, "Document");
     //	qmlRegisterType<EpubReader>("EPUB", 1, 0, "Document");
     qmlRegisterType<LibraryModel>(SHELF_URI, 1, 0, "LibraryList");
     qmlRegisterSingletonInstance<Library>(SHELF_URI, 1, 0, "Library", &library);

@@ -6,6 +6,7 @@ import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.3 as FB
 
 import org.kde.kirigami 2.7 as Kirigami
+import org.shelf.poppler 1.0 as Poppler
 
 Maui.Page
 {
@@ -130,7 +131,7 @@ Maui.Page
     {
         id: _pdfComponent
 
-        Viewer_PDF
+        Poppler.PDFViewer
         {
             anchors.fill: parent
         }

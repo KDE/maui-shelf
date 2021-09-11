@@ -26,6 +26,7 @@
 
 #include "pdfitem.h"
 #include "pdftocmodel.h"
+#include <QUrl>
 
 typedef QList<Poppler::Page*> PdfPagesList;
 
@@ -33,7 +34,8 @@ class PdfDocument : public QAbstractListModel
 {
     Q_OBJECT
     Q_DISABLE_COPY(PdfDocument)
-    Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
+    Q_PROPERTY(QString title READ title NOTIFY titleChanged)
+    Q_PROPERTY(QUrl path READ path WRITE setPath NOTIFY pathChanged)
     Q_PROPERTY(int pages READ pageCount NOTIFY pagesCountChanged)
     Q_PROPERTY(int providersNumber READ providersNumber NOTIFY providersNumberChanged)
     Q_PROPERTY(QObject* tocModel READ tocModel NOTIFY tocModelChanged)
@@ -47,21 +49,23 @@ public:
     explicit PdfDocument(QAbstractListModel *parent = 0);
     virtual ~PdfDocument();
 
-    QString path() const { return m_path; }
-    void setPath(QString &pathName);
+    QUrl path() const { return m_path; }
+    void setPath(QUrl &pathName);
 
     int pageCount() const;
     int providersNumber() const { return m_providersNumber; }
 
-    QHash<int, QByteArray> roleNames() const;
+    QHash<int, QByteArray> roleNames() const override;
 
-    int rowCount(const QModelIndex & parent = QModelIndex()) const;
-    QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const;
+    int rowCount(const QModelIndex & parent = QModelIndex()) const override;
+    QVariant data(const QModelIndex & index, int role = Qt::DisplayRole) const override final;
 
     Q_INVOKABLE QDateTime getDocumentDate(QString data);
-    Q_INVOKABLE QString getDocumentInfo(QString data);
+    Q_INVOKABLE QString getDocumentInfo(QString data) const;
 
     QObject *tocModel() const { return m_tocModel; }
+
+    QString title() const;
 
 Q_SIGNALS:
     void pathChanged();
@@ -70,16 +74,21 @@ Q_SIGNALS:
     void providersNumberChanged();
     void tocModelChanged();
     void pagesCountChanged();
+    void documentLocked();
+    void titleChanged();
 
 private slots:
     void _q_populate(PdfPagesList pagesList);
 
+public slots:
+    void unlock(const QString &ownerPassword, const QString &password);
+
 private:
-    QString m_path;
+    QUrl m_path;
     int m_providersNumber;
     int pages;
 
-    bool loadDocument(QString &pathName);
+    bool loadDocument(const QString &pathName, const QString &password = QString(), const QString &userPassword = QString());
     void loadProvider();
     bool loadPages();
 

@@ -3,19 +3,6 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-include_directories(
-    ${CMAKE_CURRENT_SOURCE_DIR}/PDFViewer/poppler-qml-plugin
-    ${CMAKE_CURRENT_BINARY_DIR}/PDFViewer/poppler-qml-plugin
-    )
-
-set(popplerqmlplugin_SRCS
-#    PDFViewer/poppler-qml-plugin/plugin.cpp
-    PDFViewer/poppler-qml-plugin/pdfdocument.cpp
-    PDFViewer/poppler-qml-plugin/pdfimageprovider.cpp
-    PDFViewer/poppler-qml-plugin/pdfitem.cpp
-#    PDFViewer/poppler-qml-plugin/verticalview.cpp
-    PDFViewer/poppler-qml-plugin/pdftocmodel.cpp
-)
 
 set(shelf_SRCS
     main.cpp
@@ -30,30 +17,20 @@ set(shelf_ASSETS
 
 if(ANDROID)
     add_library(${PROJECT_NAME} SHARED
-        ${popplerqmlplugin_SRCS}
         ${shelf_SRCS}
         ${shelf_ASSETS}
         )
 else()
     add_executable(${PROJECT_NAME}
-        ${popplerqmlplugin_SRCS}
         ${shelf_SRCS}
         ${shelf_ASSETS}
         )
 endif()
 
 if (ANDROID)
-    add_library(poppler SHARED IMPORTED GLOBAL)
-    set_target_properties( poppler PROPERTIES IMPORTED_LOCATION "/home/camilo/Qt5152/5.15.2/android/lib/libpoppler_armeabi-v7a.so" )
-
-    add_library(poppler-qt5 SHARED IMPORTED GLOBAL)
-    set_target_properties( poppler-qt5 PROPERTIES IMPORTED_LOCATION "/home/camilo/Qt5152/5.15.2/android/lib/libpoppler-qt5_armeabi-v7a.so" )
-
-    target_include_directories(${PROJECT_NAME} PUBLIC "/home/camilo/Qt5152/5.15.2/android/include/")
-
-    target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2 poppler-qt5)
+     target_link_libraries(${PROJECT_NAME} Qt5::AndroidExtras Qt5::QuickControls2)
 elseif(UNIX)
-    target_link_libraries(${PROJECT_NAME} Qt5::Widgets Poppler::Qt5)
+    target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
 endif()
 
 target_compile_definitions(${PROJECT_NAME}

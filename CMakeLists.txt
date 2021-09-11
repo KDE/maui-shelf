@@ -82,7 +82,11 @@ ecm_setup_version(${SHELF_VERSION}
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/shelf_version.h"
     )
 
+set(QML_IMPORT_PATH ${CMAKE_SOURCE_DIR}/plugins ${CMAKE_BINARY_DIR}/org CACHE STRING "" FORCE)
+
+add_subdirectory(plugins/poppler)
 add_subdirectory(src)
+
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install(FILES org.kde.shelf.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})

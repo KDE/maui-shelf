@@ -1,0 +1,4 @@
+module org.shelf.poppler
+plugin ShelfPoppler
+classname ShelfPopplerPlugin
+typeinfo plugins.qmltypes
