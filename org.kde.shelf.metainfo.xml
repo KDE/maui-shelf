@@ -18,6 +18,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="hi">शेल्फ़</name>
   <name xml:lang="it">Shelf</name>
   <name xml:lang="ko">Shelf</name>
+  <name xml:lang="my">စာအုပ်စင်</name>
   <name xml:lang="nl">Shelf</name>
   <name xml:lang="pl">Shelf</name>
   <name xml:lang="pt">Shelf</name>
@@ -83,6 +84,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="hi">शेल्फ़</caption>
       <caption xml:lang="it">Shelf</caption>
       <caption xml:lang="ko">Shelf</caption>
+      <caption xml:lang="my">စာအုပ်စင်</caption>
       <caption xml:lang="nl">Shelf</caption>
       <caption xml:lang="pl">Shelf</caption>
       <caption xml:lang="pt">Shelf</caption>
