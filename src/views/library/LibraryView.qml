@@ -7,6 +7,8 @@ import org.mauikit.filebrowsing 1.3 as FB
 
 import org.maui.shelf 1.0 as Shelf
 
+import org.kde.kirigami 2.14 as Kirigami
+
 Maui.AltBrowser
 {
     id: control
@@ -51,7 +53,6 @@ Maui.AltBrowser
         id: _dialogLoader
     }
 
-
     holder.visible: control.list.count == 0
     holder.title: i18n("Nothing here!")
     holder.body: i18n("Add new sources to manage your documents.")
@@ -72,7 +73,7 @@ Maui.AltBrowser
         }
     }
 
-    headBar.enabled: control.list.count > 0
+    altHeader: Kirigami.Settings.isMobile
     headBar.leftContent: Maui.ToolButtonMenu
     {
         icon.name: "application-menu"

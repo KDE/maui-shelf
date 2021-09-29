@@ -32,6 +32,7 @@ Maui.ApplicationWindow
         initialItem: LibraryView
         {
             id: libraryView
+            showCSDControls: true
         }
     }
 

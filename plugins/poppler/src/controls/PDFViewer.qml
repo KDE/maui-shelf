@@ -117,7 +117,7 @@ Maui.Page
                 //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index;
                 source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index
                 //                                source: "image://poppler/page/" + _listView.currentPage;
-                sourceSize.width: 2000
+                sourceSize.width: Kirigami.Settings.isMobile ? control.width * 2 : 2000
                 //                    sourceSize.height: 2000
                 //                    imageWidth: 1000
                 //                    imageHeight: 1000

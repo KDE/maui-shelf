@@ -19,6 +19,7 @@ Maui.Page
     title: currentViewer ? currentViewer.title : ""
     padding: 0
 
+    onGoBackTriggered: _stackView.pop()
     property alias viewer : _viewerLoader.item
 
     Maui.Doodle
@@ -48,34 +49,27 @@ Maui.Page
         onClicked: _stackView.pop()
     }
 
-    headBar.rightContent: [
+    headBar.rightContent: Maui.ToolButtonMenu
+    {
+        icon.name: "overflow-menu"
 
-        ToolButton
+        Maui.MenuItemActionRow
         {
-            icon.name: "love"
-            checked: currentPathFav
-            icon.color: currentPathFav ? "#f84172" : Kirigami.Theme.textColor
-            onClicked:
+            Action
             {
-                FB.Tagging.toggleFav(control.currentPath)
-                currentPathFav = FB.Tagging.isFav(control.currentPath)
+                icon.name: "love"
+                text: i18n("Fav")
+
+                checked: currentPathFav
+                icon.color: currentPathFav ? "#f84172" : Kirigami.Theme.textColor
+                onTriggered:
+                {
+                    FB.Tagging.toggleFav(control.currentPath)
+                    currentPathFav = FB.Tagging.isFav(control.currentPath)
+                }
             }
-        },
 
-        ToolButton
-        {
-            icon.name: "document-share"
-            onClicked:
-            {
-                Maui.Platform.shareFiles([control.currentPath])
-            }
-        },
-
-        Maui.ToolButtonMenu
-        {
-            icon.name: "overflow-menu"
-
-            MenuItem
+            Action
             {
                 icon.name: "tool_pen"
                 text: i18n("Doodle")
@@ -83,43 +77,56 @@ Maui.Page
                 onTriggered: doodle.open()
             }
 
-            MenuSeparator {}
-
-            MenuItem
+            Action
             {
-                icon.name: "view-right-new"
-                text: i18n("Browse Horizontally")
+                icon.name: "document-share"
+                text: i18n("Share")
 
-                checkable: true
-                checked:  currentViewer.orientation === ListView.Horizontal
-                onClicked:
-                {
-                    currentViewer.orientation = currentViewer.orientation === ListView.Horizontal ? ListView.Vertical : ListView.Horizontal
-                }
-            }
-
-            MenuItem
-            {
-                icon.name:  "zoom-fit-width"
-                text: i18n("Fill")
-                checkable: true
-                checked: currentViewer.fitWidth
                 onTriggered:
                 {
-                    currentViewer.fitWidth= !currentViewer.fitWidth
+                    Maui.Platform.shareFiles([control.currentPath])
                 }
             }
+        }
 
-            MenuItem
+
+        MenuSeparator {}
+
+        MenuItem
+        {
+            icon.name: "view-right-new"
+            text: i18n("Browse Horizontally")
+
+            checkable: true
+            checked:  currentViewer.orientation === ListView.Horizontal
+            onClicked:
             {
-                text: i18n("Fullscreen")
-                checkable: true
-                checked: root.visibility === Window.FullScreen
-                icon.name: "view-fullscreen"
-                onTriggered: root.visibility = (root.visibility === Window.FullScreen  ? Window.Windowed : Window.FullScreen)
+                currentViewer.orientation = currentViewer.orientation === ListView.Horizontal ? ListView.Vertical : ListView.Horizontal
             }
         }
-    ]
+
+        MenuItem
+        {
+            icon.name:  "zoom-fit-width"
+            text: i18n("Fill")
+            checkable: true
+            checked: currentViewer.fitWidth
+            onTriggered:
+            {
+                currentViewer.fitWidth= !currentViewer.fitWidth
+            }
+        }
+
+        MenuItem
+        {
+            text: i18n("Fullscreen")
+            checkable: true
+            checked: root.visibility === Window.FullScreen
+            icon.name: "view-fullscreen"
+            onTriggered: root.visibility = (root.visibility === Window.FullScreen  ? Window.Windowed : Window.FullScreen)
+        }
+    }
+
 
     Loader
     {
@@ -134,6 +141,7 @@ Maui.Page
         Poppler.PDFViewer
         {
             anchors.fill: parent
+            onGoBackTriggered: _stackView.pop()
         }
     }
 
