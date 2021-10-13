@@ -17,6 +17,12 @@ Maui.ApplicationWindow
     headBar.visible: false
 
     property bool selectionMode: false
+    property alias dialog :_dialogLoader.item
+
+    Loader
+    {
+        id: _dialogLoader
+    }
 
     StackView
     {

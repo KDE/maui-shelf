@@ -22,21 +22,29 @@ Maui.Page
     onGoBackTriggered: _stackView.pop()
     property alias viewer : _viewerLoader.item
 
-    Maui.Doodle
+    Component
     {
-        id: doodle
-        sourceItem: currentViewer.currentItem
-        hint: 1
+        id: _doodleComponent
+        Maui.Doodle
+        {
+            sourceItem: currentViewer.currentItem
+            hint: 1
+        }
     }
 
-    Maui.Holder
+    Loader
     {
         anchors.fill: parent
-        visible: !viewer
-        emoji: "qrc:/assets/draw-watercolor.svg"
-        title : i18n("Nothing here")
-        body: i18n("Drop or open a document to view.")
-        emojiSize: Maui.Style.iconSizes.huge
+        active: !viewer
+        visible: active
+        asynchronous: true
+
+        sourceComponent: Maui.Holder
+        {
+            emoji: "qrc:/assets/draw-watercolor.svg"
+            title : i18n("Nothing here")
+            body: i18n("Drop or open a document to view.")
+        }
     }
 
     headBar.forceCenterMiddleContent: root.isWide
@@ -49,81 +57,88 @@ Maui.Page
         onClicked: _stackView.pop()
     }
 
-    headBar.rightContent: Maui.ToolButtonMenu
+    headBar.rightContent: Loader
     {
-        icon.name: "overflow-menu"
-
-        Maui.MenuItemActionRow
+        asynchronous: true
+        sourceComponent:  Maui.ToolButtonMenu
         {
-            Action
-            {
-                icon.name: "love"
-                text: i18n("Fav")
+            icon.name: "overflow-menu"
 
-                checked: currentPathFav
-                icon.color: currentPathFav ? "#f84172" : Kirigami.Theme.textColor
-                onTriggered:
+            Maui.MenuItemActionRow
+            {
+                Action
                 {
-                    FB.Tagging.toggleFav(control.currentPath)
-                    currentPathFav = FB.Tagging.isFav(control.currentPath)
+                    icon.name: "love"
+                    text: i18n("Fav")
+
+                    checked: currentPathFav
+                    icon.color: currentPathFav ? "#f84172" : Kirigami.Theme.textColor
+                    onTriggered:
+                    {
+                        FB.Tagging.toggleFav(control.currentPath)
+                        currentPathFav = FB.Tagging.isFav(control.currentPath)
+                    }
+                }
+
+                Action
+                {
+                    icon.name: "tool_pen"
+                    text: i18n("Doodle")
+
+                    onTriggered:
+                    {
+                        _dialogLoader.sourceComponent = _doodleComponent
+                        dialog.open()
+                    }
+                }
+
+                Action
+                {
+                    icon.name: "document-share"
+                    text: i18n("Share")
+
+                    onTriggered:
+                    {
+                        Maui.Platform.shareFiles([control.currentPath])
+                    }
                 }
             }
 
-            Action
+            MenuSeparator {}
+
+            MenuItem
             {
-                icon.name: "tool_pen"
-                text: i18n("Doodle")
+                icon.name: "view-right-new"
+                text: i18n("Browse Horizontally")
 
-                onTriggered: doodle.open()
-            }
-
-            Action
-            {
-                icon.name: "document-share"
-                text: i18n("Share")
-
-                onTriggered:
+                checkable: true
+                checked:  currentViewer.orientation === ListView.Horizontal
+                onClicked:
                 {
-                    Maui.Platform.shareFiles([control.currentPath])
+                    currentViewer.orientation = currentViewer.orientation === ListView.Horizontal ? ListView.Vertical : ListView.Horizontal
                 }
             }
-        }
 
-
-        MenuSeparator {}
-
-        MenuItem
-        {
-            icon.name: "view-right-new"
-            text: i18n("Browse Horizontally")
-
-            checkable: true
-            checked:  currentViewer.orientation === ListView.Horizontal
-            onClicked:
+            MenuItem
             {
-                currentViewer.orientation = currentViewer.orientation === ListView.Horizontal ? ListView.Vertical : ListView.Horizontal
+                icon.name:  "zoom-fit-width"
+                text: i18n("Fill")
+                checkable: true
+                checked: currentViewer.fitWidth
+                onTriggered:
+                {
+                    currentViewer.fitWidth= !currentViewer.fitWidth
+                }
             }
-        }
 
-        MenuItem
-        {
-            icon.name:  "zoom-fit-width"
-            text: i18n("Fill")
-            checkable: true
-            checked: currentViewer.fitWidth
-            onTriggered:
+            MenuItem
             {
-                currentViewer.fitWidth= !currentViewer.fitWidth
+                text: i18n("Fullscreen")
+                checkable: true
+                checked: root.visibility === Window.FullScreen
+                icon.name: "view-fullscreen"
+                onTriggered: root.visibility = (root.visibility === Window.FullScreen  ? Window.Windowed : Window.FullScreen)
             }
-        }
-
-        MenuItem
-        {
-            text: i18n("Fullscreen")
-            checkable: true
-            checked: root.visibility === Window.FullScreen
-            icon.name: "view-fullscreen"
-            onTriggered: root.visibility = (root.visibility === Window.FullScreen  ? Window.Windowed : Window.FullScreen)
         }
     }
 
@@ -131,6 +146,7 @@ Maui.Page
     Loader
     {
         id: _viewerLoader
+        asynchronous: true
         anchors.fill: parent
     }
 
@@ -142,6 +158,7 @@ Maui.Page
         {
             anchors.fill: parent
             onGoBackTriggered: _stackView.pop()
+            path: control.currentPath
         }
     }
 
@@ -170,7 +187,6 @@ Maui.Page
         control.currentPath = path
         control.currentPathFav = FB.Tagging.isFav(path)
 
-        console.log("openinf file:", control.currentPath)
         if(FB.FM.fileExists(  control.currentPath))
         {
             _stackView.push(viewerView)
@@ -181,8 +197,6 @@ Maui.Page
             else if(control.currentPath.endsWith(".epub"))
                 _viewerLoader.sourceComponent = _epubComponent
             else return;
-
-            viewer.open(control.currentPath)
         }
     }
 }

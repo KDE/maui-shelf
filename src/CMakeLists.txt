@@ -11,19 +11,26 @@ set(shelf_SRCS
 )
 
 set(shelf_ASSETS
-    qml.qrc
     lib_assets.qrc
     )
+
+if(QUICK_COMPILER)
+    qtquick_compiler_add_resources(shelf_QML_QRC qml.qrc)
+else()
+    qt5_add_resources(shelf_QML_QRC qml.qrc)
+endif()
 
 if(ANDROID)
     add_library(${PROJECT_NAME} SHARED
         ${shelf_SRCS}
         ${shelf_ASSETS}
+        ${shelf_QML_QRC}
         )
 else()
     add_executable(${PROJECT_NAME}
         ${shelf_SRCS}
         ${shelf_ASSETS}
+        ${shelf_QML_QRC}
         )
 endif()
 
