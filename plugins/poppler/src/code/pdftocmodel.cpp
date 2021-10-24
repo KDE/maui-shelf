@@ -23,7 +23,7 @@
 PdfTocModel::PdfTocModel(QAbstractListModel *parent):
     QAbstractListModel(parent)
 {
-    connect(this, SIGNAL(documentChanged()), this, SLOT(fillModel()));
+//    connect(this, SIGNAL(documentChanged()), this, SLOT(fillModel()));
 }
 
 void PdfTocModel::setDocument(Poppler::Document *document)
