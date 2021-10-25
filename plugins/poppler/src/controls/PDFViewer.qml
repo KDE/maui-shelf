@@ -2,8 +2,6 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 
 import org.mauikit.controls 1.3 as Maui
-import org.mauikit.imagetools 1.0 as IT
-
 import org.kde.kirigami 2.9 as Kirigami
 
 import org.shelf.poppler 1.0 as Poppler
@@ -103,7 +101,7 @@ Maui.Page
             width: ListView.view.width
             height: ListView.view.height
 
-            IT.ImageViewer
+            Maui.ImageViewer
             {
                 id: pageImg
                 asynchronous: true
