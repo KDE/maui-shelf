@@ -8,6 +8,8 @@
 #include "shelfpoppler_plugin.h"
 #include "pdfdocument.h"
 
+#include "thumbnailer.h"
+
 void ShelfPopplerPlugin::registerTypes(const char *uri)
 {
 #if defined(Q_OS_ANDROID)
@@ -18,4 +20,12 @@ void ShelfPopplerPlugin::registerTypes(const char *uri)
 
     qmlRegisterType(resolveFileUrl(QStringLiteral("PDFViewer.qml")), uri, 1, 0, "PDFViewer");
 
+}
+
+void ShelfPopplerPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
+{
+    Q_UNUSED(uri);
+
+    /** IMAGE PROVIDERS **/
+    engine->addImageProvider("preview", new Thumbnailer());
 }

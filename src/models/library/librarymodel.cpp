@@ -5,6 +5,14 @@
 
 #include <MauiKit/Core/fmh.h>
 
+static FMH::MODEL fileData(const QUrl &url)
+{
+    FMH::MODEL model;
+    model = FMStatic::getFileInfoModel(url);
+    model.insert(FMH::MODEL_KEY::PREVIEW, "image://preview/"+url.toString());
+    return model;
+}
+
 LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
   , m_fileLoader(new FMH::FileLoader(parent))
 {
@@ -21,6 +29,7 @@ LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
 
 void LibraryModel::setList()
 {
+    this->m_fileLoader->informer = &fileData;
     this->m_fileLoader->requestPath({FMStatic::DesktopPath, FMStatic::DownloadsPath, FMStatic::DocumentsPath, FMStatic::CloudCachePath}, true, FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT]);
 }
 

@@ -13,15 +13,9 @@ class ShelfPopplerPlugin : public QQmlExtensionPlugin
     Q_PLUGIN_METADATA(IID QQmlExtensionInterface_iid)
 public:
     void registerTypes(const char *uri) override;
+    void initializeEngine(QQmlEngine *engine, const char *uri) override;
+
 private:
-    QString resolveFilePath(const QString &path) const
-    {
-#if defined(Q_OS_ANDROID)
-        return QStringLiteral(":/android_rcc_bundle/qml/org/shelf/poppler/") + path;
-#else
-        return baseUrl().toLocalFile() + QLatin1Char('/') + path;
-#endif
-    }
     QString resolveFileUrl(const QString &filePath) const
     {
 #if defined(Q_OS_ANDROID)

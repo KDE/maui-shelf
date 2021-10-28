@@ -14,6 +14,7 @@ set(
     code/shelfpoppler_plugin.cpp
     code/pdfdocument.cpp
     code/pdfimageprovider.cpp
+    code/thumbnailer.cpp
     code/pdfitem.cpp
 #    code/verticalview.cpp
     code/pdftocmodel.cpp

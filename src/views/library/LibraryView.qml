@@ -16,7 +16,7 @@ Maui.AltBrowser
     gridView.itemSize: 180
     gridView.itemHeight: 220
     floatingFooter: true
-    viewType: root.isWide ? Maui.AltBrowser.ViewType.Grid : Maui.AltBrowser.ViewType.List
+    viewType: viewerSettings.viewType
 
     property alias list : _libraryList
 
@@ -124,7 +124,7 @@ Maui.AltBrowser
                 checkable: true
                 icon.name: "view-list-details"
                 checked: control.viewType === Maui.AltBrowser.ViewType.List
-                onTriggered:  control.viewType = Maui.AltBrowser.ViewType.List
+                onTriggered: viewerSettings.viewType = Maui.AltBrowser.ViewType.List
             }
 
             MenuItem
@@ -133,7 +133,7 @@ Maui.AltBrowser
                 checkable: true
                 icon.name: "view-list-icons"
                 checked: control.viewType === Maui.AltBrowser.ViewType.Grid
-                onTriggered:  control.viewType = Maui.AltBrowser.ViewType.Grid
+                onTriggered: viewerSettings.viewType = Maui.AltBrowser.ViewType.Grid
             }
 
             Maui.LabelDelegate
@@ -221,7 +221,7 @@ Maui.AltBrowser
 
 
         label1.text: model.label
-        imageSource: model.thumbnail
+        imageSource: model.preview
         iconSource: model.icon
         template.fillMode: Image.PreserveAspectFit
 

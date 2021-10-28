@@ -30,12 +30,11 @@ PdfImageProvider::PdfImageProvider(Poppler::Document *pdfDocument)
 
 QImage PdfImageProvider::requestImage(const QString & id, QSize * size, const QSize & requestedSize)
 {
-    Q_UNUSED(size)
-
     // If the requestedSize.width is 0, avoid Poppler rendering
     // FIXME: Actually it works correctly, but an error is anyway shown in the application output.
-    if (requestedSize.width() > 0) {
-        QString type = id.section("/", 0, 0);
+    if (requestedSize.width() > 0)
+    {
+        const QString type = id.section("/", 0, 0);
         QImage result;
         QSizeF pageSize;
         QSizeF pageSizePhys;
@@ -56,7 +55,8 @@ QImage PdfImageProvider::requestImage(const QString & id, QSize * size, const QS
             if(!page)
                 return result;
 
-
+            size->setHeight(requestedSize.height());
+            size->setWidth(requestedSize.width());
             pageSize = page->pageSizeF();
             pageSizePhys.setWidth(pageSize.width() / 72);
             res = requestedSize.width() / pageSizePhys.width();
