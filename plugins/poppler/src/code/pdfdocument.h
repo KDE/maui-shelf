@@ -39,6 +39,8 @@ class PdfDocument : public QAbstractListModel
     Q_PROPERTY(int pages READ pageCount NOTIFY pagesCountChanged)
     Q_PROPERTY(int providersNumber READ providersNumber NOTIFY providersNumberChanged)
     Q_PROPERTY(QObject* tocModel READ tocModel NOTIFY tocModelChanged)
+    Q_PROPERTY(bool isLocked READ isLocked NOTIFY isLockedChanged CONSTANT)
+    Q_PROPERTY(bool isValid READ isValid NOTIFY isValidChanged CONSTANT)
 
 public:
     enum Roles {
@@ -67,6 +69,10 @@ public:
 
     QString title() const;
 
+    bool isLocked() const;
+
+    bool isValid() const;
+
 Q_SIGNALS:
     void pathChanged();
     void error(const QString& errorMessage);
@@ -76,6 +82,10 @@ Q_SIGNALS:
     void pagesCountChanged();
     void documentLocked();
     void titleChanged();
+
+    void isLockedChanged();
+
+    void isValidChanged();
 
 private slots:
     void _q_populate(PdfPagesList pagesList);
@@ -95,6 +105,7 @@ private:
     Poppler::Document *m_document;
     QList<PdfItem> m_pages;
     PdfTocModel* m_tocModel;
+    bool m_isValid = false;
 };
 
 #endif // PDFDOCUMENT_H

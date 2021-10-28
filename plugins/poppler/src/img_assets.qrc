@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/img_assets">
+        <file>assets/lock.svg</file>
+        <file>assets/alarm.svg</file>
+        <file>assets/draw-watercolor.svg</file>
+    </qresource>
+</RCC>

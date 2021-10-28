@@ -112,6 +112,9 @@ bool PdfDocument::loadDocument(const QString &pathName, const QString &password,
         qDebug() << "ERROR : Can't open the document located at " + pathName;
         Q_EMIT error("Can't open the document located at " + pathName);
 
+        this->m_isValid = false;
+        emit this->isValidChanged();
+
         delete m_document;
         return false;
     }
@@ -119,9 +122,11 @@ bool PdfDocument::loadDocument(const QString &pathName, const QString &password,
     if (m_document->isLocked()) {
         qDebug() << "ERROR : Can't open the document located at beacuse it is locked" + pathName;
         emit this->documentLocked();
+        emit this->isLockedChanged();
 
-//        if(m_document)
-//            delete m_document;
+        this->m_isValid = false;
+        emit this->isValidChanged();
+
         return false;
     }
 
@@ -130,6 +135,10 @@ bool PdfDocument::loadDocument(const QString &pathName, const QString &password,
     this->pages = this->m_document->numPages();
     emit this->pagesCountChanged();
     emit this->titleChanged();
+    emit this->isLockedChanged();
+
+    this->m_isValid = true;
+    emit this->isValidChanged();
 
     m_document->setRenderHint(Poppler::Document::Antialiasing, true);
     m_document->setRenderHint(Poppler::Document::TextAntialiasing, true);
@@ -172,6 +181,16 @@ QString PdfDocument::title() const
     }
 
     return res;
+}
+
+bool PdfDocument::isLocked() const
+{
+    return m_document->isLocked();
+}
+
+bool PdfDocument::isValid() const
+{
+    return m_isValid;
 }
 
 bool PdfDocument::loadPages()

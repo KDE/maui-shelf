@@ -128,6 +128,22 @@ Maui.Page
         //         ScrollBar.vertical: ScrollBar {}
     }
 
+    Maui.Holder
+    {
+        visible: !poppler.isValid
+        anchors.fill: parent
+        emoji: poppler.isLocked ? "qrc:/img_assets/assets/lock.svg" : "qrc:/img_assets/assets/alarm.svg"
+        title: poppler.isLocked ? i18n("Locked") : i18n("Error")
+        body: poppler.isLocked ? i18n("This document is password protected.") : i18n("There has been an error loading this document.")
+
+        actions: Action
+        {
+            enabled: poppler.isLocked
+            text: i18n("UnLock")
+            onTriggered: _passwordDialog.open()
+        }
+    }
+
     function open(filePath)
     {
         poppler.path = filePath

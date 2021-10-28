@@ -18,6 +18,7 @@ set(
     code/pdfitem.cpp
 #    code/verticalview.cpp
     code/pdftocmodel.cpp
+    img_assets.qrc
     resources.qrc
      ${shelfpoppler_QM_LOADER}
     )
