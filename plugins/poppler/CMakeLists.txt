@@ -29,6 +29,8 @@ project(ShelfPoppler LANGUAGES CXX VERSION 1.0.0)
 find_package(ECM ${KF5_VERSION} NO_MODULE)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
 
+option(QUICK_COMPILER "Use QtQuick compiler to improve performance" TRUE)
+
 include(GenerateExportHeader)
 include(GNUInstallDirs)
 include(KDEInstallDirs)
@@ -75,6 +77,14 @@ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/shelfpoppler_version.h"
     COMPONENT Devel)
 
 find_package(Qt5 ${REQUIRED_QT_VERSION} COMPONENTS Core Quick Concurrent REQUIRED)
+
+if(QUICK_COMPILER)
+    find_package(Qt5QuickCompiler)
+    set_package_properties(Qt5QuickCompiler PROPERTIES
+        DESCRIPTION "Compile QML at build time"
+        TYPE OPTIONAL
+        )
+endif()
 
 add_subdirectory(src)
 

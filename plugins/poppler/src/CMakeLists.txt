@@ -18,15 +18,23 @@ set(
     code/pdfitem.cpp
 #    code/verticalview.cpp
     code/pdftocmodel.cpp
-    img_assets.qrc
-    resources.qrc
      ${shelfpoppler_QM_LOADER}
     )
 
 set(
     pluginData
+    data/fonts/fonts.qrc
     controls/qmldir
+    img_assets.qrc
     )
+
+if(QUICK_COMPILER)
+    qtquick_compiler_add_resources(plugin_QML_QRC resources.qrc
+)
+else()
+    qt5_add_resources(plugin_QML_QRC resources.qrc
+)
+endif()
 
 #ecm_generate_qmltypes(org.shelf.poppler ${PROJECT_VERSION}
 #    DESTINATION ${KDE_INSTALL_QMLDIR}/org/shelf/poppler )
@@ -38,7 +46,9 @@ set(
 add_library(
     ShelfPoppler
     SHARED
-    ${sources} ${pluginData}
+    ${sources}
+    ${pluginData}
+    ${plugin_QML_QRC}
     )
 
 #generate_export_header(ShelfPoppler BASE_NAME ShelfPoppler)

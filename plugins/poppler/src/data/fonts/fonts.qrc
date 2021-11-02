@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/fonts">
+        <file>Courier/Courier.ttf</file>
+        <file>Courier/Courier Bold Oblique.otf</file>
+        <file>times/TIMESR.ttf</file>
+        <file>Helvetica-Font/helvetica-rounded-bold-5871d05ead8de.otf</file>
+        <file>Helvetica-Font/helvetica-compressed-5871d14b6903a.otf</file>
+        <file>Helvetica-Font/helvetica-light-587ebe5a59211.ttf</file>
+        <file>Helvetica-Font/Helvetica.ttf</file>
+        <file>Helvetica-Font/Helvetica-Oblique.ttf</file>
+        <file>Helvetica-Font/Helvetica-BoldOblique.ttf</file>
+        <file>Helvetica-Font/Helvetica-Bold.ttf</file>
+    </qresource>
+</RCC>

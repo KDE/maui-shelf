@@ -39,8 +39,8 @@ class PdfDocument : public QAbstractListModel
     Q_PROPERTY(int pages READ pageCount NOTIFY pagesCountChanged)
     Q_PROPERTY(int providersNumber READ providersNumber NOTIFY providersNumberChanged)
     Q_PROPERTY(QObject* tocModel READ tocModel NOTIFY tocModelChanged)
-    Q_PROPERTY(bool isLocked READ isLocked NOTIFY isLockedChanged CONSTANT)
-    Q_PROPERTY(bool isValid READ isValid NOTIFY isValidChanged CONSTANT)
+    Q_PROPERTY(bool isLocked READ isLocked NOTIFY isLockedChanged FINAL)
+    Q_PROPERTY(bool isValid READ isValid NOTIFY isValidChanged FINAL)
 
 public:
     enum Roles {

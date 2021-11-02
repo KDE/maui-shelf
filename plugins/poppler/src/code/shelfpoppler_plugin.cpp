@@ -4,6 +4,7 @@
 
 #include <QQmlEngine>
 #include <QResource>
+#include <QFontDatabase>
 
 #include "shelfpoppler_plugin.h"
 #include "pdfdocument.h"
@@ -14,6 +15,19 @@ void ShelfPopplerPlugin::registerTypes(const char *uri)
 {
 #if defined(Q_OS_ANDROID)
     QResource::registerResource(QStringLiteral("assets:/android_rcc_bundle.rcc"));
+    QResource::registerResource(QStringLiteral("fonts.qrc"), "fonts");
+
+    if(QFile::exists(":/fonts/Courier/Courier.ttf"))
+    {
+        qDebug() << "Courier font exists";
+    }
+    QFontDatabase::addApplicationFont(":/fonts/Courier/Courier.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/Courier/Courier Bold Oblique.otf");
+    QFontDatabase::addApplicationFont(":/fonts/Helvetica-Font/Helvetica-Bold.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/Helvetica-Font/Helvetica-BoldOblique.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/Helvetica-Font/Helvetica-Oblique.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/times/TIMESR.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/Helvetica-Font/Helvetica.ttf");
     #endif
 
     qmlRegisterType<PdfDocument>(uri, 1, 0, "Document");
