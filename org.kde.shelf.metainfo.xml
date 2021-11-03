@@ -11,6 +11,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="ca">Shelf</name>
   <name xml:lang="ca-valencia">Shelf</name>
   <name xml:lang="cs">Shelf</name>
+  <name xml:lang="de">Shelf</name>
   <name xml:lang="en-GB">Shelf</name>
   <name xml:lang="es">Shelf</name>
   <name xml:lang="fi">Shelf</name>
@@ -77,6 +78,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="ca">Shelf</caption>
       <caption xml:lang="ca-valencia">Shelf</caption>
       <caption xml:lang="cs">Shelf</caption>
+      <caption xml:lang="de">Shelf</caption>
       <caption xml:lang="en-GB">Shelf</caption>
       <caption xml:lang="es">Shelf</caption>
       <caption xml:lang="fi">Shelf</caption>
