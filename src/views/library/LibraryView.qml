@@ -58,6 +58,19 @@ Maui.AltBrowser
     holder.body: i18n("Add new sources to manage your documents.")
     holder.emoji: "qrc:/assets/document-new.svg"
     holder.emojiSize: Maui.Style.iconSizes.huge
+    holder.actions:[
+
+        Action
+        {
+            text: i18n("Open file")
+            onTriggered: openFileDialog()
+        },
+
+        Action
+        {
+            text: i18n("Add sources")
+        }
+    ]
 
     model: Maui.BaseModel
     {
@@ -82,11 +95,7 @@ Maui.AltBrowser
         {
             text: i18n("Open")
             icon.name: "document-open"
-            onTriggered:
-            {
-                _dialogLoader.sourceComponent = _fileDialog
-                _dialogLoader.item.open()
-            }
+            onTriggered: openFileDialog()
         }
 
         MenuItem
@@ -397,6 +406,12 @@ function filterSelectedItems(path)
     }
 
     return path
+}
+
+function openFileDialog()
+{
+    _dialogLoader.sourceComponent = _fileDialog
+    _dialogLoader.item.open()
 }
 
 }
