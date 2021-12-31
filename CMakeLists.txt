@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(SHELF_VERSION 2.1.0)
+set(SHELF_VERSION 2.1.1)
 project(shelf LANGUAGES CXX VERSION ${SHELF_VERSION})
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror")
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -97,7 +96,6 @@ set(QML_IMPORT_PATH ${CMAKE_SOURCE_DIR}/plugins ${CMAKE_BINARY_DIR}/org CACHE ST
 
 add_subdirectory(plugins/poppler)
 add_subdirectory(src)
-
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install(FILES org.kde.shelf.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
