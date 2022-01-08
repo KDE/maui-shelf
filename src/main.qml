@@ -14,6 +14,7 @@ Maui.ApplicationWindow
 {
     id: root
     title: viewerView.title
+    Maui.App.darkMode: viewerSettings.darkMode
 
     headBar.visible: false
 
@@ -63,10 +64,15 @@ Maui.ApplicationWindow
 
     Component.onCompleted:
     {
+        setAndroidStatusBarColor()
+    }        
+
+    function setAndroidStatusBarColor()
+    {
         if(Maui.Handy.isAndroid)
         {
-            Maui.Android.statusbarColor(headBar.Kirigami.Theme.backgroundColor, false)
-            Maui.Android.navBarColor(headBar.visible ? headBar.Kirigami.Theme.backgroundColor : Kirigami.Theme.backgroundColor, false)
+            Maui.Android.statusbarColor( Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
+            Maui.Android.navBarColor(headBar.visible ? headBar.Kirigami.Theme.backgroundColor : Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
         }
     }
 }
