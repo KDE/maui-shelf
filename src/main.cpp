@@ -63,26 +63,24 @@ int main(int argc, char *argv[])
     about.processCommandLine(&parser);
     const QStringList args = parser.positionalArguments();
 
-    Library library;
-
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(
                 &engine,
                 &QQmlApplicationEngine::objectCreated,
                 &app,
-                [url, args, &library](QObject *obj, const QUrl &objUrl) {
+                [url, args](QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
 
         if (!args.isEmpty())
-            library.openFiles(args);
+            Library::instance()->openFiles(args);
     },
     Qt::QueuedConnection);
 
     //	qmlRegisterType<EpubReader>("EPUB", 1, 0, "Document");
     qmlRegisterType<LibraryModel>(SHELF_URI, 1, 0, "LibraryList");
-    qmlRegisterSingletonInstance<Library>(SHELF_URI, 1, 0, "Library", &library);
+    qmlRegisterSingletonInstance<Library>(SHELF_URI, 1, 0, "Library", Library::instance());
 
     engine.load(url);
 

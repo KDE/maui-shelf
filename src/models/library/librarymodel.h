@@ -24,7 +24,7 @@ private:
     FMH::FileLoader *m_fileLoader;
     FMH::MODEL_LIST list;  
 
-    void setList();
+    void setList(const QStringList &sources);
 
 public slots:
     bool remove(const int &index);

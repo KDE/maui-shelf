@@ -7,6 +7,7 @@ import org.mauikit.controls 1.3 as Maui
 
 import org.maui.shelf 1.0 as Shelf
 
+import "views"
 import "views/library/"
 import "views/Viewer/"
 
@@ -24,7 +25,19 @@ Maui.ApplicationWindow
     Settings
     {
         id: viewerSettings
+        property bool thumbnailsPreview : true
+        property bool darkMode: true
         property int viewType : Maui.AltBrowser.ViewType.Grid
+    }
+
+    Component
+    {
+        id: _settingsDialogComponent
+
+        SettingsDialog
+        {
+
+        }
     }
 
     Loader

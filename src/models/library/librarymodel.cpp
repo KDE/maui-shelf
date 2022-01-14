@@ -5,6 +5,8 @@
 
 #include <MauiKit/Core/fmh.h>
 
+#include "library.h"
+
 static FMH::MODEL fileData(const QUrl &url)
 {
     FMH::MODEL model;
@@ -18,6 +20,8 @@ LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
 {
     qRegisterMetaType<LibraryModel*>("const LibraryModel*");
 
+    connect(Library::instance(), &Library::sourcesChanged, this, &LibraryModel::setList);
+
     connect(m_fileLoader, &FMH::FileLoader::itemsReady,[this](FMH::MODEL_LIST items)
     {
         emit this->preItemsAppended(items.size());
@@ -27,10 +31,10 @@ LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
     });
 }
 
-void LibraryModel::setList()
+void LibraryModel::setList(const QStringList &sources)
 {
     this->m_fileLoader->informer = &fileData;
-    this->m_fileLoader->requestPath({FMStatic::DesktopPath, FMStatic::DownloadsPath, FMStatic::DocumentsPath, FMStatic::CloudCachePath}, true, FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT]);
+    this->m_fileLoader->requestPath(QUrl::fromStringList(sources), true, FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT]);
 }
 
 const FMH::MODEL_LIST &LibraryModel::items() const
@@ -86,5 +90,5 @@ void LibraryModel::clear()
 
 void LibraryModel::componentComplete()
 {
-    this->setList();
+    this->setList(Library::instance()->sources());
 }

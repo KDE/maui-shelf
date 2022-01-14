@@ -104,6 +104,8 @@ Maui.AltBrowser
             icon.name: "settings-configure"
             onTriggered:
             {
+                _dialogLoader.sourceComponent = _settingsDialogComponent
+                _dialogLoader.item.open()
             }
         }
 
@@ -198,11 +200,11 @@ Maui.AltBrowser
     {
         Layout.fillWidth: true
         Layout.maximumWidth: 500
+        Layout.alignment: Qt.AlignCenter
         placeholderText: i18n("Filter...")
         onAccepted: control.model.filter = text
         onCleared:  control.model.filter = text
     }
-
 
     gridDelegate: Item
     {
@@ -232,6 +234,7 @@ Maui.AltBrowser
         label1.text: model.label
         imageSource: model.preview
         iconSource: model.icon
+        template.labelSizeHint: 32
         template.fillMode: Image.PreserveAspectFit
 
         checkable: root.selectionMode
