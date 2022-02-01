@@ -4,6 +4,7 @@ import Qt.labs.settings 1.0
 
 import org.kde.kirigami 2.14 as Kirigami
 import org.mauikit.controls 1.3 as Maui
+import org.mauikit.filebrowsing 1.3 as FB
 
 import org.maui.shelf 1.0 as Shelf
 
@@ -34,9 +35,21 @@ Maui.ApplicationWindow
     {
         id: _settingsDialogComponent
 
-        SettingsDialog
-        {
+        SettingsDialog {}
+    }
 
+    Component
+    {
+        id: _fileDialog
+        FB.FileDialog
+        {
+            mode: modes.OPEN
+            settings.filterType: FB.FMList.DOCUMENT
+            callback: function(paths)
+            {
+                console.log(paths)
+                Shelf.Library.openFiles(paths)
+            }
         }
     }
 

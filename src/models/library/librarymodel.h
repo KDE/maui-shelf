@@ -31,6 +31,7 @@ public slots:
     bool deleteAt(const int &index);
     bool bookmark(const int &index, const int &value);
     void clear();
+    void rescan();
 };
 
 #endif // LIBRARYMODEL_H

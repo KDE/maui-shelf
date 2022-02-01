@@ -1,10 +1,14 @@
 #include "library.h"
 #include <MauiKit/FileBrowsing/fmstatic.h>
+#include <MauiKit/Core/utils.h>
 
 Library *Library::m_instance = nullptr;
 
 Library::Library(QObject *parent) : QObject(parent)
 {   
+    static const auto defaultSources = QStringList({FMStatic::DesktopPath, FMStatic::DownloadsPath, FMStatic::DocumentsPath});
+
+    m_sources = UTIL::loadSettings("Sources", "Settings", defaultSources).toStringList();
 }
 
 Library *Library::instance()
@@ -21,8 +25,7 @@ Library *Library::instance()
 QVariantList Library::sourcesModel() const
 {
     QVariantList res;
-    const auto urls = sources();
-    for (const auto &url : urls)
+    for (const auto &url : m_sources)
     {
         if(FMStatic::fileExists(url))
         {
@@ -35,7 +38,7 @@ QVariantList Library::sourcesModel() const
 
 QStringList Library::sources() const
 {
-    return QStringList({FMStatic::DesktopPath, FMStatic::DownloadsPath, FMStatic::DocumentsPath, FMStatic::CloudCachePath});
+    return m_sources;
 }
 
 void Library::openFiles(QStringList files)
@@ -61,23 +64,21 @@ void Library::openFiles(QStringList files)
 
 void Library::removeSource(const QString &url)
 {
+    m_sources.removeOne(url);
 
-}
-
-void Library::addSource(const QString &url)
-{
-
+    UTIL::saveSettings("Sources", m_sources, "Settings");
+    emit this->sourcesChanged(m_sources);
 }
 
 void Library::addSources(const QStringList &urls)
 {
+    m_sources << urls;
+    m_sources.removeDuplicates();
 
+    UTIL::saveSettings("Sources", m_sources, "Settings");
+    emit this->sourcesChanged(m_sources);
 }
 
-void Library::rescan()
-{
-
-}
 
 
 

@@ -17,19 +17,16 @@ public:
 public slots:
     void openFiles(QStringList files);
     void removeSource(const QString &url);
-    void addSource(const QString &url);
     void addSources(const QStringList &urls);
-    void rescan();
 
 private:
     static Library *m_instance;
     explicit Library(QObject *parent = nullptr);
-
+    QStringList m_sources;
 signals:
     void requestedFiles(QList<QUrl> files);
     void sourcesChanged(QStringList sources);
 
-public slots:
 };
 
 #endif // LIBRARY_H

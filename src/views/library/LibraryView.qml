@@ -2,7 +2,7 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.3
 
-import org.mauikit.controls 1.2 as Maui
+import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.3 as FB
 
 import org.maui.shelf 1.0 as Shelf
@@ -33,31 +33,10 @@ Maui.AltBrowser
         }
     }
 
-    Component
-    {
-        id: _fileDialog
-        FB.FileDialog
-        {
-            mode: modes.OPEN
-            settings.filterType: FB.FMList.DOCUMENT
-            callback: function(paths)
-            {
-                console.log(paths)
-                Shelf.Library.openFiles(paths)
-            }
-        }
-    }
-
-    Loader
-    {
-        id: _dialogLoader
-    }
-
     holder.visible: control.list.count == 0
     holder.title: i18n("Nothing here!")
     holder.body: i18n("Add new sources to manage your documents.")
     holder.emoji: "qrc:/assets/document-new.svg"
-    holder.emojiSize: Maui.Style.iconSizes.huge
     holder.actions:[
 
         Action
@@ -69,6 +48,7 @@ Maui.AltBrowser
         Action
         {
             text: i18n("Add sources")
+            onTriggered: openSettingsDialog()
         }
     ]
 
@@ -102,11 +82,7 @@ Maui.AltBrowser
         {
             text: i18n("Settings")
             icon.name: "settings-configure"
-            onTriggered:
-            {
-                _dialogLoader.sourceComponent = _settingsDialogComponent
-                _dialogLoader.item.open()
-            }
+            onTriggered: openSettingsDialog()
         }
 
         MenuItem
@@ -196,7 +172,7 @@ Maui.AltBrowser
         }
     ]
 
-    headBar.middleContent: Maui.TextField
+    headBar.middleContent: Maui.SearchField
     {
         Layout.fillWidth: true
         Layout.maximumWidth: 500
@@ -234,6 +210,7 @@ Maui.AltBrowser
         label1.text: model.label
         imageSource: model.preview
         iconSource: model.icon
+        iconSizeHint: Maui.Style.iconSizes.huge
         template.labelSizeHint: 32
         template.fillMode: Image.PreserveAspectFit
 
@@ -414,6 +391,12 @@ function filterSelectedItems(path)
 function openFileDialog()
 {
     _dialogLoader.sourceComponent = _fileDialog
+    _dialogLoader.item.open()
+}
+
+function openSettingsDialog()
+{
+    _dialogLoader.sourceComponent = _settingsDialogComponent
     _dialogLoader.item.open()
 }
 

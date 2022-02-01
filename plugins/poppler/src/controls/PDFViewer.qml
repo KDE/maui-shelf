@@ -95,37 +95,28 @@ Maui.Page
             currentIndex = index
         }
 
-        delegate: Item
+        delegate: Maui.ImageViewer
         {
-            id: delegate
+            id: pageImg
+            asynchronous: true
             width: ListView.view.width
             height: ListView.view.height
 
-            Maui.ImageViewer
-            {
-                id: pageImg
-                asynchronous: true
+            cache: false
+            //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + _listView.currentPage;
+            //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index;
+            source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index
+            //                                source: "image://poppler/page/" + _listView.currentPage;
+            sourceSize.width: Kirigami.Settings.isMobile ? control.width * 2 : 2000
+            //                    sourceSize.height: 2000
+            //                    imageWidth: 1000
+            //                    imageHeight: 1000
+            fillMode: Image.PreserveAspectFit
 
-                anchors.centerIn: parent
-                height: fitWidth ? undefined : parent.height
-                width:  parent.width
-
-                cache: false
-                //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + _listView.currentPage;
-                //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index;
-                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index
-                //                                source: "image://poppler/page/" + _listView.currentPage;
-                sourceSize.width: Kirigami.Settings.isMobile ? control.width * 2 : 2000
-                //                    sourceSize.height: 2000
-                //                    imageWidth: 1000
-                //                    imageHeight: 1000
-                fillMode: Image.PreserveAspectFit
-
-                //                onSourceChanged: console.log(source)
-            }
+            //                onSourceChanged: console.log(source)
         }
 
-        //         ScrollBar.vertical: ScrollBar {}
+
     }
 
     Maui.Holder

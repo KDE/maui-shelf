@@ -119,17 +119,17 @@ Maui.Page
                 }
             }
 
-            MenuItem
-            {
-                icon.name:  "zoom-fit-width"
-                text: i18n("Fill")
-                checkable: true
-                checked: currentViewer.fitWidth
-                onTriggered:
-                {
-                    currentViewer.fitWidth= !currentViewer.fitWidth
-                }
-            }
+//            MenuItem
+//            {
+//                icon.name:  "zoom-fit-width"
+//                text: i18n("Fill")
+//                checkable: true
+//                checked: currentViewer.fitWidth
+//                onTriggered:
+//                {
+//                    currentViewer.fitWidth= !currentViewer.fitWidth
+//                }
+//            }
 
             MenuItem
             {

@@ -33,6 +33,8 @@ LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
 
 void LibraryModel::setList(const QStringList &sources)
 {
+    this->clear();
+
     this->m_fileLoader->informer = &fileData;
     this->m_fileLoader->requestPath(QUrl::fromStringList(sources), true, FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT]);
 }
@@ -82,10 +84,20 @@ bool LibraryModel::bookmark(const int &index, const int &)
 
 void LibraryModel::clear()
 {
+    if(this->list.isEmpty())
+    {
+        return;
+    }
+
     emit this->preListChanged();
     this->list.clear();
     emit this->postListChanged();
     emit this->countChanged();
+}
+
+void LibraryModel::rescan()
+{
+    this->setList(Library::instance()->sources());
 }
 
 void LibraryModel::componentComplete()
