@@ -1,5 +1,6 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
+import QtQuick.Layouts 1.12
 
 import org.mauikit.controls 1.3 as Maui
 import org.kde.kirigami 2.9 as Kirigami
@@ -31,9 +32,9 @@ Maui.Page
         onFinished: poppler.unlock(text, text)
     }
 
-    footBar.middleContent: [
-        Maui.ToolActions
+    footBar.middleContent: Maui.ToolActions
         {
+            Layout.alignment: Qt.AlignCenter
             expanded: true
             autoExclusive: false
             checkable: false
@@ -65,7 +66,7 @@ Maui.Page
                 }
             }
         }
-    ]
+
 
     Maui.ListBrowser
     {
