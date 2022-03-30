@@ -67,6 +67,7 @@ Maui.AltBrowser
     }
 
     altHeader: Kirigami.Settings.isMobile
+    headBar.forceCenterMiddleContent: root.isWide
     headBar.leftContent: Maui.ToolButtonMenu
     {
         icon.name: "application-menu"
