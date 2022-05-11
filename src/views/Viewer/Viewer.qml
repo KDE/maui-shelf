@@ -12,15 +12,14 @@ Maui.Page
 {
     id: control
 
-    property string currentPath : ""
-    property bool currentPathFav : false
-    property alias currentViewer: _viewerLoader.item
-
+    property string currentPath : _tabView.currentItem.path
+    property bool currentPathFav : FB.Tagging.isFav(currentPath)
+    property alias currentViewer: _tabView.currentItem
+    property alias tabView :_tabView
     title: currentViewer ? currentViewer.title : ""
     padding: 0
 
     onGoBackTriggered: _stackView.pop()
-    property alias viewer : _viewerLoader.item
 
     Component
     {
@@ -35,7 +34,7 @@ Maui.Page
     Loader
     {
         anchors.fill: parent
-        active: !viewer
+        active: !currentViewer
         visible: active
         asynchronous: true
 
@@ -119,17 +118,17 @@ Maui.Page
                 }
             }
 
-//            MenuItem
-//            {
-//                icon.name:  "zoom-fit-width"
-//                text: i18n("Fill")
-//                checkable: true
-//                checked: currentViewer.fitWidth
-//                onTriggered:
-//                {
-//                    currentViewer.fitWidth= !currentViewer.fitWidth
-//                }
-//            }
+            //            MenuItem
+            //            {
+            //                icon.name:  "zoom-fit-width"
+            //                text: i18n("Fill")
+            //                checkable: true
+            //                checked: currentViewer.fitWidth
+            //                onTriggered:
+            //                {
+            //                    currentViewer.fitWidth= !currentViewer.fitWidth
+            //                }
+            //            }
 
             MenuItem
             {
@@ -142,11 +141,9 @@ Maui.Page
         }
     }
 
-
-    Loader
+    Maui.TabView
     {
-        id: _viewerLoader
-        asynchronous: true
+        id: _tabView
         anchors.fill: parent
     }
 
@@ -156,9 +153,11 @@ Maui.Page
 
         Poppler.PDFViewer
         {
-            anchors.fill: parent
+            Maui.TabViewInfo.tabTitle: title
+            Maui.TabViewInfo.tabToolTipText:  path
+            height: ListView.view.height
+            width:  ListView.view.width
             onGoBackTriggered: _stackView.pop()
-            path: control.currentPath
         }
     }
 
@@ -184,18 +183,25 @@ Maui.Page
 
     function open(path)
     {
-        control.currentPath = path
-        control.currentPathFav = FB.Tagging.isFav(path)
-
-        if(FB.FM.fileExists(  control.currentPath))
+        if(FB.FM.fileExists(path))
         {
-            _stackView.push(viewerView)
-            if(control.currentPath.endsWith(".pdf"))
-                _viewerLoader.sourceComponent = _pdfComponent
-            else if(control.currentPath.endsWith(".txt"))
-                _viewerLoader.sourceComponent = _txtComponent
-            else if(control.currentPath.endsWith(".epub"))
-                _viewerLoader.sourceComponent = _epubComponent
+            if(!viewerView.visible)
+            {
+                toggleViewer()
+            }
+
+            if(path.endsWith(".pdf"))
+            {
+                _tabView.addTab(_pdfComponent, ({'path': path}))
+            }
+            else if(path.endsWith(".txt"))
+            {
+                _tabView.addTab(_txtComponent, ({'path': path}))
+            }
+            else if(path.endsWith(".epub"))
+            {
+                _tabView.addTab(_epubComponent, ({'path': path}))
+            }
             else return;
         }
     }

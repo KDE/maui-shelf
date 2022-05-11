@@ -68,7 +68,7 @@ Maui.AltBrowser
 
     altHeader: Kirigami.Settings.isMobile
     headBar.forceCenterMiddleContent: root.isWide
-    headBar.leftContent: Maui.ToolButtonMenu
+    headBar.leftContent: [Maui.ToolButtonMenu
     {
         icon.name: "application-menu"
 
@@ -92,7 +92,17 @@ Maui.AltBrowser
             icon.name: "documentinfo"
             onTriggered: root.about()
         }
-    }
+    },
+
+    ToolButton
+        {
+            visible: viewerView.tabView.count
+            icon.name: "view-readermode-active"
+            text: viewerView.tabView.count
+            onClicked: toggleViewer()
+        }
+
+    ]
 
     headBar.rightContent:[
         Maui.ToolButtonMenu

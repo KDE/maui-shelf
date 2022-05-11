@@ -63,6 +63,50 @@ Maui.ApplicationWindow
         id: _stackView
         anchors.fill: parent
 
+        pushEnter: Transition
+        {
+            PropertyAnimation
+            {
+                property: "opacity"
+                from: 0
+                to:1
+                duration: 200
+            }
+        }
+
+        pushExit: Transition
+        {
+            PropertyAnimation
+            {
+                property: "opacity"
+                from: 1
+                to:0
+                duration: 200
+            }
+        }
+
+        popEnter: Transition
+        {
+            PropertyAnimation
+            {
+                property: "opacity"
+                from: 0
+                to:1
+                duration: 200
+            }
+        }
+
+        popExit: Transition
+        {
+            PropertyAnimation
+            {
+                property: "opacity"
+                from: 1
+                to:0
+                duration: 200
+            }
+        }
+
         Viewer
         {
             id: viewerView
@@ -92,6 +136,27 @@ Maui.ApplicationWindow
     {
         setAndroidStatusBarColor()
     }        
+
+    function toggleViewer()
+    {
+        if(viewerView.visible)
+        {
+            if(_stackView.depth === 1)
+            {
+                _stackView.replace(viewerView, libraryView)
+
+            }else
+            {
+                _stackView.pop()
+            }
+
+        }else
+        {
+            _stackView.push(viewerView)
+        }
+
+        _stackView.currentItem.forceActiveFocus()
+    }
 
     function setAndroidStatusBarColor()
     {
