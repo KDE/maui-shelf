@@ -23,15 +23,20 @@
 #include <QDebug>
 #include <QQmlEngine>
 #include <QQmlContext>
+#include <QUuid>
 
 #include <QtConcurrent/QtConcurrent>
+
+static int InstanceCount = 0;
 
 PdfDocument::PdfDocument(QAbstractListModel *parent):
     QAbstractListModel(parent)
   , m_path("")
+  , m_id(QString("poppler-%1").arg(InstanceCount++))
   , m_providersNumber(1)
   , m_tocModel(nullptr)
 {
+
     qRegisterMetaType<PdfPagesList>("PdfPagesList");
 }
 
@@ -45,18 +50,26 @@ QHash<int, QByteArray> PdfDocument::roleNames() const
 
 int PdfDocument::rowCount(const QModelIndex & parent) const
 {
-    Q_UNUSED(parent)
+    if (parent.isValid())
+    {
+        return 0;
+    }
+
     return m_pages.count();
 }
 
 QVariant PdfDocument::data(const QModelIndex & index, int role) const
-{
+{    
+    if (!index.isValid())
+        return QVariant();
+
     if (index.row() < 0 || index.row() > m_pages.count())
         return QVariant();
 
     const PdfItem &pdfItem = m_pages.at(index.row());
 
-    switch (role) {
+    switch (role)
+    {
     case WidthRole:
         return pdfItem.width();
     case HeightRole:
@@ -68,27 +81,20 @@ QVariant PdfDocument::data(const QModelIndex & index, int role) const
 
 void PdfDocument::setPath(QUrl &pathName)
 {
-    if (pathName.isEmpty())
+    if(m_path == pathName || pathName.isEmpty())
+    {
         return;
+    }
 
     beginResetModel();
 
-    m_pages.clear();
     m_path = pathName;
     Q_EMIT pathChanged();
 
     if (!loadDocument(m_path.toLocalFile()))
         return;
 
-    // Init toc model
-    if(!m_tocModel)
-    m_tocModel = new PdfTocModel;
-
-    m_tocModel->setDocument(m_document);
-    Q_EMIT tocModelChanged();
-
     loadPages();
-    loadProvider();
     endResetModel();
 }
 
@@ -139,6 +145,15 @@ bool PdfDocument::loadDocument(const QString &pathName, const QString &password,
 
     this->m_isValid = true;
     emit this->isValidChanged();
+
+    // Init toc model
+    if(!m_tocModel)
+    {
+        m_tocModel = new PdfTocModel;
+    }
+
+    m_tocModel->setDocument(m_document);
+    Q_EMIT tocModelChanged();
 
     m_document->setRenderHint(Poppler::Document::Antialiasing, true);
     m_document->setRenderHint(Poppler::Document::TextAntialiasing, true);
@@ -193,6 +208,11 @@ bool PdfDocument::isValid() const
     return m_isValid;
 }
 
+QString PdfDocument::id() const
+{
+    return m_id;
+}
+
 bool PdfDocument::loadPages()
 {
     qDebug() << "Populating model...";
@@ -202,13 +222,17 @@ bool PdfDocument::loadPages()
     if (!m_document)
         return false;
 
+    loadProvider();
     qDebug() << m_document->title() << m_document->numPages();
     Poppler::Document* document = m_document;
-    QtConcurrent::run( [=] {
+    QtConcurrent::run( [=]
+    {
         PdfPagesList pages;
 
         for( int i = 0; i < document->numPages(); ++i )
+        {
             pages.append(document->page(i));
+        }
 
         QMetaObject::invokeMethod(this, "_q_populate", Qt::QueuedConnection, Q_ARG(PdfPagesList, pages));
     });
@@ -220,7 +244,8 @@ void PdfDocument::_q_populate(PdfPagesList pagesList)
 {
     qDebug() << "Number of pages:" << pagesList.count();
 
-    Q_FOREACH (Poppler::Page *page, pagesList) {
+    Q_FOREACH (Poppler::Page *page, pagesList)
+    {
         beginInsertRows(QModelIndex(), rowCount(), rowCount());
         m_pages << page;
         endInsertRows();
@@ -235,15 +260,8 @@ void PdfDocument::unlock(const QString &ownerPassword, const QString &password)
     if (! this->loadDocument(m_path.toLocalFile(), ownerPassword, password))
         return;
 
-    // Init toc model
-    if(!m_tocModel)
-    m_tocModel = new PdfTocModel;
-
-    m_tocModel->setDocument(m_document);
-    Q_EMIT tocModelChanged();
 
     loadPages();
-    loadProvider();
 }
 
 void PdfDocument::loadProvider()
@@ -269,7 +287,9 @@ void PdfDocument::loadProvider()
     QQmlEngine *engine = QQmlEngine::contextForObject(this)->engine();
 
     for (int i=0; i<m_providersNumber; i++)
-        engine->addImageProvider(QLatin1String("poppler" + QByteArray::number(i)), new PdfImageProvider(m_document));
+    {
+        engine->addImageProvider(m_id+QByteArray::number(i), new PdfImageProvider(m_document));
+    }
 
     qDebug() << "Image provider(s) loaded successfully !";
 }

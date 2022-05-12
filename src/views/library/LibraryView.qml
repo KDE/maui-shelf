@@ -367,6 +367,20 @@ footer: Maui.SelectionBar
 
     Action
     {
+        text: i18n("Open")
+        icon.name: "folder_open"
+        onTriggered:
+        {
+            for(var file of _selectionbar.uris)
+            {
+                console.log("OPEN FILES<<<<<<<<<<<<<<", file)
+                viewerView.open(file)
+            }
+        }
+    }
+
+    Action
+    {
         text: i18n("Tag")
         icon.name: "tag"
         onTriggered:

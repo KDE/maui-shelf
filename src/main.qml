@@ -111,13 +111,20 @@ Maui.ApplicationWindow
         {
             id: viewerView
             visible: StackView.status === StackView.Active
+            showCSDControls:  initModule === "viewer"
         }
 
-        initialItem: LibraryView
+        Component
         {
             id: libraryView
-            showCSDControls: true
+
+            LibraryView
+            {
+                showCSDControls:  initModule === "collection"
+            }
         }
+
+        initialItem: initModule === "viewer" ? viewerView : libraryView
     }
 
     Connections
@@ -128,14 +135,18 @@ Maui.ApplicationWindow
 
         onRequestedFiles:
         {
-            viewerView.open(files[0])
+            for(var file of files)
+            {
+                console.log("OPEN FILES<<<<<<<<<<<<<<", file)
+                viewerView.open(file)
+            }
         }
     }
 
     Component.onCompleted:
     {
         setAndroidStatusBarColor()
-    }        
+    }
 
     function toggleViewer()
     {

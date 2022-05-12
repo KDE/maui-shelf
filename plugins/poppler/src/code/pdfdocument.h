@@ -41,6 +41,7 @@ class PdfDocument : public QAbstractListModel
     Q_PROPERTY(QObject* tocModel READ tocModel NOTIFY tocModelChanged)
     Q_PROPERTY(bool isLocked READ isLocked NOTIFY isLockedChanged FINAL)
     Q_PROPERTY(bool isValid READ isValid NOTIFY isValidChanged FINAL)
+    Q_PROPERTY(QString id READ id CONSTANT FINAL)
 
 public:
     enum Roles {
@@ -73,6 +74,8 @@ public:
 
     bool isValid() const;
 
+    QString id() const;
+
 Q_SIGNALS:
     void pathChanged();
     void error(const QString& errorMessage);
@@ -95,6 +98,7 @@ public slots:
 
 private:
     QUrl m_path;
+    QString m_id; //id of this document for the provider
     int m_providersNumber;
     int pages;
 

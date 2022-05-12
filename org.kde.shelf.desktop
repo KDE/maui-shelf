@@ -28,6 +28,7 @@ Name[tr]=Raf
 Name[uk]=Shelf
 Name[x-test]=xxShelfxx
 Name[zh_CN]=Shelf
+Comment=Document viewer
 TryExec=shelf
 Exec=shelf %U
 Terminal=false

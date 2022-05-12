@@ -24,21 +24,20 @@
 
 PdfImageProvider::PdfImageProvider(Poppler::Document *pdfDocument)
     : QQuickImageProvider(QQuickImageProvider::Image, QQuickImageProvider::ForceAsynchronousImageLoading)
+    , document(pdfDocument)
 {
-    this->document = pdfDocument;
 }
 
 QImage PdfImageProvider::requestImage(const QString & id, QSize * size, const QSize & requestedSize)
 {
     // If the requestedSize.width is 0, avoid Poppler rendering
     // FIXME: Actually it works correctly, but an error is anyway shown in the application output.
-    if (requestedSize.width() > 0)
-    {
+//    if (requestedSize.width() > 0)
+//    {
+    qDebug() << "REQUESTED PDF" << id ;
+
         const QString type = id.section("/", 0, 0);
         QImage result;
-        QSizeF pageSize;
-        QSizeF pageSizePhys;
-        float res = 0;
         Poppler::Page *page;
 
         if (type == "page")
@@ -53,28 +52,36 @@ QImage PdfImageProvider::requestImage(const QString & id, QSize * size, const QS
 
             page = document->page(numPage);
             if(!page)
+            {
                 return result;
+            }
 
-            size->setHeight(requestedSize.height());
-            size->setWidth(requestedSize.width());
-            pageSize = page->pageSizeF();
+            size->setHeight(page->pageSize().height());
+            size->setWidth(page->pageSize().width());
+
+            QSizeF pageSizePhys;
+            QSizeF pageSize = page->pageSizeF();
+
             pageSizePhys.setWidth(pageSize.width() / 72);
-            res = requestedSize.width() / pageSizePhys.width();
+            pageSizePhys.setHeight(pageSize.height() / 72);
 
+            auto resH = (requestedSize.isValid() ? requestedSize.height() : size->height()) / pageSizePhys.height() ;
+            auto resW = (requestedSize.isValid() ? requestedSize.width() : size->width()) / pageSizePhys.width() ;
             // Useful for debugging, keep commented unless you need it.
-            /*
-            qDebug() << "Requested size :" << requestedSize.width() << ";" << requestedSize.height();
-            qDebug() << "Size :" << pageSizePhys.width() << ";" << pageSizePhys.height();
-            qDebug() << "Resolution :" << res;
-            */
+
+//            qDebug() << "Requested size :" << requestedSize.width() << ";" << requestedSize.height();
+//            qDebug() << "Size 1:" << size->width() << ";" << size->height();
+//            qDebug() << "Size :" << pageSizePhys.width() << ";" << pageSizePhys.height();
+//            qDebug() << "Resolution :" << res;
+
 
             // Render the page to QImage
-            result = page->renderToImage(res, res);
+            result = page->renderToImage(resW, resH);
+
         }
 
-        return result;
-    }
+//    }
 
     // Requested size is 0, so return a null image.
-    return QImage();
+    return result;
 }

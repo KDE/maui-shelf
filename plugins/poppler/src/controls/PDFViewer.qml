@@ -1,6 +1,7 @@
 import QtQuick 2.14
 import QtQuick.Controls 2.14
 import QtQuick.Layouts 1.12
+ import QtQuick.Window 2.15
 
 import org.mauikit.controls 1.3 as Maui
 import org.kde.kirigami 2.9 as Kirigami
@@ -19,7 +20,7 @@ Maui.Page
 
     headBar.visible: false
     footBar.visible: !Kirigami.Settings.isMobile && poppler.pages > 1
-    title: poppler.title
+    title:  poppler.title
     padding: 0
 
     Maui.NewDialog
@@ -33,40 +34,39 @@ Maui.Page
     }
 
     footBar.middleContent: Maui.ToolActions
+    {
+        Layout.alignment: Qt.AlignCenter
+        expanded: true
+        autoExclusive: false
+        checkable: false
+
+        Action
         {
-            Layout.alignment: Qt.AlignCenter
-            expanded: true
-            autoExclusive: false
-            checkable: false
-
-            Action
+            enabled: _listView.currentIndex > 0
+            icon.name:  _listView.orientation === ListView.Horizontal ? "go-previous" : "go-up"
+            onTriggered:
             {
-                enabled: _listView.currentIndex > 0
-                icon.name:  _listView.orientation === ListView.Horizontal ? "go-previous" : "go-up"
-                onTriggered:
-                {
-                    if( _listView.currentIndex > 0)
+                if( _listView.currentIndex > 0)
                     _listView.currentIndex = _listView.currentIndex - 1
-                }
-            }
-
-            Action
-            {
-                text:  _listView.currentIndex + 1 +" / "+ poppler.pages
-            }
-
-            Action
-            {
-                enabled: _listView.currentIndex +1 < poppler.pages
-                icon.name:  _listView.orientation === ListView.Horizontal ? "go-next" : "go-down"
-                onTriggered:
-                {
-                    if( _listView.currentIndex +1 < poppler.pages)
-                    _listView.currentIndex = _listView.currentIndex + 1
-                }
             }
         }
 
+        Action
+        {
+            text:  _listView.currentIndex + 1 +" / "+ poppler.pages
+        }
+
+        Action
+        {
+            enabled: _listView.currentIndex +1 < poppler.pages
+            icon.name:  _listView.orientation === ListView.Horizontal ? "go-next" : "go-down"
+            onTriggered:
+            {
+                if( _listView.currentIndex +1 < poppler.pages)
+                    _listView.currentIndex = _listView.currentIndex + 1
+            }
+        }
+    }
 
     Maui.ListBrowser
     {
@@ -106,9 +106,10 @@ Maui.Page
             cache: false
             //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + _listView.currentPage;
             //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index;
-            source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index
+            source: "image://" + poppler.id + (index % poppler.providersNumber) + "/page/" + index
             //                                source: "image://poppler/page/" + _listView.currentPage;
-            sourceSize.width: Kirigami.Settings.isMobile ? control.width * 2 : 2000
+            sourceSize.width: model.width * Math.round(Screen.pixelDensity)
+            sourceSize.height: model.height * Math.round(Screen.pixelDensity)
             //                    sourceSize.height: 2000
             //                    imageWidth: 1000
             //                    imageHeight: 1000
@@ -116,8 +117,6 @@ Maui.Page
 
             //                onSourceChanged: console.log(source)
         }
-
-
     }
 
     Maui.Holder

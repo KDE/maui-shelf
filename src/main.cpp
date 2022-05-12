@@ -1,6 +1,7 @@
 #include <QCommandLineParser>
 #include <QDate>
 #include <QIcon>
+#include <QPair>
 
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
@@ -63,8 +64,16 @@ int main(int argc, char *argv[])
     about.processCommandLine(&parser);
     const QStringList args = parser.positionalArguments();
 
+    QPair<QString, QList<QUrl>> arguments;
+    arguments.first = "collection";
+
+    if (!args.isEmpty())
+    {
+        arguments.first = "viewer";
+    }
+
     QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
+    QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(
                 &engine,
                 &QQmlApplicationEngine::objectCreated,
@@ -77,6 +86,9 @@ int main(int argc, char *argv[])
             Library::instance()->openFiles(args);
     },
     Qt::QueuedConnection);
+
+    engine.rootContext()->setContextProperty("initModule", arguments.first);
+    engine.rootContext()->setContextProperty("initData", QUrl::toStringList(arguments.second));
 
     //	qmlRegisterType<EpubReader>("EPUB", 1, 0, "Document");
     qmlRegisterType<LibraryModel>(SHELF_URI, 1, 0, "LibraryList");

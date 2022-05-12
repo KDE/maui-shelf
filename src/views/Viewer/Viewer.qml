@@ -53,7 +53,7 @@ Maui.Page
         icon.name: "go-previous"
         text: i18n("Browser")
         display: isWide ? ToolButton.TextBesideIcon : ToolButton.IconOnly
-        onClicked: _stackView.pop()
+        onClicked: toggleViewer()
     }
 
     headBar.rightContent: Loader
@@ -145,6 +145,8 @@ Maui.Page
     {
         id: _tabView
         anchors.fill: parent
+
+        onCloseTabClicked: _tabView.closeTab(index)
     }
 
     Component
