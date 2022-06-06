@@ -71,7 +71,7 @@ Maui.Page
                     text: i18n("Fav")
 
                     checked: currentPathFav
-                    icon.color: currentPathFav ? "#f84172" : Kirigami.Theme.textColor
+                    icon.color: currentPathFav ? "#f84172" : Maui.Theme.textColor
                     onTriggered:
                     {
                         FB.Tagging.toggleFav(control.currentPath)

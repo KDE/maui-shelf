@@ -7,8 +7,6 @@ import org.mauikit.filebrowsing 1.3 as FB
 
 import org.maui.shelf 1.0 as Shelf
 
-import org.kde.kirigami 2.14 as Kirigami
-
 Maui.AltBrowser
 {
     id: control
@@ -66,7 +64,7 @@ Maui.AltBrowser
         }
     }
 
-    altHeader: Kirigami.Settings.isMobile
+    altHeader: Maui.Handy.isMobile
     headBar.forceCenterMiddleContent: root.isWide
     headBar.leftContent: [Maui.ToolButtonMenu
     {
@@ -295,7 +293,7 @@ listDelegate: Maui.ListBrowserDelegate
                        } : {}
 
     label1.text: model.label
-    label2.text: model.path
+    label2.text: String(FB.FM.fileDir(model.path)).replace(FB.FM.homePath(), "")
 
     label3.text: Qt.formatDateTime(new Date(model.modified), "d MMM yyyy")
 

@@ -4,8 +4,6 @@ import QtQuick.Layouts 1.12
  import QtQuick.Window 2.15
 
 import org.mauikit.controls 1.3 as Maui
-import org.kde.kirigami 2.9 as Kirigami
-
 import org.shelf.poppler 1.0 as Poppler
 
 Maui.Page
@@ -19,7 +17,7 @@ Maui.Page
     property alias path : poppler.path
 
     headBar.visible: false
-    footBar.visible: !Kirigami.Settings.isMobile && poppler.pages > 1
+    footBar.visible: !Maui.Handy.isMobile && poppler.pages > 1
     title:  poppler.title
     padding: 0
 
@@ -108,8 +106,8 @@ Maui.Page
             //                source: "image://poppler" + (index % poppler.providersNumber) + "/page/" + index;
             source: "image://" + poppler.id + (index % poppler.providersNumber) + "/page/" + index
             //                                source: "image://poppler/page/" + _listView.currentPage;
-            sourceSize.width: model.width * Math.round(Screen.pixelDensity)
-            sourceSize.height: model.height * Math.round(Screen.pixelDensity)
+            sourceSize.width: model.width
+            sourceSize.height: model.height
             //                    sourceSize.height: 2000
             //                    imageWidth: 1000
             //                    imageHeight: 1000

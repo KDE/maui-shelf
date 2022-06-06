@@ -2,7 +2,6 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import Qt.labs.settings 1.0
 
-import org.kde.kirigami 2.14 as Kirigami
 import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.3 as FB
 
@@ -16,7 +15,7 @@ Maui.ApplicationWindow
 {
     id: root
     title: viewerView.title
-    Maui.App.darkMode: viewerSettings.darkMode
+//    Maui.App.darkMode: viewerSettings.darkMode
 
     headBar.visible: false
 
@@ -129,8 +128,8 @@ Maui.ApplicationWindow
     {
         if(Maui.Handy.isAndroid)
         {
-            Maui.Android.statusbarColor( Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
-            Maui.Android.navBarColor(headBar.visible ? headBar.Kirigami.Theme.backgroundColor : Kirigami.Theme.backgroundColor, !Maui.App.darkMode)
+            Maui.Android.statusbarColor( Maui.Theme.backgroundColor, !viewerSettings.darkMode)
+            Maui.Android.navBarColor(headBar.visible ? headBar.Maui.Theme.backgroundColor : Maui.Theme.backgroundColor,  !viewerSettings.darkMode)
         }
     }
 }
