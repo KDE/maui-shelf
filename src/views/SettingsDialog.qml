@@ -99,7 +99,6 @@ Maui.SettingsDialog
     {
         title: i18n("Sources")
         description: i18n("Add or remove sources")
-        lastOne: true
 
         ColumnLayout
         {
