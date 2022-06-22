@@ -17,8 +17,6 @@ Maui.ApplicationWindow
     title: viewerView.title
 //    Maui.App.darkMode: viewerSettings.darkMode
 
-    headBar.visible: false
-
     property bool selectionMode: false
     property alias dialog :_dialogLoader.item
 
