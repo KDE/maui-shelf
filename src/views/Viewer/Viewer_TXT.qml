@@ -7,7 +7,6 @@ import org.mauikit.texteditor 1.0 as TE
 TE.TextEditor
 {
     id: _editor
-    headBar.visible: false
     property int currentPage : body.cursorPosition
 
     body.readOnly: true    

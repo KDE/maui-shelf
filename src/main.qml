@@ -15,7 +15,7 @@ Maui.ApplicationWindow
 {
     id: root
     title: viewerView.title
-//    Maui.App.darkMode: viewerSettings.darkMode
+    Maui.Style.styleType: Maui.Handy.isAndroid ? (viewerSettings.darkMode ? Maui.Style.Dark : Maui.Style.Light) : undefined
 
     property bool selectionMode: false
     property alias dialog :_dialogLoader.item
@@ -127,7 +127,7 @@ Maui.ApplicationWindow
         if(Maui.Handy.isAndroid)
         {
             Maui.Android.statusbarColor( Maui.Theme.backgroundColor, !viewerSettings.darkMode)
-            Maui.Android.navBarColor(headBar.visible ? headBar.Maui.Theme.backgroundColor : Maui.Theme.backgroundColor,  !viewerSettings.darkMode)
+            Maui.Android.navBarColor(Maui.Theme.backgroundColor,  !viewerSettings.darkMode)
         }
     }
 }
