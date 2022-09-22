@@ -87,6 +87,8 @@ int main(int argc, char *argv[])
     },
     Qt::QueuedConnection);
 
+    engine.rootContext()->setContextProperty("globalQmlEngine", &engine);
+
     engine.rootContext()->setContextProperty("initModule", arguments.first);
     engine.rootContext()->setContextProperty("initData", QUrl::toStringList(arguments.second));
 

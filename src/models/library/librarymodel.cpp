@@ -11,7 +11,18 @@ static FMH::MODEL fileData(const QUrl &url)
 {
     FMH::MODEL model;
     model = FMStatic::getFileInfoModel(url);
-    model.insert(FMH::MODEL_KEY::PREVIEW, "image://preview/"+url.toString());
+
+    const auto fileName = url.fileName();
+    if(fileName.toLower().endsWith("cbr") || fileName.toLower().endsWith("cbz"))
+    {
+        model.insert(FMH::MODEL_KEY::PREVIEW, QString("image://comiccover/").append(url.toLocalFile()));
+
+    }else
+    {
+        model.insert(FMH::MODEL_KEY::PREVIEW, "image://preview/"+url.toString());
+
+    }
+
     return model;
 }
 

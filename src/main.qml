@@ -6,6 +6,7 @@ import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.3 as FB
 
 import org.maui.shelf 1.0 as Shelf
+import org.kde.peruse 0.1 as Peruse
 
 import "views"
 import "views/library/"
@@ -19,7 +20,10 @@ Maui.ApplicationWindow
 
     property bool selectionMode: false
     property alias dialog :_dialogLoader.item
-
+    Peruse.ArchiveBookModel
+           {
+               qmlEngine: globalQmlEngine
+           }
     Settings
     {
         id: viewerSettings
@@ -42,6 +46,7 @@ Maui.ApplicationWindow
         {
             mode: modes.OPEN
             settings.filterType: FB.FMList.DOCUMENT
+            settings.filters: [".cbz", ".cbr"]
             callback: function(paths)
             {
                 console.log(paths)

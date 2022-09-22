@@ -5,14 +5,14 @@ import QtQuick.Window 2.12
 import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.3 as FB
 
-import org.kde.kirigami 2.7 as Kirigami
 import org.shelf.poppler 1.0 as Poppler
+import org.kde.peruse 0.1 as Peruse
 
 Maui.Page
 {
     id: control
 
-    property string currentPath : _tabView.currentItem.path
+    readonly property string currentPath : _tabView.currentItem ? _tabView.currentItem.path : ""
     property bool currentPathFav : FB.Tagging.isFav(currentPath)
     property alias currentViewer: _tabView.currentItem
     property alias tabView :_tabView
@@ -169,7 +169,6 @@ Maui.Page
 
         Viewer_TXT
         {
-            anchors.fill: parent
         }
     }
 
@@ -179,9 +178,24 @@ Maui.Page
 
         Viewer_EPUB
         {
-            anchors.fill: parent
         }
     }
+
+    Component
+    {
+        id: _CBComponent
+
+        Viewer_CB
+        {
+            Maui.TabViewInfo.tabTitle: title
+            Maui.TabViewInfo.tabToolTipText: path
+            height: ListView.view.height
+            width:  ListView.view.width
+            onGoBackTriggered: _stackView.pop()
+        }
+    }
+
+
 
     function open(path)
     {
@@ -203,7 +217,12 @@ Maui.Page
             else if(path.endsWith(".epub"))
             {
                 _tabView.addTab(_epubComponent, ({'path': path}))
+            }else if(path.endsWith(".cbz"))
+            {
+                _tabView.addTab(_CBComponent, ({'path': path}))
+
             }
+
             else return;
         }
     }

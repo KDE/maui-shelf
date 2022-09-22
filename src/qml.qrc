@@ -7,5 +7,6 @@
         <file>views/Viewer/Viewer_TXT.qml</file>
         <file>views/Viewer/Viewer_EPUB.qml</file>
         <file>views/SettingsDialog.qml</file>
+        <file>views/Viewer/Viewer_CB.qml</file>
     </qresource>
 </RCC>
