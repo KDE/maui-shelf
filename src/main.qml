@@ -71,7 +71,6 @@ Maui.ApplicationWindow
         {
             id: viewerView
             visible: StackView.status === StackView.Active
-            showCSDControls:  initModule === "viewer"
         }
 
         Component
