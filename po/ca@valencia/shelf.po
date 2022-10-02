@@ -1,0 +1,248 @@
+# Translation of shelf.po to Catalan (Valencian)
+# Copyright (C) 2020-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: maui-shelf\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-02 00:45+0000\n"
+"PO-Revision-Date: 2022-01-15 11:05+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: src/main.cpp:49
+#, kde-format
+msgid "Shelf"
+msgstr "Shelf"
+
+#: src/main.cpp:49
+#, kde-format
+msgid "Browse and view your documents."
+msgstr "Navegueu i visualitzeu els vostres documents."
+
+#: src/main.cpp:49
+#, kde-format
+msgid "© 2019-%1 Maui Development Team"
+msgstr "© 2019-%1 L'equip de desenvolupament de Maui"
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Camilo Higuita"
+msgstr "Camilo Higuita"
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Developer"
+msgstr "Desenvolupador"
+
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:144
+#, kde-format
+msgid "Title"
+msgstr "Títol"
+
+#: src/views/cloud/CloudView.qml:36
+#, kde-format
+msgid "Add date"
+msgstr "Afig la data"
+
+#: src/views/cloud/CloudView.qml:42
+#, kde-format
+msgid "Creation date"
+msgstr "Data de creació"
+
+#: src/views/cloud/CloudView.qml:48
+#, kde-format
+msgid "Format"
+msgstr "Format"
+
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:160
+#, kde-format
+msgid "Size"
+msgstr "Mida"
+
+#: src/views/library/LibraryView.qml:35
+#, kde-format
+msgid "Nothing here!"
+msgstr "Res ací!"
+
+#: src/views/library/LibraryView.qml:36
+#, kde-format
+msgid "Add new sources to manage your documents."
+msgstr "Afig fonts noves per a gestionar els vostres documents."
+
+#: src/views/library/LibraryView.qml:42
+#, kde-format
+msgid "Open file"
+msgstr "Obri un fitxer"
+
+#: src/views/library/LibraryView.qml:48
+#, kde-format
+msgid "Add sources"
+msgstr "Afig fonts"
+
+#: src/views/library/LibraryView.qml:75 src/views/library/LibraryView.qml:368
+#, kde-format
+msgid "Open"
+msgstr "Obri"
+
+#: src/views/library/LibraryView.qml:82
+#, kde-format
+msgid "Settings"
+msgstr "Configuració"
+
+#: src/views/library/LibraryView.qml:89
+#, kde-format
+msgid "About"
+msgstr "Quant a"
+
+#: src/views/library/LibraryView.qml:113
+#, kde-format
+msgid "View type"
+msgstr "Tipus de vista"
+
+#: src/views/library/LibraryView.qml:119
+#, kde-format
+msgid "List"
+msgstr "Llista"
+
+#: src/views/library/LibraryView.qml:128
+#, kde-format
+msgid "Grid"
+msgstr "Quadrícula"
+
+#: src/views/library/LibraryView.qml:138
+#, kde-format
+msgid "Sort by"
+msgstr "Ordena per"
+
+#: src/views/library/LibraryView.qml:152
+#, kde-format
+msgid "Date"
+msgstr "Data"
+
+#: src/views/library/LibraryView.qml:170
+#, kde-format
+msgid "Ascending"
+msgstr "Ascendent"
+
+#: src/views/library/LibraryView.qml:177
+#, kde-format
+msgid "Descending"
+msgstr "Descendent"
+
+#: src/views/library/LibraryView.qml:189
+#, kde-format
+msgid "Filter..."
+msgstr "Filtre..."
+
+#: src/views/library/LibraryView.qml:382
+#, kde-format
+msgid "Tag"
+msgstr "Etiqueta"
+
+#: src/views/library/LibraryView.qml:392 src/views/Viewer/Viewer.qml:103
+#, kde-format
+msgid "Share"
+msgstr "Compartix"
+
+#: src/views/library/LibraryView.qml:398
+#, kde-format
+msgid "Export"
+msgstr "Exporta"
+
+#: src/views/SettingsDialog.qml:51
+#, kde-format
+msgid "General"
+msgstr "General"
+
+#: src/views/SettingsDialog.qml:52
+#, kde-format
+msgid "Configure the app plugins and behavior."
+msgstr "Configura els connectors i el comportament de l'aplicació."
+
+#: src/views/SettingsDialog.qml:69
+#, kde-format
+msgid "Auto Scan"
+msgstr "Exploració automàtica"
+
+#: src/views/SettingsDialog.qml:70
+#, kde-format
+msgid ""
+"Scan all the music sources on startup to keep your collection up to date"
+msgstr ""
+"Explora totes les fonts de música en iniciar per a mantindre actualitzada la "
+"col·lecció"
+
+#: src/views/SettingsDialog.qml:82
+#, kde-format
+msgid "Dark Mode"
+msgstr "Mode fosc"
+
+#: src/views/SettingsDialog.qml:83
+#, kde-format
+msgid "Switch between light and dark colorscheme"
+msgstr "Alterna entre els esquemes de color clar i fosc"
+
+#: src/views/SettingsDialog.qml:100
+#, kde-format
+msgid "Sources"
+msgstr "Fonts"
+
+#: src/views/SettingsDialog.qml:101
+#, kde-format
+msgid "Add or remove sources"
+msgstr "Afig o elimina fonts"
+
+#: src/views/SettingsDialog.qml:146
+#, kde-format
+msgid "Add"
+msgstr "Afig"
+
+#: src/views/SettingsDialog.qml:163
+#, kde-format
+msgid "Scan now"
+msgstr "Explora ara"
+
+#: src/views/Viewer/Viewer.qml:42
+#, kde-format
+msgid "Nothing here"
+msgstr "Res ací"
+
+#: src/views/Viewer/Viewer.qml:43
+#, kde-format
+msgid "Drop or open a document to view."
+msgstr "Deixeu anar o obriu un document a veure."
+
+#: src/views/Viewer/Viewer.qml:60
+#, kde-format
+msgid "Browser"
+msgstr "Navegador"
+
+#: src/views/Viewer/Viewer.qml:77
+#, kde-format
+msgid "Fav"
+msgstr "Preferit"
+
+#: src/views/Viewer/Viewer.qml:91
+#, kde-format
+msgid "Doodle"
+msgstr "Gargot"
+
+#: src/views/Viewer/Viewer.qml:117
+#, kde-format
+msgid "Browse Horizontally"
+msgstr "Navega horitzontalment"
+
+#: src/views/Viewer/Viewer.qml:141
+#, kde-format
+msgid "Fullscreen"
+msgstr "Pantalla completa"

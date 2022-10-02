@@ -1,0 +1,265 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the maui-shelf package.
+#
+# Sameer Singh <lumarzeli30@gmail.com>, 2021.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: maui-shelf\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-02 00:45+0000\n"
+"PO-Revision-Date: 2021-07-22 20:54+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: kde-hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 21.04.3\n"
+
+#: src/main.cpp:49
+#, kde-format
+msgid "Shelf"
+msgstr "शेल्फ़"
+
+#: src/main.cpp:49
+#, kde-format
+msgid "Browse and view your documents."
+msgstr "अपने दस्तावेज़ों का विचरण एवं प्रदर्शन करें।"
+
+#: src/main.cpp:49
+#, fuzzy, kde-format
+#| msgid "© 2019-%1 Nitrux Development Team"
+msgid "© 2019-%1 Maui Development Team"
+msgstr "© 2019-%1 नाइट्रक्स विकास समूह"
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Camilo Higuita"
+msgstr "कैमिलो हिग्वीटा"
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Developer"
+msgstr "विकासकर्ता"
+
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:144
+#, kde-format
+msgid "Title"
+msgstr "शीर्षक"
+
+#: src/views/cloud/CloudView.qml:36
+#, kde-format
+msgid "Add date"
+msgstr "दिनांक जोड़ें"
+
+#: src/views/cloud/CloudView.qml:42
+#, kde-format
+msgid "Creation date"
+msgstr "निर्माण तिथि"
+
+#: src/views/cloud/CloudView.qml:48
+#, kde-format
+msgid "Format"
+msgstr "प्रारूप"
+
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:160
+#, kde-format
+msgid "Size"
+msgstr "आकार"
+
+#: src/views/library/LibraryView.qml:35
+#, kde-format
+msgid "Nothing here!"
+msgstr "यहां कुछ नहीं है !"
+
+#: src/views/library/LibraryView.qml:36
+#, kde-format
+msgid "Add new sources to manage your documents."
+msgstr "अपने दस्तावेज़ों को प्रबंधित करने के लिए नए स्रोत जोड़ें।"
+
+#: src/views/library/LibraryView.qml:42
+#, fuzzy, kde-format
+#| msgid "Open"
+msgid "Open file"
+msgstr "खोलें"
+
+#: src/views/library/LibraryView.qml:48
+#, kde-format
+msgid "Add sources"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:75 src/views/library/LibraryView.qml:368
+#, kde-format
+msgid "Open"
+msgstr "खोलें"
+
+#: src/views/library/LibraryView.qml:82
+#, kde-format
+msgid "Settings"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:89
+#, kde-format
+msgid "About"
+msgstr "परिचय"
+
+#: src/views/library/LibraryView.qml:113
+#, kde-format
+msgid "View type"
+msgstr "दृश्य क़िस्म"
+
+#: src/views/library/LibraryView.qml:119
+#, kde-format
+msgid "List"
+msgstr "सूची"
+
+#: src/views/library/LibraryView.qml:128
+#, kde-format
+msgid "Grid"
+msgstr "ग्रिड"
+
+#: src/views/library/LibraryView.qml:138
+#, kde-format
+msgid "Sort by"
+msgstr "इस आधार पर छांटें"
+
+#: src/views/library/LibraryView.qml:152
+#, kde-format
+msgid "Date"
+msgstr "दिनांक"
+
+#: src/views/library/LibraryView.qml:170
+#, kde-format
+msgid "Ascending"
+msgstr "बढ़ते क्रम में"
+
+#: src/views/library/LibraryView.qml:177
+#, kde-format
+msgid "Descending"
+msgstr "घटते क्रम में"
+
+#: src/views/library/LibraryView.qml:189
+#, kde-format
+msgid "Filter..."
+msgstr "फ़िल्टर..."
+
+#: src/views/library/LibraryView.qml:382
+#, kde-format
+msgid "Tag"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:392 src/views/Viewer/Viewer.qml:103
+#, kde-format
+msgid "Share"
+msgstr "साझा करें"
+
+#: src/views/library/LibraryView.qml:398
+#, kde-format
+msgid "Export"
+msgstr "निर्यात"
+
+#: src/views/SettingsDialog.qml:51
+#, kde-format
+msgid "General"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:52
+#, kde-format
+msgid "Configure the app plugins and behavior."
+msgstr ""
+
+#: src/views/SettingsDialog.qml:69
+#, kde-format
+msgid "Auto Scan"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:70
+#, kde-format
+msgid ""
+"Scan all the music sources on startup to keep your collection up to date"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:82
+#, kde-format
+msgid "Dark Mode"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:83
+#, kde-format
+msgid "Switch between light and dark colorscheme"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:100
+#, kde-format
+msgid "Sources"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:101
+#, kde-format
+msgid "Add or remove sources"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:146
+#, kde-format
+msgid "Add"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:163
+#, kde-format
+msgid "Scan now"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:42
+#, kde-format
+msgid "Nothing here"
+msgstr "यहां कुछ नहीं है"
+
+#: src/views/Viewer/Viewer.qml:43
+#, kde-format
+msgid "Drop or open a document to view."
+msgstr "प्रदर्शन के लिए दस्तावेज़ खोलें या फिर गिराएँ"
+
+#: src/views/Viewer/Viewer.qml:60
+#, kde-format
+msgid "Browser"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:77
+#, kde-format
+msgid "Fav"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:91
+#, kde-format
+msgid "Doodle"
+msgstr "डूडल"
+
+#: src/views/Viewer/Viewer.qml:117
+#, kde-format
+msgid "Browse Horizontally"
+msgstr "आड़ा विचरण करें"
+
+#: src/views/Viewer/Viewer.qml:141
+#, kde-format
+msgid "Fullscreen"
+msgstr "पूर्ण स्क्रीन"
+
+#~ msgid "Fill"
+#~ msgstr "भरें"
+
+#~ msgid "New Bookmark..."
+#~ msgstr "नया पुस्तचिन्ह..."
+
+#~ msgid "Bookmark #"
+#~ msgstr "पुस्तचिन्ह #"
+
+#~ msgid "Save new bookmark as"
+#~ msgstr "नया पुस्तचिन्ह संरक्षित करें"
+
+#~ msgid "Save"
+#~ msgstr "सहेजें"
+
+#~ msgid "Library"
+#~ msgstr "पुस्तकालय"

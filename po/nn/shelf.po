@@ -1,0 +1,246 @@
+# Translation of shelf to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: maui-shelf\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-18 00:43+0000\n"
+"PO-Revision-Date: 2021-02-06 13:59+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.03.70\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: src/main.cpp:49
+#, kde-format
+msgid "Shelf"
+msgstr "Shelf"
+
+#: src/main.cpp:49
+#, kde-format
+msgid "Browse and view your documents."
+msgstr ""
+
+#: src/main.cpp:49
+#, kde-format
+msgid "© 2019-%1 Maui Development Team"
+msgstr ""
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Camilo Higuita"
+msgstr "Camilo Higuita"
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Developer"
+msgstr "Utviklar"
+
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:144
+#, kde-format
+msgid "Title"
+msgstr "Tittel"
+
+#: src/views/cloud/CloudView.qml:36
+#, kde-format
+msgid "Add date"
+msgstr "Legg til dato"
+
+#: src/views/cloud/CloudView.qml:42
+#, kde-format
+msgid "Creation date"
+msgstr "Opprettingsdato"
+
+#: src/views/cloud/CloudView.qml:48
+#, kde-format
+msgid "Format"
+msgstr "Format"
+
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:160
+#, kde-format
+msgid "Size"
+msgstr "Storleik"
+
+#: src/views/library/LibraryView.qml:35
+#, kde-format
+msgid "Nothing here!"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:36
+#, kde-format
+msgid "Add new sources to manage your documents."
+msgstr ""
+
+#: src/views/library/LibraryView.qml:42
+#, kde-format
+msgid "Open file"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:48
+#, kde-format
+msgid "Add sources"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:75 src/views/library/LibraryView.qml:368
+#, kde-format
+msgid "Open"
+msgstr "Opna"
+
+#: src/views/library/LibraryView.qml:82
+#, kde-format
+msgid "Settings"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:89
+#, kde-format
+msgid "About"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:113
+#, kde-format
+msgid "View type"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:119
+#, kde-format
+msgid "List"
+msgstr "Liste"
+
+#: src/views/library/LibraryView.qml:128
+#, kde-format
+msgid "Grid"
+msgstr "Rutenett"
+
+#: src/views/library/LibraryView.qml:138
+#, kde-format
+msgid "Sort by"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:152
+#, kde-format
+msgid "Date"
+msgstr "Dato"
+
+#: src/views/library/LibraryView.qml:170
+#, kde-format
+msgid "Ascending"
+msgstr "Stigande"
+
+#: src/views/library/LibraryView.qml:177
+#, kde-format
+msgid "Descending"
+msgstr "Synkande"
+
+#: src/views/library/LibraryView.qml:189
+#, kde-format
+msgid "Filter..."
+msgstr "Filtrer …"
+
+#: src/views/library/LibraryView.qml:382
+#, kde-format
+msgid "Tag"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:392 src/views/Viewer/Viewer.qml:97
+#, kde-format
+msgid "Share"
+msgstr "Del"
+
+#: src/views/library/LibraryView.qml:398
+#, kde-format
+msgid "Export"
+msgstr "Eksporter"
+
+#: src/views/SettingsDialog.qml:51
+#, kde-format
+msgid "General"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:52
+#, kde-format
+msgid "Configure the app plugins and behavior."
+msgstr ""
+
+#: src/views/SettingsDialog.qml:69
+#, kde-format
+msgid "Auto Scan"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:70
+#, kde-format
+msgid ""
+"Scan all the music sources on startup to keep your collection up to date"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:82
+#, kde-format
+msgid "Dark Mode"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:83
+#, kde-format
+msgid "Switch between light and dark colorscheme"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:100
+#, kde-format
+msgid "Sources"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:101
+#, kde-format
+msgid "Add or remove sources"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:146
+#, kde-format
+msgid "Add"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:163
+#, kde-format
+msgid "Scan now"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:44
+#, kde-format
+msgid "Nothing here"
+msgstr "Ingenting her"
+
+#: src/views/Viewer/Viewer.qml:45
+#, kde-format
+msgid "Drop or open a document to view."
+msgstr "Dra eller opna eit dokument for å visa det."
+
+#: src/views/Viewer/Viewer.qml:54
+#, kde-format
+msgid "Browser"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:71
+#, kde-format
+msgid "Fav"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:85
+#, kde-format
+msgid "Doodle"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:111
+#, kde-format
+msgid "Browse Horizontally"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:135
+#, kde-format
+msgid "Fullscreen"
+msgstr ""

@@ -1,0 +1,267 @@
+# Translation of shelf.po to Ukrainian
+# Copyright (C) 2020-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: shelf\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-02 00:45+0000\n"
+"PO-Revision-Date: 2022-01-15 09:36+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: src/main.cpp:49
+#, kde-format
+msgid "Shelf"
+msgstr "Shelf"
+
+#: src/main.cpp:49
+#, kde-format
+msgid "Browse and view your documents."
+msgstr "Навігація вашими документами та перегляд документів."
+
+#: src/main.cpp:49
+#, kde-format
+msgid "© 2019-%1 Maui Development Team"
+msgstr "© Команда розробників Maui, 2019–%1"
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Camilo Higuita"
+msgstr "Camilo Higuita"
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Developer"
+msgstr "Розробник"
+
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:144
+#, kde-format
+msgid "Title"
+msgstr "Заголовок"
+
+#: src/views/cloud/CloudView.qml:36
+#, kde-format
+msgid "Add date"
+msgstr "Додати дату"
+
+#: src/views/cloud/CloudView.qml:42
+#, kde-format
+msgid "Creation date"
+msgstr "Дата створення"
+
+#: src/views/cloud/CloudView.qml:48
+#, kde-format
+msgid "Format"
+msgstr "Формат"
+
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:160
+#, kde-format
+msgid "Size"
+msgstr "Розмір"
+
+#: src/views/library/LibraryView.qml:35
+#, kde-format
+msgid "Nothing here!"
+msgstr "Тут нічого немає!"
+
+#: src/views/library/LibraryView.qml:36
+#, kde-format
+msgid "Add new sources to manage your documents."
+msgstr "Додайте нові джерела для керування вашими документами."
+
+#: src/views/library/LibraryView.qml:42
+#, kde-format
+msgid "Open file"
+msgstr "Відкрити файл"
+
+#: src/views/library/LibraryView.qml:48
+#, kde-format
+msgid "Add sources"
+msgstr "Додати джерела"
+
+#: src/views/library/LibraryView.qml:75 src/views/library/LibraryView.qml:368
+#, kde-format
+msgid "Open"
+msgstr "Відкрити"
+
+#: src/views/library/LibraryView.qml:82
+#, kde-format
+msgid "Settings"
+msgstr "Параметри"
+
+#: src/views/library/LibraryView.qml:89
+#, kde-format
+msgid "About"
+msgstr "Про програму"
+
+#: src/views/library/LibraryView.qml:113
+#, kde-format
+msgid "View type"
+msgstr "Тип перегляду"
+
+#: src/views/library/LibraryView.qml:119
+#, kde-format
+msgid "List"
+msgstr "Список"
+
+#: src/views/library/LibraryView.qml:128
+#, kde-format
+msgid "Grid"
+msgstr "Таблиця"
+
+#: src/views/library/LibraryView.qml:138
+#, kde-format
+msgid "Sort by"
+msgstr "Критерій упорядковування"
+
+#: src/views/library/LibraryView.qml:152
+#, kde-format
+msgid "Date"
+msgstr "Дата"
+
+#: src/views/library/LibraryView.qml:170
+#, kde-format
+msgid "Ascending"
+msgstr "За зростанням"
+
+#: src/views/library/LibraryView.qml:177
+#, kde-format
+msgid "Descending"
+msgstr "За спаданням"
+
+#: src/views/library/LibraryView.qml:189
+#, kde-format
+msgid "Filter..."
+msgstr "Фільтрувати…"
+
+#: src/views/library/LibraryView.qml:382
+#, kde-format
+msgid "Tag"
+msgstr "Мітка"
+
+#: src/views/library/LibraryView.qml:392 src/views/Viewer/Viewer.qml:103
+#, kde-format
+msgid "Share"
+msgstr "Оприлюднити"
+
+#: src/views/library/LibraryView.qml:398
+#, kde-format
+msgid "Export"
+msgstr "Експортувати"
+
+#: src/views/SettingsDialog.qml:51
+#, kde-format
+msgid "General"
+msgstr "Загальне"
+
+#: src/views/SettingsDialog.qml:52
+#, kde-format
+msgid "Configure the app plugins and behavior."
+msgstr "Налаштувати додатки і поведінку програми."
+
+#: src/views/SettingsDialog.qml:69
+#, kde-format
+msgid "Auto Scan"
+msgstr "Автосканування"
+
+#: src/views/SettingsDialog.qml:70
+#, kde-format
+msgid ""
+"Scan all the music sources on startup to keep your collection up to date"
+msgstr ""
+"Сканувати під час запуску усі джерела музичних творів для підтримання "
+"актуальності збірки"
+
+#: src/views/SettingsDialog.qml:82
+#, kde-format
+msgid "Dark Mode"
+msgstr "Темний режим"
+
+#: src/views/SettingsDialog.qml:83
+#, kde-format
+msgid "Switch between light and dark colorscheme"
+msgstr "Перемкнутися між світлою і темною схемою кольорів"
+
+#: src/views/SettingsDialog.qml:100
+#, kde-format
+msgid "Sources"
+msgstr "Джерела"
+
+#: src/views/SettingsDialog.qml:101
+#, kde-format
+msgid "Add or remove sources"
+msgstr "Додати або вилучити джерела"
+
+#: src/views/SettingsDialog.qml:146
+#, kde-format
+msgid "Add"
+msgstr "Додати"
+
+#: src/views/SettingsDialog.qml:163
+#, kde-format
+msgid "Scan now"
+msgstr "Сканувати зараз"
+
+#: src/views/Viewer/Viewer.qml:42
+#, kde-format
+msgid "Nothing here"
+msgstr "Тут нічого немає"
+
+#: src/views/Viewer/Viewer.qml:43
+#, kde-format
+msgid "Drop or open a document to view."
+msgstr "Скиньте або відкрийте документ для перегляду."
+
+#: src/views/Viewer/Viewer.qml:60
+#, kde-format
+msgid "Browser"
+msgstr "Навігатор"
+
+#: src/views/Viewer/Viewer.qml:77
+#, kde-format
+msgid "Fav"
+msgstr "Улюбл."
+
+#: src/views/Viewer/Viewer.qml:91
+#, kde-format
+msgid "Doodle"
+msgstr "Doodle"
+
+#: src/views/Viewer/Viewer.qml:117
+#, kde-format
+msgid "Browse Horizontally"
+msgstr "Горизонтальна навігація"
+
+#: src/views/Viewer/Viewer.qml:141
+#, kde-format
+msgid "Fullscreen"
+msgstr "На весь екран"
+
+#~ msgid "Fill"
+#~ msgstr "Заповнення"
+
+#~ msgid "New Bookmark..."
+#~ msgstr "Створити закладку…"
+
+#~ msgid "Bookmark #"
+#~ msgstr "Закладка №"
+
+#~ msgid "Save new bookmark as"
+#~ msgstr "Зберегти нову закладку як"
+
+#~ msgid "Save"
+#~ msgstr "Зберегти"
+
+#~ msgid "Library"
+#~ msgstr "Бібліотека"
