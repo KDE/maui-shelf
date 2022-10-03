@@ -1,21 +1,22 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the maui-shelf package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-02 00:45+0000\n"
-"PO-Revision-Date: 2022-10-02 15:50\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2022-10-02 08:17+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/maui-shelf/shelf.pot\n"
-"X-Crowdin-File-ID: 24952\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -25,220 +26,221 @@ msgstr "Shelf"
 #: src/main.cpp:49
 #, kde-format
 msgid "Browse and view your documents."
-msgstr "浏览和查看您的文档。"
+msgstr "მოძებნეთ და დაათვალიერეთ თქვენი დოკუმენტები."
 
 #: src/main.cpp:49
 #, kde-format
 msgid "© 2019-%1 Maui Development Team"
-msgstr "© 2019-%1 Maui Development Team"
+msgstr "© 2019- %1 Maui განვითარების გუნდი"
 
 #: src/main.cpp:50
 #, kde-format
 msgid "Camilo Higuita"
-msgstr "Camilo Higuita"
+msgstr "კამილო ჰიგუიტა"
 
 #: src/main.cpp:50
 #, kde-format
 msgid "Developer"
-msgstr "开发人员"
+msgstr "პროგრამისტი"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:144
 #, kde-format
 msgid "Title"
-msgstr "标题"
+msgstr "სათაური"
 
 #: src/views/cloud/CloudView.qml:36
 #, kde-format
 msgid "Add date"
-msgstr "添加日期"
+msgstr "თარიღის დამატება"
 
 #: src/views/cloud/CloudView.qml:42
 #, kde-format
 msgid "Creation date"
-msgstr "创建日期"
+msgstr "შექმნის თარიღი"
 
 #: src/views/cloud/CloudView.qml:48
 #, kde-format
 msgid "Format"
-msgstr "格式"
+msgstr "ფორმატირება"
 
 #: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:160
 #, kde-format
 msgid "Size"
-msgstr "大小"
+msgstr "ზომა"
 
 #: src/views/library/LibraryView.qml:35
 #, kde-format
 msgid "Nothing here!"
-msgstr "暂无内容"
+msgstr "აქ არაფერია!"
 
 #: src/views/library/LibraryView.qml:36
 #, kde-format
 msgid "Add new sources to manage your documents."
-msgstr "添加新的文档来源。"
+msgstr "დოკუმენტების სამართავად დაამატეთ ახალი წყაროები."
 
 #: src/views/library/LibraryView.qml:42
 #, kde-format
 msgid "Open file"
-msgstr "打开文件"
+msgstr "ფაილის გახსნა"
 
 #: src/views/library/LibraryView.qml:48
 #, kde-format
 msgid "Add sources"
-msgstr "添加来源"
+msgstr "წყაროების დამატება"
 
 #: src/views/library/LibraryView.qml:75 src/views/library/LibraryView.qml:368
 #, kde-format
 msgid "Open"
-msgstr "打开"
+msgstr "გახსნა"
 
 #: src/views/library/LibraryView.qml:82
 #, kde-format
 msgid "Settings"
-msgstr "设置"
+msgstr "&მორგება"
 
 #: src/views/library/LibraryView.qml:89
 #, kde-format
 msgid "About"
-msgstr "关于"
+msgstr "შესახებ"
 
 #: src/views/library/LibraryView.qml:113
 #, kde-format
 msgid "View type"
-msgstr "视图类型"
+msgstr "ხედის ტიპი"
 
 #: src/views/library/LibraryView.qml:119
 #, kde-format
 msgid "List"
-msgstr "列表"
+msgstr "სია"
 
 #: src/views/library/LibraryView.qml:128
 #, kde-format
 msgid "Grid"
-msgstr "网格"
+msgstr "ბადე"
 
 #: src/views/library/LibraryView.qml:138
 #, kde-format
 msgid "Sort by"
-msgstr "排序依据"
+msgstr "დალაგება"
 
 #: src/views/library/LibraryView.qml:152
 #, kde-format
 msgid "Date"
-msgstr "日期"
+msgstr "თარიღი"
 
 #: src/views/library/LibraryView.qml:170
 #, kde-format
 msgid "Ascending"
-msgstr "升序"
+msgstr "ზრდადობით"
 
 #: src/views/library/LibraryView.qml:177
 #, kde-format
 msgid "Descending"
-msgstr "降序"
+msgstr "კლებადობით"
 
 #: src/views/library/LibraryView.qml:189
 #, kde-format
 msgid "Filter..."
-msgstr "筛选..."
+msgstr "გაფილტვრა..."
 
 #: src/views/library/LibraryView.qml:382
 #, kde-format
 msgid "Tag"
-msgstr "标签"
+msgstr "იარლიყი"
 
 #: src/views/library/LibraryView.qml:392 src/views/Viewer/Viewer.qml:103
 #, kde-format
 msgid "Share"
-msgstr "分享"
+msgstr "გაზიარება"
 
 #: src/views/library/LibraryView.qml:398
 #, kde-format
 msgid "Export"
-msgstr "导出"
+msgstr "გატანა"
 
 #: src/views/SettingsDialog.qml:51
 #, kde-format
 msgid "General"
-msgstr "常规"
+msgstr "ზოგადი"
 
 #: src/views/SettingsDialog.qml:52
 #, kde-format
 msgid "Configure the app plugins and behavior."
-msgstr "配置应用的插件和行为。"
+msgstr "აპის დამატებებისა და ქცევის მორგება."
 
 #: src/views/SettingsDialog.qml:69
 #, kde-format
 msgid "Auto Scan"
-msgstr "自动扫描"
+msgstr "ავტომატური სკანირება"
 
 #: src/views/SettingsDialog.qml:70
 #, kde-format
 msgid ""
 "Scan all the music sources on startup to keep your collection up to date"
-msgstr "启动时扫描所有音乐来源以保持您的音乐集合为最新状态"
+msgstr ""
+"გაშვებისას მუსიკის სკანირება კოლექციის ყოველთვის განახლებულად ქონის მიზნით"
 
 #: src/views/SettingsDialog.qml:82
 #, kde-format
 msgid "Dark Mode"
-msgstr "深色模式"
+msgstr "მუქი რეჟიმი"
 
 #: src/views/SettingsDialog.qml:83
 #, kde-format
 msgid "Switch between light and dark colorscheme"
-msgstr "切换浅色/深色模式"
+msgstr "ღია და მუქ ფერებს შორის გადართვა"
 
 #: src/views/SettingsDialog.qml:100
 #, kde-format
 msgid "Sources"
-msgstr "来源"
+msgstr "წყაროები"
 
 #: src/views/SettingsDialog.qml:101
 #, kde-format
 msgid "Add or remove sources"
-msgstr "添加或移除来源"
+msgstr "წყაროების დამატება ან წაშლა"
 
 #: src/views/SettingsDialog.qml:146
 #, kde-format
 msgid "Add"
-msgstr "添加"
+msgstr "დამატება"
 
 #: src/views/SettingsDialog.qml:163
 #, kde-format
 msgid "Scan now"
-msgstr "立即扫描"
+msgstr "ახლა სკანრება"
 
 #: src/views/Viewer/Viewer.qml:42
 #, kde-format
 msgid "Nothing here"
-msgstr "暂无内容"
+msgstr "აქ არაფერია"
 
 #: src/views/Viewer/Viewer.qml:43
 #, kde-format
 msgid "Drop or open a document to view."
-msgstr "拖放或打开文档进行查看。"
+msgstr "დააგდეთ ან გახსენით სანახავი დოკუმენტი."
 
 #: src/views/Viewer/Viewer.qml:60
 #, kde-format
 msgid "Browser"
-msgstr "浏览器"
+msgstr "Browser-ი"
 
 #: src/views/Viewer/Viewer.qml:77
 #, kde-format
 msgid "Fav"
-msgstr "收藏"
+msgstr "რჩეულებში"
 
 #: src/views/Viewer/Viewer.qml:91
 #, kde-format
 msgid "Doodle"
-msgstr "涂鸦"
+msgstr "დუდლი"
 
 #: src/views/Viewer/Viewer.qml:117
 #, kde-format
 msgid "Browse Horizontally"
-msgstr "水平浏览"
+msgstr "ჰორიზონტალურად დათვალიერება"
 
 #: src/views/Viewer/Viewer.qml:141
 #, kde-format
 msgid "Fullscreen"
-msgstr "全屏"
+msgstr "მთელ ეკრანზე"
