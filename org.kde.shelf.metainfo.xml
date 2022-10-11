@@ -63,7 +63,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="es">Shelf es un sencillo explorador y visor de documentos PDF y EPUB.</p>
     <p xml:lang="eu">Shelf PDF eta EPUB dokumentuak arakatzaile eta erakusle sinple bat da.</p>
     <p xml:lang="fi">Shelf on yksinkertainen PDF- ja ePub-tiedostoselain ja -katselin.</p>
-    <p xml:lang="fr">Shelf est un navigateur et un afficheur simple de documents « PDF » et « ePub ».</p>
+    <p xml:lang="fr">Shelf est un navigateur et un afficheur simple de documents « PDF » et « ePub ».</p>
     <p xml:lang="hi">शेल्फ़ एक साधारण पीडीएफ और इ-पब दस्तावेज़ ब्राउज़र और प्रदर्शक है।</p>
     <p xml:lang="it">Shelf è un semplice navigatore e visore di documenti PDF ed EPUB.</p>
     <p xml:lang="ka">Shelf PDF და EPUB დოკუმენტების ნახვის მარტივი პროგრამაა.</p>
@@ -127,5 +127,11 @@ SPDX-License-Identifier: CC0-1.0
     <release version="1.2.2" date="2021-05-11">
       <url>https://nxos.org/maui/maui-1-2-2-release/</url>
     </release>
+    <release version="2.1.2" date="2022-05-16">
+      <url>https://mauikit.org/blog/maui-2-1-2-release/</url>
+    </release>
+ <release version="2.2.0" date="2022-08-30">
+    <url>https://mauikit.org/blog/maui-2-2-0-release/</url>
+  </release>
   </releases>
 </component>
