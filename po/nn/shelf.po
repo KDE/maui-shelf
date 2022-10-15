@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-18 00:43+0000\n"
+"POT-Creation-Date: 2022-10-02 00:45+0000\n"
 "PO-Revision-Date: 2021-02-06 13:59+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -149,7 +149,7 @@ msgstr "Filtrer …"
 msgid "Tag"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:392 src/views/Viewer/Viewer.qml:97
+#: src/views/library/LibraryView.qml:392 src/views/Viewer/Viewer.qml:103
 #, kde-format
 msgid "Share"
 msgstr "Del"
@@ -210,37 +210,37 @@ msgstr ""
 msgid "Scan now"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:44
+#: src/views/Viewer/Viewer.qml:42
 #, kde-format
 msgid "Nothing here"
 msgstr "Ingenting her"
 
-#: src/views/Viewer/Viewer.qml:45
+#: src/views/Viewer/Viewer.qml:43
 #, kde-format
 msgid "Drop or open a document to view."
 msgstr "Dra eller opna eit dokument for å visa det."
 
-#: src/views/Viewer/Viewer.qml:54
+#: src/views/Viewer/Viewer.qml:60
 #, kde-format
 msgid "Browser"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:71
+#: src/views/Viewer/Viewer.qml:77
 #, kde-format
 msgid "Fav"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:85
+#: src/views/Viewer/Viewer.qml:91
 #, kde-format
 msgid "Doodle"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:111
+#: src/views/Viewer/Viewer.qml:117
 #, kde-format
 msgid "Browse Horizontally"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:135
+#: src/views/Viewer/Viewer.qml:141
 #, kde-format
 msgid "Fullscreen"
 msgstr ""
