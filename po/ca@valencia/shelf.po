@@ -220,7 +220,7 @@ msgstr "Res ací"
 #: src/views/Viewer/Viewer.qml:43
 #, kde-format
 msgid "Drop or open a document to view."
-msgstr "Deixeu anar o obriu un document a veure."
+msgstr "Deixeu anar o obriu un document que s'haja de visualitzar."
 
 #: src/views/Viewer/Viewer.qml:60
 #, kde-format
