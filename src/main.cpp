@@ -43,8 +43,6 @@ int main(int argc, char *argv[])
     app.setOrganizationName("Maui");
     app.setWindowIcon(QIcon(":/assets/shelf.svg"));
 
-    MauiApp::instance ()->setIconName ("qrc:/assets/shelf.svg");
-
     KLocalizedString::setApplicationDomain("shelf");
     KAboutData about(QStringLiteral("shelf"), i18n("Shelf"), SHELF_VERSION_STRING, i18n("Browse and view your documents."), KAboutLicense::LGPL_V3, i18n("© 2019-%1 Maui Development Team", QString::number(QDate::currentDate().year())), QString(GIT_BRANCH) + "/" + QString(GIT_COMMIT_HASH));
     about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
@@ -53,8 +51,11 @@ int main(int argc, char *argv[])
     about.setBugAddress("https://invent.kde.org/maui/shelf/-/issues");
     about.setOrganizationDomain(SHELF_URI);
     about.setProgramLogo(app.windowIcon());
+    about.addComponent("Poppler");
+    about.addCredit(i18n("Peruse Developers"));
 
     KAboutData::setApplicationData(about);
+    MauiApp::instance ()->setIconName ("qrc:/assets/shelf.svg");
 
     QCommandLineParser parser;
 
@@ -86,6 +87,8 @@ int main(int argc, char *argv[])
             Library::instance()->openFiles(args);
     },
     Qt::QueuedConnection);
+
+    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
 
     engine.rootContext()->setContextProperty("globalQmlEngine", &engine);
 

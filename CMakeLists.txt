@@ -92,17 +92,15 @@ ecm_setup_version(${SHELF_VERSION}
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/shelf_version.h"
     )
 
-set(QML_IMPORT_PATH ${CMAKE_SOURCE_DIR}/plugins ${CMAKE_BINARY_DIR}/org CACHE STRING "" FORCE)
-
-add_subdirectory(plugins/poppler)
 add_subdirectory(src)
+ki18n_install(po)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install(FILES org.kde.shelf.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
     install(FILES org.kde.shelf.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 endif()
 
-feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})

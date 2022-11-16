@@ -5,7 +5,7 @@ import QtQuick.Window 2.12
 import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.3 as FB
 
-import org.shelf.poppler 1.0 as Poppler
+import org.mauikit.documents 1.0 as Poppler
 import org.kde.peruse 0.1 as Peruse
 
 Item
