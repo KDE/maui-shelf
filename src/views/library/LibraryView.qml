@@ -188,7 +188,43 @@ Maui.AltBrowser
         Layout.alignment: Qt.AlignCenter
         placeholderText: i18n("Filter...")
         onAccepted: control.model.filter = text
-        onCleared:  control.model.filter = text
+        onCleared:  _libraryModel.clearFilters()
+    }
+
+    gridView.flickable.header: Pane
+    {
+    width: parent.width
+    height: implicitContentHeight + topPadding + bottomPadding
+    padding: Maui.Style.space.big
+
+   contentItem: Flow
+    {
+        spacing: Maui.Style.space.medium
+
+        Button
+        {
+            text: i18n("Comics")
+            icon.name: "animal"
+            onClicked: _libraryModel.filters = [".cbz", ".cbr"]
+        }
+
+        Button
+        {
+            text: i18n("Favs")
+            icon.name: "love"
+        }
+
+        Button
+        {
+            text: i18n("Important")
+        }
+
+//        Repeater
+//        {
+
+//        }
+    }
+
     }
 
     gridDelegate: Item
