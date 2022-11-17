@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-02 00:45+0000\n"
+"POT-Creation-Date: 2022-11-17 00:44+0000\n"
 "PO-Revision-Date: 2022-04-15 04:57+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -16,29 +16,35 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: src/main.cpp:49
+#: src/main.cpp:47
 #, kde-format
 msgid "Shelf"
 msgstr "Shelf"
 
-#: src/main.cpp:49
+#: src/main.cpp:47
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "Ihre Dokumente durchsehen und anzeigen."
 
-#: src/main.cpp:49
+#: src/main.cpp:47
 #, kde-format
 msgid "© 2019-%1 Maui Development Team"
 msgstr "© 2019-%1 Maui-Entwicklerteam"
 
-#: src/main.cpp:50
+#: src/main.cpp:48
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:50
+#: src/main.cpp:48
 #, kde-format
 msgid "Developer"
+msgstr "Entwickler"
+
+#: src/main.cpp:55
+#, fuzzy, kde-format
+#| msgid "Developer"
+msgid "Peruse Developers"
 msgstr "Entwickler"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:144

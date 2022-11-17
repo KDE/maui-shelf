@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-02 00:45+0000\n"
+"POT-Creation-Date: 2022-11-17 00:44+0000\n"
 "PO-Revision-Date: 2021-05-01 23:14-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -17,31 +17,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.12.2\n"
 
-#: src/main.cpp:49
+#: src/main.cpp:47
 #, kde-format
 msgid "Shelf"
 msgstr "ਸ਼ੈਲਫ਼"
 
-#: src/main.cpp:49
+#: src/main.cpp:47
 #, fuzzy, kde-format
 #| msgid "Shelf lets you browse and view your documents."
 msgid "Browse and view your documents."
 msgstr "ਸ਼ੈਲਫ਼ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਦਸਤਾਵੇਜ਼ ਵੇਖਣ ਲਈ ਸਹਾਇਕ ਹੈ।"
 
-#: src/main.cpp:49
+#: src/main.cpp:47
 #, fuzzy, kde-format
 #| msgid "© 2019-%1 Nitrux Development Team"
 msgid "© 2019-%1 Maui Development Team"
 msgstr "© 2019-%1 Nitrux Development ਟੀਮ"
 
-#: src/main.cpp:50
+#: src/main.cpp:48
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:50
+#: src/main.cpp:48
 #, kde-format
 msgid "Developer"
+msgstr "ਡਿਵੈਲਪਰ"
+
+#: src/main.cpp:55
+#, fuzzy, kde-format
+#| msgid "Developer"
+msgid "Peruse Developers"
 msgstr "ਡਿਵੈਲਪਰ"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:144
