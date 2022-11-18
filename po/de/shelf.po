@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-17 00:44+0000\n"
+"POT-Creation-Date: 2022-11-18 00:44+0000\n"
 "PO-Revision-Date: 2022-04-15 04:57+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -92,7 +92,7 @@ msgstr "Datei öffnen"
 msgid "Add sources"
 msgstr "Quellen hinzufügen"
 
-#: src/views/library/LibraryView.qml:75 src/views/library/LibraryView.qml:368
+#: src/views/library/LibraryView.qml:75 src/views/library/LibraryView.qml:404
 #, kde-format
 msgid "Open"
 msgstr "Öffnen"
@@ -147,17 +147,32 @@ msgstr "Absteigend"
 msgid "Filter..."
 msgstr "Filter ..."
 
-#: src/views/library/LibraryView.qml:382
+#: src/views/library/LibraryView.qml:206
+#, kde-format
+msgid "Comics"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:213
+#, kde-format
+msgid "Favs"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:219
+#, kde-format
+msgid "Important"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:418
 #, kde-format
 msgid "Tag"
 msgstr "Stichwort"
 
-#: src/views/library/LibraryView.qml:392 src/views/Viewer/Viewer.qml:103
+#: src/views/library/LibraryView.qml:428 src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
 msgstr "Teilen"
 
-#: src/views/library/LibraryView.qml:398
+#: src/views/library/LibraryView.qml:434
 #, kde-format
 msgid "Export"
 msgstr "Exportieren"
@@ -213,37 +228,37 @@ msgstr "Hinzufügen"
 msgid "Scan now"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:42
+#: src/views/Viewer/Viewer.qml:41
 #, kde-format
 msgid "Nothing here"
 msgstr "Nichts"
 
-#: src/views/Viewer/Viewer.qml:43
+#: src/views/Viewer/Viewer.qml:42
 #, kde-format
 msgid "Drop or open a document to view."
 msgstr "Ablegen oder ein Dokument zur Anzeige öffnen."
 
-#: src/views/Viewer/Viewer.qml:60
+#: src/views/Viewer/Viewer.qml:58
 #, kde-format
 msgid "Browser"
 msgstr "Browser"
 
-#: src/views/Viewer/Viewer.qml:77
+#: src/views/Viewer/Viewer.qml:75
 #, kde-format
 msgid "Fav"
 msgstr "Zu Favoriten hinzufügen"
 
-#: src/views/Viewer/Viewer.qml:91
+#: src/views/Viewer/Viewer.qml:89
 #, kde-format
 msgid "Doodle"
 msgstr "Doodle"
 
-#: src/views/Viewer/Viewer.qml:117
+#: src/views/Viewer/Viewer.qml:115
 #, kde-format
 msgid "Browse Horizontally"
 msgstr "Waagrecht durchsuchen"
 
-#: src/views/Viewer/Viewer.qml:141
+#: src/views/Viewer/Viewer.qml:139
 #, kde-format
 msgid "Fullscreen"
 msgstr "Vollbild"

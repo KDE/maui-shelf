@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-17 00:44+0000\n"
+"POT-Creation-Date: 2022-11-18 00:44+0000\n"
 "PO-Revision-Date: 2022-01-15 11:05+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -95,7 +95,7 @@ msgstr "Obri un fitxer"
 msgid "Add sources"
 msgstr "Afig fonts"
 
-#: src/views/library/LibraryView.qml:75 src/views/library/LibraryView.qml:368
+#: src/views/library/LibraryView.qml:75 src/views/library/LibraryView.qml:404
 #, kde-format
 msgid "Open"
 msgstr "Obri"
@@ -150,17 +150,32 @@ msgstr "Descendent"
 msgid "Filter..."
 msgstr "Filtre..."
 
-#: src/views/library/LibraryView.qml:382
+#: src/views/library/LibraryView.qml:206
+#, kde-format
+msgid "Comics"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:213
+#, kde-format
+msgid "Favs"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:219
+#, kde-format
+msgid "Important"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:418
 #, kde-format
 msgid "Tag"
 msgstr "Etiqueta"
 
-#: src/views/library/LibraryView.qml:392 src/views/Viewer/Viewer.qml:103
+#: src/views/library/LibraryView.qml:428 src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
 msgstr "Compartix"
 
-#: src/views/library/LibraryView.qml:398
+#: src/views/library/LibraryView.qml:434
 #, kde-format
 msgid "Export"
 msgstr "Exporta"
@@ -218,37 +233,37 @@ msgstr "Afig"
 msgid "Scan now"
 msgstr "Explora ara"
 
-#: src/views/Viewer/Viewer.qml:42
+#: src/views/Viewer/Viewer.qml:41
 #, kde-format
 msgid "Nothing here"
 msgstr "Res ací"
 
-#: src/views/Viewer/Viewer.qml:43
+#: src/views/Viewer/Viewer.qml:42
 #, kde-format
 msgid "Drop or open a document to view."
 msgstr "Deixeu anar o obriu un document que s'haja de visualitzar."
 
-#: src/views/Viewer/Viewer.qml:60
+#: src/views/Viewer/Viewer.qml:58
 #, kde-format
 msgid "Browser"
 msgstr "Navegador"
 
-#: src/views/Viewer/Viewer.qml:77
+#: src/views/Viewer/Viewer.qml:75
 #, kde-format
 msgid "Fav"
 msgstr "Preferit"
 
-#: src/views/Viewer/Viewer.qml:91
+#: src/views/Viewer/Viewer.qml:89
 #, kde-format
 msgid "Doodle"
 msgstr "Gargot"
 
-#: src/views/Viewer/Viewer.qml:117
+#: src/views/Viewer/Viewer.qml:115
 #, kde-format
 msgid "Browse Horizontally"
 msgstr "Navega horitzontalment"
 
-#: src/views/Viewer/Viewer.qml:141
+#: src/views/Viewer/Viewer.qml:139
 #, kde-format
 msgid "Fullscreen"
 msgstr "Pantalla completa"

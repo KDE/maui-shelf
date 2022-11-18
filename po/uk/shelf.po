@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-17 00:44+0000\n"
-"PO-Revision-Date: 2022-01-15 09:36+0200\n"
+"POT-Creation-Date: 2022-11-18 00:44+0000\n"
+"PO-Revision-Date: 2022-11-17 04:14+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -46,10 +46,9 @@ msgid "Developer"
 msgstr "Розробник"
 
 #: src/main.cpp:55
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgid "Peruse Developers"
-msgstr "Розробник"
+msgstr "Розробники Peruse"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:144
 #, kde-format
@@ -96,7 +95,7 @@ msgstr "Відкрити файл"
 msgid "Add sources"
 msgstr "Додати джерела"
 
-#: src/views/library/LibraryView.qml:75 src/views/library/LibraryView.qml:368
+#: src/views/library/LibraryView.qml:75 src/views/library/LibraryView.qml:404
 #, kde-format
 msgid "Open"
 msgstr "Відкрити"
@@ -151,17 +150,32 @@ msgstr "За спаданням"
 msgid "Filter..."
 msgstr "Фільтрувати…"
 
-#: src/views/library/LibraryView.qml:382
+#: src/views/library/LibraryView.qml:206
+#, kde-format
+msgid "Comics"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:213
+#, kde-format
+msgid "Favs"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:219
+#, kde-format
+msgid "Important"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:418
 #, kde-format
 msgid "Tag"
 msgstr "Мітка"
 
-#: src/views/library/LibraryView.qml:392 src/views/Viewer/Viewer.qml:103
+#: src/views/library/LibraryView.qml:428 src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
 msgstr "Оприлюднити"
 
-#: src/views/library/LibraryView.qml:398
+#: src/views/library/LibraryView.qml:434
 #, kde-format
 msgid "Export"
 msgstr "Експортувати"
@@ -219,37 +233,37 @@ msgstr "Додати"
 msgid "Scan now"
 msgstr "Сканувати зараз"
 
-#: src/views/Viewer/Viewer.qml:42
+#: src/views/Viewer/Viewer.qml:41
 #, kde-format
 msgid "Nothing here"
 msgstr "Тут нічого немає"
 
-#: src/views/Viewer/Viewer.qml:43
+#: src/views/Viewer/Viewer.qml:42
 #, kde-format
 msgid "Drop or open a document to view."
 msgstr "Скиньте або відкрийте документ для перегляду."
 
-#: src/views/Viewer/Viewer.qml:60
+#: src/views/Viewer/Viewer.qml:58
 #, kde-format
 msgid "Browser"
 msgstr "Навігатор"
 
-#: src/views/Viewer/Viewer.qml:77
+#: src/views/Viewer/Viewer.qml:75
 #, kde-format
 msgid "Fav"
 msgstr "Улюбл."
 
-#: src/views/Viewer/Viewer.qml:91
+#: src/views/Viewer/Viewer.qml:89
 #, kde-format
 msgid "Doodle"
 msgstr "Doodle"
 
-#: src/views/Viewer/Viewer.qml:117
+#: src/views/Viewer/Viewer.qml:115
 #, kde-format
 msgid "Browse Horizontally"
 msgstr "Горизонтальна навігація"
 
-#: src/views/Viewer/Viewer.qml:141
+#: src/views/Viewer/Viewer.qml:139
 #, kde-format
 msgid "Fullscreen"
 msgstr "На весь екран"
