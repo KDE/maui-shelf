@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:44+0000\n"
-"PO-Revision-Date: 2022-10-02 08:17+0200\n"
+"PO-Revision-Date: 2022-11-18 07:30+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #: src/main.cpp:47
 #, kde-format
@@ -44,8 +44,7 @@ msgid "Developer"
 msgstr "პროგრამისტი"
 
 #: src/main.cpp:55
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgid "Peruse Developers"
 msgstr "პროგრამისტი"
 
@@ -152,17 +151,17 @@ msgstr "გაფილტვრა..."
 #: src/views/library/LibraryView.qml:206
 #, kde-format
 msgid "Comics"
-msgstr ""
+msgstr "კომიქსები"
 
 #: src/views/library/LibraryView.qml:213
 #, kde-format
 msgid "Favs"
-msgstr ""
+msgstr "ფავორიტები"
 
 #: src/views/library/LibraryView.qml:219
 #, kde-format
 msgid "Important"
-msgstr ""
+msgstr "მნიშვნელოვანი"
 
 #: src/views/library/LibraryView.qml:418
 #, kde-format

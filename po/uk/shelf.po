@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:44+0000\n"
-"PO-Revision-Date: 2022-11-17 04:14+0200\n"
+"PO-Revision-Date: 2022-11-18 08:43+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -153,17 +153,17 @@ msgstr "Фільтрувати…"
 #: src/views/library/LibraryView.qml:206
 #, kde-format
 msgid "Comics"
-msgstr ""
+msgstr "Комікси"
 
 #: src/views/library/LibraryView.qml:213
 #, kde-format
 msgid "Favs"
-msgstr ""
+msgstr "Улюблене"
 
 #: src/views/library/LibraryView.qml:219
 #, kde-format
 msgid "Important"
-msgstr ""
+msgstr "Важливе"
 
 #: src/views/library/LibraryView.qml:418
 #, kde-format

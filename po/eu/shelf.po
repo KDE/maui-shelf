@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:44+0000\n"
-"PO-Revision-Date: 2022-11-17 06:56+0100\n"
+"PO-Revision-Date: 2022-11-18 07:47+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -153,17 +153,17 @@ msgstr "Iragazkia..."
 #: src/views/library/LibraryView.qml:206
 #, kde-format
 msgid "Comics"
-msgstr ""
+msgstr "Komikiak"
 
 #: src/views/library/LibraryView.qml:213
 #, kde-format
 msgid "Favs"
-msgstr ""
+msgstr "Gogk"
 
 #: src/views/library/LibraryView.qml:219
 #, kde-format
 msgid "Important"
-msgstr ""
+msgstr "Garrantzitsua"
 
 #: src/views/library/LibraryView.qml:418
 #, kde-format

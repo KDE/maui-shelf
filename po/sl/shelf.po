@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
 #
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:44+0000\n"
-"PO-Revision-Date: 2022-01-18 09:06+0100\n"
-"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"PO-Revision-Date: 2022-11-18 08:14+0100\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #: src/main.cpp:47
 #, kde-format
@@ -41,13 +41,12 @@ msgstr "Camilo Higuita"
 #: src/main.cpp:48
 #, kde-format
 msgid "Developer"
-msgstr "Razvijalec"
+msgstr "Razvojnik"
 
 #: src/main.cpp:55
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgid "Peruse Developers"
-msgstr "Razvijalec"
+msgstr "Razvojniki Peruse"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:144
 #, kde-format
@@ -152,22 +151,22 @@ msgstr "Filter ..."
 #: src/views/library/LibraryView.qml:206
 #, kde-format
 msgid "Comics"
-msgstr ""
+msgstr "Stripi"
 
 #: src/views/library/LibraryView.qml:213
 #, kde-format
 msgid "Favs"
-msgstr ""
+msgstr "Priljubljeni"
 
 #: src/views/library/LibraryView.qml:219
 #, kde-format
 msgid "Important"
-msgstr ""
+msgstr "Pomembni"
 
 #: src/views/library/LibraryView.qml:418
 #, kde-format
 msgid "Tag"
-msgstr "Značka"
+msgstr "Oznaka"
 
 #: src/views/library/LibraryView.qml:428 src/views/Viewer/Viewer.qml:101
 #, kde-format
