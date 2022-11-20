@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:44+0000\n"
-"PO-Revision-Date: 2022-11-06 01:07\n"
+"PO-Revision-Date: 2022-11-19 14:49\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -43,10 +43,9 @@ msgid "Developer"
 msgstr "开发人员"
 
 #: src/main.cpp:55
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgid "Peruse Developers"
-msgstr "开发人员"
+msgstr ""
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:144
 #, kde-format
