@@ -70,14 +70,6 @@ Maui.Page
             fillMode: Image.PreserveAspectFit
             asynchronous: true
 
-            Rectangle
-            {
-                anchors.centerIn: parent
-                color: "red"
-                height: 100
-                width: 100
-            }
-
             //                                            property bool shouldCheat: imageWidth * 2 > maxTextureSize || imageHeight * 2 > maxTextureSize;
             //                                                           property bool isTall: imageHeight < imageWidth;
             //                                                           property int fixedWidth: isTall ? maxTextureSize * (imageWidth / imageHeight) : maxTextureSize;
