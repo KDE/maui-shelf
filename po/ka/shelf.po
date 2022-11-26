@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:44+0000\n"
-"PO-Revision-Date: 2022-11-18 07:30+0100\n"
+"PO-Revision-Date: 2022-11-25 22:58+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -166,7 +166,7 @@ msgstr "მნიშვნელოვანი"
 #: src/views/library/LibraryView.qml:418
 #, kde-format
 msgid "Tag"
-msgstr "იარლიყი"
+msgstr "ჭდე"
 
 #: src/views/library/LibraryView.qml:428 src/views/Viewer/Viewer.qml:101
 #, kde-format
@@ -228,7 +228,7 @@ msgstr "დამატება"
 #: src/views/SettingsDialog.qml:163
 #, kde-format
 msgid "Scan now"
-msgstr "ახლა სკანრება"
+msgstr "ახლა სკანირება"
 
 #: src/views/Viewer/Viewer.qml:41
 #, kde-format
@@ -243,7 +243,7 @@ msgstr "დააგდეთ ან გახსენით სანახა
 #: src/views/Viewer/Viewer.qml:58
 #, kde-format
 msgid "Browser"
-msgstr "Browser-ი"
+msgstr "ბრაუზერი"
 
 #: src/views/Viewer/Viewer.qml:75
 #, kde-format
