@@ -81,5 +81,4 @@ Maui.Page
 
     Component.onCompleted:  _model.filename = control.path.replace("file://", "")
 
-
 }

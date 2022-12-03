@@ -87,7 +87,7 @@ Maui.ApplicationWindow
 
         ignoreUnknownSignals: true
 
-        function onRequestedFiles()
+        function onRequestedFiles(files)
         {
             for(var file of files)
             {
