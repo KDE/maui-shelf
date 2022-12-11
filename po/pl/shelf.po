@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:44+0000\n"
-"PO-Revision-Date: 2022-06-27 20:21+0200\n"
+"PO-Revision-Date: 2022-12-10 11:12+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.03.70\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: src/main.cpp:47
 #, kde-format
@@ -44,10 +44,9 @@ msgid "Developer"
 msgstr "Programista"
 
 #: src/main.cpp:55
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgid "Peruse Developers"
-msgstr "Programista"
+msgstr "Programiści Peruse"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:144
 #, kde-format
@@ -152,17 +151,17 @@ msgstr "Odfiltruj..."
 #: src/views/library/LibraryView.qml:206
 #, kde-format
 msgid "Comics"
-msgstr ""
+msgstr "Komiksy"
 
 #: src/views/library/LibraryView.qml:213
 #, kde-format
 msgid "Favs"
-msgstr ""
+msgstr "Ulubione"
 
 #: src/views/library/LibraryView.qml:219
-#, kde-format
+#, fuzzy, kde-format
 msgid "Important"
-msgstr ""
+msgstr "Ważna"
 
 #: src/views/library/LibraryView.qml:418
 #, kde-format
