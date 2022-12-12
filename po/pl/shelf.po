@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-18 00:44+0000\n"
-"PO-Revision-Date: 2022-12-10 11:12+0100\n"
+"PO-Revision-Date: 2022-12-11 07:52+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -159,9 +159,9 @@ msgid "Favs"
 msgstr "Ulubione"
 
 #: src/views/library/LibraryView.qml:219
-#, fuzzy, kde-format
+#, kde-format
 msgid "Important"
-msgstr "Ważna"
+msgstr "Ważne"
 
 #: src/views/library/LibraryView.qml:418
 #, kde-format
