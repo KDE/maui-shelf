@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:44+0000\n"
+"POT-Creation-Date: 2023-01-28 00:57+0000\n"
 "PO-Revision-Date: 2022-11-25 22:58+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -194,9 +194,11 @@ msgid "Auto Scan"
 msgstr "ავტომატური სკანირება"
 
 #: src/views/SettingsDialog.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Scan all the music sources on startup to keep your collection up to date"
 msgid ""
-"Scan all the music sources on startup to keep your collection up to date"
+"Scan all the document sources on startup to keep your collection up to date"
 msgstr ""
 "გაშვებისას მუსიკის სკანირება კოლექციის ყოველთვის განახლებულად ქონის მიზნით"
 

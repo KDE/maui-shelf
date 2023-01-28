@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:44+0000\n"
+"POT-Creation-Date: 2023-01-28 00:57+0000\n"
 "PO-Revision-Date: 2020-11-08 21:27+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -196,7 +196,7 @@ msgstr ""
 #: src/views/SettingsDialog.qml:70
 #, kde-format
 msgid ""
-"Scan all the music sources on startup to keep your collection up to date"
+"Scan all the document sources on startup to keep your collection up to date"
 msgstr ""
 
 #: src/views/SettingsDialog.qml:82

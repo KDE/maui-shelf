@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:44+0000\n"
+"POT-Creation-Date: 2023-01-28 00:57+0000\n"
 "PO-Revision-Date: 2021-01-23 14:18+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -202,7 +202,7 @@ msgstr ""
 #: src/views/SettingsDialog.qml:70
 #, kde-format
 msgid ""
-"Scan all the music sources on startup to keep your collection up to date"
+"Scan all the document sources on startup to keep your collection up to date"
 msgstr ""
 
 #: src/views/SettingsDialog.qml:82

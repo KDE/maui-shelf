@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:44+0000\n"
+"POT-Creation-Date: 2023-01-28 00:57+0000\n"
 "PO-Revision-Date: 2022-11-19 23:05+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -195,9 +195,11 @@ msgid "Auto Scan"
 msgstr "Explorar automáticamente"
 
 #: src/views/SettingsDialog.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Scan all the music sources on startup to keep your collection up to date"
 msgid ""
-"Scan all the music sources on startup to keep your collection up to date"
+"Scan all the document sources on startup to keep your collection up to date"
 msgstr ""
 "Explorar todas las fuentes de música durante el inicio para mantener la "
 "colección actualizada"
