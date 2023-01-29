@@ -19,6 +19,7 @@
 
 #include "library.h"
 #include "models/library/librarymodel.h"
+#include "models/placesmodel.h"
 //#include "./src/models/cloud/cloud.h"
 
 #include <KI18n/KLocalizedString>
@@ -97,6 +98,7 @@ int main(int argc, char *argv[])
 
     //	qmlRegisterType<EpubReader>("EPUB", 1, 0, "Document");
     qmlRegisterType<LibraryModel>(SHELF_URI, 1, 0, "LibraryList");
+    qmlRegisterType<PlacesModel>(SHELF_URI, 1, 0, "PlacesList");
     qmlRegisterSingletonInstance<Library>(SHELF_URI, 1, 0, "Library", Library::instance());
 
     engine.load(url);

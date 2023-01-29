@@ -57,7 +57,7 @@ Maui.ApplicationWindow
         id: _dialogLoader
     }
 
-    Maui.StackView
+    StackView
     {
         id: _stackView
         anchors.fill: parent

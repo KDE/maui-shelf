@@ -8,5 +8,6 @@
         <file>views/Viewer/Viewer_EPUB.qml</file>
         <file>views/SettingsDialog.qml</file>
         <file>views/Viewer/Viewer_CB.qml</file>
+        <file>views/library/Sidebar.qml</file>
     </qresource>
 </RCC>

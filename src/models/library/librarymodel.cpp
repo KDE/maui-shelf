@@ -28,10 +28,11 @@ static FMH::MODEL fileData(const QUrl &url)
 
 LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
   , m_fileLoader(new FMH::FileLoader(parent))
+  , m_sources({"collection:///"})
 {
     qRegisterMetaType<LibraryModel*>("const LibraryModel*");
 
-    connect(Library::instance(), &Library::sourcesChanged, this, &LibraryModel::setList);
+//    connect(Library::instance(), &Library::sourcesChanged, this, &LibraryModel::setList);
 
     connect(m_fileLoader, &FMH::FileLoader::itemsReady,[this](FMH::MODEL_LIST items)
     {
@@ -40,14 +41,16 @@ LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
         emit this->postItemAppended();
         emit this->countChanged();
     });
+
+    connect(this, &LibraryModel::sourcesChanged, this, &LibraryModel::setList);
 }
 
 void LibraryModel::setList(const QStringList &sources)
 {
     this->clear();
-
+auto paths = sources.count() == 1 && sources.first() == "collection:///" ? Library::instance()->sources() : sources;
     this->m_fileLoader->informer = &fileData;
-    this->m_fileLoader->requestPath(QUrl::fromStringList(sources), true, FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT]);
+    this->m_fileLoader->requestPath(QUrl::fromStringList(paths), true, FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT]);
 }
 
 const FMH::MODEL_LIST &LibraryModel::items() const
@@ -108,10 +111,29 @@ void LibraryModel::clear()
 
 void LibraryModel::rescan()
 {
-    this->setList(Library::instance()->sources());
+    this->setList(m_sources);
+}
+
+void LibraryModel::setSources(QStringList sources)
+{
+    if (m_sources == sources)
+        return;
+
+    m_sources = sources;
+    emit sourcesChanged(m_sources);
 }
 
 void LibraryModel::componentComplete()
 {
-    this->setList(Library::instance()->sources());
+    this->setList(m_sources);
+}
+
+QStringList LibraryModel::sources() const
+{
+    return m_sources;
+}
+
+void LibraryModel::resetSources()
+{
+    setSources({"collection:///"});
 }

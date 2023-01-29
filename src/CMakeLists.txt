@@ -7,6 +7,7 @@
 set(shelf_SRCS
     main.cpp
     library.cpp
+    models/placesmodel.cpp
     models/library/librarymodel.cpp
 )
 

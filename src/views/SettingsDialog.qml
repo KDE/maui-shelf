@@ -46,12 +46,12 @@ Maui.SettingsDialog
         onRejected: confirmationDialog.close()
     }
 
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         title: i18n("General")
         description: i18n("Configure the app plugins and behavior.")
 
-//        Maui.SettingTemplate
+//        Maui.SectionItem
 //        {
 //            label1.text: i18n("Thumbnails")
 //            label2.text: i18n("Show thumbnail previews")
@@ -64,7 +64,7 @@ Maui.SettingsDialog
 //            }
 //        }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Auto Scan")
             label2.text: i18n("Scan all the document sources on startup to keep your collection up to date")
@@ -77,7 +77,7 @@ Maui.SettingsDialog
             }
         }
 
-        Maui.SettingTemplate
+        Maui.SectionItem
         {
             label1.text: i18n("Dark Mode")
             label2.text: i18n("Switch between light and dark colorscheme")
@@ -95,7 +95,7 @@ Maui.SettingsDialog
         }
     }
 
-    Maui.SettingsSection
+    Maui.SectionGroup
     {
         title: i18n("Sources")
         description: i18n("Add or remove sources")

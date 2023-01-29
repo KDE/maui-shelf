@@ -6,5 +6,6 @@
         <file>assets/shelf.svg</file>
         <file>assets/alarm.svg</file>
         <file>assets/lock.svg</file>
+        <file>views/library/Sidebar.qml</file>
     </qresource>
 </RCC>
