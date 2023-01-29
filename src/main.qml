@@ -52,6 +52,21 @@ Maui.ApplicationWindow
         }
     }
 
+    FB.OpenWithDialog
+    {
+        id: _openWithDialog
+    }
+
+    Component
+    {
+        id: tagsDialogComponent
+        FB.TagsDialog
+        {
+            onTagsReady: composerList.updateToUrls(tags)
+            composerList.strict: false
+        }
+    }
+
     Loader
     {
         id: _dialogLoader

@@ -7,5 +7,6 @@
         <file>assets/alarm.svg</file>
         <file>assets/lock.svg</file>
         <file>views/library/Sidebar.qml</file>
+        <file>views/library/LibraryMenu.qml</file>
     </qresource>
 </RCC>

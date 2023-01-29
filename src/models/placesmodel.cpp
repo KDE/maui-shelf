@@ -13,9 +13,12 @@ PlacesModel::PlacesModel(QObject *parent) : MauiList(parent)
     m_quickPlaces << QVariantMap{{"icon", "document-new"}, {"path", "documents:///"}, {"label", i18n("PDFs")}};
     m_quickPlaces << QVariantMap{{"icon", "view-list-icons"}, {"path", "collection:///"}, {"label", i18n("Collection")}};
 
-    connect(Tagging::getInstance(), &Tagging::tagged, [this](QVariantMap tag) {
+    connect(Tagging::getInstance(), &Tagging::tagged, [this](QVariantMap item) {
            emit this->preItemAppended();
-          m_list << FMH::toModel(tag);
+        auto tag = FMH::toModel(item);
+        tag[FMH::MODEL_KEY::TYPE] = i18n("Tags");
+        tag[FMH::MODEL_KEY::PATH] = QString("tags:///%1").arg(tag[FMH::MODEL_KEY::TAG]);
+          m_list << tag;
            emit this->postItemAppended();
        });
 }

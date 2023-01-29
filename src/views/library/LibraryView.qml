@@ -24,6 +24,14 @@ property alias flickable : _browser.flickable
         anchors.fill: parent
     }
 
+    LibraryMenu
+    {
+    id: _menu
+    index: _browser.currentIndex
+    model: _libraryModel
+    }
+
+
     Maui.AltBrowser
     {
         id: _browser
@@ -300,6 +308,18 @@ property alias flickable : _browser.flickable
                     viewerView.open(item.path)
                 }
             }
+
+            onPressAndHold:
+            {
+                _browser.currentIndex = index
+                _menu.show()
+            }
+
+            onRightClicked:
+            {
+                _browser.currentIndex = index
+                _menu.show()
+            }
         }
     }
 
@@ -376,6 +396,18 @@ property alias flickable : _browser.flickable
             viewerView.open(item.path)
         }
     }
+
+    onPressAndHold:
+    {
+        _browser.currentIndex = index
+        _menu.show()
+    }
+
+    onRightClicked:
+    {
+        _browser.currentIndex = index
+        _menu.show()
+    }
 }
 
 footer: Maui.SelectionBar
@@ -411,7 +443,9 @@ footer: Maui.SelectionBar
         icon.name: "tag"
         onTriggered:
         {
-
+            _dialogLoader.sourceComponent = tagsDialogComponent
+            dialog.composerList.urls = _selectionbar.uris
+            dialog.open()
         }
     }
 
@@ -419,6 +453,10 @@ footer: Maui.SelectionBar
     {
         text: i18n("Share")
         icon.name: "document-share"
+        onTriggered:
+        {
+            Maui.Platform.shareFiles(_selectionbar.uris)
+        }
     }
 
     Action
@@ -434,6 +472,19 @@ function openFolders(paths)
 {
     control.sources = paths
 }
+
+
+function filterSelection(url)
+{
+    if(_selectionbar.contains(url))
+    {
+        return selectionBox.uris
+    }else
+    {
+        return [url]
+    }
+}
+
 
 function filterSelectedItems(path)
 {
