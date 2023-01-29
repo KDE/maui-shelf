@@ -1,15 +1,15 @@
 # Translation of shelf.po to Catalan
-# Copyright (C) 2020-2022 This_file_is_part_of_KDE
+# Copyright (C) 2020-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-28 00:57+0000\n"
-"PO-Revision-Date: 2022-11-18 13:21+0100\n"
+"PO-Revision-Date: 2023-01-28 10:29+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -195,14 +195,12 @@ msgid "Auto Scan"
 msgstr "Exploració automàtica"
 
 #: src/views/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Scan all the music sources on startup to keep your collection up to date"
+#, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date"
 msgstr ""
-"Explora totes les fonts de música en iniciar per a mantenir actualitzada la "
-"col·lecció"
+"Explora totes les fonts de documents en iniciar per a mantenir actualitzada "
+"la col·lecció"
 
 #: src/views/SettingsDialog.qml:82
 #, kde-format

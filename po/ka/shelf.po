@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-28 00:57+0000\n"
-"PO-Revision-Date: 2022-11-25 22:58+0100\n"
+"PO-Revision-Date: 2023-01-28 07:09+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: src/main.cpp:47
 #, kde-format
@@ -194,13 +194,12 @@ msgid "Auto Scan"
 msgstr "ავტომატური სკანირება"
 
 #: src/views/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Scan all the music sources on startup to keep your collection up to date"
+#, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date"
 msgstr ""
-"გაშვებისას მუსიკის სკანირება კოლექციის ყოველთვის განახლებულად ქონის მიზნით"
+"გაშვებისას ყველა დოკუმენტის წყაროს სკანირება კოლექციის ყოველთვის "
+"განახლებულად ქონის მიზნით"
 
 #: src/views/SettingsDialog.qml:82
 #, kde-format

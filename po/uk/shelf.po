@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2022.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-28 00:57+0000\n"
-"PO-Revision-Date: 2022-11-18 08:43+0200\n"
+"PO-Revision-Date: 2023-01-28 08:58+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -196,13 +196,11 @@ msgid "Auto Scan"
 msgstr "Автосканування"
 
 #: src/views/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Scan all the music sources on startup to keep your collection up to date"
+#, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date"
 msgstr ""
-"Сканувати під час запуску усі джерела музичних творів для підтримання "
+"Сканувати під час запуску усі джерела документів для підтримання "
 "актуальності збірки"
 
 #: src/views/SettingsDialog.qml:82
