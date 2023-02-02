@@ -52,8 +52,8 @@ id: _placesList
     holder.title: i18n("Tags!")
     holder.body: i18n("Your tags will be listed here")
 
-    flickable.topMargin: Maui.Style.space.medium
-    flickable.bottomMargin: Maui.Style.space.medium
+    flickable.topMargin: Maui.Style.contentMargins
+    flickable.bottomMargin: Maui.Style.contentMargins
     flickable.header: Loader
     {
         asynchronous: true
