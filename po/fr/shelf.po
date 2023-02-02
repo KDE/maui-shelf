@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-30 00:56+0000\n"
-"PO-Revision-Date: 2023-01-29 10:54+0100\n"
+"PO-Revision-Date: 2023-01-31 19:24+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -48,17 +48,17 @@ msgstr "L'équipe de développement de Peruse"
 #: src/models/placesmodel.cpp:9
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favoris"
 
 #: src/models/placesmodel.cpp:10
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Téléchargements"
 
 #: src/models/placesmodel.cpp:11
 #, kde-format
 msgid "Documents"
-msgstr ""
+msgstr "Documents"
 
 #: src/models/placesmodel.cpp:12
 #, kde-format
@@ -68,18 +68,18 @@ msgstr "Bandes dessinées"
 #: src/models/placesmodel.cpp:13
 #, kde-format
 msgid "PDFs"
-msgstr ""
+msgstr "PDF"
 
 #: src/models/placesmodel.cpp:14
 #, kde-format
 msgid "Collection"
-msgstr ""
+msgstr "Collection"
 
 #: src/models/placesmodel.cpp:19 src/models/placesmodel.cpp:46
 #: src/views/library/LibraryMenu.qml:40
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Étiquettes"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:160
 #, kde-format
@@ -109,12 +109,12 @@ msgstr "Taille"
 #: src/views/library/LibraryMenu.qml:31
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "Le retirer des signets"
 
 #: src/views/library/LibraryMenu.qml:52
 #, kde-format
 msgid "Info"
-msgstr ""
+msgstr "Informations"
 
 #: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:454
 #: src/views/Viewer/Viewer.qml:101
@@ -125,7 +125,7 @@ msgstr "Partager"
 #: src/views/library/LibraryMenu.qml:76
 #, kde-format
 msgid "Select"
-msgstr ""
+msgstr "Sélectionner"
 
 #: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:464
 #, kde-format
@@ -133,25 +133,24 @@ msgid "Export"
 msgstr "Exporter"
 
 #: src/views/library/LibraryMenu.qml:110
-#, fuzzy, kde-format
-#| msgid "Open file"
+#, kde-format
 msgid "Open With"
-msgstr "Ouvrir un fichier"
+msgstr "Ouvrir avec"
 
 #: src/views/library/LibraryMenu.qml:121
 #, kde-format
 msgid "Go to folder"
-msgstr ""
+msgstr "Se déplacer dans un dossier"
 
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
 msgid "Open location"
-msgstr ""
+msgstr "Ouvrir un emplacement"
 
 #: src/views/library/LibraryMenu.qml:145
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Supprimer"
 
 #: src/views/library/LibraryView.qml:58
 #, kde-format
@@ -176,7 +175,7 @@ msgstr "Ajouter des sources"
 #: src/views/library/LibraryView.qml:100
 #, kde-format
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "Afficher / Masquer le panneau latéral"
 
 #: src/views/library/LibraryView.qml:121 src/views/library/LibraryView.qml:428
 #, kde-format
@@ -241,12 +240,12 @@ msgstr "Étiquette"
 #: src/views/library/Sidebar.qml:52
 #, kde-format
 msgid "Tags!"
-msgstr ""
+msgstr "Étiquettes !"
 
 #: src/views/library/Sidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Vos étiquettes seront listées ici."
 
 #: src/views/SettingsDialog.qml:51
 #, kde-format
