@@ -47,7 +47,7 @@ msgstr "Desenvolvimento do Peruse"
 #: src/models/placesmodel.cpp:9
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favoritos"
 
 #: src/models/placesmodel.cpp:10
 #, kde-format
@@ -57,7 +57,7 @@ msgstr ""
 #: src/models/placesmodel.cpp:11
 #, kde-format
 msgid "Documents"
-msgstr ""
+msgstr "Documentos"
 
 #: src/models/placesmodel.cpp:12
 #, kde-format
@@ -72,13 +72,13 @@ msgstr ""
 #: src/models/placesmodel.cpp:14
 #, kde-format
 msgid "Collection"
-msgstr ""
+msgstr "Colecção"
 
 #: src/models/placesmodel.cpp:19 src/models/placesmodel.cpp:46
 #: src/views/library/LibraryMenu.qml:40
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Marcas"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:160
 #, kde-format
@@ -108,12 +108,12 @@ msgstr "Tamanho"
 #: src/views/library/LibraryMenu.qml:31
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "Remover dos favoritos"
 
 #: src/views/library/LibraryMenu.qml:52
 #, kde-format
 msgid "Info"
-msgstr ""
+msgstr "Informação"
 
 #: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:454
 #: src/views/Viewer/Viewer.qml:101
@@ -132,25 +132,24 @@ msgid "Export"
 msgstr "Exportar"
 
 #: src/views/library/LibraryMenu.qml:110
-#, fuzzy, kde-format
-#| msgid "Open file"
+#, kde-format
 msgid "Open With"
-msgstr "Abrir um ficheiro"
+msgstr "Abrir Com"
 
 #: src/views/library/LibraryMenu.qml:121
 #, kde-format
 msgid "Go to folder"
-msgstr ""
+msgstr "Ir para a pasta"
 
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
 msgid "Open location"
-msgstr ""
+msgstr "Abrir a localização"
 
 #: src/views/library/LibraryMenu.qml:145
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Remover"
 
 #: src/views/library/LibraryView.qml:58
 #, kde-format
@@ -175,7 +174,7 @@ msgstr "Adicionar fontes"
 #: src/views/library/LibraryView.qml:100
 #, kde-format
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "Comutar a barra lateral"
 
 #: src/views/library/LibraryView.qml:121 src/views/library/LibraryView.qml:428
 #, kde-format
