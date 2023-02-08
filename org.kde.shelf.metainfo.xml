@@ -32,6 +32,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="uk">Шафа</name>
   <name xml:lang="x-test">xxShelfxx</name>
   <name xml:lang="zh-CN">Shelf</name>
+  <name xml:lang="zh-TW">Shelf</name>
   <summary>Browse and view your documents</summary>
   <summary xml:lang="ca">Navegueu i visualitzeu els vostres documents</summary>
   <summary xml:lang="ca-valencia">Navegueu i visualitzeu els vostres documents</summary>
@@ -54,6 +55,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="uk">Навігація вашими документами та перегляд документів</summary>
   <summary xml:lang="x-test">xxBrowse and view your documentsxx</summary>
   <summary xml:lang="zh-CN">浏览并查看文档</summary>
+  <summary xml:lang="zh-TW">瀏覽並檢視您的文件</summary>
   <description>
     <p>Shelf is a simple PDF and EPUB document browser and viewer.</p>
     <p xml:lang="ca">El Shelf és un navegador i visualitzador de documents PDF and EPUB.</p>
@@ -76,6 +78,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="uk">«Шафа» проста програма для навігації збіркою документів PDF та EPUB та перегляду документів.</p>
     <p xml:lang="x-test">xxShelf is a simple PDF and EPUB document browser and viewer.xx</p>
     <p xml:lang="zh-CN">Shelf 是一款简易 PDF 和 EPUB 文档浏览器和查看器。</p>
+    <p xml:lang="zh-TW">Shelf 是一個簡潔的 PDF 與 EPUB 文件瀏覽器與檢視器。</p>
   </description>
   <url type="homepage">https://mauikit.org/</url>
   <url type="bugtracker">https://invent.kde.org/maui/shelf/-/issues</url>
@@ -107,6 +110,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="uk">Шафа</caption>
       <caption xml:lang="x-test">xxShelfxx</caption>
       <caption xml:lang="zh-CN">Shelf</caption>
+      <caption xml:lang="zh-TW">Shelf</caption>
       <image type="source" width="2464" height="1929">
         https://cdn.kde.org/screenshots/shelf/shelf.png
       </image>
