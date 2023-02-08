@@ -2,336 +2,338 @@
 # maui-shelf 套件的正體中文翻譯.
 # Copyright (C) 2022 This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
-# Automatically generated, 2022.
 #
+# Automatically generated, 2022.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-30 00:56+0000\n"
-"PO-Revision-Date: 2022-06-07 00:50+0000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-02-08 00:31+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: src/main.cpp:48
 #, kde-format
 msgid "Shelf"
-msgstr ""
+msgstr "Shelf"
 
 #: src/main.cpp:48
 #, kde-format
 msgid "Browse and view your documents."
-msgstr ""
+msgstr "瀏覽並檢視您的文件。"
 
 #: src/main.cpp:48
 #, kde-format
 msgid "© 2019-%1 Maui Development Team"
-msgstr ""
+msgstr "© 2019-%1 Maui 開發團隊"
 
 #: src/main.cpp:49
 #, kde-format
 msgid "Camilo Higuita"
-msgstr ""
+msgstr "Camilo Higuita"
 
 #: src/main.cpp:49
 #, kde-format
 msgid "Developer"
-msgstr ""
+msgstr "開發者"
 
 #: src/main.cpp:56
 #, kde-format
 msgid "Peruse Developers"
-msgstr ""
+msgstr "Peruse 開發者"
 
 #: src/models/placesmodel.cpp:9
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "我的最愛"
 
 #: src/models/placesmodel.cpp:10
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "下載"
 
 #: src/models/placesmodel.cpp:11
 #, kde-format
 msgid "Documents"
-msgstr ""
+msgstr "文件"
 
 #: src/models/placesmodel.cpp:12
 #, kde-format
 msgid "Comics"
-msgstr ""
+msgstr "漫畫"
 
 #: src/models/placesmodel.cpp:13
 #, kde-format
 msgid "PDFs"
-msgstr ""
+msgstr "PDF"
 
 #: src/models/placesmodel.cpp:14
 #, kde-format
 msgid "Collection"
-msgstr ""
+msgstr "收藏"
 
 #: src/models/placesmodel.cpp:19 src/models/placesmodel.cpp:46
 #: src/views/library/LibraryMenu.qml:40
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "標籤"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:160
 #, kde-format
 msgid "Title"
-msgstr ""
+msgstr "標題"
 
 #: src/views/cloud/CloudView.qml:36
 #, kde-format
 msgid "Add date"
-msgstr ""
+msgstr "新增日期"
 
 #: src/views/cloud/CloudView.qml:42
 #, kde-format
 msgid "Creation date"
-msgstr ""
+msgstr "建立日期"
 
 #: src/views/cloud/CloudView.qml:48
 #, kde-format
 msgid "Format"
-msgstr ""
+msgstr "格式"
 
 #: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:176
 #, kde-format
 msgid "Size"
-msgstr ""
+msgstr "大小"
 
 #: src/views/library/LibraryMenu.qml:31
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "從最愛中移除它"
 
 #: src/views/library/LibraryMenu.qml:52
 #, kde-format
 msgid "Info"
-msgstr ""
+msgstr "資訊"
 
 #: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:454
 #: src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "分享"
 
 #: src/views/library/LibraryMenu.qml:76
 #, kde-format
 msgid "Select"
-msgstr ""
+msgstr "選取"
 
 #: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:464
 #, kde-format
 msgid "Export"
-msgstr ""
+msgstr "匯出"
 
 #: src/views/library/LibraryMenu.qml:110
 #, kde-format
 msgid "Open With"
-msgstr ""
+msgstr "開啟方式"
 
 #: src/views/library/LibraryMenu.qml:121
 #, kde-format
 msgid "Go to folder"
-msgstr ""
+msgstr "跳至資料夾"
 
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
 msgid "Open location"
-msgstr ""
+msgstr "開啟位置"
 
 #: src/views/library/LibraryMenu.qml:145
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
 #: src/views/library/LibraryView.qml:58
 #, kde-format
 msgid "Nothing here!"
-msgstr ""
+msgstr "這裡什麼都沒有！"
 
 #: src/views/library/LibraryView.qml:59
 #, kde-format
 msgid "Add new sources to manage your documents."
-msgstr ""
+msgstr "新增來源來管理您的文件。"
 
 #: src/views/library/LibraryView.qml:65
 #, kde-format
 msgid "Open file"
-msgstr ""
+msgstr "開啟檔案"
 
 #: src/views/library/LibraryView.qml:71
 #, kde-format
 msgid "Add sources"
-msgstr ""
+msgstr "新增來源"
 
 #: src/views/library/LibraryView.qml:100
 #, kde-format
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "切換側邊欄"
 
 #: src/views/library/LibraryView.qml:121 src/views/library/LibraryView.qml:428
 #, kde-format
 msgid "Open"
-msgstr ""
+msgstr "開啟"
 
 #: src/views/library/LibraryView.qml:129
 #, kde-format
 msgid "View type"
-msgstr ""
+msgstr "檢視型態"
 
 #: src/views/library/LibraryView.qml:135
 #, kde-format
 msgid "List"
-msgstr ""
+msgstr "列表"
 
 #: src/views/library/LibraryView.qml:144
 #, kde-format
 msgid "Grid"
-msgstr ""
+msgstr "格線"
 
 #: src/views/library/LibraryView.qml:154
 #, kde-format
 msgid "Sort by"
-msgstr ""
+msgstr "排序依據"
 
 #: src/views/library/LibraryView.qml:168
 #, kde-format
 msgid "Date"
-msgstr ""
+msgstr "日期"
 
 #: src/views/library/LibraryView.qml:186
 #, kde-format
 msgid "Ascending"
-msgstr ""
+msgstr "遞增"
 
 #: src/views/library/LibraryView.qml:193
 #, kde-format
 msgid "Descending"
-msgstr ""
+msgstr "遞減"
 
 #: src/views/library/LibraryView.qml:204
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: src/views/library/LibraryView.qml:211
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "關於"
 
 #: src/views/library/LibraryView.qml:223
 #, kde-format
 msgid "Filter..."
-msgstr ""
+msgstr "過濾器…"
 
 #: src/views/library/LibraryView.qml:442
 #, kde-format
 msgid "Tag"
-msgstr ""
+msgstr "標籤"
 
 #: src/views/library/Sidebar.qml:52
 #, kde-format
 msgid "Tags!"
-msgstr ""
+msgstr "標籤！"
 
 #: src/views/library/Sidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "您的標籤將會列於此處"
 
 #: src/views/SettingsDialog.qml:51
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "一般"
 
 #: src/views/SettingsDialog.qml:52
 #, kde-format
 msgid "Configure the app plugins and behavior."
-msgstr ""
+msgstr "設定應用程式外掛與行為。"
 
 #: src/views/SettingsDialog.qml:69
 #, kde-format
 msgid "Auto Scan"
-msgstr ""
+msgstr "自動掃描"
 
 #: src/views/SettingsDialog.qml:70
 #, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date"
-msgstr ""
+msgstr "啟動時掃描所有文件來源來確保您的收藏是最新狀態"
 
 #: src/views/SettingsDialog.qml:82
 #, kde-format
 msgid "Dark Mode"
-msgstr ""
+msgstr "暗色模式"
 
 #: src/views/SettingsDialog.qml:83
 #, kde-format
 msgid "Switch between light and dark colorscheme"
-msgstr ""
+msgstr "在明亮和暗色配色方案間切換"
 
 #: src/views/SettingsDialog.qml:100
 #, kde-format
 msgid "Sources"
-msgstr ""
+msgstr "來源"
 
 #: src/views/SettingsDialog.qml:101
 #, kde-format
 msgid "Add or remove sources"
-msgstr ""
+msgstr "新增或移除來源"
 
 #: src/views/SettingsDialog.qml:146
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "新增"
 
 #: src/views/SettingsDialog.qml:163
 #, kde-format
 msgid "Scan now"
-msgstr ""
+msgstr "現在掃描"
 
 #: src/views/Viewer/Viewer.qml:41
 #, kde-format
 msgid "Nothing here"
-msgstr ""
+msgstr "這裡什麼都沒有"
 
 #: src/views/Viewer/Viewer.qml:42
 #, kde-format
 msgid "Drop or open a document to view."
-msgstr ""
+msgstr "拖放文件或開啟文件來檢視它。"
 
 #: src/views/Viewer/Viewer.qml:58
 #, kde-format
 msgid "Browser"
-msgstr ""
+msgstr "瀏覽器"
 
 #: src/views/Viewer/Viewer.qml:75
 #, kde-format
 msgid "Fav"
-msgstr ""
+msgstr "加到最愛"
 
 #: src/views/Viewer/Viewer.qml:89
 #, kde-format
 msgid "Doodle"
-msgstr ""
+msgstr "塗鴉"
 
 #: src/views/Viewer/Viewer.qml:115
 #, kde-format
 msgid "Browse Horizontally"
-msgstr ""
+msgstr "水平瀏覽"
 
 #: src/views/Viewer/Viewer.qml:139
 #, kde-format
 msgid "Fullscreen"
-msgstr ""
+msgstr "全螢幕"
