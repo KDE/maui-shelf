@@ -20,7 +20,6 @@ Maui.ApplicationWindow
     property bool selectionMode: false
     property alias dialog :_dialogLoader.item
 
-
     Settings
     {
         id: viewerSettings

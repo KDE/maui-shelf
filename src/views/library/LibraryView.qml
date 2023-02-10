@@ -15,9 +15,8 @@ property alias showCSDControls : _browser.showCSDControls
 property alias flickable : _browser.flickable
     property alias sources : _libraryList.sources
 
-    sideBar.preferredWidth: Maui.Style.units.gridUnit * (Maui.Handy.isWindows || Maui.Handy.isAndroid ? 13 : 11)
-
-    sideBar.minimumWidth: Maui.Style.units.gridUnit * (Maui.Handy.isWindows || Maui.Handy.isAndroid ? 13 : 11)
+    sideBar.preferredWidth: 200
+    sideBar.minimumWidth: 200
     sideBar.resizeable: false
     sideBar.content: Sidebar
     {
