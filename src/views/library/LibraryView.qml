@@ -36,7 +36,7 @@ property alias flickable : _browser.flickable
         id: _browser
         anchors.fill: parent
         enableLassoSelection: true
-        gridView.itemSize: 180
+        gridView.itemSize: Math.min(180, Math.floor(gridView.availableWidth/3))
         gridView.itemHeight: 220
         viewType: viewerSettings.viewType
 
