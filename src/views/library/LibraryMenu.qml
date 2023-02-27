@@ -107,7 +107,7 @@ Maui.ContextualMenu
 
     MenuItem
     {
-        text: i18n("Open With")
+        text: i18n("Open with")
         icon.name: "document-open"
         onTriggered:
         {
@@ -118,7 +118,7 @@ Maui.ContextualMenu
 
     MenuItem
     {
-        text: i18n("Go to folder")
+        text: i18n("Go to Folder")
         icon.name: "folder-open"
         onTriggered:
         {
@@ -130,7 +130,7 @@ Maui.ContextualMenu
     MenuItem
     {
         visible: !Maui.Handy.isAndroid
-        text: i18n("Open location")
+        text: i18n("Open Location")
         icon.name: "folder-open"
         onTriggered:
         {

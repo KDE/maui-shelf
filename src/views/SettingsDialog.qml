@@ -67,7 +67,7 @@ Maui.SettingsDialog
         Maui.SectionItem
         {
             label1.text: i18n("Auto Scan")
-            label2.text: i18n("Scan all the document sources on startup to keep your collection up to date")
+            label2.text: i18n("Scan all the document sources on startup to keep your collection up to date.")
 
             Switch
             {
@@ -79,8 +79,10 @@ Maui.SettingsDialog
 
         Maui.SectionItem
         {
+            visible: Maui.Handy.isAndroid
+
             label1.text: i18n("Dark Mode")
-            label2.text: i18n("Switch between light and dark colorscheme")
+            label2.text: i18n("Switch between light and dark colorscheme.")
 
             Switch
             {
