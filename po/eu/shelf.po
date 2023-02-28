@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:56+0000\n"
+"POT-Creation-Date: 2023-02-28 00:57+0000\n"
 "PO-Revision-Date: 2023-02-04 09:20+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -138,18 +138,21 @@ msgid "Export"
 msgstr "Esportatu"
 
 #: src/views/library/LibraryMenu.qml:110
-#, kde-format
-msgid "Open With"
+#, fuzzy, kde-format
+#| msgid "Open With"
+msgid "Open with"
 msgstr "Ireki honekin"
 
 #: src/views/library/LibraryMenu.qml:121
-#, kde-format
-msgid "Go to folder"
+#, fuzzy, kde-format
+#| msgid "Go to folder"
+msgid "Go to Folder"
 msgstr "Joan karpetara"
 
 #: src/views/library/LibraryMenu.qml:133
-#, kde-format
-msgid "Open location"
+#, fuzzy, kde-format
+#| msgid "Open location"
+msgid "Open Location"
 msgstr "Ireki kokalekua"
 
 #: src/views/library/LibraryMenu.qml:145
@@ -268,39 +271,43 @@ msgid "Auto Scan"
 msgstr "Miatze automatikoa"
 
 #: src/views/SettingsDialog.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Scan all the document sources on startup to keep your collection up to "
+#| "date"
 msgid ""
-"Scan all the document sources on startup to keep your collection up to date"
+"Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
 "Miatu dokumentu sorburu guztiak abiatzean zure bilduma eguneratuta "
 "mantentzeko"
 
-#: src/views/SettingsDialog.qml:82
+#: src/views/SettingsDialog.qml:84
 #, kde-format
 msgid "Dark Mode"
 msgstr "Modu iluna"
 
-#: src/views/SettingsDialog.qml:83
-#, kde-format
-msgid "Switch between light and dark colorscheme"
+#: src/views/SettingsDialog.qml:85
+#, fuzzy, kde-format
+#| msgid "Switch between light and dark colorscheme"
+msgid "Switch between light and dark colorscheme."
 msgstr "Aldatu kolore-antolaera argi eta ilunaren artean"
 
-#: src/views/SettingsDialog.qml:100
+#: src/views/SettingsDialog.qml:102
 #, kde-format
 msgid "Sources"
 msgstr "Sorburuak"
 
-#: src/views/SettingsDialog.qml:101
+#: src/views/SettingsDialog.qml:103
 #, kde-format
 msgid "Add or remove sources"
 msgstr "Gehitu edo kendu sorburuak"
 
-#: src/views/SettingsDialog.qml:143
+#: src/views/SettingsDialog.qml:145
 #, kde-format
 msgid "Add"
 msgstr "Gehitu"
 
-#: src/views/SettingsDialog.qml:160
+#: src/views/SettingsDialog.qml:162
 #, kde-format
 msgid "Scan now"
 msgstr "Miatu orain"

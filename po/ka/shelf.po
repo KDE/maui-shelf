@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:56+0000\n"
+"POT-Creation-Date: 2023-02-28 00:57+0000\n"
 "PO-Revision-Date: 2023-01-30 10:56+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -136,18 +136,21 @@ msgid "Export"
 msgstr "გატანა"
 
 #: src/views/library/LibraryMenu.qml:110
-#, kde-format
-msgid "Open With"
+#, fuzzy, kde-format
+#| msgid "Open With"
+msgid "Open with"
 msgstr "გამხსნელი პროგრამა"
 
 #: src/views/library/LibraryMenu.qml:121
-#, kde-format
-msgid "Go to folder"
+#, fuzzy, kde-format
+#| msgid "Go to folder"
+msgid "Go to Folder"
 msgstr "საქაღალდეზე გადასვლა"
 
 #: src/views/library/LibraryMenu.qml:133
-#, kde-format
-msgid "Open location"
+#, fuzzy, kde-format
+#| msgid "Open location"
+msgid "Open Location"
 msgstr "მდებარეობის გახსნა"
 
 #: src/views/library/LibraryMenu.qml:145
@@ -266,39 +269,43 @@ msgid "Auto Scan"
 msgstr "ავტომატური სკანირება"
 
 #: src/views/SettingsDialog.qml:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Scan all the document sources on startup to keep your collection up to "
+#| "date"
 msgid ""
-"Scan all the document sources on startup to keep your collection up to date"
+"Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
 "გაშვებისას ყველა დოკუმენტის წყაროს სკანირება კოლექციის ყოველთვის "
 "განახლებულად ქონის მიზნით"
 
-#: src/views/SettingsDialog.qml:82
+#: src/views/SettingsDialog.qml:84
 #, kde-format
 msgid "Dark Mode"
 msgstr "მუქი რეჟიმი"
 
-#: src/views/SettingsDialog.qml:83
-#, kde-format
-msgid "Switch between light and dark colorscheme"
+#: src/views/SettingsDialog.qml:85
+#, fuzzy, kde-format
+#| msgid "Switch between light and dark colorscheme"
+msgid "Switch between light and dark colorscheme."
 msgstr "ღია და მუქ ფერებს შორის გადართვა"
 
-#: src/views/SettingsDialog.qml:100
+#: src/views/SettingsDialog.qml:102
 #, kde-format
 msgid "Sources"
 msgstr "წყაროები"
 
-#: src/views/SettingsDialog.qml:101
+#: src/views/SettingsDialog.qml:103
 #, kde-format
 msgid "Add or remove sources"
 msgstr "წყაროების დამატება ან წაშლა"
 
-#: src/views/SettingsDialog.qml:143
+#: src/views/SettingsDialog.qml:145
 #, kde-format
 msgid "Add"
 msgstr "დამატება"
 
-#: src/views/SettingsDialog.qml:160
+#: src/views/SettingsDialog.qml:162
 #, kde-format
 msgid "Scan now"
 msgstr "ახლა სკანირება"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:56+0000\n"
+"POT-Creation-Date: 2023-02-28 00:57+0000\n"
 "PO-Revision-Date: 2020-11-12 20:21-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -133,17 +133,17 @@ msgstr ""
 
 #: src/views/library/LibraryMenu.qml:110
 #, kde-format
-msgid "Open With"
+msgid "Open with"
 msgstr ""
 
 #: src/views/library/LibraryMenu.qml:121
 #, kde-format
-msgid "Go to folder"
+msgid "Go to Folder"
 msgstr ""
 
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
-msgid "Open location"
+msgid "Open Location"
 msgstr ""
 
 #: src/views/library/LibraryMenu.qml:145
@@ -264,35 +264,35 @@ msgstr ""
 #: src/views/SettingsDialog.qml:70
 #, kde-format
 msgid ""
-"Scan all the document sources on startup to keep your collection up to date"
+"Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
 
-#: src/views/SettingsDialog.qml:82
+#: src/views/SettingsDialog.qml:84
 #, kde-format
 msgid "Dark Mode"
 msgstr ""
 
-#: src/views/SettingsDialog.qml:83
+#: src/views/SettingsDialog.qml:85
 #, kde-format
-msgid "Switch between light and dark colorscheme"
+msgid "Switch between light and dark colorscheme."
 msgstr ""
 
-#: src/views/SettingsDialog.qml:100
+#: src/views/SettingsDialog.qml:102
 #, kde-format
 msgid "Sources"
 msgstr ""
 
-#: src/views/SettingsDialog.qml:101
+#: src/views/SettingsDialog.qml:103
 #, kde-format
 msgid "Add or remove sources"
 msgstr ""
 
-#: src/views/SettingsDialog.qml:143
+#: src/views/SettingsDialog.qml:145
 #, kde-format
 msgid "Add"
 msgstr ""
 
-#: src/views/SettingsDialog.qml:160
+#: src/views/SettingsDialog.qml:162
 #, kde-format
 msgid "Scan now"
 msgstr ""

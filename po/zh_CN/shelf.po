@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:56+0000\n"
+"POT-Creation-Date: 2023-02-28 00:57+0000\n"
 "PO-Revision-Date: 2023-02-24 12:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -135,18 +135,19 @@ msgid "Export"
 msgstr "导出"
 
 #: src/views/library/LibraryMenu.qml:110
-#, kde-format
-msgid "Open With"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Open file"
+msgid "Open with"
+msgstr "打开文件"
 
 #: src/views/library/LibraryMenu.qml:121
 #, kde-format
-msgid "Go to folder"
+msgid "Go to Folder"
 msgstr ""
 
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
-msgid "Open location"
+msgid "Open Location"
 msgstr ""
 
 #: src/views/library/LibraryMenu.qml:145
@@ -267,35 +268,36 @@ msgstr "自动扫描"
 #: src/views/SettingsDialog.qml:70
 #, kde-format
 msgid ""
-"Scan all the document sources on startup to keep your collection up to date"
+"Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
 
-#: src/views/SettingsDialog.qml:82
+#: src/views/SettingsDialog.qml:84
 #, kde-format
 msgid "Dark Mode"
 msgstr "深色模式"
 
-#: src/views/SettingsDialog.qml:83
-#, kde-format
-msgid "Switch between light and dark colorscheme"
+#: src/views/SettingsDialog.qml:85
+#, fuzzy, kde-format
+#| msgid "Switch between light and dark colorscheme"
+msgid "Switch between light and dark colorscheme."
 msgstr "切换浅色/深色模式"
 
-#: src/views/SettingsDialog.qml:100
+#: src/views/SettingsDialog.qml:102
 #, kde-format
 msgid "Sources"
 msgstr "来源"
 
-#: src/views/SettingsDialog.qml:101
+#: src/views/SettingsDialog.qml:103
 #, kde-format
 msgid "Add or remove sources"
 msgstr "添加或移除来源"
 
-#: src/views/SettingsDialog.qml:143
+#: src/views/SettingsDialog.qml:145
 #, kde-format
 msgid "Add"
 msgstr "添加"
 
-#: src/views/SettingsDialog.qml:160
+#: src/views/SettingsDialog.qml:162
 #, kde-format
 msgid "Scan now"
 msgstr "立即扫描"

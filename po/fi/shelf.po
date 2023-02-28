@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:56+0000\n"
+"POT-Creation-Date: 2023-02-28 00:57+0000\n"
 "PO-Revision-Date: 2022-01-28 11:50+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -138,17 +138,17 @@ msgstr "Vie"
 #: src/views/library/LibraryMenu.qml:110
 #, fuzzy, kde-format
 #| msgid "Open file"
-msgid "Open With"
+msgid "Open with"
 msgstr "Avaa tiedosto"
 
 #: src/views/library/LibraryMenu.qml:121
 #, kde-format
-msgid "Go to folder"
+msgid "Go to Folder"
 msgstr ""
 
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
-msgid "Open location"
+msgid "Open Location"
 msgstr ""
 
 #: src/views/library/LibraryMenu.qml:145
@@ -272,37 +272,38 @@ msgstr "Tarkista automaattisesti"
 #| msgid ""
 #| "Scan all the music sources on startup to keep your collection up to date"
 msgid ""
-"Scan all the document sources on startup to keep your collection up to date"
+"Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
 "Tarkista kaikki musiikkilähteet käynnistettäessä, jotta kokoelma olisi ajan "
 "tasalla"
 
-#: src/views/SettingsDialog.qml:82
+#: src/views/SettingsDialog.qml:84
 #, kde-format
 msgid "Dark Mode"
 msgstr "Tumma tila"
 
-#: src/views/SettingsDialog.qml:83
-#, kde-format
-msgid "Switch between light and dark colorscheme"
+#: src/views/SettingsDialog.qml:85
+#, fuzzy, kde-format
+#| msgid "Switch between light and dark colorscheme"
+msgid "Switch between light and dark colorscheme."
 msgstr "Vaihda vaalean ja tumman värimallin välillä"
 
-#: src/views/SettingsDialog.qml:100
+#: src/views/SettingsDialog.qml:102
 #, kde-format
 msgid "Sources"
 msgstr "Lähteet"
 
-#: src/views/SettingsDialog.qml:101
+#: src/views/SettingsDialog.qml:103
 #, kde-format
 msgid "Add or remove sources"
 msgstr "Lisää tai poista lähteitä"
 
-#: src/views/SettingsDialog.qml:143
+#: src/views/SettingsDialog.qml:145
 #, kde-format
 msgid "Add"
 msgstr "Lisää"
 
-#: src/views/SettingsDialog.qml:160
+#: src/views/SettingsDialog.qml:162
 #, kde-format
 msgid "Scan now"
 msgstr "Tarkista nyt"

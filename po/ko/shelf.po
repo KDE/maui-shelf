@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-11 00:56+0000\n"
+"POT-Creation-Date: 2023-02-28 00:57+0000\n"
 "PO-Revision-Date: 2022-02-20 21:28+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -138,17 +138,17 @@ msgstr "내보내기"
 #: src/views/library/LibraryMenu.qml:110
 #, fuzzy, kde-format
 #| msgid "Open file"
-msgid "Open With"
+msgid "Open with"
 msgstr "파일 열기"
 
 #: src/views/library/LibraryMenu.qml:121
 #, kde-format
-msgid "Go to folder"
+msgid "Go to Folder"
 msgstr ""
 
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
-msgid "Open location"
+msgid "Open Location"
 msgstr ""
 
 #: src/views/library/LibraryMenu.qml:145
@@ -271,35 +271,36 @@ msgstr "자동 검색"
 #| msgid ""
 #| "Scan all the music sources on startup to keep your collection up to date"
 msgid ""
-"Scan all the document sources on startup to keep your collection up to date"
+"Scan all the document sources on startup to keep your collection up to date."
 msgstr "시작할 때 모든 음악 원본을 검색하여 모음집을 최신 상태로 유지"
 
-#: src/views/SettingsDialog.qml:82
+#: src/views/SettingsDialog.qml:84
 #, kde-format
 msgid "Dark Mode"
 msgstr "어두운 모드"
 
-#: src/views/SettingsDialog.qml:83
-#, kde-format
-msgid "Switch between light and dark colorscheme"
+#: src/views/SettingsDialog.qml:85
+#, fuzzy, kde-format
+#| msgid "Switch between light and dark colorscheme"
+msgid "Switch between light and dark colorscheme."
 msgstr "밝은 색상과 어두운 색상 전환"
 
-#: src/views/SettingsDialog.qml:100
+#: src/views/SettingsDialog.qml:102
 #, kde-format
 msgid "Sources"
 msgstr "원본"
 
-#: src/views/SettingsDialog.qml:101
+#: src/views/SettingsDialog.qml:103
 #, kde-format
 msgid "Add or remove sources"
 msgstr "원본 추가/삭제"
 
-#: src/views/SettingsDialog.qml:143
+#: src/views/SettingsDialog.qml:145
 #, kde-format
 msgid "Add"
 msgstr "추가"
 
-#: src/views/SettingsDialog.qml:160
+#: src/views/SettingsDialog.qml:162
 #, kde-format
 msgid "Scan now"
 msgstr "지금 검색"
