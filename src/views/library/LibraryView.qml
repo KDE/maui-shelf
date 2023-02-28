@@ -420,7 +420,11 @@ footer: Maui.SelectionBar
 
     onItemClicked : console.log(index)
 
-    onExitClicked: clear()
+    onExitClicked:
+    {
+         clear()
+        root.selectionMode = false
+    }
 
     Action
     {
