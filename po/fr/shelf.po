@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:57+0000\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
 "PO-Revision-Date: 2023-01-31 19:24+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -116,7 +116,7 @@ msgstr "Le retirer des signets"
 msgid "Info"
 msgstr "Informations"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:453
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:457
 #: src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
@@ -127,7 +127,7 @@ msgstr "Partager"
 msgid "Select"
 msgstr "Sélectionner"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:463
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:467
 #, kde-format
 msgid "Export"
 msgstr "Exporter"
@@ -180,7 +180,7 @@ msgstr "Ajouter des sources"
 msgid "Toggle sidebar"
 msgstr "Afficher / Masquer le panneau latéral"
 
-#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:427
+#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:431
 #, kde-format
 msgid "Open"
 msgstr "Ouvrir"
@@ -235,7 +235,7 @@ msgstr "À propos"
 msgid "Filter..."
 msgstr "Filtrer..."
 
-#: src/views/library/LibraryView.qml:441
+#: src/views/library/LibraryView.qml:445
 #, kde-format
 msgid "Tag"
 msgstr "Étiquette"

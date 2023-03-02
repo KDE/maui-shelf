@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:57+0000\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
 "PO-Revision-Date: 2023-01-30 10:44+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -120,7 +120,7 @@ msgstr "Desmarca com a preferit"
 msgid "Info"
 msgstr "Informació"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:453
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:457
 #: src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
@@ -131,7 +131,7 @@ msgstr "Compartix"
 msgid "Select"
 msgstr "Selecciona"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:463
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:467
 #, kde-format
 msgid "Export"
 msgstr "Exporta"
@@ -184,7 +184,7 @@ msgstr "Afig fonts"
 msgid "Toggle sidebar"
 msgstr "Mostra o oculta la barra lateral"
 
-#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:427
+#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:431
 #, kde-format
 msgid "Open"
 msgstr "Obri"
@@ -239,7 +239,7 @@ msgstr "Quant a"
 msgid "Filter..."
 msgstr "Filtre..."
 
-#: src/views/library/LibraryView.qml:441
+#: src/views/library/LibraryView.qml:445
 #, kde-format
 msgid "Tag"
 msgstr "Etiqueta"

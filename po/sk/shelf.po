@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:57+0000\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
 "PO-Revision-Date: 2020-11-08 21:27+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -117,7 +117,7 @@ msgstr ""
 msgid "Info"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:453
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:457
 #: src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
@@ -128,7 +128,7 @@ msgstr "Zdieľať"
 msgid "Select"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:463
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:467
 #, kde-format
 msgid "Export"
 msgstr "Exportovať"
@@ -180,7 +180,7 @@ msgstr ""
 msgid "Toggle sidebar"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:427
+#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:431
 #, kde-format
 msgid "Open"
 msgstr "Otvoriť"
@@ -236,7 +236,7 @@ msgstr ""
 msgid "Filter..."
 msgstr "Filter..."
 
-#: src/views/library/LibraryView.qml:441
+#: src/views/library/LibraryView.qml:445
 #, kde-format
 msgid "Tag"
 msgstr ""

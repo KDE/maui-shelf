@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:57+0000\n"
-"PO-Revision-Date: 2023-01-30 18:53+0100\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"PO-Revision-Date: 2023-02-28 10:48+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -118,7 +118,7 @@ msgstr "Fav. opheffen"
 msgid "Info"
 msgstr "Informatie"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:453
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:457
 #: src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
@@ -129,26 +129,23 @@ msgstr "Delen"
 msgid "Select"
 msgstr "Selecteren"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:463
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:467
 #, kde-format
 msgid "Export"
 msgstr "Exporteren"
 
 #: src/views/library/LibraryMenu.qml:110
-#, fuzzy, kde-format
-#| msgid "Open With"
+#, kde-format
 msgid "Open with"
 msgstr "Openen met"
 
 #: src/views/library/LibraryMenu.qml:121
-#, fuzzy, kde-format
-#| msgid "Go to folder"
+#, kde-format
 msgid "Go to Folder"
 msgstr "Ga naar map"
 
 #: src/views/library/LibraryMenu.qml:133
-#, fuzzy, kde-format
-#| msgid "Open location"
+#, kde-format
 msgid "Open Location"
 msgstr "Locatie openen"
 
@@ -182,7 +179,7 @@ msgstr "Bronnen toevoegen"
 msgid "Toggle sidebar"
 msgstr "Zijbalk omschakelen"
 
-#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:427
+#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:431
 #, kde-format
 msgid "Open"
 msgstr "Openen"
@@ -237,7 +234,7 @@ msgstr "Info over"
 msgid "Filter..."
 msgstr "Filteren..."
 
-#: src/views/library/LibraryView.qml:441
+#: src/views/library/LibraryView.qml:445
 #, kde-format
 msgid "Tag"
 msgstr "Tag"
@@ -268,15 +265,12 @@ msgid "Auto Scan"
 msgstr "Automatische scan"
 
 #: src/views/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Scan all the document sources on startup to keep your collection up to "
-#| "date"
+#, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
 "Alle documentbronnen scannen bij opstarten om uw verzameling bij-de-tijd te "
-"houden"
+"houden."
 
 #: src/views/SettingsDialog.qml:84
 #, kde-format
@@ -284,10 +278,9 @@ msgid "Dark Mode"
 msgstr "Donkere modus"
 
 #: src/views/SettingsDialog.qml:85
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Tussen licht en donker kleurenschema wisselen"
+msgstr "Tussen licht en donker kleurenschema wisselen."
 
 #: src/views/SettingsDialog.qml:102
 #, kde-format

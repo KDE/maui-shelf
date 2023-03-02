@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:57+0000\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
 "PO-Revision-Date: 2023-02-03 10:47+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -118,7 +118,7 @@ msgstr ""
 msgid "Info"
 msgstr "Informace"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:453
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:457
 #: src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
@@ -129,7 +129,7 @@ msgstr "Sdílet"
 msgid "Select"
 msgstr "Vybrat"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:463
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:467
 #, kde-format
 msgid "Export"
 msgstr "Exportovat"
@@ -182,7 +182,7 @@ msgstr "Přidat zdroje"
 msgid "Toggle sidebar"
 msgstr "Přepnout postranní panel"
 
-#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:427
+#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:431
 #, kde-format
 msgid "Open"
 msgstr "Otevřít"
@@ -237,7 +237,7 @@ msgstr "O aplikaci"
 msgid "Filter..."
 msgstr "Filtr..."
 
-#: src/views/library/LibraryView.qml:441
+#: src/views/library/LibraryView.qml:445
 #, kde-format
 msgid "Tag"
 msgstr "Značka"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:57+0000\n"
-"PO-Revision-Date: 2023-01-30 19:28+0300\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"PO-Revision-Date: 2023-02-28 11:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -118,7 +118,7 @@ msgstr "Sık Kullanılanlardan Kaldır"
 msgid "Info"
 msgstr "Bilgi"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:453
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:457
 #: src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
@@ -129,28 +129,25 @@ msgstr "Paylaş"
 msgid "Select"
 msgstr "Seç"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:463
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:467
 #, kde-format
 msgid "Export"
 msgstr "Dışa Aktar"
 
 #: src/views/library/LibraryMenu.qml:110
-#, fuzzy, kde-format
-#| msgid "Open With"
+#, kde-format
 msgid "Open with"
 msgstr "Birlikte Aç"
 
 #: src/views/library/LibraryMenu.qml:121
-#, fuzzy, kde-format
-#| msgid "Go to folder"
+#, kde-format
 msgid "Go to Folder"
-msgstr "Klasöre git"
+msgstr "Klasöre Git"
 
 #: src/views/library/LibraryMenu.qml:133
-#, fuzzy, kde-format
-#| msgid "Open location"
+#, kde-format
 msgid "Open Location"
-msgstr "Konum aç"
+msgstr "Konum Aç"
 
 #: src/views/library/LibraryMenu.qml:145
 #, kde-format
@@ -182,7 +179,7 @@ msgstr "Kaynaklar ekle"
 msgid "Toggle sidebar"
 msgstr "Kenar çubuğunu aç/kapat"
 
-#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:427
+#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:431
 #, kde-format
 msgid "Open"
 msgstr "Aç"
@@ -237,7 +234,7 @@ msgstr "Hakkında"
 msgid "Filter..."
 msgstr "Süz..."
 
-#: src/views/library/LibraryView.qml:441
+#: src/views/library/LibraryView.qml:445
 #, kde-format
 msgid "Tag"
 msgstr "Etiket"
@@ -268,14 +265,12 @@ msgid "Auto Scan"
 msgstr "Otomatik Tarama"
 
 #: src/views/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Scan all the document sources on startup to keep your collection up to "
-#| "date"
+#, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
-"Koleksiyonunuzu güncel tutmak için başlangıçta tüm belge kaynaklarını tarayın"
+"Koleksiyonunuzu güncel tutmak için başlangıçta tüm belge kaynaklarını "
+"tarayın."
 
 #: src/views/SettingsDialog.qml:84
 #, kde-format
@@ -283,10 +278,9 @@ msgid "Dark Mode"
 msgstr "Koyu Kip"
 
 #: src/views/SettingsDialog.qml:85
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Açık ve koyu renk şemaları arasında geçiş yapın"
+msgstr "Açık ve koyu renk şemaları arasında geçiş yapın."
 
 #: src/views/SettingsDialog.qml:102
 #, kde-format

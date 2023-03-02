@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:57+0000\n"
-"PO-Revision-Date: 2023-01-30 09:00+0200\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"PO-Revision-Date: 2023-02-28 09:09+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -121,7 +121,7 @@ msgstr "Прибрати з улюблених"
 msgid "Info"
 msgstr "Відомості"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:453
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:457
 #: src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
@@ -132,26 +132,23 @@ msgstr "Оприлюднити"
 msgid "Select"
 msgstr "Вибрати"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:463
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:467
 #, kde-format
 msgid "Export"
 msgstr "Експортувати"
 
 #: src/views/library/LibraryMenu.qml:110
-#, fuzzy, kde-format
-#| msgid "Open With"
+#, kde-format
 msgid "Open with"
 msgstr "Відкрити за допомогою"
 
 #: src/views/library/LibraryMenu.qml:121
-#, fuzzy, kde-format
-#| msgid "Go to folder"
+#, kde-format
 msgid "Go to Folder"
 msgstr "Перейти до теки"
 
 #: src/views/library/LibraryMenu.qml:133
-#, fuzzy, kde-format
-#| msgid "Open location"
+#, kde-format
 msgid "Open Location"
 msgstr "Відкрити адресу"
 
@@ -185,7 +182,7 @@ msgstr "Додати джерела"
 msgid "Toggle sidebar"
 msgstr "Увімкнути/Вимкнути бічну панель"
 
-#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:427
+#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:431
 #, kde-format
 msgid "Open"
 msgstr "Відкрити"
@@ -240,7 +237,7 @@ msgstr "Про програму"
 msgid "Filter..."
 msgstr "Фільтрувати…"
 
-#: src/views/library/LibraryView.qml:441
+#: src/views/library/LibraryView.qml:445
 #, kde-format
 msgid "Tag"
 msgstr "Мітка"
@@ -271,15 +268,12 @@ msgid "Auto Scan"
 msgstr "Автосканування"
 
 #: src/views/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Scan all the document sources on startup to keep your collection up to "
-#| "date"
+#, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
 "Сканувати під час запуску усі джерела документів для підтримання "
-"актуальності збірки"
+"актуальності збірки."
 
 #: src/views/SettingsDialog.qml:84
 #, kde-format
@@ -287,10 +281,9 @@ msgid "Dark Mode"
 msgstr "Темний режим"
 
 #: src/views/SettingsDialog.qml:85
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Перемкнутися між світлою і темною схемою кольорів"
+msgstr "Перемкнутися між світлою і темною схемою кольорів."
 
 #: src/views/SettingsDialog.qml:102
 #, kde-format

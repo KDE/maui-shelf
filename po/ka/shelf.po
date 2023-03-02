@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:57+0000\n"
-"PO-Revision-Date: 2023-01-30 10:56+0100\n"
+"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"PO-Revision-Date: 2023-02-28 06:49+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -119,7 +119,7 @@ msgstr "რჩეულებიდან ამოღება"
 msgid "Info"
 msgstr "ინფორმაცია"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:453
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:457
 #: src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
@@ -130,26 +130,23 @@ msgstr "გაზიარება"
 msgid "Select"
 msgstr "აირჩიეთ"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:463
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:467
 #, kde-format
 msgid "Export"
 msgstr "გატანა"
 
 #: src/views/library/LibraryMenu.qml:110
-#, fuzzy, kde-format
-#| msgid "Open With"
+#, kde-format
 msgid "Open with"
 msgstr "გამხსნელი პროგრამა"
 
 #: src/views/library/LibraryMenu.qml:121
-#, fuzzy, kde-format
-#| msgid "Go to folder"
+#, kde-format
 msgid "Go to Folder"
 msgstr "საქაღალდეზე გადასვლა"
 
 #: src/views/library/LibraryMenu.qml:133
-#, fuzzy, kde-format
-#| msgid "Open location"
+#, kde-format
 msgid "Open Location"
 msgstr "მდებარეობის გახსნა"
 
@@ -183,7 +180,7 @@ msgstr "წყაროების დამატება"
 msgid "Toggle sidebar"
 msgstr "გვერდითი ზოლის ჩართ/გამორთ"
 
-#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:427
+#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:431
 #, kde-format
 msgid "Open"
 msgstr "გახსნა"
@@ -238,7 +235,7 @@ msgstr "შესახებ"
 msgid "Filter..."
 msgstr "გაფილტვრა..."
 
-#: src/views/library/LibraryView.qml:441
+#: src/views/library/LibraryView.qml:445
 #, kde-format
 msgid "Tag"
 msgstr "ჭდე"
@@ -269,15 +266,12 @@ msgid "Auto Scan"
 msgstr "ავტომატური სკანირება"
 
 #: src/views/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Scan all the document sources on startup to keep your collection up to "
-#| "date"
+#, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
 "გაშვებისას ყველა დოკუმენტის წყაროს სკანირება კოლექციის ყოველთვის "
-"განახლებულად ქონის მიზნით"
+"განახლებულად ქონის მიზნით."
 
 #: src/views/SettingsDialog.qml:84
 #, kde-format
@@ -285,10 +279,9 @@ msgid "Dark Mode"
 msgstr "მუქი რეჟიმი"
 
 #: src/views/SettingsDialog.qml:85
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "ღია და მუქ ფერებს შორის გადართვა"
+msgstr "ღია და მუქ ფერებს შორის გადართვა."
 
 #: src/views/SettingsDialog.qml:102
 #, kde-format
