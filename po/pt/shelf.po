@@ -132,10 +132,9 @@ msgid "Export"
 msgstr "Exportar"
 
 #: src/views/library/LibraryMenu.qml:110
-#, fuzzy, kde-format
-#| msgid "Open With"
+#, kde-format
 msgid "Open with"
-msgstr "Abrir Com"
+msgstr "Abrir com"
 
 #: src/views/library/LibraryMenu.qml:121
 #, fuzzy, kde-format
@@ -144,10 +143,9 @@ msgid "Go to Folder"
 msgstr "Ir para a pasta"
 
 #: src/views/library/LibraryMenu.qml:133
-#, fuzzy, kde-format
-#| msgid "Open location"
+#, kde-format
 msgid "Open Location"
-msgstr "Abrir a localização"
+msgstr "Abrir a Localização"
 
 #: src/views/library/LibraryMenu.qml:145
 #, kde-format
@@ -281,10 +279,9 @@ msgid "Dark Mode"
 msgstr "Modo Escuro"
 
 #: src/views/SettingsDialog.qml:85
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Alternar entre o esquema de cores claro e escuro"
+msgstr "Alternar entre o esquema de cores claro e escuro."
 
 #: src/views/SettingsDialog.qml:102
 #, kde-format
