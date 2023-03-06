@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-02 00:53+0000\n"
-"PO-Revision-Date: 2023-01-30 10:44+0100\n"
+"PO-Revision-Date: 2023-02-28 10:54+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -137,20 +137,17 @@ msgid "Export"
 msgstr "Exporta"
 
 #: src/views/library/LibraryMenu.qml:110
-#, fuzzy, kde-format
-#| msgid "Open With"
+#, kde-format
 msgid "Open with"
 msgstr "Obri amb"
 
 #: src/views/library/LibraryMenu.qml:121
-#, fuzzy, kde-format
-#| msgid "Go to folder"
+#, kde-format
 msgid "Go to Folder"
 msgstr "Ves a la carpeta"
 
 #: src/views/library/LibraryMenu.qml:133
-#, fuzzy, kde-format
-#| msgid "Open location"
+#, kde-format
 msgid "Open Location"
 msgstr "Obri la ubicació"
 
@@ -270,15 +267,12 @@ msgid "Auto Scan"
 msgstr "Exploració automàtica"
 
 #: src/views/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Scan all the document sources on startup to keep your collection up to "
-#| "date"
+#, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
 "Explora totes les fonts de documents en iniciar per a mantindre actualitzada "
-"la col·lecció"
+"la col·lecció."
 
 #: src/views/SettingsDialog.qml:84
 #, kde-format
@@ -286,10 +280,9 @@ msgid "Dark Mode"
 msgstr "Mode fosc"
 
 #: src/views/SettingsDialog.qml:85
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Alterna entre els esquemes de color clar i fosc"
+msgstr "Alterna entre els esquemes de color clar i fosc."
 
 #: src/views/SettingsDialog.qml:102
 #, kde-format
