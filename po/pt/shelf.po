@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-02 00:53+0000\n"
-"PO-Revision-Date: 2023-02-15 12:56+0000\n"
+"PO-Revision-Date: 2023-03-06 15:20+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -137,10 +137,9 @@ msgid "Open with"
 msgstr "Abrir com"
 
 #: src/views/library/LibraryMenu.qml:121
-#, fuzzy, kde-format
-#| msgid "Go to folder"
+#, kde-format
 msgid "Go to Folder"
-msgstr "Ir para a pasta"
+msgstr "Ir para a Pasta"
 
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
@@ -263,15 +262,12 @@ msgid "Auto Scan"
 msgstr "Sondagem Automática"
 
 #: src/views/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Scan all the document sources on startup to keep your collection up to "
-#| "date"
+#, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
 "Analisa todas as fontes de documentos no arranque para manter a sua colecção "
-"actualizada"
+"actualizada."
 
 #: src/views/SettingsDialog.qml:84
 #, kde-format
