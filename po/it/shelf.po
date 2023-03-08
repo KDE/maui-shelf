@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-02 00:53+0000\n"
-"PO-Revision-Date: 2023-02-01 17:13+0100\n"
+"PO-Revision-Date: 2023-03-05 16:22+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -135,20 +135,17 @@ msgid "Export"
 msgstr "Esporta"
 
 #: src/views/library/LibraryMenu.qml:110
-#, fuzzy, kde-format
-#| msgid "Open With"
+#, kde-format
 msgid "Open with"
 msgstr "Apri con"
 
 #: src/views/library/LibraryMenu.qml:121
-#, fuzzy, kde-format
-#| msgid "Go to folder"
+#, kde-format
 msgid "Go to Folder"
 msgstr "Vai alla cartella"
 
 #: src/views/library/LibraryMenu.qml:133
-#, fuzzy, kde-format
-#| msgid "Open location"
+#, kde-format
 msgid "Open Location"
 msgstr "Apri posizione"
 
@@ -268,15 +265,12 @@ msgid "Auto Scan"
 msgstr "Analizza automaticamente"
 
 #: src/views/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Scan all the document sources on startup to keep your collection up to "
-#| "date"
+#, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
 "Analizza tutte le fonti di documenti all'avvio per tenere la collezione "
-"aggiornata"
+"aggiornata."
 
 #: src/views/SettingsDialog.qml:84
 #, kde-format
@@ -284,10 +278,9 @@ msgid "Dark Mode"
 msgstr "Modalità scura"
 
 #: src/views/SettingsDialog.qml:85
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Passa tra gli schemi di colori chiaro e scuro"
+msgstr "Passa dallo schema di colori chiaro allo scuro e viceversa."
 
 #: src/views/SettingsDialog.qml:102
 #, kde-format
