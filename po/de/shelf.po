@@ -1,12 +1,12 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2021.
 # Alois Spitzbart <spitz234@hotmail.com>, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-02 00:53+0000\n"
-"PO-Revision-Date: 2022-04-15 04:57+0200\n"
+"PO-Revision-Date: 2023-03-12 16:54+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.07.70\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -42,46 +42,45 @@ msgid "Developer"
 msgstr "Entwickler"
 
 #: src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgid "Peruse Developers"
-msgstr "Entwickler"
+msgstr "Peruse-Entwickler"
 
 #: src/models/placesmodel.cpp:9
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favoriten"
 
 #: src/models/placesmodel.cpp:10
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Downloads"
 
 #: src/models/placesmodel.cpp:11
 #, kde-format
 msgid "Documents"
-msgstr ""
+msgstr "Dokumente"
 
 #: src/models/placesmodel.cpp:12
 #, kde-format
 msgid "Comics"
-msgstr ""
+msgstr "Comics"
 
 #: src/models/placesmodel.cpp:13
 #, kde-format
 msgid "PDFs"
-msgstr ""
+msgstr "PDFs"
 
 #: src/models/placesmodel.cpp:14
 #, kde-format
 msgid "Collection"
-msgstr ""
+msgstr "Sammlung"
 
 #: src/models/placesmodel.cpp:19 src/models/placesmodel.cpp:46
 #: src/views/library/LibraryMenu.qml:40
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Stichwörter"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:159
 #, kde-format
@@ -116,7 +115,7 @@ msgstr ""
 #: src/views/library/LibraryMenu.qml:52
 #, kde-format
 msgid "Info"
-msgstr ""
+msgstr "Information"
 
 #: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:457
 #: src/views/Viewer/Viewer.qml:101
@@ -127,7 +126,7 @@ msgstr "Teilen"
 #: src/views/library/LibraryMenu.qml:76
 #, kde-format
 msgid "Select"
-msgstr ""
+msgstr "Auswählen"
 
 #: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:467
 #, kde-format
@@ -135,10 +134,9 @@ msgid "Export"
 msgstr "Exportieren"
 
 #: src/views/library/LibraryMenu.qml:110
-#, fuzzy, kde-format
-#| msgid "Open file"
+#, kde-format
 msgid "Open with"
-msgstr "Datei öffnen"
+msgstr "Öffnen mit"
 
 #: src/views/library/LibraryMenu.qml:121
 #, kde-format
@@ -148,12 +146,12 @@ msgstr ""
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
 msgid "Open Location"
-msgstr ""
+msgstr "Adresse öffnen"
 
 #: src/views/library/LibraryMenu.qml:145
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Entfernen"
 
 #: src/views/library/LibraryView.qml:57
 #, kde-format
@@ -178,7 +176,7 @@ msgstr "Quellen hinzufügen"
 #: src/views/library/LibraryView.qml:99
 #, kde-format
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "Seitenleiste umschalten"
 
 #: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:431
 #, kde-format
@@ -243,7 +241,7 @@ msgstr "Stichwort"
 #: src/views/library/Sidebar.qml:52
 #, kde-format
 msgid "Tags!"
-msgstr ""
+msgstr "Stichwörter!"
 
 #: src/views/library/Sidebar.qml:53
 #, kde-format
@@ -258,7 +256,7 @@ msgstr "Allgemein"
 #: src/views/SettingsDialog.qml:52
 #, kde-format
 msgid "Configure the app plugins and behavior."
-msgstr ""
+msgstr "Module und Verhalten der App einrichten."
 
 #: src/views/SettingsDialog.qml:69
 #, kde-format
@@ -279,7 +277,7 @@ msgstr "Dunkler Modus"
 #: src/views/SettingsDialog.qml:85
 #, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr ""
+msgstr "Zwischen hellem und dunklem Farbschema umschalten."
 
 #: src/views/SettingsDialog.qml:102
 #, kde-format
