@@ -15,8 +15,8 @@ Item
     property bool currentPathFav : FB.Tagging.isFav(currentPath)
     property alias currentViewer: _tabView.currentItem
     property alias tabView : _tabView
-readonly property string title : _tabView.currentItem ? _tabView.currentItem.title : ""
-//    onGoBackTriggered: _stackView.pop()
+    readonly property string title : _tabView.currentItem ? _tabView.currentItem.title : ""
+    //    onGoBackTriggered: _stackView.pop()
 
     Component
     {
@@ -155,8 +155,7 @@ readonly property string title : _tabView.currentItem ? _tabView.currentItem.tit
         {
             Maui.TabViewInfo.tabTitle: title
             Maui.TabViewInfo.tabToolTipText:  path
-            height: ListView.view.height
-            width:  ListView.view.width
+
             onGoBackTriggered: _stackView.pop()
         }
     }
@@ -165,18 +164,14 @@ readonly property string title : _tabView.currentItem ? _tabView.currentItem.tit
     {
         id: _txtComponent
 
-        Viewer_TXT
-        {
-        }
+        Viewer_TXT {}
     }
 
     Component
     {
         id: _epubComponent
 
-        Viewer_EPUB
-        {
-        }
+        Viewer_EPUB {}
     }
 
     Component
@@ -187,13 +182,10 @@ readonly property string title : _tabView.currentItem ? _tabView.currentItem.tit
         {
             Maui.TabViewInfo.tabTitle: title
             Maui.TabViewInfo.tabToolTipText: path
-            height: ListView.view.height
-            width:  ListView.view.width
+
             onGoBackTriggered: _stackView.pop()
         }
     }
-
-
 
     function open(path)
     {
