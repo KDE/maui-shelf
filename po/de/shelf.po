@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-02 00:53+0000\n"
-"PO-Revision-Date: 2023-03-12 16:54+0100\n"
+"PO-Revision-Date: 2023-04-26 21:22+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -110,7 +110,7 @@ msgstr "Größe"
 #: src/views/library/LibraryMenu.qml:31
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "Aus Favoriten entfernen"
 
 #: src/views/library/LibraryMenu.qml:52
 #, kde-format
@@ -141,7 +141,7 @@ msgstr "Öffnen mit"
 #: src/views/library/LibraryMenu.qml:121
 #, kde-format
 msgid "Go to Folder"
-msgstr ""
+msgstr "In Ordner wechseln"
 
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
@@ -246,7 +246,7 @@ msgstr "Stichwörter!"
 #: src/views/library/Sidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Hier werden Ihre Aufgaben angezeigt"
 
 #: src/views/SettingsDialog.qml:51
 #, kde-format
