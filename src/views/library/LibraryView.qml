@@ -90,6 +90,7 @@ property alias flickable : _browser.flickable
         headBar.forceCenterMiddleContent: root.isWide
         headBar.leftContent: [ToolButton
             {
+                visible: control.sideBar.collapsed
                 icon.name: control.sideBar.visible ? "sidebar-collapse" : "sidebar-expand"
                 onClicked: control.sideBar.toggle()
                 checked: control.sideBar.visible
