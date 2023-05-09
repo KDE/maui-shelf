@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-05-09 00:46+0000\n"
 "PO-Revision-Date: 2023-02-28 10:54+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -85,7 +85,7 @@ msgstr "Col·lecció"
 msgid "Tags"
 msgstr "Etiquetes"
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:159
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:160
 #, kde-format
 msgid "Title"
 msgstr "Títol"
@@ -105,7 +105,7 @@ msgstr "Data de creació"
 msgid "Format"
 msgstr "Format"
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:175
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:176
 #, kde-format
 msgid "Size"
 msgstr "Mida"
@@ -120,7 +120,7 @@ msgstr "Desmarca com a preferit"
 msgid "Info"
 msgstr "Informació"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:457
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:458
 #: src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
@@ -131,7 +131,7 @@ msgstr "Comparteix"
 msgid "Select"
 msgstr "Selecciona"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:467
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:468
 #, kde-format
 msgid "Export"
 msgstr "Exporta"
@@ -176,67 +176,67 @@ msgstr "Obre un fitxer"
 msgid "Add sources"
 msgstr "Afegeix fonts"
 
-#: src/views/library/LibraryView.qml:99
+#: src/views/library/LibraryView.qml:100
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "Mostra o oculta la barra lateral"
 
-#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:431
+#: src/views/library/LibraryView.qml:121 src/views/library/LibraryView.qml:432
 #, kde-format
 msgid "Open"
 msgstr "Obre"
 
-#: src/views/library/LibraryView.qml:128
+#: src/views/library/LibraryView.qml:129
 #, kde-format
 msgid "View type"
 msgstr "Tipus de vista"
 
-#: src/views/library/LibraryView.qml:134
+#: src/views/library/LibraryView.qml:135
 #, kde-format
 msgid "List"
 msgstr "Llista"
 
-#: src/views/library/LibraryView.qml:143
+#: src/views/library/LibraryView.qml:144
 #, kde-format
 msgid "Grid"
 msgstr "Quadrícula"
 
-#: src/views/library/LibraryView.qml:153
+#: src/views/library/LibraryView.qml:154
 #, kde-format
 msgid "Sort by"
 msgstr "Ordena per"
 
-#: src/views/library/LibraryView.qml:167
+#: src/views/library/LibraryView.qml:168
 #, kde-format
 msgid "Date"
 msgstr "Data"
 
-#: src/views/library/LibraryView.qml:185
+#: src/views/library/LibraryView.qml:186
 #, kde-format
 msgid "Ascending"
 msgstr "Ascendent"
 
-#: src/views/library/LibraryView.qml:192
+#: src/views/library/LibraryView.qml:193
 #, kde-format
 msgid "Descending"
 msgstr "Descendent"
 
-#: src/views/library/LibraryView.qml:203
+#: src/views/library/LibraryView.qml:204
 #, kde-format
 msgid "Settings"
 msgstr "Configuració"
 
-#: src/views/library/LibraryView.qml:210
+#: src/views/library/LibraryView.qml:211
 #, kde-format
 msgid "About"
 msgstr "Quant al"
 
-#: src/views/library/LibraryView.qml:222
+#: src/views/library/LibraryView.qml:223
 #, kde-format
 msgid "Filter..."
 msgstr "Filtre..."
 
-#: src/views/library/LibraryView.qml:445
+#: src/views/library/LibraryView.qml:446
 #, kde-format
 msgid "Tag"
 msgstr "Etiqueta"

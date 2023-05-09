@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:53+0000\n"
+"POT-Creation-Date: 2023-05-09 00:46+0000\n"
 "PO-Revision-Date: 2023-02-28 09:09+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -86,7 +86,7 @@ msgstr "Збірка"
 msgid "Tags"
 msgstr "Мітки"
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:159
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:160
 #, kde-format
 msgid "Title"
 msgstr "Заголовок"
@@ -106,7 +106,7 @@ msgstr "Дата створення"
 msgid "Format"
 msgstr "Формат"
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:175
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:176
 #, kde-format
 msgid "Size"
 msgstr "Розмір"
@@ -121,7 +121,7 @@ msgstr "Прибрати з улюблених"
 msgid "Info"
 msgstr "Відомості"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:457
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:458
 #: src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
@@ -132,7 +132,7 @@ msgstr "Оприлюднити"
 msgid "Select"
 msgstr "Вибрати"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:467
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:468
 #, kde-format
 msgid "Export"
 msgstr "Експортувати"
@@ -177,67 +177,67 @@ msgstr "Відкрити файл"
 msgid "Add sources"
 msgstr "Додати джерела"
 
-#: src/views/library/LibraryView.qml:99
+#: src/views/library/LibraryView.qml:100
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "Увімкнути/Вимкнути бічну панель"
 
-#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:431
+#: src/views/library/LibraryView.qml:121 src/views/library/LibraryView.qml:432
 #, kde-format
 msgid "Open"
 msgstr "Відкрити"
 
-#: src/views/library/LibraryView.qml:128
+#: src/views/library/LibraryView.qml:129
 #, kde-format
 msgid "View type"
 msgstr "Тип перегляду"
 
-#: src/views/library/LibraryView.qml:134
+#: src/views/library/LibraryView.qml:135
 #, kde-format
 msgid "List"
 msgstr "Список"
 
-#: src/views/library/LibraryView.qml:143
+#: src/views/library/LibraryView.qml:144
 #, kde-format
 msgid "Grid"
 msgstr "Таблиця"
 
-#: src/views/library/LibraryView.qml:153
+#: src/views/library/LibraryView.qml:154
 #, kde-format
 msgid "Sort by"
 msgstr "Критерій упорядковування"
 
-#: src/views/library/LibraryView.qml:167
+#: src/views/library/LibraryView.qml:168
 #, kde-format
 msgid "Date"
 msgstr "Дата"
 
-#: src/views/library/LibraryView.qml:185
+#: src/views/library/LibraryView.qml:186
 #, kde-format
 msgid "Ascending"
 msgstr "За зростанням"
 
-#: src/views/library/LibraryView.qml:192
+#: src/views/library/LibraryView.qml:193
 #, kde-format
 msgid "Descending"
 msgstr "За спаданням"
 
-#: src/views/library/LibraryView.qml:203
+#: src/views/library/LibraryView.qml:204
 #, kde-format
 msgid "Settings"
 msgstr "Параметри"
 
-#: src/views/library/LibraryView.qml:210
+#: src/views/library/LibraryView.qml:211
 #, kde-format
 msgid "About"
 msgstr "Про програму"
 
-#: src/views/library/LibraryView.qml:222
+#: src/views/library/LibraryView.qml:223
 #, kde-format
 msgid "Filter..."
 msgstr "Фільтрувати…"
 
-#: src/views/library/LibraryView.qml:445
+#: src/views/library/LibraryView.qml:446
 #, kde-format
 msgid "Tag"
 msgstr "Мітка"
