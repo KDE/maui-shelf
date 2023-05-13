@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-09 00:46+0000\n"
-"PO-Revision-Date: 2023-05-10 20:26+0200\n"
+"PO-Revision-Date: 2023-05-12 19:16+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -268,6 +268,8 @@ msgstr "Automatisch scannen"
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
+"Beim Start alle Dokumentquellen durchsuchen, um Ihre Sammlung aktuell zu "
+"halten."
 
 #: src/views/SettingsDialog.qml:84
 #, kde-format
