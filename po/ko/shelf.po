@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
-# Shinjo Park <kde@peremen.name>, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-09 00:46+0000\n"
-"PO-Revision-Date: 2022-02-20 21:28+0100\n"
+"PO-Revision-Date: 2023-07-26 00:30+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -43,46 +43,45 @@ msgid "Developer"
 msgstr "개발자"
 
 #: src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgid "Peruse Developers"
-msgstr "개발자"
+msgstr "Peruse 개발자"
 
 #: src/models/placesmodel.cpp:9
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "책갈피"
 
 #: src/models/placesmodel.cpp:10
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "다운로드"
 
 #: src/models/placesmodel.cpp:11
 #, kde-format
 msgid "Documents"
-msgstr ""
+msgstr "문서"
 
 #: src/models/placesmodel.cpp:12
 #, kde-format
 msgid "Comics"
-msgstr ""
+msgstr "만화"
 
 #: src/models/placesmodel.cpp:13
 #, kde-format
 msgid "PDFs"
-msgstr ""
+msgstr "PDF"
 
 #: src/models/placesmodel.cpp:14
 #, kde-format
 msgid "Collection"
-msgstr ""
+msgstr "모음집"
 
 #: src/models/placesmodel.cpp:19 src/models/placesmodel.cpp:46
 #: src/views/library/LibraryMenu.qml:40
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "태그"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:160
 #, kde-format
@@ -112,12 +111,12 @@ msgstr "크기"
 #: src/views/library/LibraryMenu.qml:31
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "책갈피 해제"
 
 #: src/views/library/LibraryMenu.qml:52
 #, kde-format
 msgid "Info"
-msgstr ""
+msgstr "정보"
 
 #: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:458
 #: src/views/Viewer/Viewer.qml:101
@@ -128,7 +127,7 @@ msgstr "공유"
 #: src/views/library/LibraryMenu.qml:76
 #, kde-format
 msgid "Select"
-msgstr ""
+msgstr "선택"
 
 #: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:468
 #, kde-format
@@ -136,25 +135,24 @@ msgid "Export"
 msgstr "내보내기"
 
 #: src/views/library/LibraryMenu.qml:110
-#, fuzzy, kde-format
-#| msgid "Open file"
+#, kde-format
 msgid "Open with"
-msgstr "파일 열기"
+msgstr "다음으로 열기"
 
 #: src/views/library/LibraryMenu.qml:121
 #, kde-format
 msgid "Go to Folder"
-msgstr ""
+msgstr "폴더로 이동"
 
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
 msgid "Open Location"
-msgstr ""
+msgstr "위치 열기"
 
 #: src/views/library/LibraryMenu.qml:145
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "삭제"
 
 #: src/views/library/LibraryView.qml:57
 #, kde-format
@@ -179,7 +177,7 @@ msgstr "원본 추가"
 #: src/views/library/LibraryView.qml:100
 #, kde-format
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "사이드바 전환"
 
 #: src/views/library/LibraryView.qml:121 src/views/library/LibraryView.qml:432
 #, kde-format
@@ -244,12 +242,12 @@ msgstr "태그"
 #: src/views/library/Sidebar.qml:52
 #, kde-format
 msgid "Tags!"
-msgstr ""
+msgstr "태그!"
 
 #: src/views/library/Sidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "여기에 태그 목록을 표시합니다"
 
 #: src/views/SettingsDialog.qml:51
 #, kde-format
@@ -267,12 +265,10 @@ msgid "Auto Scan"
 msgstr "자동 검색"
 
 #: src/views/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Scan all the music sources on startup to keep your collection up to date"
+#, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
-msgstr "시작할 때 모든 음악 원본을 검색하여 모음집을 최신 상태로 유지"
+msgstr "시작할 때 모든 문서 원본을 검색하여 모음집을 최신 상태로 유지합니다."
 
 #: src/views/SettingsDialog.qml:84
 #, kde-format
@@ -280,10 +276,9 @@ msgid "Dark Mode"
 msgstr "어두운 모드"
 
 #: src/views/SettingsDialog.qml:85
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "밝은 색상과 어두운 색상 전환"
+msgstr "밝은 색상과 어두운 색상을 전환합니다."
 
 #: src/views/SettingsDialog.qml:102
 #, kde-format
