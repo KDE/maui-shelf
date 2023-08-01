@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2020, 2021, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-09 00:46+0000\n"
-"PO-Revision-Date: 2022-01-15 12:17+0100\n"
+"PO-Revision-Date: 2023-07-31 14:26+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -43,46 +43,45 @@ msgid "Developer"
 msgstr "Utvecklare"
 
 #: src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgid "Peruse Developers"
-msgstr "Utvecklare"
+msgstr "Utvecklare av Peruse"
 
 #: src/models/placesmodel.cpp:9
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favoriter"
 
 #: src/models/placesmodel.cpp:10
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Nerladdningar"
 
 #: src/models/placesmodel.cpp:11
 #, kde-format
 msgid "Documents"
-msgstr ""
+msgstr "Dokument"
 
 #: src/models/placesmodel.cpp:12
 #, kde-format
 msgid "Comics"
-msgstr ""
+msgstr "Serier"
 
 #: src/models/placesmodel.cpp:13
 #, kde-format
 msgid "PDFs"
-msgstr ""
+msgstr "PDF:er"
 
 #: src/models/placesmodel.cpp:14
 #, kde-format
 msgid "Collection"
-msgstr ""
+msgstr "Samling"
 
 #: src/models/placesmodel.cpp:19 src/models/placesmodel.cpp:46
 #: src/views/library/LibraryMenu.qml:40
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Etiketter"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:160
 #, kde-format
@@ -112,12 +111,12 @@ msgstr "Storlek"
 #: src/views/library/LibraryMenu.qml:31
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "Ta bort från favoriter"
 
 #: src/views/library/LibraryMenu.qml:52
 #, kde-format
 msgid "Info"
-msgstr ""
+msgstr "Information"
 
 #: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:458
 #: src/views/Viewer/Viewer.qml:101
@@ -128,7 +127,7 @@ msgstr "Dela"
 #: src/views/library/LibraryMenu.qml:76
 #, kde-format
 msgid "Select"
-msgstr ""
+msgstr "Markera"
 
 #: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:468
 #, kde-format
@@ -136,25 +135,24 @@ msgid "Export"
 msgstr "Exportera"
 
 #: src/views/library/LibraryMenu.qml:110
-#, fuzzy, kde-format
-#| msgid "Open file"
+#, kde-format
 msgid "Open with"
-msgstr "Öppna fil"
+msgstr "Öppna med"
 
 #: src/views/library/LibraryMenu.qml:121
 #, kde-format
 msgid "Go to Folder"
-msgstr ""
+msgstr "Gå till katalog"
 
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
 msgid "Open Location"
-msgstr ""
+msgstr "Öppna plats"
 
 #: src/views/library/LibraryMenu.qml:145
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Ta bort"
 
 #: src/views/library/LibraryView.qml:57
 #, kde-format
@@ -179,7 +177,7 @@ msgstr "Lägg till källor"
 #: src/views/library/LibraryView.qml:100
 #, kde-format
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "Visa eller dölj sidorad"
 
 #: src/views/library/LibraryView.qml:121 src/views/library/LibraryView.qml:432
 #, kde-format
@@ -244,12 +242,12 @@ msgstr "Etikett"
 #: src/views/library/Sidebar.qml:52
 #, kde-format
 msgid "Tags!"
-msgstr ""
+msgstr "Etiketter."
 
 #: src/views/library/Sidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Dina etiketter listas här"
 
 #: src/views/SettingsDialog.qml:51
 #, kde-format
@@ -267,13 +265,11 @@ msgid "Auto Scan"
 msgstr "Sök automatiskt"
 
 #: src/views/SettingsDialog.qml:70
-#, fuzzy, kde-format
-#| msgid ""
-#| "Scan all the music sources on startup to keep your collection up to date"
+#, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
-"Sök igenom alla musikkällor vid start för att hålla samlingen uppdaterad"
+"Sök igenom alla dokumentkällor vid start för att hålla samlingen uppdaterad."
 
 #: src/views/SettingsDialog.qml:84
 #, kde-format
@@ -281,10 +277,9 @@ msgid "Dark Mode"
 msgstr "Mörkt läge"
 
 #: src/views/SettingsDialog.qml:85
-#, fuzzy, kde-format
-#| msgid "Switch between light and dark colorscheme"
+#, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr "Byt mellan ljust och mörkt färgschema"
+msgstr "Byt mellan ljust och mörkt färgschema."
 
 #: src/views/SettingsDialog.qml:102
 #, kde-format
