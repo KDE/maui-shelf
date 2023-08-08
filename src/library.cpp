@@ -1,6 +1,6 @@
 #include "library.h"
-#include <MauiKit/FileBrowsing/fmstatic.h>
-#include <MauiKit/Core/utils.h>
+#include <MauiKit3/FileBrowsing/fmstatic.h>
+#include <MauiKit3/Core/utils.h>
 
 Library *Library::m_instance = nullptr;
 

@@ -8,12 +8,10 @@ set(shelf_SRCS
     main.cpp
     library.cpp
     models/placesmodel.cpp
-    models/library/librarymodel.cpp
-)
+    models/library/librarymodel.cpp)
 
 set(shelf_ASSETS
-    lib_assets.qrc
-    )
+    lib_assets.qrc)
 
 if(QUICK_COMPILER)
     qtquick_compiler_add_resources(shelf_QML_QRC qml.qrc)
@@ -22,17 +20,16 @@ else()
 endif()
 
 if(ANDROID)
-    add_library(${PROJECT_NAME} SHARED
+    add_library(${PROJECT_NAME}
+        SHARED
         ${shelf_SRCS}
         ${shelf_ASSETS}
-        ${shelf_QML_QRC}
-        )
+        ${shelf_QML_QRC})
 else()
     add_executable(${PROJECT_NAME}
         ${shelf_SRCS}
         ${shelf_ASSETS}
-        ${shelf_QML_QRC}
-        )
+        ${shelf_QML_QRC})
 endif()
 
 if (ANDROID)
@@ -44,7 +41,13 @@ endif()
 target_compile_definitions(${PROJECT_NAME}
     PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
-target_link_libraries(${PROJECT_NAME} MauiKit MauiKit::FileBrowsing Qt5::Quick Qt5::Qml KF5::CoreAddons KF5::I18n)
+target_link_libraries(${PROJECT_NAME}
+    MauiKit3
+    MauiKit3::FileBrowsing
+    Qt5::Quick
+    Qt5::Qml
+    KF5::CoreAddons
+    KF5::I18n)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     install(TARGETS ${PROJECT_NAME} ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

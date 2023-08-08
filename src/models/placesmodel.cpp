@@ -1,7 +1,7 @@
 #include "placesmodel.h"
 #include <KI18n/KLocalizedString>
-#include <MauiKit/FileBrowsing/fmstatic.h>
-#include <MauiKit/FileBrowsing/tagging.h>
+#include <MauiKit3/FileBrowsing/fmstatic.h>
+#include <MauiKit3/FileBrowsing/tagging.h>
 
 
 PlacesModel::PlacesModel(QObject *parent) : MauiList(parent)
