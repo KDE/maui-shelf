@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(SHELF_VERSION 3.0.0)
+set(SHELF_VERSION 3.0.1)
 project(shelf LANGUAGES CXX VERSION ${SHELF_VERSION})
 
 set(CMAKE_CXX_STANDARD 17)
