@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 00:46+0000\n"
+"POT-Creation-Date: 2023-08-28 00:45+0000\n"
 "PO-Revision-Date: 2022-12-11 07:52+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -251,22 +251,22 @@ msgstr ""
 msgid "Your tags will be listed here"
 msgstr ""
 
-#: src/views/SettingsDialog.qml:51
+#: src/views/SettingsDialog.qml:50
 #, kde-format
 msgid "General"
 msgstr "Ogólne"
 
-#: src/views/SettingsDialog.qml:52
+#: src/views/SettingsDialog.qml:51
 #, kde-format
 msgid "Configure the app plugins and behavior."
 msgstr "Ustawienia wtyczek programu i zachowania."
 
-#: src/views/SettingsDialog.qml:69
+#: src/views/SettingsDialog.qml:68
 #, kde-format
 msgid "Auto Scan"
 msgstr "Samoprzeszukiwanie"
 
-#: src/views/SettingsDialog.qml:70
+#: src/views/SettingsDialog.qml:69
 #, fuzzy, kde-format
 #| msgid ""
 #| "Scan all the music sources on startup to keep your collection up to date"
@@ -276,33 +276,33 @@ msgstr ""
 "Przeszukaj wszystkie źródła muzyki po uruchomieniu, aby utrzymywać swój "
 "zbiór na bieżąco"
 
-#: src/views/SettingsDialog.qml:84
+#: src/views/SettingsDialog.qml:83
 #, kde-format
 msgid "Dark Mode"
 msgstr "Tryb ciemny"
 
-#: src/views/SettingsDialog.qml:85
+#: src/views/SettingsDialog.qml:84
 #, fuzzy, kde-format
 #| msgid "Switch between light and dark colorscheme"
 msgid "Switch between light and dark colorscheme."
 msgstr "Przełącz pomiędzy trybem jasnym i ciemnym"
 
-#: src/views/SettingsDialog.qml:102
+#: src/views/SettingsDialog.qml:101
 #, kde-format
 msgid "Sources"
 msgstr "Źródła"
 
-#: src/views/SettingsDialog.qml:103
+#: src/views/SettingsDialog.qml:102
 #, kde-format
 msgid "Add or remove sources"
 msgstr "Dodaj lub usuń źródła"
 
-#: src/views/SettingsDialog.qml:145
+#: src/views/SettingsDialog.qml:144
 #, kde-format
 msgid "Add"
 msgstr "Dodaj"
 
-#: src/views/SettingsDialog.qml:162
+#: src/views/SettingsDialog.qml:161
 #, kde-format
 msgid "Scan now"
 msgstr "Przeszukaj teraz"

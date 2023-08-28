@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 00:46+0000\n"
+"POT-Creation-Date: 2023-08-28 00:45+0000\n"
 "PO-Revision-Date: 2023-03-06 15:20+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -246,22 +246,22 @@ msgstr "Marcas!"
 msgid "Your tags will be listed here"
 msgstr "As suas marcas serão apresentadas aqui"
 
-#: src/views/SettingsDialog.qml:51
+#: src/views/SettingsDialog.qml:50
 #, kde-format
 msgid "General"
 msgstr "Geral"
 
-#: src/views/SettingsDialog.qml:52
+#: src/views/SettingsDialog.qml:51
 #, kde-format
 msgid "Configure the app plugins and behavior."
 msgstr "Configura os 'plugins' e o comportamento da aplicação."
 
-#: src/views/SettingsDialog.qml:69
+#: src/views/SettingsDialog.qml:68
 #, kde-format
 msgid "Auto Scan"
 msgstr "Sondagem Automática"
 
-#: src/views/SettingsDialog.qml:70
+#: src/views/SettingsDialog.qml:69
 #, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
@@ -269,32 +269,32 @@ msgstr ""
 "Analisa todas as fontes de documentos no arranque para manter a sua colecção "
 "actualizada."
 
-#: src/views/SettingsDialog.qml:84
+#: src/views/SettingsDialog.qml:83
 #, kde-format
 msgid "Dark Mode"
 msgstr "Modo Escuro"
 
-#: src/views/SettingsDialog.qml:85
+#: src/views/SettingsDialog.qml:84
 #, kde-format
 msgid "Switch between light and dark colorscheme."
 msgstr "Alternar entre o esquema de cores claro e escuro."
 
-#: src/views/SettingsDialog.qml:102
+#: src/views/SettingsDialog.qml:101
 #, kde-format
 msgid "Sources"
 msgstr "Fontes"
 
-#: src/views/SettingsDialog.qml:103
+#: src/views/SettingsDialog.qml:102
 #, kde-format
 msgid "Add or remove sources"
 msgstr "Adicionar ou remover fontes"
 
-#: src/views/SettingsDialog.qml:145
+#: src/views/SettingsDialog.qml:144
 #, kde-format
 msgid "Add"
 msgstr "Adicionar"
 
-#: src/views/SettingsDialog.qml:162
+#: src/views/SettingsDialog.qml:161
 #, kde-format
 msgid "Scan now"
 msgstr "Sondar agora"

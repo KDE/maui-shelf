@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 00:46+0000\n"
+"POT-Creation-Date: 2023-08-28 00:45+0000\n"
 "PO-Revision-Date: 2023-02-08 00:31+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -255,22 +255,22 @@ msgstr "標籤！"
 msgid "Your tags will be listed here"
 msgstr "您的標籤將會列於此處"
 
-#: src/views/SettingsDialog.qml:51
+#: src/views/SettingsDialog.qml:50
 #, kde-format
 msgid "General"
 msgstr "一般"
 
-#: src/views/SettingsDialog.qml:52
+#: src/views/SettingsDialog.qml:51
 #, kde-format
 msgid "Configure the app plugins and behavior."
 msgstr "設定應用程式外掛與行為。"
 
-#: src/views/SettingsDialog.qml:69
+#: src/views/SettingsDialog.qml:68
 #, kde-format
 msgid "Auto Scan"
 msgstr "自動掃描"
 
-#: src/views/SettingsDialog.qml:70
+#: src/views/SettingsDialog.qml:69
 #, fuzzy, kde-format
 #| msgid ""
 #| "Scan all the document sources on startup to keep your collection up to "
@@ -279,33 +279,33 @@ msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr "啟動時掃描所有文件來源來確保您的收藏是最新狀態"
 
-#: src/views/SettingsDialog.qml:84
+#: src/views/SettingsDialog.qml:83
 #, kde-format
 msgid "Dark Mode"
 msgstr "暗色模式"
 
-#: src/views/SettingsDialog.qml:85
+#: src/views/SettingsDialog.qml:84
 #, fuzzy, kde-format
 #| msgid "Switch between light and dark colorscheme"
 msgid "Switch between light and dark colorscheme."
 msgstr "在明亮和暗色配色方案間切換"
 
-#: src/views/SettingsDialog.qml:102
+#: src/views/SettingsDialog.qml:101
 #, kde-format
 msgid "Sources"
 msgstr "來源"
 
-#: src/views/SettingsDialog.qml:103
+#: src/views/SettingsDialog.qml:102
 #, kde-format
 msgid "Add or remove sources"
 msgstr "新增或移除來源"
 
-#: src/views/SettingsDialog.qml:145
+#: src/views/SettingsDialog.qml:144
 #, kde-format
 msgid "Add"
 msgstr "新增"
 
-#: src/views/SettingsDialog.qml:162
+#: src/views/SettingsDialog.qml:161
 #, kde-format
 msgid "Scan now"
 msgstr "現在掃描"

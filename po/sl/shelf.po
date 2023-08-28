@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 00:46+0000\n"
+"POT-Creation-Date: 2023-08-28 00:45+0000\n"
 "PO-Revision-Date: 2023-02-28 09:21+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -250,22 +250,22 @@ msgstr "Oznake!"
 msgid "Your tags will be listed here"
 msgstr "Vaše oznake bodo prikazane tu"
 
-#: src/views/SettingsDialog.qml:51
+#: src/views/SettingsDialog.qml:50
 #, kde-format
 msgid "General"
 msgstr "Splošno"
 
-#: src/views/SettingsDialog.qml:52
+#: src/views/SettingsDialog.qml:51
 #, kde-format
 msgid "Configure the app plugins and behavior."
 msgstr "Prilagodite vtičnike programa in vedenje."
 
-#: src/views/SettingsDialog.qml:69
+#: src/views/SettingsDialog.qml:68
 #, kde-format
 msgid "Auto Scan"
 msgstr "Samodejno preglej"
 
-#: src/views/SettingsDialog.qml:70
+#: src/views/SettingsDialog.qml:69
 #, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
@@ -273,32 +273,32 @@ msgstr ""
 "Preglej vse vire dokumentov ob zagonu, da se ohranja vaša zbirka "
 "posodobljena."
 
-#: src/views/SettingsDialog.qml:84
+#: src/views/SettingsDialog.qml:83
 #, kde-format
 msgid "Dark Mode"
 msgstr "Temni način"
 
-#: src/views/SettingsDialog.qml:85
+#: src/views/SettingsDialog.qml:84
 #, kde-format
 msgid "Switch between light and dark colorscheme."
 msgstr "Preklopi med svetlo in temno barvno shemo."
 
-#: src/views/SettingsDialog.qml:102
+#: src/views/SettingsDialog.qml:101
 #, kde-format
 msgid "Sources"
 msgstr "Viri"
 
-#: src/views/SettingsDialog.qml:103
+#: src/views/SettingsDialog.qml:102
 #, kde-format
 msgid "Add or remove sources"
 msgstr "Dodajanje ali odstranjevanje virov"
 
-#: src/views/SettingsDialog.qml:145
+#: src/views/SettingsDialog.qml:144
 #, kde-format
 msgid "Add"
 msgstr "Dodaj"
 
-#: src/views/SettingsDialog.qml:162
+#: src/views/SettingsDialog.qml:161
 #, kde-format
 msgid "Scan now"
 msgstr "Preglej zdaj"
