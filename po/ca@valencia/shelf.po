@@ -144,7 +144,7 @@ msgstr "Obri amb"
 #: src/views/library/LibraryMenu.qml:121
 #, kde-format
 msgid "Go to Folder"
-msgstr "Ves a la carpeta"
+msgstr "Ves fins a la carpeta"
 
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
