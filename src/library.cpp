@@ -1,6 +1,7 @@
 #include "library.h"
+#include <QSettings>
+
 #include <MauiKit3/FileBrowsing/fmstatic.h>
-#include <MauiKit3/Core/utils.h>
 
 Library *Library::m_instance = nullptr;
 
@@ -8,7 +9,10 @@ Library::Library(QObject *parent) : QObject(parent)
 {   
     static const auto defaultSources = QStringList({FMStatic::DesktopPath, FMStatic::DownloadsPath, FMStatic::DocumentsPath});
 
-    m_sources = UTIL::loadSettings("Sources", "Settings", defaultSources).toStringList();
+    QSettings settings;
+    settings.beginGroup("Settings");
+    m_sources = settings.value("Sources", defaultSources).toStringList();
+    settings.endGroup();
 }
 
 Library *Library::instance()
@@ -66,8 +70,12 @@ void Library::removeSource(const QString &url)
 {
     m_sources.removeOne(url);
 
-    UTIL::saveSettings("Sources", m_sources, "Settings");
-    emit this->sourcesChanged(m_sources);
+    QSettings settings;
+    settings.beginGroup("Settings");
+    settings.setValue("Sources", m_sources);
+    settings.endGroup();
+
+    Q_EMIT this->sourcesChanged(m_sources);
 }
 
 void Library::addSources(const QStringList &urls)
@@ -75,8 +83,12 @@ void Library::addSources(const QStringList &urls)
     m_sources << urls;
     m_sources.removeDuplicates();
 
-    UTIL::saveSettings("Sources", m_sources, "Settings");
-    emit this->sourcesChanged(m_sources);
+    QSettings settings;
+    settings.beginGroup("Settings");
+    settings.setValue("Sources", m_sources);
+    settings.endGroup();
+
+    Q_EMIT this->sourcesChanged(m_sources);
 }
 
 

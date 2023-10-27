@@ -36,19 +36,22 @@ Maui.SettingsDialog
         message : "Are you sure you want to remove the source: \n "+url
         template.iconSource: "emblem-warning"
 
+        standardButtons: Dialog.Ok | Dialog.Cancel
+
         onAccepted:
         {
             if(url.length>0)
                 Library.removeSource(url)
             confirmationDialog.close()
         }
+
         onRejected: confirmationDialog.close()
     }
 
     Maui.SectionGroup
     {
         title: i18n("General")
-        description: i18n("Configure the app plugins and behavior.")
+//        description: i18n("Configure the app plugins and behavior.")
 
 //        Maui.SectionItem
 //        {
@@ -71,8 +74,22 @@ Maui.SettingsDialog
             Switch
             {
                 checkable: true
-                checked: viewerSettings.thumbnailsPreview
-                onToggled: viewerSettings.thumbnailsPreview = !viewerSettings.thumbnailsPreview
+                checked: viewerSettings.autoScan
+                onToggled: viewerSettings.autoScan = !viewerSettings.autoScan
+            }
+        }
+
+
+        Maui.SectionItem
+        {
+            label1.text: i18n("Previews")
+            label2.text: i18n("Display thumbnail previews.")
+
+            Switch
+            {
+                checkable: true
+                checked: viewerSettings.showThumbnails
+                onToggled: viewerSettings.showThumbnails = !viewerSettings.showThumbnails
             }
         }
 
@@ -99,27 +116,23 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Sources")
-        description: i18n("Add or remove sources")
+//        description: i18n("Add or remove sources")
 
         ColumnLayout
         {
             Layout.fillWidth: true
-            spacing: Maui.Style.space.big
+            spacing: Maui.Style.space.medium
 
-            Maui.ListBrowser
+            Repeater
             {
 
                 id: _sourcesList
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-                Layout.minimumHeight: Math.min(500, contentHeight)
+
                 model: Library.sources
-                currentIndex: -1
-                padding: 0
 
                 delegate: Maui.ListDelegate
                 {
-                    width: ListView.view.width
+                    Layout.fillWidth: true
                     template.iconSource: modelData.icon
                     template.iconSizeHint: Maui.Style.iconSizes.small
                     template.label1.text: modelData.label

@@ -11,8 +11,8 @@ Maui.SideBarView
 {
     id: control
     property alias list : _libraryList
-property alias showCSDControls : _browser.showCSDControls
-property alias flickable : _browser.flickable
+    property alias showCSDControls : _browser.showCSDControls
+    property alias flickable : _browser.flickable
     property alias sources : _libraryList.sources
 
     sideBar.preferredWidth: 200
@@ -25,11 +25,10 @@ property alias flickable : _browser.flickable
 
     LibraryMenu
     {
-    id: _menu
-    index: _browser.currentIndex
-    model: _libraryModel
+        id: _menu
+        index: _browser.currentIndex
+        model: _libraryModel
     }
-
 
     Maui.AltBrowser
     {
@@ -115,7 +114,6 @@ property alias flickable : _browser.flickable
             {
                 icon.name: _browser.viewType === Maui.AltBrowser.ViewType.List ? "view-list-details" : "view-list-icons"
 
-
                 MenuItem
                 {
                     text: i18n("Open")
@@ -123,12 +121,7 @@ property alias flickable : _browser.flickable
                     onTriggered: openFileDialog()
                 }
 
-                Maui.LabelDelegate
-                {
-                    isSection: true
-                    label: i18n("View type")
-                    width: ListView.view.width
-                }
+                MenuSeparator {}
 
                 MenuItem
                 {
@@ -148,12 +141,7 @@ property alias flickable : _browser.flickable
                     onTriggered: viewerSettings.viewType = Maui.AltBrowser.ViewType.Grid
                 }
 
-                Maui.LabelDelegate
-                {
-                    isSection: true
-                    label: i18n("Sort by")
-                    width: ListView.view.width
-                }
+                MenuSeparator {}
 
                 MenuItem
                 {
@@ -196,8 +184,6 @@ property alias flickable : _browser.flickable
                 }
 
                 MenuSeparator {}
-
-
 
                 MenuItem
                 {
@@ -252,7 +238,7 @@ property alias flickable : _browser.flickable
 
 
             label1.text: model.label
-            imageSource: model.preview
+            imageSource: viewerSettings.showThumbnails ? model.preview : ""
             iconSource: model.icon
             iconSizeHint: Maui.Style.iconSizes.huge
             template.labelSizeHint: 32
@@ -343,6 +329,7 @@ property alias flickable : _browser.flickable
     label2.text: String(FB.FM.fileDir(model.path)).replace(FB.FM.homePath(), "")
 
     label3.text: Qt.formatDateTime(new Date(model.modified), "d MMM yyyy")
+    imageSource: viewerSettings.showThumbnails ? model.preview : ""
 
     iconSource: model.icon
     iconSizeHint: Maui.Style.iconSizes.medium
@@ -413,7 +400,7 @@ property alias flickable : _browser.flickable
 footer: Maui.SelectionBar
 {
     id: _selectionbar
-//    implicitHeight: 80
+    //    implicitHeight: 80
     anchors.horizontalCenter: parent.horizontalCenter
     width: Math.min(parent.width-(Maui.Style.space.medium*2), implicitWidth)
 
@@ -423,7 +410,7 @@ footer: Maui.SelectionBar
 
     onExitClicked:
     {
-         clear()
+        clear()
         root.selectionMode = false
     }
 

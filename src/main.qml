@@ -23,8 +23,9 @@ Maui.ApplicationWindow
     Settings
     {
         id: viewerSettings
-        property bool thumbnailsPreview : true
+        property bool autoScan : true
         property bool darkMode: true
+        property bool showThumbnails: true
         property int viewType : Maui.AltBrowser.ViewType.Grid
     }
 
