@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-28 00:45+0000\n"
+"POT-Creation-Date: 2023-10-28 00:42+0000\n"
 "PO-Revision-Date: 2020-11-12 20:21-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -19,27 +19,27 @@ msgstr ""
 msgid "Shelf"
 msgstr ""
 
-#: src/main.cpp:48
+#: src/main.cpp:50
 #, kde-format
 msgid "Browse and view your documents."
 msgstr ""
 
-#: src/main.cpp:48
+#: src/main.cpp:52
 #, kde-format
-msgid "© 2019-%1 Maui Development Team"
+msgid "© 2019-2023 Maui Development Team"
 msgstr ""
 
-#: src/main.cpp:49
+#: src/main.cpp:55
 #, kde-format
 msgid "Camilo Higuita"
 msgstr ""
 
-#: src/main.cpp:49
+#: src/main.cpp:55
 #, kde-format
 msgid "Developer"
 msgstr ""
 
-#: src/main.cpp:56
+#: src/main.cpp:62
 #, kde-format
 msgid "Peruse Developers"
 msgstr ""
@@ -80,7 +80,7 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:160
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:148
 #, kde-format
 msgid "Title"
 msgstr ""
@@ -100,7 +100,7 @@ msgstr ""
 msgid "Format"
 msgstr ""
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:176
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:164
 #, kde-format
 msgid "Size"
 msgstr ""
@@ -115,7 +115,7 @@ msgstr ""
 msgid "Info"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:458
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:445
 #: src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
@@ -126,7 +126,7 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:468
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:455
 #, kde-format
 msgid "Export"
 msgstr ""
@@ -151,87 +151,77 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:57
+#: src/views/library/LibraryView.qml:56
 #, kde-format
 msgid "Nothing here!"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:58
+#: src/views/library/LibraryView.qml:57
 #, kde-format
 msgid "Add new sources to manage your documents."
 msgstr ""
 
-#: src/views/library/LibraryView.qml:64
+#: src/views/library/LibraryView.qml:63
 #, kde-format
 msgid "Open file"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:70
+#: src/views/library/LibraryView.qml:69
 #, kde-format
 msgid "Add sources"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:100
+#: src/views/library/LibraryView.qml:99
 #, kde-format
 msgid "Toggle sidebar"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:121 src/views/library/LibraryView.qml:432
+#: src/views/library/LibraryView.qml:119 src/views/library/LibraryView.qml:419
 #, kde-format
 msgid "Open"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:129
-#, kde-format
-msgid "View type"
-msgstr ""
-
-#: src/views/library/LibraryView.qml:135
+#: src/views/library/LibraryView.qml:128
 #, kde-format
 msgid "List"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:144
+#: src/views/library/LibraryView.qml:137
 #, kde-format
 msgid "Grid"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:154
-#, kde-format
-msgid "Sort by"
-msgstr ""
-
-#: src/views/library/LibraryView.qml:168
+#: src/views/library/LibraryView.qml:156
 #, kde-format
 msgid "Date"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:186
+#: src/views/library/LibraryView.qml:174
 #, kde-format
 msgid "Ascending"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:193
+#: src/views/library/LibraryView.qml:181
 #, kde-format
 msgid "Descending"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:204
+#: src/views/library/LibraryView.qml:190
 #, kde-format
 msgid "Settings"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:211
+#: src/views/library/LibraryView.qml:197
 #, kde-format
 msgid "About"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:223
+#: src/views/library/LibraryView.qml:209
 #, kde-format
 msgid "Filter..."
 msgstr ""
 
-#: src/views/library/LibraryView.qml:446
+#: src/views/library/LibraryView.qml:433
 #, kde-format
 msgid "Tag"
 msgstr ""
@@ -246,53 +236,53 @@ msgstr ""
 msgid "Your tags will be listed here"
 msgstr ""
 
-#: src/views/SettingsDialog.qml:50
+#: src/views/SettingsDialog.qml:53
 #, kde-format
 msgid "General"
 msgstr ""
 
-#: src/views/SettingsDialog.qml:51
-#, kde-format
-msgid "Configure the app plugins and behavior."
-msgstr ""
-
-#: src/views/SettingsDialog.qml:68
+#: src/views/SettingsDialog.qml:71
 #, kde-format
 msgid "Auto Scan"
 msgstr ""
 
-#: src/views/SettingsDialog.qml:69
+#: src/views/SettingsDialog.qml:72
 #, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
 
-#: src/views/SettingsDialog.qml:83
+#: src/views/SettingsDialog.qml:85
+#, kde-format
+msgid "Previews"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:86
+#, kde-format
+msgid "Display thumbnail previews."
+msgstr ""
+
+#: src/views/SettingsDialog.qml:100
 #, kde-format
 msgid "Dark Mode"
 msgstr ""
 
-#: src/views/SettingsDialog.qml:84
+#: src/views/SettingsDialog.qml:101
 #, kde-format
 msgid "Switch between light and dark colorscheme."
 msgstr ""
 
-#: src/views/SettingsDialog.qml:101
+#: src/views/SettingsDialog.qml:118
 #, kde-format
 msgid "Sources"
 msgstr ""
 
-#: src/views/SettingsDialog.qml:102
-#, kde-format
-msgid "Add or remove sources"
-msgstr ""
-
-#: src/views/SettingsDialog.qml:144
+#: src/views/SettingsDialog.qml:157
 #, kde-format
 msgid "Add"
 msgstr ""
 
-#: src/views/SettingsDialog.qml:161
+#: src/views/SettingsDialog.qml:174
 #, kde-format
 msgid "Scan now"
 msgstr ""

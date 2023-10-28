@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-28 00:45+0000\n"
+"POT-Creation-Date: 2023-10-28 00:42+0000\n"
 "PO-Revision-Date: 2023-07-26 00:30+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -22,27 +22,28 @@ msgstr ""
 msgid "Shelf"
 msgstr "Shelf"
 
-#: src/main.cpp:48
+#: src/main.cpp:50
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "문서를 탐색하고 봅니다."
 
-#: src/main.cpp:48
-#, kde-format
-msgid "© 2019-%1 Maui Development Team"
+#: src/main.cpp:52
+#, fuzzy, kde-format
+#| msgid "© 2019-%1 Maui Development Team"
+msgid "© 2019-2023 Maui Development Team"
 msgstr "© 2019-%1 Maui Development Team"
 
-#: src/main.cpp:49
+#: src/main.cpp:55
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:49
+#: src/main.cpp:55
 #, kde-format
 msgid "Developer"
 msgstr "개발자"
 
-#: src/main.cpp:56
+#: src/main.cpp:62
 #, kde-format
 msgid "Peruse Developers"
 msgstr "Peruse 개발자"
@@ -83,7 +84,7 @@ msgstr "모음집"
 msgid "Tags"
 msgstr "태그"
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:160
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:148
 #, kde-format
 msgid "Title"
 msgstr "제목"
@@ -103,7 +104,7 @@ msgstr "만든 날짜"
 msgid "Format"
 msgstr "형식"
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:176
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:164
 #, kde-format
 msgid "Size"
 msgstr "크기"
@@ -118,7 +119,7 @@ msgstr "책갈피 해제"
 msgid "Info"
 msgstr "정보"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:458
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:445
 #: src/views/Viewer/Viewer.qml:101
 #, kde-format
 msgid "Share"
@@ -129,7 +130,7 @@ msgstr "공유"
 msgid "Select"
 msgstr "선택"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:468
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:455
 #, kde-format
 msgid "Export"
 msgstr "내보내기"
@@ -154,87 +155,77 @@ msgstr "위치 열기"
 msgid "Remove"
 msgstr "삭제"
 
-#: src/views/library/LibraryView.qml:57
+#: src/views/library/LibraryView.qml:56
 #, kde-format
 msgid "Nothing here!"
 msgstr "아무것도 없습니다!"
 
-#: src/views/library/LibraryView.qml:58
+#: src/views/library/LibraryView.qml:57
 #, kde-format
 msgid "Add new sources to manage your documents."
 msgstr "문서를 관리하려면 새 원본을 추가하십시오."
 
-#: src/views/library/LibraryView.qml:64
+#: src/views/library/LibraryView.qml:63
 #, kde-format
 msgid "Open file"
 msgstr "파일 열기"
 
-#: src/views/library/LibraryView.qml:70
+#: src/views/library/LibraryView.qml:69
 #, kde-format
 msgid "Add sources"
 msgstr "원본 추가"
 
-#: src/views/library/LibraryView.qml:100
+#: src/views/library/LibraryView.qml:99
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "사이드바 전환"
 
-#: src/views/library/LibraryView.qml:121 src/views/library/LibraryView.qml:432
+#: src/views/library/LibraryView.qml:119 src/views/library/LibraryView.qml:419
 #, kde-format
 msgid "Open"
 msgstr "열기"
 
-#: src/views/library/LibraryView.qml:129
-#, kde-format
-msgid "View type"
-msgstr "보기 형식"
-
-#: src/views/library/LibraryView.qml:135
+#: src/views/library/LibraryView.qml:128
 #, kde-format
 msgid "List"
 msgstr "목록"
 
-#: src/views/library/LibraryView.qml:144
+#: src/views/library/LibraryView.qml:137
 #, kde-format
 msgid "Grid"
 msgstr "격자"
 
-#: src/views/library/LibraryView.qml:154
-#, kde-format
-msgid "Sort by"
-msgstr "정렬 순서"
-
-#: src/views/library/LibraryView.qml:168
+#: src/views/library/LibraryView.qml:156
 #, kde-format
 msgid "Date"
 msgstr "날짜"
 
-#: src/views/library/LibraryView.qml:186
+#: src/views/library/LibraryView.qml:174
 #, kde-format
 msgid "Ascending"
 msgstr "오름차순"
 
-#: src/views/library/LibraryView.qml:193
+#: src/views/library/LibraryView.qml:181
 #, kde-format
 msgid "Descending"
 msgstr "내림차순"
 
-#: src/views/library/LibraryView.qml:204
+#: src/views/library/LibraryView.qml:190
 #, kde-format
 msgid "Settings"
 msgstr "설정"
 
-#: src/views/library/LibraryView.qml:211
+#: src/views/library/LibraryView.qml:197
 #, kde-format
 msgid "About"
 msgstr "정보"
 
-#: src/views/library/LibraryView.qml:223
+#: src/views/library/LibraryView.qml:209
 #, kde-format
 msgid "Filter..."
 msgstr "필터..."
 
-#: src/views/library/LibraryView.qml:446
+#: src/views/library/LibraryView.qml:433
 #, kde-format
 msgid "Tag"
 msgstr "태그"
@@ -249,53 +240,53 @@ msgstr "태그!"
 msgid "Your tags will be listed here"
 msgstr "여기에 태그 목록을 표시합니다"
 
-#: src/views/SettingsDialog.qml:50
+#: src/views/SettingsDialog.qml:53
 #, kde-format
 msgid "General"
 msgstr "일반"
 
-#: src/views/SettingsDialog.qml:51
-#, kde-format
-msgid "Configure the app plugins and behavior."
-msgstr "앱 플러그인과 행동을 설정합니다."
-
-#: src/views/SettingsDialog.qml:68
+#: src/views/SettingsDialog.qml:71
 #, kde-format
 msgid "Auto Scan"
 msgstr "자동 검색"
 
-#: src/views/SettingsDialog.qml:69
+#: src/views/SettingsDialog.qml:72
 #, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr "시작할 때 모든 문서 원본을 검색하여 모음집을 최신 상태로 유지합니다."
 
-#: src/views/SettingsDialog.qml:83
+#: src/views/SettingsDialog.qml:85
+#, kde-format
+msgid "Previews"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:86
+#, kde-format
+msgid "Display thumbnail previews."
+msgstr ""
+
+#: src/views/SettingsDialog.qml:100
 #, kde-format
 msgid "Dark Mode"
 msgstr "어두운 모드"
 
-#: src/views/SettingsDialog.qml:84
+#: src/views/SettingsDialog.qml:101
 #, kde-format
 msgid "Switch between light and dark colorscheme."
 msgstr "밝은 색상과 어두운 색상을 전환합니다."
 
-#: src/views/SettingsDialog.qml:101
+#: src/views/SettingsDialog.qml:118
 #, kde-format
 msgid "Sources"
 msgstr "원본"
 
-#: src/views/SettingsDialog.qml:102
-#, kde-format
-msgid "Add or remove sources"
-msgstr "원본 추가/삭제"
-
-#: src/views/SettingsDialog.qml:144
+#: src/views/SettingsDialog.qml:157
 #, kde-format
 msgid "Add"
 msgstr "추가"
 
-#: src/views/SettingsDialog.qml:161
+#: src/views/SettingsDialog.qml:174
 #, kde-format
 msgid "Scan now"
 msgstr "지금 검색"
@@ -334,6 +325,18 @@ msgstr "수평으로 탐색"
 #, kde-format
 msgid "Fullscreen"
 msgstr "전체 화면"
+
+#~ msgid "View type"
+#~ msgstr "보기 형식"
+
+#~ msgid "Sort by"
+#~ msgstr "정렬 순서"
+
+#~ msgid "Configure the app plugins and behavior."
+#~ msgstr "앱 플러그인과 행동을 설정합니다."
+
+#~ msgid "Add or remove sources"
+#~ msgstr "원본 추가/삭제"
 
 #~ msgid "Fill"
 #~ msgstr "채우기"
