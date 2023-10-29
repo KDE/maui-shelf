@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the maui-shelf package.
 #
 # Automatically generated, 2020.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-28 00:42+0000\n"
-"PO-Revision-Date: 2023-02-28 03:06+0100\n"
+"PO-Revision-Date: 2023-10-28 12:43+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -30,10 +30,9 @@ msgid "Browse and view your documents."
 msgstr "Explore y vea sus documentos."
 
 #: src/main.cpp:52
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-%1 El equipo de desarrollo de Maui"
+msgstr "© 2019-2023 El equipo de desarrollo de Maui"
 
 #: src/main.cpp:55
 #, kde-format
@@ -263,12 +262,12 @@ msgstr ""
 #: src/views/SettingsDialog.qml:85
 #, kde-format
 msgid "Previews"
-msgstr ""
+msgstr "Vistas previas"
 
 #: src/views/SettingsDialog.qml:86
 #, kde-format
 msgid "Display thumbnail previews."
-msgstr ""
+msgstr "Mostrar vistas previas en miniatura."
 
 #: src/views/SettingsDialog.qml:100
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-28 00:42+0000\n"
-"PO-Revision-Date: 2023-02-28 09:09+0200\n"
+"PO-Revision-Date: 2023-10-28 09:13+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -31,10 +31,9 @@ msgid "Browse and view your documents."
 msgstr "Навігація вашими документами та перегляд документів."
 
 #: src/main.cpp:52
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© Команда розробників Maui, 2019–%1"
+msgstr "© Команда розробників Maui, 2019–2023"
 
 #: src/main.cpp:55
 #, kde-format
@@ -264,12 +263,12 @@ msgstr ""
 #: src/views/SettingsDialog.qml:85
 #, kde-format
 msgid "Previews"
-msgstr ""
+msgstr "Ескізи"
 
 #: src/views/SettingsDialog.qml:86
 #, kde-format
 msgid "Display thumbnail previews."
-msgstr ""
+msgstr "Показати мініатюрні зображення попереднього перегляду."
 
 #: src/views/SettingsDialog.qml:100
 #, kde-format
