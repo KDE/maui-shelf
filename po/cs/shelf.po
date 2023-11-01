@@ -28,10 +28,9 @@ msgid "Browse and view your documents."
 msgstr "Procházejte a prohlížejte svoje dokumenty"
 
 #: src/main.cpp:52
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-%1 Vývojový tým Maui"
+msgstr ""
 
 #: src/main.cpp:55
 #, kde-format
@@ -260,7 +259,7 @@ msgstr ""
 #: src/views/SettingsDialog.qml:85
 #, kde-format
 msgid "Previews"
-msgstr ""
+msgstr "Náhledy"
 
 #: src/views/SettingsDialog.qml:86
 #, kde-format
@@ -326,15 +325,3 @@ msgstr "Prohlížet vodorovně"
 #, kde-format
 msgid "Fullscreen"
 msgstr "Celá obrazovka"
-
-#~ msgid "View type"
-#~ msgstr "Typ pohledu"
-
-#~ msgid "Sort by"
-#~ msgstr "Řadit dle"
-
-#~ msgid "Configure the app plugins and behavior."
-#~ msgstr "Nastavení modulů a chování aplikace."
-
-#~ msgid "Add or remove sources"
-#~ msgstr "Přidat nebo odebrat zdroje"
