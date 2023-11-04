@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
 #
-# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Matjaž Jeran <matjaz.jeran@amis.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-28 00:42+0000\n"
-"PO-Revision-Date: 2023-10-28 09:44+0200\n"
+"PO-Revision-Date: 2023-11-04 14:15+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -56,7 +56,7 @@ msgstr "Priljubljene"
 #: src/models/placesmodel.cpp:10
 #, kde-format
 msgid "Downloads"
-msgstr "Prenosi"
+msgstr "Prejemi"
 
 #: src/models/placesmodel.cpp:11
 #, kde-format
@@ -348,3 +348,4 @@ msgstr "Celotni zaslon"
 
 #~ msgid "Fill"
 #~ msgstr "Napolni"
+
