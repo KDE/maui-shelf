@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
-# Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:29+0000\n"
-"PO-Revision-Date: 2023-03-01 16:26+0100\n"
+"PO-Revision-Date: 2023-10-31 16:28+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -30,7 +30,7 @@ msgstr "Procházejte a prohlížejte svoje dokumenty"
 #: src/main.cpp:52
 #, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr ""
+msgstr "© 2019-2023 Vývojový tým Maui"
 
 #: src/main.cpp:55
 #, kde-format
@@ -264,7 +264,7 @@ msgstr "Náhledy"
 #: src/views/SettingsDialog.qml:86
 #, kde-format
 msgid "Display thumbnail previews."
-msgstr ""
+msgstr "Zobrazit náhledy"
 
 #: src/views/SettingsDialog.qml:100
 #, kde-format
