@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:29+0000\n"
-"PO-Revision-Date: 2023-10-21 13:55\n"
+"PO-Revision-Date: 2023-11-19 03:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -28,10 +28,9 @@ msgid "Browse and view your documents."
 msgstr "浏览和查看您的文档。"
 
 #: src/main.cpp:52
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-%1 Maui Development Team"
+msgstr ""
 
 #: src/main.cpp:55
 #, kde-format
@@ -325,15 +324,3 @@ msgstr "水平浏览"
 #, kde-format
 msgid "Fullscreen"
 msgstr "全屏"
-
-#~ msgid "View type"
-#~ msgstr "视图类型"
-
-#~ msgid "Sort by"
-#~ msgstr "排序依据"
-
-#~ msgid "Configure the app plugins and behavior."
-#~ msgstr "配置应用的插件和行为。"
-
-#~ msgid "Add or remove sources"
-#~ msgstr "添加或移除来源"
