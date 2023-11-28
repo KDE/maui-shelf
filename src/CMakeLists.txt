@@ -44,6 +44,7 @@ target_compile_definitions(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
     MauiKit3
     MauiKit3::FileBrowsing
+    MauiKit3::Documents
     Qt5::Quick
     Qt5::Qml
     KF5::CoreAddons

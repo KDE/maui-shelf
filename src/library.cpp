@@ -1,5 +1,6 @@
 #include "library.h"
 #include <QSettings>
+#include <QFileInfo>
 
 #include <MauiKit3/FileBrowsing/fmstatic.h>
 
@@ -63,7 +64,7 @@ void Library::openFiles(QStringList files)
         }
     }
 
-    emit this->requestedFiles(res);
+    Q_EMIT this->requestedFiles(res);
 }
 
 void Library::removeSource(const QString &url)
@@ -89,6 +90,28 @@ void Library::addSources(const QStringList &urls)
     settings.endGroup();
 
     Q_EMIT this->sourcesChanged(m_sources);
+}
+
+bool Library::isPDF(const QString &url)
+{
+  return FMStatic::getMime(url) == "application/pdf";
+}
+
+bool Library::isPlainText(const QString &url)
+{
+    return FMStatic::checkFileType(FMStatic::FILTER_TYPE::TEXT, FMStatic::getMime(url));
+}
+
+bool Library::isEpub(const QString &url)
+{
+
+    return url.endsWith(".epub", Qt::CaseSensitivity::CaseInsensitive);
+}
+
+bool Library::isCommicBook(const QString &url)
+{
+    auto mime = FMStatic::getMime(url);
+    return mime == "application/vnd.comicbook+zip" || mime == "application/vnd.comicbook+rar";
 }
 
 

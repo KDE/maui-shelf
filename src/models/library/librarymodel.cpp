@@ -1,5 +1,7 @@
 #include "librarymodel.h"
 
+#include <QDebug>
+
 #include <MauiKit3/FileBrowsing/fileloader.h>
 #include <MauiKit3/FileBrowsing/fmstatic.h>
 
@@ -32,14 +34,14 @@ LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
 {
     qRegisterMetaType<LibraryModel*>("const LibraryModel*");
 
-//    connect(Library::instance(), &Library::sourcesChanged, this, &LibraryModel::setList);
+    //    connect(Library::instance(), &Library::sourcesChanged, this, &LibraryModel::setList);
 
     connect(m_fileLoader, &FMH::FileLoader::itemsReady,[this](FMH::MODEL_LIST items)
     {
-        emit this->preItemsAppended(items.size());
+        Q_EMIT this->preItemsAppended(items.size());
         this->list << items;
-        emit this->postItemAppended();
-        emit this->countChanged();
+        Q_EMIT this->postItemAppended();
+        Q_EMIT this->countChanged();
     });
 
     connect(this, &LibraryModel::sourcesChanged, this, &LibraryModel::setList);
@@ -48,9 +50,46 @@ LibraryModel::LibraryModel(QObject *parent) : MauiList(parent)
 void LibraryModel::setList(const QStringList &sources)
 {
     this->clear();
-auto paths = sources.count() == 1 && sources.first() == "collection:///" ? Library::instance()->sources() : sources;
+    QStringList paths = sources;
+    QStringList filters;
+
+    if(sources.count() == 1 )
+    {
+        QString source = sources.first();
+        paths = Library::instance()->sources();
+
+        if(source == "collection:///")
+        {
+            filters = FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT];
+
+        }else if( source == "comics:///")
+        {
+            QMimeDatabase mimedb;
+            QStringList types = mimedb.mimeTypeForName("application/vnd.comicbook+zip").suffixes();
+            types << mimedb.mimeTypeForName("application/vnd.comicbook+rar").suffixes();
+
+            for(const auto &type : types)
+            {
+                filters << "*."+type;
+            }
+
+        }else if( source == "documents:///")
+        {
+            QMimeDatabase mimedb;
+            QStringList types = mimedb.mimeTypeForName("application/pdf").suffixes();
+
+            for(const auto &type : types)
+            {
+                filters << "*."+type;
+            }
+        }
+    }else
+    {
+        filters = FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT];
+    }
+
     this->m_fileLoader->informer = &fileData;
-    this->m_fileLoader->requestPath(QUrl::fromStringList(paths), true, FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT]);
+    this->m_fileLoader->requestPath(QUrl::fromStringList(paths), true, filters);
 }
 
 const FMH::MODEL_LIST &LibraryModel::items() const
@@ -63,9 +102,9 @@ bool LibraryModel::remove(const int &index)
     if(index >= this->list.size() || index < 0)
         return false;
 
-    emit this->preItemRemoved(index);
+    Q_EMIT this->preItemRemoved(index);
     this->list.remove(index);
-    emit this->postItemRemoved();
+    Q_EMIT this->postItemRemoved();
 
     return true;
 }
@@ -103,10 +142,10 @@ void LibraryModel::clear()
         return;
     }
 
-    emit this->preListChanged();
+    Q_EMIT this->preListChanged();
     this->list.clear();
-    emit this->postListChanged();
-    emit this->countChanged();
+    Q_EMIT this->postListChanged();
+    Q_EMIT this->countChanged();
 }
 
 void LibraryModel::rescan()
@@ -120,7 +159,7 @@ void LibraryModel::setSources(QStringList sources)
         return;
 
     m_sources = sources;
-    emit sourcesChanged(m_sources);
+    Q_EMIT sourcesChanged(m_sources);
 }
 
 void LibraryModel::componentComplete()

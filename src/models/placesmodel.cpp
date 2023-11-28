@@ -3,7 +3,6 @@
 #include <MauiKit3/FileBrowsing/fmstatic.h>
 #include <MauiKit3/FileBrowsing/tagging.h>
 
-
 PlacesModel::PlacesModel(QObject *parent) : MauiList(parent)
 {
     m_quickPlaces << QVariantMap{{"icon", "love"}, {"path", "tags:///fav"}, {"label", i18n("Favorites")}};
@@ -14,12 +13,12 @@ PlacesModel::PlacesModel(QObject *parent) : MauiList(parent)
     m_quickPlaces << QVariantMap{{"icon", "view-list-icons"}, {"path", "collection:///"}, {"label", i18n("Collection")}};
 
     connect(Tagging::getInstance(), &Tagging::tagged, [this](QVariantMap item) {
-           emit this->preItemAppended();
+           Q_EMIT this->preItemAppended();
         auto tag = FMH::toModel(item);
         tag[FMH::MODEL_KEY::TYPE] = i18n("Tags");
         tag[FMH::MODEL_KEY::PATH] = QString("tags:///%1").arg(tag[FMH::MODEL_KEY::TAG]);
           m_list << tag;
-           emit this->postItemAppended();
+           Q_EMIT this->postItemAppended();
        });
 }
 
@@ -30,10 +29,10 @@ QVariantList PlacesModel::quickPlaces() const
 
 void PlacesModel::setList()
 {
-    emit this->preListChanged();
+    Q_EMIT this->preListChanged();
     m_list << this->tags();
-    emit this->postListChanged();
-    emit this->countChanged();
+    Q_EMIT this->postListChanged();
+    Q_EMIT this->countChanged();
 }
 
 FMH::MODEL_LIST PlacesModel::tags()

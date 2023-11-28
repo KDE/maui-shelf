@@ -1,5 +1,4 @@
-#ifndef LIBRARYMODEL_H
-#define LIBRARYMODEL_H
+#pragma once
 
 #include <QObject>
 
@@ -15,7 +14,6 @@ class LibraryModel : public MauiList
 {
     Q_OBJECT
     Q_PROPERTY(QStringList sources READ sources WRITE setSources NOTIFY sourcesChanged RESET resetSources)
-
 
 public:
     explicit LibraryModel(QObject *parent = nullptr);
@@ -33,15 +31,14 @@ private:
 
     QStringList m_sources;
 
-public slots:
+public Q_SLOTS:
     bool remove(const int &index);
     bool deleteAt(const int &index);
     bool bookmark(const int &index, const int &value);
     void clear();
     void rescan();
     void setSources(QStringList sources);
-signals:
+
+Q_SIGNALS:
     void sourcesChanged(QStringList sources);
 };
-
-#endif // LIBRARYMODEL_H

@@ -13,6 +13,8 @@
 #endif
 
 #include <MauiKit3/Core/mauiapp.h>
+#include <MauiKit3/FileBrowsing/moduleinfo.h>
+#include <MauiKit3/Documents/moduleinfo.h>
 
 //#include "epubreader.h"
 
@@ -58,8 +60,17 @@ int main(int argc, char *argv[])
     about.setBugAddress("https://invent.kde.org/maui/shelf/-/issues");
     about.setOrganizationDomain(SHELF_URI);
     about.setProgramLogo(app.windowIcon());
-    about.addComponent("Poppler");
+
     about.addCredit(i18n("Peruse Developers"));
+
+    const auto FBData = MauiKitFileBrowsing::aboutData();
+    about.addComponent(FBData.name(), MauiKitFileBrowsing::buildVersion(), FBData.version(), FBData.webAddress());
+
+    const auto DData = MauiKitDocuments::aboutData();
+    about.addComponent(DData.name(), MauiKitDocuments::buildVersion(), DData.version(), DData.webAddress());
+
+    const auto PopplerData = MauiKitDocuments::aboutPoppler();
+    about.addComponent(PopplerData.name(), "", PopplerData.version(), PopplerData.webAddress());
 
     KAboutData::setApplicationData(about);
     MauiApp::instance ()->setIconName ("qrc:/assets/shelf.svg");

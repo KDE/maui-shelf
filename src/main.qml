@@ -62,7 +62,7 @@ Maui.ApplicationWindow
         id: tagsDialogComponent
         FB.TagsDialog
         {
-            onTagsReady: composerList.updateToUrls(tags)
+            onTagsReady: (tags) => composerList.updateToUrls(tags)
             composerList.strict: false
         }
     }
@@ -91,7 +91,7 @@ Maui.ApplicationWindow
 
             LibraryView
             {
-                showCSDControls:  initModule === "collection"
+                showCSDControls: initModule === "collection"
             }
         }
     }

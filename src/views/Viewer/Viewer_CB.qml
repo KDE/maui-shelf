@@ -7,7 +7,6 @@ import org.mauikit.filebrowsing 1.3 as FB
 
 import org.mauikit.documents 1.0 as Peruse
 
-
 Maui.Page
 {
     id: control

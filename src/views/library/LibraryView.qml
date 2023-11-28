@@ -52,7 +52,7 @@ Maui.SideBarView
             }
         }
 
-        holder.visible: _browser.list.count == 0
+        holder.visible: _browser.count === 0
         holder.title: i18n("Nothing here!")
         holder.body: i18n("Add new sources to manage your documents.")
         holder.emoji: "qrc:/assets/document-new.svg"
@@ -274,14 +274,14 @@ Maui.SideBarView
                 _browser.currentIndex = index
                 const item = _browser.model.get(_browser.currentIndex)
 
-                if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt._browserModifier)))
+                if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
                 {
                     const item = _browser.model.get(_browser.currentIndex)
                     _selectionbar.append(item.path, item)
 
                 }else if(Maui.Handy.singleClick)
                 {
-                    viewerView.open(item.path)
+                    Shelf.Library.openFiles([item.url])
                 }
             }
 
@@ -291,7 +291,7 @@ Maui.SideBarView
                 if(!Maui.Handy.singleClick && !selectionMode)
                 {
                     const item = _browser.model.get(_browser.currentIndex)
-                    viewerView.open(item.path)
+                    Shelf.Library.openFiles([item.url])
                 }
             }
 
@@ -363,13 +363,13 @@ Maui.SideBarView
         _browser.currentIndex = index
         const item = _browser.model.get(_browser.currentIndex)
 
-        if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt._browserModifier)))
+        if(selectionMode || (mouse.button == Qt.LeftButton && (mouse.modifiers & Qt.ControlModifier)))
         {
             _selectionbar.append(item.path, item)
 
         }else if(Maui.Handy.singleClick)
         {
-            viewerView.open(item.path)
+            Shelf.Library.openFiles([item.path])
         }
     }
 
@@ -380,7 +380,7 @@ Maui.SideBarView
         if(!Maui.Handy.singleClick && !selectionMode)
         {
             const item = _browser.model.get(_browser.currentIndex)
-            viewerView.open(item.path)
+            Shelf.Library.openFiles([item.path])
         }
     }
 
@@ -420,11 +420,7 @@ footer: Maui.SelectionBar
         icon.name: "folder_open"
         onTriggered:
         {
-            for(var file of _selectionbar.uris)
-            {
-                console.log("OPEN FILES<<<<<<<<<<<<<<", file)
-                viewerView.open(file)
-            }
+            Shelf.Library.openFiles(_selectionbar.uris)
         }
     }
 
@@ -464,7 +460,6 @@ function openFolders(paths)
     control.sources = paths
 }
 
-
 function filterSelection(url)
 {
     if(_selectionbar.contains(url))
@@ -475,7 +470,6 @@ function filterSelection(url)
         return [url]
     }
 }
-
 
 function filterSelectedItems(path)
 {

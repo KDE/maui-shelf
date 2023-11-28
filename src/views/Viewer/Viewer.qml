@@ -6,6 +6,7 @@ import org.mauikit.controls 1.3 as Maui
 import org.mauikit.filebrowsing 1.3 as FB
 
 import org.mauikit.documents 1.0 as Poppler
+import org.maui.shelf 1.0 as Shelf
 
 Item
 {
@@ -189,6 +190,7 @@ Item
 
     function open(path)
     {
+        console.log("CHECKING IF DOC FILE EXISTS", path)
         if(FB.FM.fileExists(path))
         {
             if(!viewerView.visible)
@@ -196,21 +198,20 @@ Item
                 toggleViewer()
             }
 
-            if(path.endsWith(".pdf"))
+            if(Shelf.Library.isPDF(path))
             {
                 _tabView.addTab(_pdfComponent, ({'path': path}))
             }
-            else if(path.endsWith(".txt"))
+            else if(Shelf.Library.isPlainText(path))
             {
                 _tabView.addTab(_txtComponent, ({'path': path}))
             }
-            else if(path.endsWith(".epub"))
+            else if(Shelf.Library.isEpub(path))
             {
                 _tabView.addTab(_epubComponent, ({'path': path}))
-            }else if(path.endsWith(".cbz"))
+            }else if(Shelf.Library.isCommicBook(path))
             {
                 _tabView.addTab(_CBComponent, ({'path': path}))
-
             }
 
             else return;

@@ -24,9 +24,6 @@ private:
 public:
     void classBegin() override final;
     void componentComplete() override final;
-
-    // MauiList interface
-public:
     const FMH::MODEL_LIST &items() const override final;
 };
 
