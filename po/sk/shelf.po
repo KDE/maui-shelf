@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:29+0000\n"
+"POT-Creation-Date: 2023-11-29 00:41+0000\n"
 "PO-Revision-Date: 2020-11-08 21:27+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -15,68 +15,68 @@ msgstr ""
 "X-Generator: Lokalize 20.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: src/main.cpp:48
+#: src/main.cpp:50
 #, kde-format
 msgid "Shelf"
 msgstr "Shelf"
 
-#: src/main.cpp:50
+#: src/main.cpp:52
 #, kde-format
 msgid "Browse and view your documents."
 msgstr ""
 
-#: src/main.cpp:52
+#: src/main.cpp:54
 #, kde-format
 msgid "© 2019-2023 Maui Development Team"
 msgstr ""
 
-#: src/main.cpp:55
+#: src/main.cpp:57
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:55
+#: src/main.cpp:57
 #, kde-format
 msgid "Developer"
 msgstr "Vývojár"
 
-#: src/main.cpp:62
+#: src/main.cpp:64
 #, fuzzy, kde-format
 #| msgid "Developer"
 msgid "Peruse Developers"
 msgstr "Vývojár"
 
-#: src/models/placesmodel.cpp:9
+#: src/models/placesmodel.cpp:8
 #, kde-format
 msgid "Favorites"
 msgstr ""
 
-#: src/models/placesmodel.cpp:10
+#: src/models/placesmodel.cpp:9
 #, kde-format
 msgid "Downloads"
 msgstr ""
 
-#: src/models/placesmodel.cpp:11
+#: src/models/placesmodel.cpp:10
 #, kde-format
 msgid "Documents"
 msgstr ""
 
-#: src/models/placesmodel.cpp:12
+#: src/models/placesmodel.cpp:11
 #, kde-format
 msgid "Comics"
 msgstr ""
 
-#: src/models/placesmodel.cpp:13
+#: src/models/placesmodel.cpp:12
 #, kde-format
 msgid "PDFs"
 msgstr ""
 
-#: src/models/placesmodel.cpp:14
+#: src/models/placesmodel.cpp:13
 #, kde-format
 msgid "Collection"
 msgstr ""
 
-#: src/models/placesmodel.cpp:19 src/models/placesmodel.cpp:46
+#: src/models/placesmodel.cpp:18 src/models/placesmodel.cpp:45
 #: src/views/library/LibraryMenu.qml:40
 #, kde-format
 msgid "Tags"
@@ -117,8 +117,8 @@ msgstr ""
 msgid "Info"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:445
-#: src/views/Viewer/Viewer.qml:101
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:441
+#: src/views/Viewer/Viewer.qml:102
 #, kde-format
 msgid "Share"
 msgstr "Zdieľať"
@@ -128,7 +128,7 @@ msgstr "Zdieľať"
 msgid "Select"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:455
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:451
 #, kde-format
 msgid "Export"
 msgstr "Exportovať"
@@ -225,7 +225,7 @@ msgstr ""
 msgid "Filter..."
 msgstr "Filter..."
 
-#: src/views/library/LibraryView.qml:433
+#: src/views/library/LibraryView.qml:429
 #, kde-format
 msgid "Tag"
 msgstr ""
@@ -291,37 +291,37 @@ msgstr ""
 msgid "Scan now"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:41
+#: src/views/Viewer/Viewer.qml:42
 #, kde-format
 msgid "Nothing here"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:42
+#: src/views/Viewer/Viewer.qml:43
 #, kde-format
 msgid "Drop or open a document to view."
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:58
+#: src/views/Viewer/Viewer.qml:59
 #, kde-format
 msgid "Browser"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:75
+#: src/views/Viewer/Viewer.qml:76
 #, kde-format
 msgid "Fav"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:89
+#: src/views/Viewer/Viewer.qml:90
 #, kde-format
 msgid "Doodle"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:115
+#: src/views/Viewer/Viewer.qml:116
 #, kde-format
 msgid "Browse Horizontally"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:139
+#: src/views/Viewer/Viewer.qml:140
 #, kde-format
 msgid "Fullscreen"
 msgstr ""

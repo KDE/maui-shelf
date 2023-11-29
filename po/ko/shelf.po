@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:29+0000\n"
+"POT-Creation-Date: 2023-11-29 00:41+0000\n"
 "PO-Revision-Date: 2023-07-26 00:30+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,68 +17,68 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: src/main.cpp:48
+#: src/main.cpp:50
 #, kde-format
 msgid "Shelf"
 msgstr "Shelf"
 
-#: src/main.cpp:50
+#: src/main.cpp:52
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "문서를 탐색하고 봅니다."
 
-#: src/main.cpp:52
+#: src/main.cpp:54
 #, fuzzy, kde-format
 #| msgid "© 2019-%1 Maui Development Team"
 msgid "© 2019-2023 Maui Development Team"
 msgstr "© 2019-%1 Maui Development Team"
 
-#: src/main.cpp:55
+#: src/main.cpp:57
 #, kde-format
 msgid "Camilo Higuita"
 msgstr "Camilo Higuita"
 
-#: src/main.cpp:55
+#: src/main.cpp:57
 #, kde-format
 msgid "Developer"
 msgstr "개발자"
 
-#: src/main.cpp:62
+#: src/main.cpp:64
 #, kde-format
 msgid "Peruse Developers"
 msgstr "Peruse 개발자"
 
-#: src/models/placesmodel.cpp:9
+#: src/models/placesmodel.cpp:8
 #, kde-format
 msgid "Favorites"
 msgstr "책갈피"
 
-#: src/models/placesmodel.cpp:10
+#: src/models/placesmodel.cpp:9
 #, kde-format
 msgid "Downloads"
 msgstr "다운로드"
 
-#: src/models/placesmodel.cpp:11
+#: src/models/placesmodel.cpp:10
 #, kde-format
 msgid "Documents"
 msgstr "문서"
 
-#: src/models/placesmodel.cpp:12
+#: src/models/placesmodel.cpp:11
 #, kde-format
 msgid "Comics"
 msgstr "만화"
 
-#: src/models/placesmodel.cpp:13
+#: src/models/placesmodel.cpp:12
 #, kde-format
 msgid "PDFs"
 msgstr "PDF"
 
-#: src/models/placesmodel.cpp:14
+#: src/models/placesmodel.cpp:13
 #, kde-format
 msgid "Collection"
 msgstr "모음집"
 
-#: src/models/placesmodel.cpp:19 src/models/placesmodel.cpp:46
+#: src/models/placesmodel.cpp:18 src/models/placesmodel.cpp:45
 #: src/views/library/LibraryMenu.qml:40
 #, kde-format
 msgid "Tags"
@@ -119,8 +119,8 @@ msgstr "책갈피 해제"
 msgid "Info"
 msgstr "정보"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:445
-#: src/views/Viewer/Viewer.qml:101
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:441
+#: src/views/Viewer/Viewer.qml:102
 #, kde-format
 msgid "Share"
 msgstr "공유"
@@ -130,7 +130,7 @@ msgstr "공유"
 msgid "Select"
 msgstr "선택"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:455
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:451
 #, kde-format
 msgid "Export"
 msgstr "내보내기"
@@ -225,7 +225,7 @@ msgstr "정보"
 msgid "Filter..."
 msgstr "필터..."
 
-#: src/views/library/LibraryView.qml:433
+#: src/views/library/LibraryView.qml:429
 #, kde-format
 msgid "Tag"
 msgstr "태그"
@@ -291,37 +291,37 @@ msgstr "추가"
 msgid "Scan now"
 msgstr "지금 검색"
 
-#: src/views/Viewer/Viewer.qml:41
+#: src/views/Viewer/Viewer.qml:42
 #, kde-format
 msgid "Nothing here"
 msgstr "아무것도 없습니다"
 
-#: src/views/Viewer/Viewer.qml:42
+#: src/views/Viewer/Viewer.qml:43
 #, kde-format
 msgid "Drop or open a document to view."
 msgstr "볼 문서를 끌어다 놓거나 여십시오."
 
-#: src/views/Viewer/Viewer.qml:58
+#: src/views/Viewer/Viewer.qml:59
 #, kde-format
 msgid "Browser"
 msgstr "탐색기"
 
-#: src/views/Viewer/Viewer.qml:75
+#: src/views/Viewer/Viewer.qml:76
 #, kde-format
 msgid "Fav"
 msgstr "책갈피"
 
-#: src/views/Viewer/Viewer.qml:89
+#: src/views/Viewer/Viewer.qml:90
 #, kde-format
 msgid "Doodle"
 msgstr "Doodle"
 
-#: src/views/Viewer/Viewer.qml:115
+#: src/views/Viewer/Viewer.qml:116
 #, kde-format
 msgid "Browse Horizontally"
 msgstr "수평으로 탐색"
 
-#: src/views/Viewer/Viewer.qml:139
+#: src/views/Viewer/Viewer.qml:140
 #, kde-format
 msgid "Fullscreen"
 msgstr "전체 화면"
