@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-29 00:41+0000\n"
-"PO-Revision-Date: 2023-03-06 13:44+0200\n"
+"PO-Revision-Date: 2023-11-19 19:36+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -28,10 +28,9 @@ msgid "Browse and view your documents."
 msgstr "Selaa ja katsele tiedostojasi."
 
 #: src/main.cpp:54
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
+#, kde-format
 msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019–%1 Maui-kehitysryhmä"
+msgstr "© 2019–2023 Maui-kehitysryhmä"
 
 #: src/main.cpp:57
 #, kde-format
@@ -261,12 +260,12 @@ msgstr ""
 #: src/views/SettingsDialog.qml:85
 #, kde-format
 msgid "Previews"
-msgstr ""
+msgstr "Esikatselut"
 
 #: src/views/SettingsDialog.qml:86
 #, kde-format
 msgid "Display thumbnail previews."
-msgstr ""
+msgstr "Näytä pienoiskuvaesikatselut:"
 
 #: src/views/SettingsDialog.qml:100
 #, kde-format
