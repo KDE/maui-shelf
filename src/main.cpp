@@ -47,14 +47,14 @@ int main(int argc, char *argv[])
 
     KLocalizedString::setApplicationDomain("shelf");
     KAboutData about(QStringLiteral("shelf"),
-                     i18n("Shelf"),
+                     QStringLiteral("Shelf"),
                      SHELF_VERSION_STRING,
                      i18n("Browse and view your documents."),
                      KAboutLicense::LGPL_V3,
-                     i18n("© 2019-2023 Maui Development Team"),
+                     APP_COPYRIGHT_NOTICE,
                      QString(GIT_BRANCH) + "/" + QString(GIT_COMMIT_HASH));
 
-    about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
+    about.addAuthor(QStringLiteral("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
     about.setHomepage("https://mauikit.org");
     about.setProductName("maui/shelf");
     about.setBugAddress("https://invent.kde.org/maui/shelf/-/issues");
