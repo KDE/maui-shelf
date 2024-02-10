@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
-# Shinjo Park <kde@peremen.name>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 00:41+0000\n"
-"PO-Revision-Date: 2023-07-26 00:30+0200\n"
+"POT-Creation-Date: 2024-02-10 01:51+0000\n"
+"PO-Revision-Date: 2024-02-10 00:19+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,28 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
-
-#: src/main.cpp:50
-#, kde-format
-msgid "Shelf"
-msgstr "Shelf"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: src/main.cpp:52
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "문서를 탐색하고 봅니다."
-
-#: src/main.cpp:54
-#, fuzzy, kde-format
-#| msgid "© 2019-%1 Maui Development Team"
-msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-%1 Maui Development Team"
-
-#: src/main.cpp:57
-#, kde-format
-msgid "Camilo Higuita"
-msgstr "Camilo Higuita"
 
 #: src/main.cpp:57
 #, kde-format
@@ -259,12 +243,12 @@ msgstr "시작할 때 모든 문서 원본을 검색하여 모음집을 최신 �
 #: src/views/SettingsDialog.qml:85
 #, kde-format
 msgid "Previews"
-msgstr ""
+msgstr "미리 보기"
 
 #: src/views/SettingsDialog.qml:86
 #, kde-format
 msgid "Display thumbnail previews."
-msgstr ""
+msgstr "섬네일 미리 보기를 표시합니다."
 
 #: src/views/SettingsDialog.qml:100
 #, kde-format
@@ -325,6 +309,15 @@ msgstr "수평으로 탐색"
 #, kde-format
 msgid "Fullscreen"
 msgstr "전체 화면"
+
+#~ msgid "Shelf"
+#~ msgstr "Shelf"
+
+#~ msgid "© 2019-2023 Maui Development Team"
+#~ msgstr "© 2019-2023 Maui Development Team"
+
+#~ msgid "Camilo Higuita"
+#~ msgstr "Camilo Higuita"
 
 #~ msgid "View type"
 #~ msgstr "보기 형식"

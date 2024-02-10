@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 00:41+0000\n"
+"POT-Creation-Date: 2024-02-10 01:51+0000\n"
 "PO-Revision-Date: 2023-10-30 05:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,25 +18,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.1\n"
 
-#: src/main.cpp:50
-#, kde-format
-msgid "Shelf"
-msgstr "Shelf"
-
 #: src/main.cpp:52
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "მოძებნეთ და დაათვალიერეთ თქვენი დოკუმენტები."
-
-#: src/main.cpp:54
-#, kde-format
-msgid "© 2019-2023 Maui Development Team"
-msgstr "© 2019-2023 Maui განვითარების გუნდი"
-
-#: src/main.cpp:57
-#, kde-format
-msgid "Camilo Higuita"
-msgstr "კამილო ჰიგუიტა"
 
 #: src/main.cpp:57
 #, kde-format
@@ -327,6 +312,15 @@ msgstr "ჰორიზონტალურად დათვალიერ�
 #, kde-format
 msgid "Fullscreen"
 msgstr "მთელ ეკრანზე"
+
+#~ msgid "Shelf"
+#~ msgstr "Shelf"
+
+#~ msgid "© 2019-2023 Maui Development Team"
+#~ msgstr "© 2019-2023 Maui განვითარების გუნდი"
+
+#~ msgid "Camilo Higuita"
+#~ msgstr "კამილო ჰიგუიტა"
 
 #~ msgid "View type"
 #~ msgstr "ხედის ტიპი"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-29 00:41+0000\n"
+"POT-Creation-Date: 2024-02-10 01:51+0000\n"
 "PO-Revision-Date: 2020-11-08 21:27+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -15,25 +15,10 @@ msgstr ""
 "X-Generator: Lokalize 20.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: src/main.cpp:50
-#, kde-format
-msgid "Shelf"
-msgstr "Shelf"
-
 #: src/main.cpp:52
 #, kde-format
 msgid "Browse and view your documents."
 msgstr ""
-
-#: src/main.cpp:54
-#, kde-format
-msgid "© 2019-2023 Maui Development Team"
-msgstr ""
-
-#: src/main.cpp:57
-#, kde-format
-msgid "Camilo Higuita"
-msgstr "Camilo Higuita"
 
 #: src/main.cpp:57
 #, kde-format
@@ -325,6 +310,12 @@ msgstr ""
 #, kde-format
 msgid "Fullscreen"
 msgstr ""
+
+#~ msgid "Shelf"
+#~ msgstr "Shelf"
+
+#~ msgid "Camilo Higuita"
+#~ msgstr "Camilo Higuita"
 
 #, fuzzy
 #~| msgid "Viewer"
