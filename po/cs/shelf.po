@@ -310,12 +310,3 @@ msgstr "Prohlížet vodorovně"
 #, kde-format
 msgid "Fullscreen"
 msgstr "Celá obrazovka"
-
-#~ msgid "Shelf"
-#~ msgstr "Shelf"
-
-#~ msgid "© 2019-2023 Maui Development Team"
-#~ msgstr "© 2019-2023 Vývojový tým Maui"
-
-#~ msgid "Camilo Higuita"
-#~ msgstr "Camilo Higuita"
