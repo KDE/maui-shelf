@@ -311,30 +311,3 @@ msgstr "Yatay Olarak Göz At"
 #, kde-format
 msgid "Fullscreen"
 msgstr "Tam Ekran"
-
-#~ msgid "Shelf"
-#~ msgstr "Raf"
-
-#~ msgid "© 2019-2023 Maui Development Team"
-#~ msgstr "© 2019-2023 Maui Geliştirme Takımı"
-
-#~ msgid "Camilo Higuita"
-#~ msgstr "Camilo Higuita"
-
-#~ msgid "View type"
-#~ msgstr "Görüntüleme türü"
-
-#~ msgid "Sort by"
-#~ msgstr "Sıralama ölçütü"
-
-#~ msgid "Configure the app plugins and behavior."
-#~ msgstr "Uygulama eklentilerini ve davranışlarını yapılandırın."
-
-#~ msgid "Add or remove sources"
-#~ msgstr "Kaynak ekle veya kaldır"
-
-#~ msgid "Favs"
-#~ msgstr "Sık Kullanılanlar"
-
-#~ msgid "Important"
-#~ msgstr "Önemli"
