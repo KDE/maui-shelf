@@ -1,0 +1,312 @@
+# translation of shelf.pot to Esperanto
+# Copyright (C) 2024 Free Software Foundation, Inc.
+# This file is distributed under the same license as the maui-shelf package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: maui-shelf\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-02-10 01:51+0000\n"
+"PO-Revision-Date: 2024-02-26 21:30+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Browse and view your documents."
+msgstr ""
+
+#: src/main.cpp:57
+#, kde-format
+msgid "Developer"
+msgstr "Ellaboranto"
+
+#: src/main.cpp:64
+#, kde-format
+msgid "Peruse Developers"
+msgstr ""
+
+#: src/models/placesmodel.cpp:8
+#, kde-format
+msgid "Favorites"
+msgstr "Plej ŝatataj"
+
+#: src/models/placesmodel.cpp:9
+#, kde-format
+msgid "Downloads"
+msgstr "Elŝutoj"
+
+#: src/models/placesmodel.cpp:10
+#, kde-format
+msgid "Documents"
+msgstr "Dokumentoj"
+
+#: src/models/placesmodel.cpp:11
+#, kde-format
+msgid "Comics"
+msgstr "Bildstrio"
+
+#: src/models/placesmodel.cpp:12
+#, kde-format
+msgid "PDFs"
+msgstr ""
+
+#: src/models/placesmodel.cpp:13
+#, kde-format
+msgid "Collection"
+msgstr "Kolekto"
+
+#: src/models/placesmodel.cpp:18 src/models/placesmodel.cpp:45
+#: src/views/library/LibraryMenu.qml:40
+#, kde-format
+msgid "Tags"
+msgstr "Etikedoj"
+
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:148
+#, kde-format
+msgid "Title"
+msgstr "Titolo"
+
+#: src/views/cloud/CloudView.qml:36
+#, kde-format
+msgid "Add date"
+msgstr ""
+
+#: src/views/cloud/CloudView.qml:42
+#, kde-format
+msgid "Creation date"
+msgstr "Kreodato"
+
+#: src/views/cloud/CloudView.qml:48
+#, kde-format
+msgid "Format"
+msgstr "Formato"
+
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:164
+#, kde-format
+msgid "Size"
+msgstr "Grandeco"
+
+#: src/views/library/LibraryMenu.qml:31
+#, kde-format
+msgid "UnFav it"
+msgstr ""
+
+#: src/views/library/LibraryMenu.qml:52
+#, kde-format
+msgid "Info"
+msgstr "Informo"
+
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:441
+#: src/views/Viewer/Viewer.qml:102
+#, kde-format
+msgid "Share"
+msgstr "Kunhavigi"
+
+#: src/views/library/LibraryMenu.qml:76
+#, kde-format
+msgid "Select"
+msgstr "Elekti"
+
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:451
+#, kde-format
+msgid "Export"
+msgstr "Eksporti"
+
+#: src/views/library/LibraryMenu.qml:110
+#, kde-format
+msgid "Open with"
+msgstr "Malfermi kun"
+
+#: src/views/library/LibraryMenu.qml:121
+#, kde-format
+msgid "Go to Folder"
+msgstr ""
+
+#: src/views/library/LibraryMenu.qml:133
+#, kde-format
+msgid "Open Location"
+msgstr "Malfermi lokon"
+
+#: src/views/library/LibraryMenu.qml:145
+#, kde-format
+msgid "Remove"
+msgstr "Forigi"
+
+#: src/views/library/LibraryView.qml:56
+#, kde-format
+msgid "Nothing here!"
+msgstr "Nenio ĉi tie!"
+
+#: src/views/library/LibraryView.qml:57
+#, kde-format
+msgid "Add new sources to manage your documents."
+msgstr ""
+
+#: src/views/library/LibraryView.qml:63
+#, kde-format
+msgid "Open file"
+msgstr "Malfermi dosieron"
+
+#: src/views/library/LibraryView.qml:69
+#, kde-format
+msgid "Add sources"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:99
+#, kde-format
+msgid "Toggle sidebar"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:119 src/views/library/LibraryView.qml:419
+#, kde-format
+msgid "Open"
+msgstr "Malfermi"
+
+#: src/views/library/LibraryView.qml:128
+#, kde-format
+msgid "List"
+msgstr "Listo"
+
+#: src/views/library/LibraryView.qml:137
+#, kde-format
+msgid "Grid"
+msgstr "Krado"
+
+#: src/views/library/LibraryView.qml:156
+#, kde-format
+msgid "Date"
+msgstr "Dato"
+
+#: src/views/library/LibraryView.qml:174
+#, kde-format
+msgid "Ascending"
+msgstr "Kreskante"
+
+#: src/views/library/LibraryView.qml:181
+#, kde-format
+msgid "Descending"
+msgstr "Malkreskanta"
+
+#: src/views/library/LibraryView.qml:190
+#, kde-format
+msgid "Settings"
+msgstr "Agordoj"
+
+#: src/views/library/LibraryView.qml:197
+#, kde-format
+msgid "About"
+msgstr "Pri"
+
+#: src/views/library/LibraryView.qml:209
+#, kde-format
+msgid "Filter..."
+msgstr "Filtri..."
+
+#: src/views/library/LibraryView.qml:429
+#, kde-format
+msgid "Tag"
+msgstr "Etikedo"
+
+#: src/views/library/Sidebar.qml:52
+#, kde-format
+msgid "Tags!"
+msgstr ""
+
+#: src/views/library/Sidebar.qml:53
+#, kde-format
+msgid "Your tags will be listed here"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:53
+#, kde-format
+msgid "General"
+msgstr "Ĝenerala"
+
+#: src/views/SettingsDialog.qml:71
+#, kde-format
+msgid "Auto Scan"
+msgstr ""
+
+#: src/views/SettingsDialog.qml:72
+#, kde-format
+msgid ""
+"Scan all the document sources on startup to keep your collection up to date."
+msgstr ""
+
+#: src/views/SettingsDialog.qml:85
+#, kde-format
+msgid "Previews"
+msgstr "Antaŭrigardoj"
+
+#: src/views/SettingsDialog.qml:86
+#, kde-format
+msgid "Display thumbnail previews."
+msgstr ""
+
+#: src/views/SettingsDialog.qml:100
+#, kde-format
+msgid "Dark Mode"
+msgstr "Malhela Reĝimo"
+
+#: src/views/SettingsDialog.qml:101
+#, kde-format
+msgid "Switch between light and dark colorscheme."
+msgstr ""
+
+#: src/views/SettingsDialog.qml:118
+#, kde-format
+msgid "Sources"
+msgstr "Fontoj"
+
+#: src/views/SettingsDialog.qml:157
+#, kde-format
+msgid "Add"
+msgstr "Aldoni"
+
+#: src/views/SettingsDialog.qml:174
+#, kde-format
+msgid "Scan now"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:42
+#, kde-format
+msgid "Nothing here"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:43
+#, kde-format
+msgid "Drop or open a document to view."
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:59
+#, kde-format
+msgid "Browser"
+msgstr "Retumilo"
+
+#: src/views/Viewer/Viewer.qml:76
+#, kde-format
+msgid "Fav"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:90
+#, kde-format
+msgid "Doodle"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:116
+#, kde-format
+msgid "Browse Horizontally"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:140
+#, kde-format
+msgid "Fullscreen"
+msgstr "Plenekrane"
