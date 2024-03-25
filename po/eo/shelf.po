@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-10 01:51+0000\n"
-"PO-Revision-Date: 2024-02-26 21:30+0100\n"
+"PO-Revision-Date: 2024-03-24 10:34+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
 "Language: eo\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: src/main.cpp:52
 #, kde-format
 msgid "Browse and view your documents."
-msgstr ""
+msgstr "Foliumi kaj vidi viajn dokumentojn."
 
 #: src/main.cpp:57
 #, kde-format
@@ -31,7 +31,7 @@ msgstr "Ellaboranto"
 #: src/main.cpp:64
 #, kde-format
 msgid "Peruse Developers"
-msgstr ""
+msgstr "Peruse Programistoj"
 
 #: src/models/placesmodel.cpp:8
 #, kde-format
@@ -56,7 +56,7 @@ msgstr "Bildstrio"
 #: src/models/placesmodel.cpp:12
 #, kde-format
 msgid "PDFs"
-msgstr ""
+msgstr "PDF-oj"
 
 #: src/models/placesmodel.cpp:13
 #, kde-format
@@ -77,7 +77,7 @@ msgstr "Titolo"
 #: src/views/cloud/CloudView.qml:36
 #, kde-format
 msgid "Add date"
-msgstr ""
+msgstr "Aldoni daton"
 
 #: src/views/cloud/CloudView.qml:42
 #, kde-format
@@ -97,7 +97,7 @@ msgstr "Grandeco"
 #: src/views/library/LibraryMenu.qml:31
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "MalFavi ĝin"
 
 #: src/views/library/LibraryMenu.qml:52
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "Malfermi kun"
 #: src/views/library/LibraryMenu.qml:121
 #, kde-format
 msgid "Go to Folder"
-msgstr ""
+msgstr "Iri al Dosierujo"
 
 #: src/views/library/LibraryMenu.qml:133
 #, kde-format
@@ -148,7 +148,7 @@ msgstr "Nenio ĉi tie!"
 #: src/views/library/LibraryView.qml:57
 #, kde-format
 msgid "Add new sources to manage your documents."
-msgstr ""
+msgstr "Aldoni novajn fontojn por administri viajn dokumentojn."
 
 #: src/views/library/LibraryView.qml:63
 #, kde-format
@@ -158,12 +158,12 @@ msgstr "Malfermi dosieron"
 #: src/views/library/LibraryView.qml:69
 #, kde-format
 msgid "Add sources"
-msgstr ""
+msgstr "Aldoni fontojn"
 
 #: src/views/library/LibraryView.qml:99
 #, kde-format
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "Baskuligi flankbreton"
 
 #: src/views/library/LibraryView.qml:119 src/views/library/LibraryView.qml:419
 #, kde-format
@@ -218,12 +218,12 @@ msgstr "Etikedo"
 #: src/views/library/Sidebar.qml:52
 #, kde-format
 msgid "Tags!"
-msgstr ""
+msgstr "Etikedoj!"
 
 #: src/views/library/Sidebar.qml:53
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Viaj etikedoj estos listigitaj ĉi tie"
 
 #: src/views/SettingsDialog.qml:53
 #, kde-format
@@ -233,7 +233,7 @@ msgstr "Ĝenerala"
 #: src/views/SettingsDialog.qml:71
 #, kde-format
 msgid "Auto Scan"
-msgstr ""
+msgstr "Aŭtomata Skanado"
 
 #: src/views/SettingsDialog.qml:72
 #, kde-format
@@ -249,7 +249,7 @@ msgstr "Antaŭrigardoj"
 #: src/views/SettingsDialog.qml:86
 #, kde-format
 msgid "Display thumbnail previews."
-msgstr ""
+msgstr "Montri bildetojn antaŭrigardojn."
 
 #: src/views/SettingsDialog.qml:100
 #, kde-format
@@ -259,7 +259,7 @@ msgstr "Malhela Reĝimo"
 #: src/views/SettingsDialog.qml:101
 #, kde-format
 msgid "Switch between light and dark colorscheme."
-msgstr ""
+msgstr "Ŝanĝu inter hela kaj malhela kolorskemo."
 
 #: src/views/SettingsDialog.qml:118
 #, kde-format
@@ -274,17 +274,17 @@ msgstr "Aldoni"
 #: src/views/SettingsDialog.qml:174
 #, kde-format
 msgid "Scan now"
-msgstr ""
+msgstr "Skani nun"
 
 #: src/views/Viewer/Viewer.qml:42
 #, kde-format
 msgid "Nothing here"
-msgstr ""
+msgstr "Nenio ĉi tie"
 
 #: src/views/Viewer/Viewer.qml:43
 #, kde-format
 msgid "Drop or open a document to view."
-msgstr ""
+msgstr "Faligi aŭ malfermi dokumenton por vidi."
 
 #: src/views/Viewer/Viewer.qml:59
 #, kde-format
@@ -294,17 +294,17 @@ msgstr "Retumilo"
 #: src/views/Viewer/Viewer.qml:76
 #, kde-format
 msgid "Fav"
-msgstr ""
+msgstr "Fav"
 
 #: src/views/Viewer/Viewer.qml:90
 #, kde-format
 msgid "Doodle"
-msgstr ""
+msgstr "Doodle"
 
 #: src/views/Viewer/Viewer.qml:116
 #, kde-format
 msgid "Browse Horizontally"
-msgstr ""
+msgstr "Foliumi Horizontale"
 
 #: src/views/Viewer/Viewer.qml:140
 #, kde-format
