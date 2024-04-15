@@ -14,8 +14,10 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(REQUIRED_QT_VERSION 5.15.0)
-set(REQUIRED_KF5_VERSION 5.60)
+set(QT_MAJOR_VERSION 6)
+
+set(REQUIRED_QT_VERSION 6.5.2)
+set(REQUIRED_KF_VERSION 5.240.0)
 
 if(ANDROID)
     set(ANDROID_PACKAGE_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/android_files)
@@ -23,33 +25,19 @@ if(ANDROID)
     configure_file(${CMAKE_CURRENT_SOURCE_DIR}/android_files/version.gradle.in ${CMAKE_BINARY_DIR}/version.gradle)
 endif()
 
-option(QUICK_COMPILER "Use QtQuick compiler to improve performance" TRUE)
-
-find_package(ECM ${REQUIRED_KF5_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${REQUIRED_KF_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake" ${ECM_MODULE_PATH})
 
 if(ANDROID)
-    find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS AndroidExtras QuickControls2)
+    find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS AndroidExtras QuickControls2)
 elseif(UNIX)
-    find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets)
-    find_package(Poppler REQUIRED COMPONENTS Qt5)
-    set_package_properties("Poppler" PROPERTIES
-        TYPE RECOMMENDED
-        PURPOSE "Support for PDF files.")
+    find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Widgets)
 endif()
 
-find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Qml Quick)
-find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS I18n CoreAddons)
+find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE COMPONENTS Qml Quick)
+find_package(KF6 ${REQUIRED_KF_VERSION} REQUIRED COMPONENTS I18n CoreAddons)
 
-find_package(MauiKit3 REQUIRED COMPONENTS FileBrowsing Documents)
-find_package(MauiKit3 REQUIRED)
-
-if(QUICK_COMPILER)
-    find_package(Qt5QuickCompiler)
-    set_package_properties(Qt5QuickCompiler PROPERTIES
-        DESCRIPTION "Compile QML at build time"
-        TYPE OPTIONAL)
-endif()
+find_package(MauiKit4 REQUIRED COMPONENTS FileBrowsing Documents)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     include(KDEInstallDirs)
@@ -94,7 +82,7 @@ add_subdirectory(src)
 ki18n_install(po)
 
 if(UNIX AND NOT APPLE AND NOT ANDROID)
-    install(FILES org.kde.shelf.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+    install(FILES org.kde.shelf.desktop DESTINATION ${KDE_INSTALL_APPDIR})
     install(FILES org.kde.shelf.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 endif()
 

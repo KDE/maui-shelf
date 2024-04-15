@@ -1,11 +1,11 @@
-import QtQuick 2.13
-import QtQuick.Controls 2.13
-import QtQuick.Window 2.12
+import QtQuick 
+import QtQuick.Controls
+import QtQuick.Window 
 
-import org.mauikit.controls 1.3 as Maui
-import org.mauikit.filebrowsing 1.3 as FB
+import org.mauikit.controls as Maui
+import org.mauikit.filebrowsing as FB
 
-import org.mauikit.documents 1.0 as Peruse
+import org.mauikit.documents as Peruse
 
 Maui.Page
 {

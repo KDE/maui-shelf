@@ -1,12 +1,11 @@
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import Qt.labs.settings 1.0
+import QtQuick 
+import QtQuick.Controls 
 
-import org.mauikit.controls 1.3 as Maui
-import org.mauikit.filebrowsing 1.3 as FB
-import QtQuick.Layouts 1.12
+import org.mauikit.controls as Maui
+import org.mauikit.filebrowsing as FB
+import QtQuick.Layouts
 
-import org.maui.shelf 1.0 as Shelf
+import org.maui.shelf as Shelf
 
 Loader
 {
@@ -43,7 +42,7 @@ Loader
         section.delegate: Maui.LabelDelegate
         {
             width: ListView.view.width
-            label: section
+            text: section
             isSection: true
             //                height: Maui.Style.toolBarHeightAlt
         }
