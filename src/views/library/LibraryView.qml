@@ -10,6 +10,7 @@ import org.maui.shelf as Shelf
 Maui.SideBarView
 {
     id: control
+
     property alias list : _libraryList
     property alias flickable : _browser.flickable
     property alias sources : _libraryList.sources

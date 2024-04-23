@@ -22,7 +22,6 @@ static FMH::MODEL fileData(const QUrl &url)
     }else
     {
         model.insert(FMH::MODEL_KEY::PREVIEW, "image://preview/"+url.toString());
-
     }
 
     return model;
