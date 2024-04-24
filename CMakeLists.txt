@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(SHELF_VERSION 3.1.0)
+set(SHELF_VERSION 4.0.0)
 add_compile_definitions(APP_COPYRIGHT_NOTICE="© 2019-2024 Maui Development Team")
 
 project(shelf LANGUAGES CXX VERSION ${SHELF_VERSION})
