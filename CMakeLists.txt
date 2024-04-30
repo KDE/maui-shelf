@@ -42,8 +42,6 @@ find_package(MauiKit4 REQUIRED COMPONENTS FileBrowsing Documents)
 if(UNIX AND NOT APPLE AND NOT ANDROID)
     include(KDEInstallDirs)
     include(KDECMakeSettings)
-    include(ECMInstallIcons)
-    include(ECMAddAppIcon)
 endif()
 
 #include(KDECompilerSettings NO_POLICY_SCOPE) //this makes android app launch crash by not finding the main method

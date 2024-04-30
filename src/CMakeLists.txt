@@ -14,7 +14,8 @@ set(shelf_SRCS
 set(shelf_ASSETS
     lib_assets.qrc)
 
-qt_add_resources(shelf_QML_QRC qml.qrc)
+qt_add_resources(shelf_QML_QRC
+    qml.qrc)
 
 if(ANDROID)
     add_library(${PROJECT_NAME}
@@ -30,9 +31,9 @@ else()
 endif()
 
 if (ANDROID)
-     target_link_libraries(${PROJECT_NAME} 
-     Qt6::AndroidExtras 
-     Qt6::QuickControls2)
+    target_link_libraries(${PROJECT_NAME}
+        Qt6::AndroidExtras
+        Qt6::QuickControls2)
 elseif(UNIX)
     target_link_libraries(${PROJECT_NAME} Qt6::Widgets)
 endif()

@@ -2,10 +2,10 @@
 
 #include <QDebug>
 
-#include <MauiKit3/FileBrowsing/fileloader.h>
-#include <MauiKit3/FileBrowsing/fmstatic.h>
+#include <MauiKit4/FileBrowsing/fileloader.h>
+#include <MauiKit4/FileBrowsing/fmstatic.h>
 
-#include <MauiKit3/Core/fmh.h>
+#include <MauiKit4/Core/fmh.h>
 
 #include "library.h"
 
