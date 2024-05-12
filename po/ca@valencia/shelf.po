@@ -209,7 +209,7 @@ msgstr "Quant a"
 #: src/views/library/LibraryView.qml:209
 #, kde-format
 msgid "Filter..."
-msgstr "Filtre..."
+msgstr "Filtre…"
 
 #: src/views/library/LibraryView.qml:429
 #, kde-format
@@ -313,12 +313,3 @@ msgstr "Navega horitzontalment"
 #, kde-format
 msgid "Fullscreen"
 msgstr "Pantalla completa"
-
-#~ msgid "Shelf"
-#~ msgstr "Shelf"
-
-#~ msgid "© 2019-2023 Maui Development Team"
-#~ msgstr "© 2019-2023 L'equip de desenvolupament de Maui"
-
-#~ msgid "Camilo Higuita"
-#~ msgstr "Camilo Higuita"
