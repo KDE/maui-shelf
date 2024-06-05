@@ -1,8 +1,8 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.2
+import QtQuick 
+import QtQuick.Controls
 
-import org.mauikit.controls 1.0 as Maui
-import org.mauikit.texteditor 1.0 as TE
+import org.mauikit.controls as Maui
+import org.mauikit.texteditor as TE
 
 TE.TextEditor
 {

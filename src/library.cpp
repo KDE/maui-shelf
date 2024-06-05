@@ -2,7 +2,7 @@
 #include <QSettings>
 #include <QFileInfo>
 
-#include <MauiKit3/FileBrowsing/fmstatic.h>
+#include <MauiKit4/FileBrowsing/fmstatic.h>
 
 Library *Library::m_instance = nullptr;
 

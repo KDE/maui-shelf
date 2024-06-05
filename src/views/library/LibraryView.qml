@@ -1,17 +1,17 @@
-import QtQuick 2.14
-import QtQuick.Controls 2.14
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 
-import org.mauikit.controls 1.3 as Maui
-import org.mauikit.filebrowsing 1.3 as FB
+import org.mauikit.controls as Maui
+import org.mauikit.filebrowsing as FB
 
-import org.maui.shelf 1.0 as Shelf
+import org.maui.shelf as Shelf
 
 Maui.SideBarView
 {
     id: control
+
     property alias list : _libraryList
-    property alias showCSDControls : _browser.showCSDControls
     property alias flickable : _browser.flickable
     property alias sources : _libraryList.sources
 
@@ -33,6 +33,7 @@ Maui.SideBarView
     Maui.AltBrowser
     {
         id: _browser
+        Maui.Controls.showCSD: control.Maui.Controls.showCSD
         anchors.fill: parent
         enableLassoSelection: true
         gridView.itemSize: Math.min(180, Math.floor(gridView.availableWidth/3))

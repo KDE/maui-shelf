@@ -2,10 +2,10 @@
 
 #include <QDebug>
 
-#include <MauiKit3/FileBrowsing/fileloader.h>
-#include <MauiKit3/FileBrowsing/fmstatic.h>
+#include <MauiKit4/FileBrowsing/fileloader.h>
+#include <MauiKit4/FileBrowsing/fmstatic.h>
 
-#include <MauiKit3/Core/fmh.h>
+#include <MauiKit4/Core/fmh.h>
 
 #include "library.h"
 
@@ -22,7 +22,6 @@ static FMH::MODEL fileData(const QUrl &url)
     }else
     {
         model.insert(FMH::MODEL_KEY::PREVIEW, "image://preview/"+url.toString());
-
     }
 
     return model;
@@ -53,17 +52,14 @@ void LibraryModel::setList(const QStringList &sources)
     QStringList paths = sources;
     QStringList filters;
 
-    if(sources.count() == 1 )
+    if(sources.count() == 1)
     {
         QString source = sources.first();
-        paths = Library::instance()->sources();
 
-        if(source == "collection:///")
+        if(source == "comics:///")
         {
-            filters = FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT];
+            paths = Library::instance()->sources();
 
-        }else if( source == "comics:///")
-        {
             QMimeDatabase mimedb;
             QStringList types = mimedb.mimeTypeForName("application/vnd.comicbook+zip").suffixes();
             types << mimedb.mimeTypeForName("application/vnd.comicbook+rar").suffixes();
@@ -73,8 +69,10 @@ void LibraryModel::setList(const QStringList &sources)
                 filters << "*."+type;
             }
 
-        }else if( source == "documents:///")
+        }else if(source == "documents:///")
         {
+            paths = Library::instance()->sources();
+
             QMimeDatabase mimedb;
             QStringList types = mimedb.mimeTypeForName("application/pdf").suffixes();
 
@@ -82,11 +80,21 @@ void LibraryModel::setList(const QStringList &sources)
             {
                 filters << "*."+type;
             }
+        }else if(source == "collection:///")
+        {
+            paths = Library::instance()->sources();
+            filters = FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT];
+        }else
+        {
+            filters = FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT];
         }
+
     }else
     {
         filters = FMStatic::FILTER_LIST[FMStatic::FILTER_TYPE::DOCUMENT];
     }
+
+    qDebug() << "Using filters for the collection seeker" << filters << QUrl::fromStringList(paths);
 
     this->m_fileLoader->informer = &fileData;
     this->m_fileLoader->requestPath(QUrl::fromStringList(paths), true, filters);

@@ -1,11 +1,11 @@
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import Qt.labs.settings 1.0
+import QtQuick 
+import QtCore
+import QtQuick.Controls 
 
-import org.mauikit.controls 1.3 as Maui
-import org.mauikit.filebrowsing 1.3 as FB
+import org.mauikit.controls as Maui
+import org.mauikit.filebrowsing as FB
 
-import org.maui.shelf 1.0 as Shelf
+import org.maui.shelf as Shelf
 
 import "views"
 import "views/library/"
@@ -42,8 +42,8 @@ Maui.ApplicationWindow
         FB.FileDialog
         {
             mode: modes.OPEN
-            settings.filterType: FB.FMList.DOCUMENT
-            settings.filters: [".cbz", ".cbr"]
+            browser.settings.filterType: FB.FMList.DOCUMENT
+            browser.settings.filters: [".cbz", ".cbr"]
             callback: function(paths)
             {
                 console.log(paths)
@@ -91,7 +91,7 @@ Maui.ApplicationWindow
 
             LibraryView
             {
-                showCSDControls: initModule === "collection"
+                Maui.Controls.showCSD: initModule === "collection"
             }
         }
     }
