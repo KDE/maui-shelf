@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-10 01:51+0000\n"
+"POT-Creation-Date: 2024-06-06 01:47+0000\n"
 "PO-Revision-Date: 2021-09-19 13:19+0630\n"
 "Last-Translator: \n"
 "Language-Team: Burmese <kde-i18n-doc@kde.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.2.1\n"
 
-#: src/main.cpp:52
+#: src/main.cpp:50
 #, kde-format
 msgid "Browse and view your documents."
 msgstr ""
 
-#: src/main.cpp:57
+#: src/main.cpp:55
 #, kde-format
 msgid "Developer"
 msgstr "ပရိုဂရမ်မာ"
 
-#: src/main.cpp:64
+#: src/main.cpp:62
 #, fuzzy, kde-format
 #| msgid "Developer"
 msgid "Peruse Developers"
@@ -70,7 +70,7 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:148
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:149
 #, kde-format
 msgid "Title"
 msgstr "ခေါင်းစဉ်"
@@ -90,7 +90,7 @@ msgstr "ဖန်တီးခဲ့သော ရက်စွဲ"
 msgid "Format"
 msgstr ""
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:164
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:165
 #, kde-format
 msgid "Size"
 msgstr "အရွယ်အစား"
@@ -105,7 +105,7 @@ msgstr ""
 msgid "Info"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:441
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:442
 #: src/views/Viewer/Viewer.qml:102
 #, kde-format
 msgid "Share"
@@ -116,7 +116,7 @@ msgstr "ဝေမျှမည်"
 msgid "Select"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:451
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:452
 #, kde-format
 msgid "Export"
 msgstr "တင်ပို့မည်"
@@ -142,88 +142,88 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:56
+#: src/views/library/LibraryView.qml:57
 #, kde-format
 msgid "Nothing here!"
 msgstr "ဘာမှမရှိ။"
 
-#: src/views/library/LibraryView.qml:57
+#: src/views/library/LibraryView.qml:58
 #, kde-format
 msgid "Add new sources to manage your documents."
 msgstr ""
 
-#: src/views/library/LibraryView.qml:63
+#: src/views/library/LibraryView.qml:64
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open file"
 msgstr "ဖွင့်မည်"
 
-#: src/views/library/LibraryView.qml:69
+#: src/views/library/LibraryView.qml:70
 #, kde-format
 msgid "Add sources"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:99
+#: src/views/library/LibraryView.qml:100
 #, kde-format
 msgid "Toggle sidebar"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:119 src/views/library/LibraryView.qml:419
+#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:420
 #, kde-format
 msgid "Open"
 msgstr "ဖွင့်မည်"
 
-#: src/views/library/LibraryView.qml:128
+#: src/views/library/LibraryView.qml:129
 #, kde-format
 msgid "List"
 msgstr "စာရင်းစဥ်"
 
-#: src/views/library/LibraryView.qml:137
+#: src/views/library/LibraryView.qml:138
 #, kde-format
 msgid "Grid"
 msgstr "ဂရစ်"
 
-#: src/views/library/LibraryView.qml:156
+#: src/views/library/LibraryView.qml:157
 #, kde-format
 msgid "Date"
 msgstr "ရက်စွဲ"
 
-#: src/views/library/LibraryView.qml:174
+#: src/views/library/LibraryView.qml:175
 #, kde-format
 msgid "Ascending"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:181
+#: src/views/library/LibraryView.qml:182
 #, kde-format
 msgid "Descending"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:190
+#: src/views/library/LibraryView.qml:191
 #, kde-format
 msgid "Settings"
 msgstr "ဆက်တင်များ"
 
-#: src/views/library/LibraryView.qml:197
+#: src/views/library/LibraryView.qml:198
 #, kde-format
 msgid "About"
 msgstr "အကြောင်း"
 
-#: src/views/library/LibraryView.qml:209
+#: src/views/library/LibraryView.qml:210
 #, kde-format
 msgid "Filter..."
 msgstr ""
 
-#: src/views/library/LibraryView.qml:429
+#: src/views/library/LibraryView.qml:430
 #, kde-format
 msgid "Tag"
 msgstr "တပ်ဂ်"
 
-#: src/views/library/Sidebar.qml:52
+#: src/views/library/Sidebar.qml:51
 #, kde-format
 msgid "Tags!"
 msgstr ""
 
-#: src/views/library/Sidebar.qml:53
+#: src/views/library/Sidebar.qml:52
 #, kde-format
 msgid "Your tags will be listed here"
 msgstr ""

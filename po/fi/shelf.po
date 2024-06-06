@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-10 01:51+0000\n"
+"POT-Creation-Date: 2024-06-06 01:47+0000\n"
 "PO-Revision-Date: 2023-11-19 19:36+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: src/main.cpp:52
+#: src/main.cpp:50
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "Selaa ja katsele tiedostojasi."
 
-#: src/main.cpp:57
+#: src/main.cpp:55
 #, kde-format
 msgid "Developer"
 msgstr "Kehittäjä"
 
-#: src/main.cpp:64
+#: src/main.cpp:62
 #, kde-format
 msgid "Peruse Developers"
 msgstr "Perusen kehittäjät"
@@ -68,7 +68,7 @@ msgstr "Kokoelma"
 msgid "Tags"
 msgstr "Luokitukset"
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:148
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:149
 #, kde-format
 msgid "Title"
 msgstr "Otsikko"
@@ -88,7 +88,7 @@ msgstr "Luontipäivä"
 msgid "Format"
 msgstr "Muoto"
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:164
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:165
 #, kde-format
 msgid "Size"
 msgstr "Koko"
@@ -103,7 +103,7 @@ msgstr "Poista suosikeista"
 msgid "Info"
 msgstr "Tietoa"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:441
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:442
 #: src/views/Viewer/Viewer.qml:102
 #, kde-format
 msgid "Share"
@@ -114,7 +114,7 @@ msgstr "Jaa"
 msgid "Select"
 msgstr "Valitse"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:451
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:452
 #, kde-format
 msgid "Export"
 msgstr "Vie"
@@ -139,87 +139,87 @@ msgstr "Avaa sijainti"
 msgid "Remove"
 msgstr "Poista"
 
-#: src/views/library/LibraryView.qml:56
+#: src/views/library/LibraryView.qml:57
 #, kde-format
 msgid "Nothing here!"
 msgstr "Ei mitään täällä!"
 
-#: src/views/library/LibraryView.qml:57
+#: src/views/library/LibraryView.qml:58
 #, kde-format
 msgid "Add new sources to manage your documents."
 msgstr "Lisää uusi lähteitä tiedostojesi hallitsemiseksi."
 
-#: src/views/library/LibraryView.qml:63
+#: src/views/library/LibraryView.qml:64
 #, kde-format
 msgid "Open file"
 msgstr "Avaa tiedosto"
 
-#: src/views/library/LibraryView.qml:69
+#: src/views/library/LibraryView.qml:70
 #, kde-format
 msgid "Add sources"
 msgstr "Lisää lähteitä"
 
-#: src/views/library/LibraryView.qml:99
+#: src/views/library/LibraryView.qml:100
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "Näytä tai piilota sivupaneeli"
 
-#: src/views/library/LibraryView.qml:119 src/views/library/LibraryView.qml:419
+#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:420
 #, kde-format
 msgid "Open"
 msgstr "Avaa"
 
-#: src/views/library/LibraryView.qml:128
+#: src/views/library/LibraryView.qml:129
 #, kde-format
 msgid "List"
 msgstr "Luettelo"
 
-#: src/views/library/LibraryView.qml:137
+#: src/views/library/LibraryView.qml:138
 #, kde-format
 msgid "Grid"
 msgstr "Ruudukko"
 
-#: src/views/library/LibraryView.qml:156
+#: src/views/library/LibraryView.qml:157
 #, kde-format
 msgid "Date"
 msgstr "Päiväys"
 
-#: src/views/library/LibraryView.qml:174
+#: src/views/library/LibraryView.qml:175
 #, kde-format
 msgid "Ascending"
 msgstr "Nouseva"
 
-#: src/views/library/LibraryView.qml:181
+#: src/views/library/LibraryView.qml:182
 #, kde-format
 msgid "Descending"
 msgstr "Laskeva"
 
-#: src/views/library/LibraryView.qml:190
+#: src/views/library/LibraryView.qml:191
 #, kde-format
 msgid "Settings"
 msgstr "Asetukset"
 
-#: src/views/library/LibraryView.qml:197
+#: src/views/library/LibraryView.qml:198
 #, kde-format
 msgid "About"
 msgstr "Tietoa"
 
-#: src/views/library/LibraryView.qml:209
+#: src/views/library/LibraryView.qml:210
 #, kde-format
 msgid "Filter..."
 msgstr "Suodata…"
 
-#: src/views/library/LibraryView.qml:429
+#: src/views/library/LibraryView.qml:430
 #, kde-format
 msgid "Tag"
 msgstr "Luokitus"
 
-#: src/views/library/Sidebar.qml:52
+#: src/views/library/Sidebar.qml:51
 #, kde-format
 msgid "Tags!"
 msgstr "Luokituksia!"
 
-#: src/views/library/Sidebar.qml:53
+#: src/views/library/Sidebar.qml:52
 #, kde-format
 msgid "Your tags will be listed here"
 msgstr "Tässä luetellaan luokituksesi"

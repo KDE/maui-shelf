@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-10 01:51+0000\n"
+"POT-Creation-Date: 2024-06-06 01:47+0000\n"
 "PO-Revision-Date: 2024-03-24 10:34+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: src/main.cpp:52
+#: src/main.cpp:50
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "Foliumi kaj vidi viajn dokumentojn."
 
-#: src/main.cpp:57
+#: src/main.cpp:55
 #, kde-format
 msgid "Developer"
 msgstr "Ellaboranto"
 
-#: src/main.cpp:64
+#: src/main.cpp:62
 #, kde-format
 msgid "Peruse Developers"
 msgstr "Peruse Programistoj"
@@ -69,7 +69,7 @@ msgstr "Kolekto"
 msgid "Tags"
 msgstr "Etikedoj"
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:148
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:149
 #, kde-format
 msgid "Title"
 msgstr "Titolo"
@@ -89,7 +89,7 @@ msgstr "Kreodato"
 msgid "Format"
 msgstr "Formato"
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:164
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:165
 #, kde-format
 msgid "Size"
 msgstr "Grandeco"
@@ -104,7 +104,7 @@ msgstr "MalFavi ĝin"
 msgid "Info"
 msgstr "Informo"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:441
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:442
 #: src/views/Viewer/Viewer.qml:102
 #, kde-format
 msgid "Share"
@@ -115,7 +115,7 @@ msgstr "Kunhavigi"
 msgid "Select"
 msgstr "Elekti"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:451
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:452
 #, kde-format
 msgid "Export"
 msgstr "Eksporti"
@@ -140,87 +140,87 @@ msgstr "Malfermi lokon"
 msgid "Remove"
 msgstr "Forigi"
 
-#: src/views/library/LibraryView.qml:56
+#: src/views/library/LibraryView.qml:57
 #, kde-format
 msgid "Nothing here!"
 msgstr "Nenio ĉi tie!"
 
-#: src/views/library/LibraryView.qml:57
+#: src/views/library/LibraryView.qml:58
 #, kde-format
 msgid "Add new sources to manage your documents."
 msgstr "Aldoni novajn fontojn por administri viajn dokumentojn."
 
-#: src/views/library/LibraryView.qml:63
+#: src/views/library/LibraryView.qml:64
 #, kde-format
 msgid "Open file"
 msgstr "Malfermi dosieron"
 
-#: src/views/library/LibraryView.qml:69
+#: src/views/library/LibraryView.qml:70
 #, kde-format
 msgid "Add sources"
 msgstr "Aldoni fontojn"
 
-#: src/views/library/LibraryView.qml:99
+#: src/views/library/LibraryView.qml:100
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "Baskuligi flankbreton"
 
-#: src/views/library/LibraryView.qml:119 src/views/library/LibraryView.qml:419
+#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:420
 #, kde-format
 msgid "Open"
 msgstr "Malfermi"
 
-#: src/views/library/LibraryView.qml:128
+#: src/views/library/LibraryView.qml:129
 #, kde-format
 msgid "List"
 msgstr "Listo"
 
-#: src/views/library/LibraryView.qml:137
+#: src/views/library/LibraryView.qml:138
 #, kde-format
 msgid "Grid"
 msgstr "Krado"
 
-#: src/views/library/LibraryView.qml:156
+#: src/views/library/LibraryView.qml:157
 #, kde-format
 msgid "Date"
 msgstr "Dato"
 
-#: src/views/library/LibraryView.qml:174
+#: src/views/library/LibraryView.qml:175
 #, kde-format
 msgid "Ascending"
 msgstr "Kreskante"
 
-#: src/views/library/LibraryView.qml:181
+#: src/views/library/LibraryView.qml:182
 #, kde-format
 msgid "Descending"
 msgstr "Malkreskanta"
 
-#: src/views/library/LibraryView.qml:190
+#: src/views/library/LibraryView.qml:191
 #, kde-format
 msgid "Settings"
 msgstr "Agordoj"
 
-#: src/views/library/LibraryView.qml:197
+#: src/views/library/LibraryView.qml:198
 #, kde-format
 msgid "About"
 msgstr "Pri"
 
-#: src/views/library/LibraryView.qml:209
+#: src/views/library/LibraryView.qml:210
 #, kde-format
 msgid "Filter..."
 msgstr "Filtri..."
 
-#: src/views/library/LibraryView.qml:429
+#: src/views/library/LibraryView.qml:430
 #, kde-format
 msgid "Tag"
 msgstr "Etikedo"
 
-#: src/views/library/Sidebar.qml:52
+#: src/views/library/Sidebar.qml:51
 #, kde-format
 msgid "Tags!"
 msgstr "Etikedoj!"
 
-#: src/views/library/Sidebar.qml:53
+#: src/views/library/Sidebar.qml:52
 #, kde-format
 msgid "Your tags will be listed here"
 msgstr "Viaj etikedoj estos listigitaj ĉi tie"

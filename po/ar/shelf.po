@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-10 01:51+0000\n"
+"POT-Creation-Date: 2024-06-06 01:47+0000\n"
 "PO-Revision-Date: 2023-05-11 11:05+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: src/main.cpp:52
+#: src/main.cpp:50
 #, kde-format
 msgid "Browse and view your documents."
 msgstr ""
 
-#: src/main.cpp:57
+#: src/main.cpp:55
 #, kde-format
 msgid "Developer"
 msgstr "مطوّر"
 
-#: src/main.cpp:64
+#: src/main.cpp:62
 #, kde-format
 msgid "Peruse Developers"
 msgstr ""
@@ -68,7 +68,7 @@ msgstr ""
 msgid "Tags"
 msgstr "الوسوم"
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:148
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:149
 #, kde-format
 msgid "Title"
 msgstr "العنوان"
@@ -88,7 +88,7 @@ msgstr "تاريخ الإنشاء"
 msgid "Format"
 msgstr "التّنسيق"
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:164
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:165
 #, kde-format
 msgid "Size"
 msgstr "الحجم"
@@ -103,7 +103,7 @@ msgstr ""
 msgid "Info"
 msgstr "معلومات"
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:441
+#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:442
 #: src/views/Viewer/Viewer.qml:102
 #, kde-format
 msgid "Share"
@@ -114,7 +114,7 @@ msgstr "شارك"
 msgid "Select"
 msgstr "اختر"
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:451
+#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:452
 #, kde-format
 msgid "Export"
 msgstr "صدّر"
@@ -139,87 +139,87 @@ msgstr "افتح موقعًا"
 msgid "Remove"
 msgstr "أزل"
 
-#: src/views/library/LibraryView.qml:56
+#: src/views/library/LibraryView.qml:57
 #, kde-format
 msgid "Nothing here!"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:57
+#: src/views/library/LibraryView.qml:58
 #, kde-format
 msgid "Add new sources to manage your documents."
 msgstr ""
 
-#: src/views/library/LibraryView.qml:63
+#: src/views/library/LibraryView.qml:64
 #, kde-format
 msgid "Open file"
 msgstr "افتح الملفّ"
 
-#: src/views/library/LibraryView.qml:69
+#: src/views/library/LibraryView.qml:70
 #, kde-format
 msgid "Add sources"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:99
+#: src/views/library/LibraryView.qml:100
 #, kde-format
 msgid "Toggle sidebar"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:119 src/views/library/LibraryView.qml:419
+#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:420
 #, kde-format
 msgid "Open"
 msgstr "افتح"
 
-#: src/views/library/LibraryView.qml:128
+#: src/views/library/LibraryView.qml:129
 #, kde-format
 msgid "List"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:137
+#: src/views/library/LibraryView.qml:138
 #, kde-format
 msgid "Grid"
 msgstr "الشبكة"
 
-#: src/views/library/LibraryView.qml:156
+#: src/views/library/LibraryView.qml:157
 #, kde-format
 msgid "Date"
 msgstr "التاريخ"
 
-#: src/views/library/LibraryView.qml:174
+#: src/views/library/LibraryView.qml:175
 #, kde-format
 msgid "Ascending"
 msgstr "تصاعديًّا"
 
-#: src/views/library/LibraryView.qml:181
+#: src/views/library/LibraryView.qml:182
 #, kde-format
 msgid "Descending"
 msgstr "تنازليًّا"
 
-#: src/views/library/LibraryView.qml:190
+#: src/views/library/LibraryView.qml:191
 #, kde-format
 msgid "Settings"
 msgstr "إعدادات"
 
-#: src/views/library/LibraryView.qml:197
+#: src/views/library/LibraryView.qml:198
 #, kde-format
 msgid "About"
 msgstr "عن"
 
-#: src/views/library/LibraryView.qml:209
+#: src/views/library/LibraryView.qml:210
 #, kde-format
 msgid "Filter..."
 msgstr "رشّح..."
 
-#: src/views/library/LibraryView.qml:429
+#: src/views/library/LibraryView.qml:430
 #, kde-format
 msgid "Tag"
 msgstr "الوسم"
 
-#: src/views/library/Sidebar.qml:52
+#: src/views/library/Sidebar.qml:51
 #, kde-format
 msgid "Tags!"
 msgstr "الوسوم!"
 
-#: src/views/library/Sidebar.qml:53
+#: src/views/library/Sidebar.qml:52
 #, kde-format
 msgid "Your tags will be listed here"
 msgstr ""
