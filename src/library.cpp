@@ -1,7 +1,7 @@
 #include "library.h"
 #include <QSettings>
 #include <QFileInfo>
-
+#include <QDesktopServices>
 #include <MauiKit4/FileBrowsing/fmstatic.h>
 
 Library *Library::m_instance = nullptr;
@@ -112,6 +112,11 @@ bool Library::isCommicBook(const QString &url)
 {
     auto mime = FMStatic::getMime(url);
     return mime == "application/vnd.comicbook+zip" || mime == "application/vnd.comicbook+rar";
+}
+
+void Library::share(const QString &url)
+{
+    QDesktopServices::openUrl(QUrl("file:///storage/emulated/0/Download/El Amante - Marguerite Duras.pdf"));
 }
 
 

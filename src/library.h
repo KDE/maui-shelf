@@ -24,6 +24,8 @@ public Q_SLOTS:
     bool isEpub(const QString &url);
     bool isCommicBook(const QString &url);
 
+    void share(const QString &url);
+
 private:
     static Library *m_instance;
     explicit Library(QObject *parent = nullptr);

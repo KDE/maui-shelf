@@ -1,6 +1,6 @@
-import QtQuick 
-import QtQuick.Controls 
-import QtQuick.Window 
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Window
 
 import org.mauikit.controls as Maui
 import org.mauikit.filebrowsing as FB
@@ -154,8 +154,8 @@ Item
 
         Poppler.PDFViewer
         {
-            Maui.TabViewInfo.tabTitle: title
-            Maui.TabViewInfo.tabToolTipText:  path
+            Maui.Controls.title: title
+            Maui.Controls.toolTipText: path
 
             onGoBackTriggered: _stackView.pop()
         }
@@ -181,8 +181,8 @@ Item
 
         Viewer_CB
         {
-            Maui.TabViewInfo.tabTitle: title
-            Maui.TabViewInfo.tabToolTipText: path
+            Maui.Controls.title: title
+            Maui.Controls.toolTipText: path
 
             onGoBackTriggered: _stackView.pop()
         }

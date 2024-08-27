@@ -34,7 +34,8 @@ int main(int argc, char *argv[])
 
 #ifdef Q_OS_ANDROID
     QGuiApplication app(argc, argv);
-    if (!MAUIAndroid::checkRunTimePermissions({"android.permission.WRITE_EXTERNAL_STORAGE"}))
+    if (!MAUIAndroid::checkRunTimePermissions({"android.permission.WRITE_EXTERNAL_STORAGE",
+                                               "android.permission.READ_EXTERNAL_STORAGE"}))
         return -1;
 #else
     QApplication app(argc, argv);
@@ -90,7 +91,7 @@ int main(int argc, char *argv[])
     }
 
     QQmlApplicationEngine engine;
-    QUrl url(QStringLiteral("qrc:/main.qml"));
+    QUrl url(QStringLiteral("qrc:/app/maui/shelf/main.qml"));
     QObject::connect(
                 &engine,
                 &QQmlApplicationEngine::objectCreated,

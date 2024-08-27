@@ -1,6 +1,6 @@
-import QtQuick 
+import QtQuick
 import QtCore
-import QtQuick.Controls 
+import QtQuick.Controls
 
 import org.mauikit.controls as Maui
 import org.mauikit.filebrowsing as FB
@@ -15,7 +15,6 @@ Maui.ApplicationWindow
 {
     id: root
     title: viewerView.title
-    Maui.Style.styleType: Maui.Handy.isAndroid ? (viewerSettings.darkMode ? Maui.Style.Dark : Maui.Style.Light) : undefined
 
     property bool selectionMode: false
     property alias dialog :_dialogLoader.item
@@ -24,7 +23,6 @@ Maui.ApplicationWindow
     {
         id: viewerSettings
         property bool autoScan : true
-        property bool darkMode: true
         property bool showThumbnails: true
         property int viewType : Maui.AltBrowser.ViewType.Grid
     }

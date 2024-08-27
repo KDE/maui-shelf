@@ -63,7 +63,7 @@ Maui.ContextualMenu
             icon.name: "document-share"
             onTriggered:
             {
-                Maui.Platform.shareFiles(filterSelection(item.url))
+               Maui.Platform.shareFiles(filterSelection(item.url))
             }
         }
 

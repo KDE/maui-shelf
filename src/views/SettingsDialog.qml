@@ -17,10 +17,10 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 
-import QtQuick.Controls 
-import QtQuick.Layouts 
-import org.maui.shelf 
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import org.maui.shelf
 import org.mauikit.controls as Maui
 
 Maui.SettingsDialog
@@ -66,7 +66,7 @@ Maui.SettingsDialog
 //            }
 //        }
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Auto Scan")
             label2.text: i18n("Scan all the document sources on startup to keep your collection up to date.")
@@ -80,7 +80,7 @@ Maui.SettingsDialog
         }
 
 
-        Maui.SectionItem
+        Maui.FlexSectionItem
         {
             label1.text: i18n("Previews")
             label2.text: i18n("Display thumbnail previews.")
@@ -90,25 +90,6 @@ Maui.SettingsDialog
                 checkable: true
                 checked: viewerSettings.showThumbnails
                 onToggled: viewerSettings.showThumbnails = !viewerSettings.showThumbnails
-            }
-        }
-
-        Maui.SectionItem
-        {
-            visible: Maui.Handy.isAndroid
-
-            label1.text: i18n("Dark Mode")
-            label2.text: i18n("Switch between light and dark colorscheme.")
-
-            Switch
-            {
-                Layout.fillHeight: true
-                checked: viewerSettings.darkMode
-                onToggled:
-                {
-                     viewerSettings.darkMode = !viewerSettings.darkMode
-                    setAndroidStatusBarColor()
-                }
             }
         }
     }
