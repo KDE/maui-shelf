@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 01:47+0000\n"
+"POT-Creation-Date: 2024-08-28 01:56+0000\n"
 "PO-Revision-Date: 2023-10-29 09:32+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: src/main.cpp:50
+#: src/main.cpp:51
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "Przeglądaj i oglądaj swoje dokumenty."
 
-#: src/main.cpp:55
+#: src/main.cpp:56
 #, kde-format
 msgid "Developer"
 msgstr "Programista"
 
-#: src/main.cpp:62
+#: src/main.cpp:63
 #, kde-format
 msgid "Peruse Developers"
 msgstr "Programiści Peruse"
@@ -252,27 +252,17 @@ msgstr "Podglądy"
 msgid "Display thumbnail previews."
 msgstr "Wyświetl podglądy miniatur."
 
-#: src/views/SettingsDialog.qml:100
-#, kde-format
-msgid "Dark Mode"
-msgstr "Tryb ciemny"
-
-#: src/views/SettingsDialog.qml:101
-#, kde-format
-msgid "Switch between light and dark colorscheme."
-msgstr "Przełącz pomiędzy trybem jasnym i ciemnym."
-
-#: src/views/SettingsDialog.qml:118
+#: src/views/SettingsDialog.qml:99
 #, kde-format
 msgid "Sources"
 msgstr "Źródła"
 
-#: src/views/SettingsDialog.qml:157
+#: src/views/SettingsDialog.qml:138
 #, kde-format
 msgid "Add"
 msgstr "Dodaj"
 
-#: src/views/SettingsDialog.qml:174
+#: src/views/SettingsDialog.qml:155
 #, kde-format
 msgid "Scan now"
 msgstr "Przeszukaj teraz"
@@ -311,6 +301,12 @@ msgstr "Przeglądaj w poziomie"
 #, kde-format
 msgid "Fullscreen"
 msgstr "Pełny ekran"
+
+#~ msgid "Dark Mode"
+#~ msgstr "Tryb ciemny"
+
+#~ msgid "Switch between light and dark colorscheme."
+#~ msgstr "Przełącz pomiędzy trybem jasnym i ciemnym."
 
 #~ msgid "Shelf"
 #~ msgstr "Shelf"

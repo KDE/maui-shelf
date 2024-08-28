@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 01:47+0000\n"
+"POT-Creation-Date: 2024-08-28 01:56+0000\n"
 "PO-Revision-Date: 2023-10-30 05:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.1\n"
 
-#: src/main.cpp:50
+#: src/main.cpp:51
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "მოძებნეთ და დაათვალიერეთ თქვენი დოკუმენტები."
 
-#: src/main.cpp:55
+#: src/main.cpp:56
 #, kde-format
 msgid "Developer"
 msgstr "პროგრამისტი"
 
-#: src/main.cpp:62
+#: src/main.cpp:63
 #, kde-format
 msgid "Peruse Developers"
 msgstr "პროგრამისტი"
@@ -253,27 +253,17 @@ msgstr "მინიატურები"
 msgid "Display thumbnail previews."
 msgstr "მინიატურების ჩვენება."
 
-#: src/views/SettingsDialog.qml:100
-#, kde-format
-msgid "Dark Mode"
-msgstr "მუქი რეჟიმი"
-
-#: src/views/SettingsDialog.qml:101
-#, kde-format
-msgid "Switch between light and dark colorscheme."
-msgstr "ღია და მუქ ფერებს შორის გადართვა."
-
-#: src/views/SettingsDialog.qml:118
+#: src/views/SettingsDialog.qml:99
 #, kde-format
 msgid "Sources"
 msgstr "წყაროები"
 
-#: src/views/SettingsDialog.qml:157
+#: src/views/SettingsDialog.qml:138
 #, kde-format
 msgid "Add"
 msgstr "დამატება"
 
-#: src/views/SettingsDialog.qml:174
+#: src/views/SettingsDialog.qml:155
 #, kde-format
 msgid "Scan now"
 msgstr "ახლა სკანირება"
@@ -312,6 +302,12 @@ msgstr "ჰორიზონტალურად დათვალიერ�
 #, kde-format
 msgid "Fullscreen"
 msgstr "მთელ ეკრანზე"
+
+#~ msgid "Dark Mode"
+#~ msgstr "მუქი რეჟიმი"
+
+#~ msgid "Switch between light and dark colorscheme."
+#~ msgstr "ღია და მუქ ფერებს შორის გადართვა."
 
 #~ msgid "Shelf"
 #~ msgstr "Shelf"

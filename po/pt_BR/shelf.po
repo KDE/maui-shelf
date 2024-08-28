@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 01:47+0000\n"
+"POT-Creation-Date: 2024-08-28 01:56+0000\n"
 "PO-Revision-Date: 2023-11-14 11:56-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: src/main.cpp:50
+#: src/main.cpp:51
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "Navegue e visualize seus documentos."
 
-#: src/main.cpp:55
+#: src/main.cpp:56
 #, kde-format
 msgid "Developer"
 msgstr "Desenvolvedor"
 
-#: src/main.cpp:62
+#: src/main.cpp:63
 #, kde-format
 msgid "Peruse Developers"
 msgstr "Desenvolvedores do Peruse"
@@ -252,27 +252,17 @@ msgstr "Visualizações"
 msgid "Display thumbnail previews."
 msgstr "Exibir visualizações em miniatura."
 
-#: src/views/SettingsDialog.qml:100
-#, kde-format
-msgid "Dark Mode"
-msgstr "Modo escuro"
-
-#: src/views/SettingsDialog.qml:101
-#, kde-format
-msgid "Switch between light and dark colorscheme."
-msgstr "Alterne entre o esquema de cores claras e escuras."
-
-#: src/views/SettingsDialog.qml:118
+#: src/views/SettingsDialog.qml:99
 #, kde-format
 msgid "Sources"
 msgstr "Fontes"
 
-#: src/views/SettingsDialog.qml:157
+#: src/views/SettingsDialog.qml:138
 #, kde-format
 msgid "Add"
 msgstr "Adicionar"
 
-#: src/views/SettingsDialog.qml:174
+#: src/views/SettingsDialog.qml:155
 #, kde-format
 msgid "Scan now"
 msgstr "Escaneie agora"
@@ -311,6 +301,12 @@ msgstr "Navegar horizontalmente"
 #, kde-format
 msgid "Fullscreen"
 msgstr "Tela inteira"
+
+#~ msgid "Dark Mode"
+#~ msgstr "Modo escuro"
+
+#~ msgid "Switch between light and dark colorscheme."
+#~ msgstr "Alterne entre o esquema de cores claras e escuras."
 
 #~ msgid "Shelf"
 #~ msgstr "Shelf"

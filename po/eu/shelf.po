@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 01:47+0000\n"
+"POT-Creation-Date: 2024-08-28 01:56+0000\n"
 "PO-Revision-Date: 2023-10-28 12:03+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,17 +20,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.2\n"
 
-#: src/main.cpp:50
+#: src/main.cpp:51
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "Zure dokumentuak arakatu eta ikusi."
 
-#: src/main.cpp:55
+#: src/main.cpp:56
 #, kde-format
 msgid "Developer"
 msgstr "Garatzailea"
 
-#: src/main.cpp:62
+#: src/main.cpp:63
 #, kde-format
 msgid "Peruse Developers"
 msgstr "Peruse-ren garatzaileak"
@@ -255,27 +255,17 @@ msgstr "Aurreikuspegiak"
 msgid "Display thumbnail previews."
 msgstr "Azaldu aurreikuspegi koadro-txikiak."
 
-#: src/views/SettingsDialog.qml:100
-#, kde-format
-msgid "Dark Mode"
-msgstr "Modu iluna"
-
-#: src/views/SettingsDialog.qml:101
-#, kde-format
-msgid "Switch between light and dark colorscheme."
-msgstr "Aldatu kolore-antolaera argi eta ilunaren artean."
-
-#: src/views/SettingsDialog.qml:118
+#: src/views/SettingsDialog.qml:99
 #, kde-format
 msgid "Sources"
 msgstr "Sorburuak"
 
-#: src/views/SettingsDialog.qml:157
+#: src/views/SettingsDialog.qml:138
 #, kde-format
 msgid "Add"
 msgstr "Gehitu"
 
-#: src/views/SettingsDialog.qml:174
+#: src/views/SettingsDialog.qml:155
 #, kde-format
 msgid "Scan now"
 msgstr "Miatu orain"
@@ -314,6 +304,12 @@ msgstr "Arakatu horizontalki"
 #, kde-format
 msgid "Fullscreen"
 msgstr "Pantaila-betea"
+
+#~ msgid "Dark Mode"
+#~ msgstr "Modu iluna"
+
+#~ msgid "Switch between light and dark colorscheme."
+#~ msgstr "Aldatu kolore-antolaera argi eta ilunaren artean."
 
 #~ msgid "Shelf"
 #~ msgstr "Shelf"

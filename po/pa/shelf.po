@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 01:47+0000\n"
+"POT-Creation-Date: 2024-08-28 01:56+0000\n"
 "PO-Revision-Date: 2021-05-01 23:14-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.12.2\n"
 
-#: src/main.cpp:50
+#: src/main.cpp:51
 #, fuzzy, kde-format
 #| msgid "Shelf lets you browse and view your documents."
 msgid "Browse and view your documents."
 msgstr "ਸ਼ੈਲਫ਼ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਦਸਤਾਵੇਜ਼ ਵੇਖਣ ਲਈ ਸਹਾਇਕ ਹੈ।"
 
-#: src/main.cpp:55
+#: src/main.cpp:56
 #, kde-format
 msgid "Developer"
 msgstr "ਡਿਵੈਲਪਰ"
 
-#: src/main.cpp:62
+#: src/main.cpp:63
 #, fuzzy, kde-format
 #| msgid "Developer"
 msgid "Peruse Developers"
@@ -256,27 +256,17 @@ msgstr ""
 msgid "Display thumbnail previews."
 msgstr ""
 
-#: src/views/SettingsDialog.qml:100
-#, kde-format
-msgid "Dark Mode"
-msgstr ""
-
-#: src/views/SettingsDialog.qml:101
-#, kde-format
-msgid "Switch between light and dark colorscheme."
-msgstr ""
-
-#: src/views/SettingsDialog.qml:118
+#: src/views/SettingsDialog.qml:99
 #, kde-format
 msgid "Sources"
 msgstr ""
 
-#: src/views/SettingsDialog.qml:157
+#: src/views/SettingsDialog.qml:138
 #, kde-format
 msgid "Add"
 msgstr ""
 
-#: src/views/SettingsDialog.qml:174
+#: src/views/SettingsDialog.qml:155
 #, kde-format
 msgid "Scan now"
 msgstr ""
