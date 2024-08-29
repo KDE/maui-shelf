@@ -300,9 +300,3 @@ msgstr "Prohlížet vodorovně"
 #, kde-format
 msgid "Fullscreen"
 msgstr "Celá obrazovka"
-
-#~ msgid "Dark Mode"
-#~ msgstr "Tmavý režim"
-
-#~ msgid "Switch between light and dark colorscheme."
-#~ msgstr "Přepínač mezi světlým a tmavým barevným schématem."
