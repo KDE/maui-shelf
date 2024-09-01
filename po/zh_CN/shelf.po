@@ -299,6 +299,3 @@ msgstr "水平浏览"
 #, kde-format
 msgid "Fullscreen"
 msgstr "全屏"
-
-#~ msgid "Dark Mode"
-#~ msgstr "深色模式"
