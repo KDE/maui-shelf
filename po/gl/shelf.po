@@ -30,7 +30,7 @@ msgstr "Desenvolvemento."
 #: src/main.cpp:63
 #, kde-format
 msgid "Peruse Developers"
-msgstr "Equipo de desenvolvemento de Peruse"
+msgstr "Equipo desenvolvedor de Peruse"
 
 #: src/models/placesmodel.cpp:8
 #, kde-format
