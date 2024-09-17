@@ -111,6 +111,12 @@ Maui.ContextualMenu
         icon.name: "document-open"
         onTriggered:
         {
+            if(Maui.Handy.isAndroid)
+            {
+                FB.FM.openUrl(item.url)
+                return
+            }
+
             _openWithDialog.urls = filterSelection(item.url)
             _openWithDialog.open()
         }
