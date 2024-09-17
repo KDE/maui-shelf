@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 01:56+0000\n"
+"POT-Creation-Date: 2024-09-17 01:52+0000\n"
 "PO-Revision-Date: 2023-10-30 05:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.1\n"
 
-#: src/main.cpp:51
+#: src/main.cpp:48
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "მოძებნეთ და დაათვალიერეთ თქვენი დოკუმენტები."
 
-#: src/main.cpp:56
+#: src/main.cpp:53
 #, kde-format
 msgid "Developer"
 msgstr "პროგრამისტი"
 
-#: src/main.cpp:63
+#: src/main.cpp:60
 #, kde-format
 msgid "Peruse Developers"
 msgstr "პროგრამისტი"
@@ -125,17 +125,17 @@ msgstr "გატანა"
 msgid "Open with"
 msgstr "გამხსნელი პროგრამა"
 
-#: src/views/library/LibraryMenu.qml:121
+#: src/views/library/LibraryMenu.qml:127
 #, kde-format
 msgid "Go to Folder"
 msgstr "საქაღალდეზე გადასვლა"
 
-#: src/views/library/LibraryMenu.qml:133
+#: src/views/library/LibraryMenu.qml:139
 #, kde-format
 msgid "Open Location"
 msgstr "მდებარეობის გახსნა"
 
-#: src/views/library/LibraryMenu.qml:145
+#: src/views/library/LibraryMenu.qml:151
 #, kde-format
 msgid "Remove"
 msgstr "წაშლა"

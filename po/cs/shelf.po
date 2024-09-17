@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 01:56+0000\n"
+"POT-Creation-Date: 2024-09-17 01:52+0000\n"
 "PO-Revision-Date: 2023-10-31 16:28+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.08.2\n"
 
-#: src/main.cpp:51
+#: src/main.cpp:48
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "Procházejte a prohlížejte svoje dokumenty"
 
-#: src/main.cpp:56
+#: src/main.cpp:53
 #, kde-format
 msgid "Developer"
 msgstr "Vývojář"
 
-#: src/main.cpp:63
+#: src/main.cpp:60
 #, kde-format
 msgid "Peruse Developers"
 msgstr "Vývojáři Peruse"
@@ -124,17 +124,17 @@ msgstr "Exportovat"
 msgid "Open with"
 msgstr "Otevřít pomocí"
 
-#: src/views/library/LibraryMenu.qml:121
+#: src/views/library/LibraryMenu.qml:127
 #, kde-format
 msgid "Go to Folder"
 msgstr "Přejít na složku"
 
-#: src/views/library/LibraryMenu.qml:133
+#: src/views/library/LibraryMenu.qml:139
 #, kde-format
 msgid "Open Location"
 msgstr "Otevřít umístění"
 
-#: src/views/library/LibraryMenu.qml:145
+#: src/views/library/LibraryMenu.qml:151
 #, kde-format
 msgid "Remove"
 msgstr "Odstranit"

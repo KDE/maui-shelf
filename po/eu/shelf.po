@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 01:56+0000\n"
+"POT-Creation-Date: 2024-09-17 01:52+0000\n"
 "PO-Revision-Date: 2023-10-28 12:03+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,17 +20,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.2\n"
 
-#: src/main.cpp:51
+#: src/main.cpp:48
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "Zure dokumentuak arakatu eta ikusi."
 
-#: src/main.cpp:56
+#: src/main.cpp:53
 #, kde-format
 msgid "Developer"
 msgstr "Garatzailea"
 
-#: src/main.cpp:63
+#: src/main.cpp:60
 #, kde-format
 msgid "Peruse Developers"
 msgstr "Peruse-ren garatzaileak"
@@ -127,17 +127,17 @@ msgstr "Esportatu"
 msgid "Open with"
 msgstr "Ireki honekin"
 
-#: src/views/library/LibraryMenu.qml:121
+#: src/views/library/LibraryMenu.qml:127
 #, kde-format
 msgid "Go to Folder"
 msgstr "Joan karpetara"
 
-#: src/views/library/LibraryMenu.qml:133
+#: src/views/library/LibraryMenu.qml:139
 #, kde-format
 msgid "Open Location"
 msgstr "Ireki kokalekua"
 
-#: src/views/library/LibraryMenu.qml:145
+#: src/views/library/LibraryMenu.qml:151
 #, kde-format
 msgid "Remove"
 msgstr "Kendu"

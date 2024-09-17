@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 01:56+0000\n"
+"POT-Creation-Date: 2024-09-17 01:52+0000\n"
 "PO-Revision-Date: 2024-02-19 07:34+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -20,17 +20,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: src/main.cpp:51
+#: src/main.cpp:48
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "瀏覽並檢視您的文件。"
 
-#: src/main.cpp:56
+#: src/main.cpp:53
 #, kde-format
 msgid "Developer"
 msgstr "開發者"
 
-#: src/main.cpp:63
+#: src/main.cpp:60
 #, kde-format
 msgid "Peruse Developers"
 msgstr "Peruse 開發者"
@@ -127,17 +127,17 @@ msgstr "匯出"
 msgid "Open with"
 msgstr "開啟方式"
 
-#: src/views/library/LibraryMenu.qml:121
+#: src/views/library/LibraryMenu.qml:127
 #, kde-format
 msgid "Go to Folder"
 msgstr "跳至資料夾"
 
-#: src/views/library/LibraryMenu.qml:133
+#: src/views/library/LibraryMenu.qml:139
 #, kde-format
 msgid "Open Location"
 msgstr "開啟位置"
 
-#: src/views/library/LibraryMenu.qml:145
+#: src/views/library/LibraryMenu.qml:151
 #, kde-format
 msgid "Remove"
 msgstr "移除"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 01:56+0000\n"
+"POT-Creation-Date: 2024-09-17 01:52+0000\n"
 "PO-Revision-Date: 2023-10-29 09:32+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: src/main.cpp:51
+#: src/main.cpp:48
 #, kde-format
 msgid "Browse and view your documents."
 msgstr "Przeglądaj i oglądaj swoje dokumenty."
 
-#: src/main.cpp:56
+#: src/main.cpp:53
 #, kde-format
 msgid "Developer"
 msgstr "Programista"
 
-#: src/main.cpp:63
+#: src/main.cpp:60
 #, kde-format
 msgid "Peruse Developers"
 msgstr "Programiści Peruse"
@@ -124,17 +124,17 @@ msgstr "Wyeksportuj"
 msgid "Open with"
 msgstr "Otwórz w"
 
-#: src/views/library/LibraryMenu.qml:121
+#: src/views/library/LibraryMenu.qml:127
 #, kde-format
 msgid "Go to Folder"
 msgstr "Przejdź do katalogu"
 
-#: src/views/library/LibraryMenu.qml:133
+#: src/views/library/LibraryMenu.qml:139
 #, kde-format
 msgid "Open Location"
 msgstr "Otwórz miejsce"
 
-#: src/views/library/LibraryMenu.qml:145
+#: src/views/library/LibraryMenu.qml:151
 #, kde-format
 msgid "Remove"
 msgstr "Usuń"
