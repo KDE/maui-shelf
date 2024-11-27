@@ -1,5 +1,5 @@
-import QtQuick 
-import QtQuick.Controls 
+import QtQuick
+import QtQuick.Controls
 import QtQuick.Layouts
 
 import org.mauikit.controls as Maui
@@ -18,11 +18,19 @@ Maui.ContextualMenu
 
     onOpened: isFav = FB.Tagging.isFav(item.url)
 
-    title: control.item.title
-    subtitle: Maui.Handy.formatSize(control.item.size)
-    titleImageSource: control.item.url
-    titleIconSource: control.item.icon
+    title: control.item.label
+    Maui.Controls.subtitle: Maui.Handy.formatSize(control.item.size)
+    icon.source: control.item.url
+    // icon.name: control.item.icon
 
+    Maui.Controls.component: Maui.IconItem
+    {
+        width: ListView.view.width
+        implicitHeight: 250
+        fillMode: Image.PreserveAspectCrop
+        imageSource: control.item.url
+        image.verticalAlignment:  Image.AlignTop
+    }
 
     Maui.MenuItemActionRow
     {
@@ -150,7 +158,7 @@ Maui.ContextualMenu
     {
         text: i18n("Remove")
         icon.name: "edit-delete"
-        Maui.Theme.textColor: Maui.Theme.negativeTextColor
+        Maui.Controls.status: Maui.Controls.Negative
         onTriggered:
         {
             removeDialog.open()

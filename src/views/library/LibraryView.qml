@@ -30,11 +30,164 @@ Maui.SideBarView
         model: _libraryModel
     }
 
+    Maui.PageLayout
+    {
+        id: _pageLayout
+    Maui.Controls.showCSD: control.Maui.Controls.showCSD
+    anchors.fill: parent
+split: !root.isWide
+    altHeader: Maui.Handy.isMobile
+
+
+    DragHandler
+    {
+        target: _floatingViewer
+        xAxis.maximum: _pageLayout.width -  _floatingViewer.width
+        xAxis.minimum: 0
+
+        yAxis.maximum : _pageLayout.height - _floatingViewer.height
+        yAxis.minimum: 0
+
+        onActiveChanged:
+        {
+            if(!active)
+            {
+                _floatingViewer.y = Qt.binding(()=> { return parent.height - _floatingViewer.implicitHeight - 20})
+            }
+        }
+    }
+
+    FloatingViewer
+    {
+        id: _floatingViewer
+        active: viewerView.tabView.count > 0 || item
+    }
+
+    headBar.forceCenterMiddleContent: root.isWide
+    leftContent: [ToolButton
+    {
+        visible: control.sideBar.collapsed
+        icon.name: control.sideBar.visible ? "sidebar-collapse" : "sidebar-expand"
+        onClicked: control.sideBar.toggle()
+        checked: control.sideBar.visible
+        ToolTip.delay: 1000
+        ToolTip.timeout: 5000
+        ToolTip.visible: hovered
+        ToolTip.text: i18n("Toggle sidebar")
+    }
+
+    ]
+
+    rightContent:[
+        Maui.ToolButtonMenu
+        {
+            icon.name: _browser.viewType === Maui.AltBrowser.ViewType.List ? "view-list-details" : "view-list-icons"
+
+            MenuItem
+            {
+                text: i18n("Open")
+                icon.name: "document-open"
+                onTriggered: openFileDialog()
+            }
+
+            MenuSeparator {}
+
+            MenuItem
+            {
+                text: i18n("List")
+                checkable: true
+                icon.name: "view-list-details"
+                checked: _browser.viewType === Maui.AltBrowser.ViewType.List
+                onTriggered: viewerSettings.viewType = Maui.AltBrowser.ViewType.List
+            }
+
+            MenuItem
+            {
+                text: i18n("Grid")
+                checkable: true
+                icon.name: "view-list-icons"
+                checked: _browser.viewType === Maui.AltBrowser.ViewType.Grid
+                onTriggered: viewerSettings.viewType = Maui.AltBrowser.ViewType.Grid
+            }
+
+            MenuSeparator {}
+
+            MenuItem
+            {
+                text: i18n("Title")
+                checkable: true
+                checked: _libraryModel.sort === "label"
+                onTriggered: _libraryModel.sort = "label"
+            }
+
+            MenuItem
+            {
+                text: i18n("Date")
+                checkable: true
+                checked: _libraryModel.sort === "modified"
+                onTriggered: _libraryModel.sort = "modified"
+            }
+
+            MenuItem
+            {
+                text: i18n("Size")
+                checkable: true
+                checked: _libraryModel.sort === "size"
+                onTriggered: _libraryModel.sort = "size"
+            }
+
+            MenuSeparator {}
+
+            MenuItem
+            {
+                text: i18n("Ascending")
+                checked: _libraryModel.sortOrder === Qt.AscendingOrder
+                onTriggered: _libraryModel.sortOrder = Qt.AscendingOrder
+            }
+
+            MenuItem
+            {
+                text: i18n("Descending")
+                checked: _libraryModel.sortOrder === Qt.DescendingOrder
+                onTriggered: _libraryModel.sortOrder = Qt.DescendingOrder
+            }
+
+            MenuSeparator {}
+
+            MenuItem
+            {
+                text: i18n("Settings")
+                icon.name: "settings-configure"
+                onTriggered: openSettingsDialog()
+            }
+
+            MenuItem
+            {
+                text: i18n("About")
+                icon.name: "documentinfo"
+                onTriggered: root.about()
+            }
+        }
+    ]
+
+    middleContent: Maui.SearchField
+    {
+        Layout.fillWidth: true
+        Layout.maximumWidth: 500
+        Layout.alignment: Qt.AlignCenter
+        placeholderText: i18n("Filter...")
+        onAccepted: _browser.model.filter = text
+        onCleared:  _libraryModel.clearFilters()
+    }
+
+
+
     Maui.AltBrowser
     {
         id: _browser
-        Maui.Controls.showCSD: control.Maui.Controls.showCSD
+
         anchors.fill: parent
+
         enableLassoSelection: true
         gridView.itemSize: Math.min(180, Math.floor(gridView.availableWidth/3))
         gridView.itemHeight: 220
@@ -84,132 +237,6 @@ Maui.SideBarView
             {
                 id: _libraryList
             }
-        }
-
-        altHeader: Maui.Handy.isMobile
-        headBar.forceCenterMiddleContent: root.isWide
-        headBar.leftContent: [ToolButton
-            {
-                visible: control.sideBar.collapsed
-                icon.name: control.sideBar.visible ? "sidebar-collapse" : "sidebar-expand"
-                onClicked: control.sideBar.toggle()
-                checked: control.sideBar.visible
-                ToolTip.delay: 1000
-                ToolTip.timeout: 5000
-                ToolTip.visible: hovered
-                ToolTip.text: i18n("Toggle sidebar")
-            },
-
-            ToolButton
-            {
-                visible: viewerView.tabView.count
-                icon.name: "view-readermode-active"
-                text: viewerView.tabView.count
-                onClicked: toggleViewer()
-            }
-
-        ]
-
-        headBar.rightContent:[
-            Maui.ToolButtonMenu
-            {
-                icon.name: _browser.viewType === Maui.AltBrowser.ViewType.List ? "view-list-details" : "view-list-icons"
-
-                MenuItem
-                {
-                    text: i18n("Open")
-                    icon.name: "document-open"
-                    onTriggered: openFileDialog()
-                }
-
-                MenuSeparator {}
-
-                MenuItem
-                {
-                    text: i18n("List")
-                    checkable: true
-                    icon.name: "view-list-details"
-                    checked: _browser.viewType === Maui.AltBrowser.ViewType.List
-                    onTriggered: viewerSettings.viewType = Maui.AltBrowser.ViewType.List
-                }
-
-                MenuItem
-                {
-                    text: i18n("Grid")
-                    checkable: true
-                    icon.name: "view-list-icons"
-                    checked: _browser.viewType === Maui.AltBrowser.ViewType.Grid
-                    onTriggered: viewerSettings.viewType = Maui.AltBrowser.ViewType.Grid
-                }
-
-                MenuSeparator {}
-
-                MenuItem
-                {
-                    text: i18n("Title")
-                    checkable: true
-                    checked: _libraryModel.sort === "label"
-                    onTriggered: _libraryModel.sort = "label"
-                }
-
-                MenuItem
-                {
-                    text: i18n("Date")
-                    checkable: true
-                    checked: _libraryModel.sort === "modified"
-                    onTriggered: _libraryModel.sort = "modified"
-                }
-
-                MenuItem
-                {
-                    text: i18n("Size")
-                    checkable: true
-                    checked: _libraryModel.sort === "size"
-                    onTriggered: _libraryModel.sort = "size"
-                }
-
-                MenuSeparator {}
-
-                MenuItem
-                {
-                    text: i18n("Ascending")
-                    checked: _libraryModel.sortOrder === Qt.AscendingOrder
-                    onTriggered: _libraryModel.sortOrder = Qt.AscendingOrder
-                }
-
-                MenuItem
-                {
-                    text: i18n("Descending")
-                    checked: _libraryModel.sortOrder === Qt.DescendingOrder
-                    onTriggered: _libraryModel.sortOrder = Qt.DescendingOrder
-                }
-
-                MenuSeparator {}
-
-                MenuItem
-                {
-                    text: i18n("Settings")
-                    icon.name: "settings-configure"
-                    onTriggered: openSettingsDialog()
-                }
-
-                MenuItem
-                {
-                    text: i18n("About")
-                    icon.name: "documentinfo"
-                    onTriggered: root.about()
-                }
-            }
-        ]
-
-        headBar.middleContent: Maui.SearchField
-        {
-            Layout.fillWidth: true
-            Layout.maximumWidth: 500
-            Layout.alignment: Qt.AlignCenter
-            placeholderText: i18n("Filter...")
-            onAccepted: _browser.model.filter = text
-            onCleared:  _libraryModel.clearFilters()
         }
 
 
@@ -454,6 +481,7 @@ footer: Maui.SelectionBar
     }
 }
 
+}
 }
 
 function openFolders(paths)

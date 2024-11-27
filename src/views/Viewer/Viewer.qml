@@ -14,8 +14,8 @@ Item
 
     readonly property string currentPath : _tabView.currentItem ? _tabView.currentItem.path : ""
     property bool currentPathFav : FB.Tagging.isFav(currentPath)
-    property alias currentViewer: _tabView.currentItem
-    property alias tabView : _tabView
+    readonly property alias currentViewer: _tabView.currentItem
+    readonly property alias tabView : _tabView
     readonly property string title : _tabView.currentItem ? _tabView.currentItem.title : ""
     //    onGoBackTriggered: _stackView.pop()
 
@@ -156,6 +156,7 @@ Item
         {
             Maui.Controls.title: title
             Maui.Controls.toolTipText: path
+            headBar.visible: false
 
             onGoBackTriggered: _stackView.pop()
         }

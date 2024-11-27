@@ -34,6 +34,7 @@ qt_add_qml_module(${PROJECT_NAME} URI app.maui.shelf
     QML_FILES
     main.qml
     views/library/LibraryView.qml
+    views/library/FloatingViewer.qml
     views/library/LibraryMenu.qml
     views/Viewer/Viewer.qml
     views/cloud/CloudView.qml
