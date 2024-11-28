@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-17 01:52+0000\n"
+"POT-Creation-Date: 2024-11-28 01:48+0000\n"
 "PO-Revision-Date: 2021-01-23 14:18+0100\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -65,12 +65,12 @@ msgid "Collection"
 msgstr ""
 
 #: src/models/placesmodel.cpp:18 src/models/placesmodel.cpp:45
-#: src/views/library/LibraryMenu.qml:40
+#: src/views/library/LibraryMenu.qml:48
 #, kde-format
 msgid "Tags"
 msgstr ""
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:149
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:117
 #, kde-format
 msgid "Title"
 msgstr "Cím"
@@ -90,132 +90,132 @@ msgstr "Létrehozás dátuma"
 msgid "Format"
 msgstr "Formátum"
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:165
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:133
 #, kde-format
 msgid "Size"
 msgstr "Méret"
 
-#: src/views/library/LibraryMenu.qml:31
+#: src/views/library/LibraryMenu.qml:39
 #, kde-format
 msgid "UnFav it"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:52
+#: src/views/library/LibraryMenu.qml:60
 #, kde-format
 msgid "Info"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:442
+#: src/views/library/LibraryMenu.qml:70 src/views/library/LibraryView.qml:469
 #: src/views/Viewer/Viewer.qml:102
 #, kde-format
 msgid "Share"
 msgstr "Megosztás"
 
-#: src/views/library/LibraryMenu.qml:76
+#: src/views/library/LibraryMenu.qml:84
 #, kde-format
 msgid "Select"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:452
+#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:479
 #, kde-format
 msgid "Export"
 msgstr "Exportálás"
 
-#: src/views/library/LibraryMenu.qml:110
+#: src/views/library/LibraryMenu.qml:118
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open with"
 msgstr "Megnyitás"
 
-#: src/views/library/LibraryMenu.qml:127
+#: src/views/library/LibraryMenu.qml:135
 #, kde-format
 msgid "Go to Folder"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:139
+#: src/views/library/LibraryMenu.qml:147
 #, kde-format
 msgid "Open Location"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:151
+#: src/views/library/LibraryMenu.qml:159
 #, kde-format
 msgid "Remove"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:57
+#: src/views/library/LibraryView.qml:76
+#, kde-format
+msgid "Toggle sidebar"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:88 src/views/library/LibraryView.qml:447
+#, kde-format
+msgid "Open"
+msgstr "Megnyitás"
+
+#: src/views/library/LibraryView.qml:97
+#, kde-format
+msgid "List"
+msgstr "Lista"
+
+#: src/views/library/LibraryView.qml:106
+#, kde-format
+msgid "Grid"
+msgstr "Rács"
+
+#: src/views/library/LibraryView.qml:125
+#, kde-format
+msgid "Date"
+msgstr "Dátum"
+
+#: src/views/library/LibraryView.qml:143
+#, kde-format
+msgid "Ascending"
+msgstr "Növekvő"
+
+#: src/views/library/LibraryView.qml:150
+#, kde-format
+msgid "Descending"
+msgstr "Csökkenő"
+
+#: src/views/library/LibraryView.qml:159
+#, kde-format
+msgid "Settings"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:166
+#, kde-format
+msgid "About"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:178
+#, kde-format
+msgid "Filter..."
+msgstr "Szűrő…"
+
+#: src/views/library/LibraryView.qml:210
 #, fuzzy, kde-format
 #| msgid "Nothing here"
 msgid "Nothing here!"
 msgstr "Itt nincs semmi"
 
-#: src/views/library/LibraryView.qml:58
+#: src/views/library/LibraryView.qml:211
 #, fuzzy, kde-format
 #| msgid "Shelf lets you browse and view your documents."
 msgid "Add new sources to manage your documents."
 msgstr "A Shelf lehetővé teszi dokumentumai böngészését és megjelenítését."
 
-#: src/views/library/LibraryView.qml:64
+#: src/views/library/LibraryView.qml:217
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open file"
 msgstr "Megnyitás"
 
-#: src/views/library/LibraryView.qml:70
+#: src/views/library/LibraryView.qml:223
 #, kde-format
 msgid "Add sources"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:100
-#, kde-format
-msgid "Toggle sidebar"
-msgstr ""
-
-#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:420
-#, kde-format
-msgid "Open"
-msgstr "Megnyitás"
-
-#: src/views/library/LibraryView.qml:129
-#, kde-format
-msgid "List"
-msgstr "Lista"
-
-#: src/views/library/LibraryView.qml:138
-#, kde-format
-msgid "Grid"
-msgstr "Rács"
-
-#: src/views/library/LibraryView.qml:157
-#, kde-format
-msgid "Date"
-msgstr "Dátum"
-
-#: src/views/library/LibraryView.qml:175
-#, kde-format
-msgid "Ascending"
-msgstr "Növekvő"
-
-#: src/views/library/LibraryView.qml:182
-#, kde-format
-msgid "Descending"
-msgstr "Csökkenő"
-
-#: src/views/library/LibraryView.qml:191
-#, kde-format
-msgid "Settings"
-msgstr ""
-
-#: src/views/library/LibraryView.qml:198
-#, kde-format
-msgid "About"
-msgstr ""
-
-#: src/views/library/LibraryView.qml:210
-#, kde-format
-msgid "Filter..."
-msgstr "Szűrő…"
-
-#: src/views/library/LibraryView.qml:430
+#: src/views/library/LibraryView.qml:457
 #, kde-format
 msgid "Tag"
 msgstr ""
