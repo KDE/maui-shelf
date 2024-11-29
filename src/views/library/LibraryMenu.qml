@@ -28,8 +28,8 @@ Maui.ContextualMenu
         width: ListView.view.width
         implicitHeight: 250
         fillMode: Image.PreserveAspectCrop
-        imageSource: control.item.url
-        image.verticalAlignment:  Image.AlignTop
+        imageSource: "image://preview/"+control.item.url
+        image.verticalAlignment: Image.AlignTop
     }
 
     Maui.MenuItemActionRow
