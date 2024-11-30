@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-28 01:48+0000\n"
+"POT-Creation-Date: 2024-11-30 01:49+0000\n"
 "PO-Revision-Date: 2023-05-11 11:05+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -68,7 +68,7 @@ msgstr ""
 msgid "Tags"
 msgstr "الوسوم"
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:117
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:118
 #, kde-format
 msgid "Title"
 msgstr "العنوان"
@@ -88,7 +88,7 @@ msgstr "تاريخ الإنشاء"
 msgid "Format"
 msgstr "التّنسيق"
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:133
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:134
 #, kde-format
 msgid "Size"
 msgstr "الحجم"
@@ -103,8 +103,8 @@ msgstr ""
 msgid "Info"
 msgstr "معلومات"
 
-#: src/views/library/LibraryMenu.qml:70 src/views/library/LibraryView.qml:469
-#: src/views/Viewer/Viewer.qml:102
+#: src/views/library/LibraryMenu.qml:70 src/views/library/LibraryView.qml:467
+#: src/views/Viewer/Viewer.qml:100
 #, kde-format
 msgid "Share"
 msgstr "شارك"
@@ -114,7 +114,7 @@ msgstr "شارك"
 msgid "Select"
 msgstr "اختر"
 
-#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:479
+#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:477
 #, kde-format
 msgid "Export"
 msgstr "صدّر"
@@ -139,77 +139,77 @@ msgstr "افتح موقعًا"
 msgid "Remove"
 msgstr "أزل"
 
-#: src/views/library/LibraryView.qml:76
+#: src/views/library/LibraryView.qml:78
 #, kde-format
 msgid "Toggle sidebar"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:88 src/views/library/LibraryView.qml:447
+#: src/views/library/LibraryView.qml:89 src/views/library/LibraryView.qml:445
 #, kde-format
 msgid "Open"
 msgstr "افتح"
 
-#: src/views/library/LibraryView.qml:97
+#: src/views/library/LibraryView.qml:98
 #, kde-format
 msgid "List"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:106
+#: src/views/library/LibraryView.qml:107
 #, kde-format
 msgid "Grid"
 msgstr "الشبكة"
 
-#: src/views/library/LibraryView.qml:125
+#: src/views/library/LibraryView.qml:126
 #, kde-format
 msgid "Date"
 msgstr "التاريخ"
 
-#: src/views/library/LibraryView.qml:143
+#: src/views/library/LibraryView.qml:144
 #, kde-format
 msgid "Ascending"
 msgstr "تصاعديًّا"
 
-#: src/views/library/LibraryView.qml:150
+#: src/views/library/LibraryView.qml:151
 #, kde-format
 msgid "Descending"
 msgstr "تنازليًّا"
 
-#: src/views/library/LibraryView.qml:159
+#: src/views/library/LibraryView.qml:160
 #, kde-format
 msgid "Settings"
 msgstr "إعدادات"
 
-#: src/views/library/LibraryView.qml:166
+#: src/views/library/LibraryView.qml:167
 #, kde-format
 msgid "About"
 msgstr "عن"
 
-#: src/views/library/LibraryView.qml:178
+#: src/views/library/LibraryView.qml:179
 #, kde-format
 msgid "Filter..."
 msgstr "رشّح..."
 
-#: src/views/library/LibraryView.qml:210
+#: src/views/library/LibraryView.qml:209
 #, kde-format
 msgid "Nothing here!"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:211
+#: src/views/library/LibraryView.qml:210
 #, kde-format
 msgid "Add new sources to manage your documents."
 msgstr ""
 
-#: src/views/library/LibraryView.qml:217
+#: src/views/library/LibraryView.qml:216
 #, kde-format
 msgid "Open file"
 msgstr "افتح الملفّ"
 
-#: src/views/library/LibraryView.qml:223
+#: src/views/library/LibraryView.qml:222
 #, kde-format
 msgid "Add sources"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:457
+#: src/views/library/LibraryView.qml:455
 #, kde-format
 msgid "Tag"
 msgstr "الوسم"
@@ -265,40 +265,43 @@ msgstr "أضف"
 msgid "Scan now"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:42
+#: src/views/Viewer/Viewer.qml:41 src/views/Viewer/Viewer.qml:55
 #, kde-format
 msgid "Nothing here"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:43
+#: src/views/Viewer/Viewer.qml:42
 #, kde-format
 msgid "Drop or open a document to view."
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:59
+#: src/views/Viewer/Viewer.qml:56
+#, kde-format
+msgid "Open a document file to view it"
+msgstr ""
+
+#: src/views/Viewer/Viewer.qml:62
 #, kde-format
 msgid "Browser"
 msgstr "المتصفّح"
 
-#: src/views/Viewer/Viewer.qml:76
-#, kde-format
-msgid "Fav"
-msgstr "فضل"
-
-#: src/views/Viewer/Viewer.qml:90
+#: src/views/Viewer/Viewer.qml:88
 #, kde-format
 msgid "Doodle"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:116
+#: src/views/Viewer/Viewer.qml:114
 #, kde-format
 msgid "Browse Horizontally"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:140
+#: src/views/Viewer/Viewer.qml:138
 #, kde-format
 msgid "Fullscreen"
 msgstr "ملء الشاشة"
+
+#~ msgid "Fav"
+#~ msgstr "فضل"
 
 #~ msgid "Dark Mode"
 #~ msgstr "الوضع الداكن"
