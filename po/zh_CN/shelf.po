@@ -276,10 +276,9 @@ msgid "Drop or open a document to view."
 msgstr "拖放或打开文档进行查看。"
 
 #: src/views/Viewer/Viewer.qml:56
-#, fuzzy, kde-format
-#| msgid "Drop or open a document to view."
+#, kde-format
 msgid "Open a document file to view it"
-msgstr "拖放或打开文档进行查看。"
+msgstr ""
 
 #: src/views/Viewer/Viewer.qml:62
 #, kde-format
@@ -300,6 +299,3 @@ msgstr "水平浏览"
 #, kde-format
 msgid "Fullscreen"
 msgstr "全屏"
-
-#~ msgid "Fav"
-#~ msgstr "收藏"

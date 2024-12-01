@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the maui-shelf package.
 #
 # Automatically generated, 2020.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-30 01:49+0000\n"
-"PO-Revision-Date: 2023-10-28 12:43+0200\n"
+"PO-Revision-Date: 2024-11-30 12:46+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -280,10 +280,9 @@ msgid "Drop or open a document to view."
 msgstr "Suelte o abra un documento para verlo."
 
 #: src/views/Viewer/Viewer.qml:56
-#, fuzzy, kde-format
-#| msgid "Drop or open a document to view."
+#, kde-format
 msgid "Open a document file to view it"
-msgstr "Suelte o abra un documento para verlo."
+msgstr "Abrir un archivo de documento para verlo"
 
 #: src/views/Viewer/Viewer.qml:62
 #, kde-format
