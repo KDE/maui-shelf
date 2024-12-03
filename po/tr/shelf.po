@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-30 01:49+0000\n"
-"PO-Revision-Date: 2023-10-28 05:41+0300\n"
+"PO-Revision-Date: 2024-12-02 19:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -278,10 +278,9 @@ msgid "Drop or open a document to view."
 msgstr "Görüntülemek için bir belge açın veya bırakın."
 
 #: src/views/Viewer/Viewer.qml:56
-#, fuzzy, kde-format
-#| msgid "Drop or open a document to view."
+#, kde-format
 msgid "Open a document file to view it"
-msgstr "Görüntülemek için bir belge açın veya bırakın."
+msgstr "Görüntülemek için bir belge açın"
 
 #: src/views/Viewer/Viewer.qml:62
 #, kde-format
