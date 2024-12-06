@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 01:56+0000\n"
+"POT-Creation-Date: 2024-11-30 01:49+0000\n"
 "PO-Revision-Date: 2021-05-01 23:14-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.12.2\n"
 
-#: src/main.cpp:51
+#: src/main.cpp:48
 #, fuzzy, kde-format
 #| msgid "Shelf lets you browse and view your documents."
 msgid "Browse and view your documents."
 msgstr "ਸ਼ੈਲਫ਼ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਦਸਤਾਵੇਜ਼ ਵੇਖਣ ਲਈ ਸਹਾਇਕ ਹੈ।"
 
-#: src/main.cpp:56
+#: src/main.cpp:53
 #, kde-format
 msgid "Developer"
 msgstr "ਡਿਵੈਲਪਰ"
 
-#: src/main.cpp:63
+#: src/main.cpp:60
 #, fuzzy, kde-format
 #| msgid "Developer"
 msgid "Peruse Developers"
@@ -65,12 +65,12 @@ msgid "Collection"
 msgstr ""
 
 #: src/models/placesmodel.cpp:18 src/models/placesmodel.cpp:45
-#: src/views/library/LibraryMenu.qml:40
+#: src/views/library/LibraryMenu.qml:48
 #, kde-format
 msgid "Tags"
 msgstr ""
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:149
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:118
 #, kde-format
 msgid "Title"
 msgstr "ਟਾਈਟਲ"
@@ -90,132 +90,132 @@ msgstr "ਬਣਾਉਣ ਤਾਰੀਖ"
 msgid "Format"
 msgstr "ਫਾਰਮੈਟ"
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:165
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:134
 #, kde-format
 msgid "Size"
 msgstr "ਆਕਾਰ"
 
-#: src/views/library/LibraryMenu.qml:31
+#: src/views/library/LibraryMenu.qml:39
 #, kde-format
 msgid "UnFav it"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:52
+#: src/views/library/LibraryMenu.qml:60
 #, kde-format
 msgid "Info"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:62 src/views/library/LibraryView.qml:442
-#: src/views/Viewer/Viewer.qml:102
+#: src/views/library/LibraryMenu.qml:70 src/views/library/LibraryView.qml:467
+#: src/views/Viewer/Viewer.qml:100
 #, kde-format
 msgid "Share"
 msgstr "ਸਾਂਝਾ ਕਰੋ"
 
-#: src/views/library/LibraryMenu.qml:76
+#: src/views/library/LibraryMenu.qml:84
 #, kde-format
 msgid "Select"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:92 src/views/library/LibraryView.qml:452
+#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:477
 #, kde-format
 msgid "Export"
 msgstr "ਐਕਸਪੋਰਟ"
 
-#: src/views/library/LibraryMenu.qml:110
+#: src/views/library/LibraryMenu.qml:118
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open with"
 msgstr "ਖੋਲ੍ਹੋ"
 
-#: src/views/library/LibraryMenu.qml:121
+#: src/views/library/LibraryMenu.qml:135
 #, kde-format
 msgid "Go to Folder"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:133
+#: src/views/library/LibraryMenu.qml:147
 #, kde-format
 msgid "Open Location"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:145
+#: src/views/library/LibraryMenu.qml:159
 #, kde-format
 msgid "Remove"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:57
+#: src/views/library/LibraryView.qml:78
+#, kde-format
+msgid "Toggle sidebar"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:89 src/views/library/LibraryView.qml:445
+#, kde-format
+msgid "Open"
+msgstr "ਖੋਲ੍ਹੋ"
+
+#: src/views/library/LibraryView.qml:98
+#, kde-format
+msgid "List"
+msgstr "ਸੂਚੀ"
+
+#: src/views/library/LibraryView.qml:107
+#, kde-format
+msgid "Grid"
+msgstr "ਗਰਿੱਡ"
+
+#: src/views/library/LibraryView.qml:126
+#, kde-format
+msgid "Date"
+msgstr "ਤਾਰੀਖ"
+
+#: src/views/library/LibraryView.qml:144
+#, kde-format
+msgid "Ascending"
+msgstr "ਵੱਧਦਾ-ਕ੍ਰਮ"
+
+#: src/views/library/LibraryView.qml:151
+#, kde-format
+msgid "Descending"
+msgstr "ਘੱਟਦਾ-ਕ੍ਰਮ"
+
+#: src/views/library/LibraryView.qml:160
+#, kde-format
+msgid "Settings"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:167
+#, kde-format
+msgid "About"
+msgstr ""
+
+#: src/views/library/LibraryView.qml:179
+#, kde-format
+msgid "Filter..."
+msgstr "...ਫਿਲਟਰ"
+
+#: src/views/library/LibraryView.qml:209
 #, fuzzy, kde-format
 #| msgid "Nothing here"
 msgid "Nothing here!"
 msgstr "ਇੱਥੇ ਕੁਝ ਨਹੀਂ ਹੈ"
 
-#: src/views/library/LibraryView.qml:58
+#: src/views/library/LibraryView.qml:210
 #, fuzzy, kde-format
 #| msgid "Shelf lets you browse and view your documents."
 msgid "Add new sources to manage your documents."
 msgstr "ਸ਼ੈਲਫ਼ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਦਸਤਾਵੇਜ਼ ਵੇਖਣ ਲਈ ਸਹਾਇਕ ਹੈ।"
 
-#: src/views/library/LibraryView.qml:64
+#: src/views/library/LibraryView.qml:216
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open file"
 msgstr "ਖੋਲ੍ਹੋ"
 
-#: src/views/library/LibraryView.qml:70
+#: src/views/library/LibraryView.qml:222
 #, kde-format
 msgid "Add sources"
 msgstr ""
 
-#: src/views/library/LibraryView.qml:100
-#, kde-format
-msgid "Toggle sidebar"
-msgstr ""
-
-#: src/views/library/LibraryView.qml:120 src/views/library/LibraryView.qml:420
-#, kde-format
-msgid "Open"
-msgstr "ਖੋਲ੍ਹੋ"
-
-#: src/views/library/LibraryView.qml:129
-#, kde-format
-msgid "List"
-msgstr "ਸੂਚੀ"
-
-#: src/views/library/LibraryView.qml:138
-#, kde-format
-msgid "Grid"
-msgstr "ਗਰਿੱਡ"
-
-#: src/views/library/LibraryView.qml:157
-#, kde-format
-msgid "Date"
-msgstr "ਤਾਰੀਖ"
-
-#: src/views/library/LibraryView.qml:175
-#, kde-format
-msgid "Ascending"
-msgstr "ਵੱਧਦਾ-ਕ੍ਰਮ"
-
-#: src/views/library/LibraryView.qml:182
-#, kde-format
-msgid "Descending"
-msgstr "ਘੱਟਦਾ-ਕ੍ਰਮ"
-
-#: src/views/library/LibraryView.qml:191
-#, kde-format
-msgid "Settings"
-msgstr ""
-
-#: src/views/library/LibraryView.qml:198
-#, kde-format
-msgid "About"
-msgstr ""
-
-#: src/views/library/LibraryView.qml:210
-#, kde-format
-msgid "Filter..."
-msgstr "...ਫਿਲਟਰ"
-
-#: src/views/library/LibraryView.qml:430
+#: src/views/library/LibraryView.qml:455
 #, kde-format
 msgid "Tag"
 msgstr ""
@@ -271,37 +271,38 @@ msgstr ""
 msgid "Scan now"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:42
+#: src/views/Viewer/Viewer.qml:41 src/views/Viewer/Viewer.qml:55
 #, kde-format
 msgid "Nothing here"
 msgstr "ਇੱਥੇ ਕੁਝ ਨਹੀਂ ਹੈ"
 
-#: src/views/Viewer/Viewer.qml:43
+#: src/views/Viewer/Viewer.qml:42
 #, kde-format
 msgid "Drop or open a document to view."
 msgstr "ਵੇਖਣ ਲਈ ਦਸਤਾਵੇਜ਼ ਸੁੱਟੋ ਜਾਂ ਖੋਲ੍ਹੋ।"
 
-#: src/views/Viewer/Viewer.qml:59
+#: src/views/Viewer/Viewer.qml:56
+#, fuzzy, kde-format
+#| msgid "Drop or open a document to view."
+msgid "Open a document file to view it"
+msgstr "ਵੇਖਣ ਲਈ ਦਸਤਾਵੇਜ਼ ਸੁੱਟੋ ਜਾਂ ਖੋਲ੍ਹੋ।"
+
+#: src/views/Viewer/Viewer.qml:62
 #, kde-format
 msgid "Browser"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:76
-#, kde-format
-msgid "Fav"
-msgstr ""
-
-#: src/views/Viewer/Viewer.qml:90
+#: src/views/Viewer/Viewer.qml:88
 #, kde-format
 msgid "Doodle"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:116
+#: src/views/Viewer/Viewer.qml:114
 #, kde-format
 msgid "Browse Horizontally"
 msgstr ""
 
-#: src/views/Viewer/Viewer.qml:140
+#: src/views/Viewer/Viewer.qml:138
 #, kde-format
 msgid "Fullscreen"
 msgstr ""

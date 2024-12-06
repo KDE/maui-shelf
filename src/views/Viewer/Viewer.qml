@@ -13,9 +13,8 @@ Item
     id: control
 
     readonly property string currentPath : _tabView.currentItem ? _tabView.currentItem.path : ""
-    property bool currentPathFav : FB.Tagging.isFav(currentPath)
-    property alias currentViewer: _tabView.currentItem
-    property alias tabView : _tabView
+    readonly property alias currentViewer: _tabView.currentItem
+    readonly property alias tabView : _tabView
     readonly property string title : _tabView.currentItem ? _tabView.currentItem.title : ""
     //    onGoBackTriggered: _stackView.pop()
 
@@ -53,6 +52,10 @@ Item
         tabBar.visible: true
         tabBar.showNewTabButton: false
 
+        holder.title: i18n("Nothing here")
+        holder.body: i18n("Open a document file to view it")
+        holder.emoji: "folder-open"
+
         tabBar.leftContent: ToolButton
         {
             icon.name: "go-previous"
@@ -61,91 +64,86 @@ Item
             onClicked: toggleViewer()
         }
 
-        tabBar.rightContent: Loader
-        {
-            asynchronous: true
-            sourceComponent:  Maui.ToolButtonMenu
+        onCurrentIndexChanged: console.log("VIEWER CURRENT INDEX CHANGED", currentIndex)
+
+        tabBar.rightContent: [
+
+            FB.FavButton
             {
-                icon.name: "overflow-menu"
+                url: control.currentPath
+            },
 
-                Maui.MenuItemActionRow
+            Loader
+            {
+                asynchronous: true
+                sourceComponent: Maui.ToolButtonMenu
                 {
-                    Action
-                    {
-                        icon.name: "love"
-                        text: i18n("Fav")
+                    icon.name: "overflow-menu"
 
-                        checked: currentPathFav
-                        icon.color: currentPathFav ? "#f84172" : Maui.Theme.textColor
-                        onTriggered:
+                    Maui.MenuItemActionRow
+                    {
+                        Action
                         {
-                            FB.Tagging.toggleFav(control.currentPath)
-                            currentPathFav = FB.Tagging.isFav(control.currentPath)
+                            icon.name: "tool_pen"
+                            text: i18n("Doodle")
+
+                            onTriggered:
+                            {
+                                _dialogLoader.sourceComponent = _doodleComponent
+                                dialog.open()
+                            }
+                        }
+
+                        Action
+                        {
+                            icon.name: "document-share"
+                            text: i18n("Share")
+
+                            onTriggered:
+                            {
+                                Maui.Platform.shareFiles([control.currentPath])
+                            }
                         }
                     }
 
-                    Action
-                    {
-                        icon.name: "tool_pen"
-                        text: i18n("Doodle")
+                    MenuSeparator {}
 
-                        onTriggered:
+                    MenuItem
+                    {
+                        icon.name: "view-right-new"
+                        text: i18n("Browse Horizontally")
+
+                        checkable: true
+                        checked:  currentViewer.orientation === ListView.Horizontal
+                        onClicked:
                         {
-                            _dialogLoader.sourceComponent = _doodleComponent
-                            dialog.open()
+                            currentViewer.orientation = currentViewer.orientation === ListView.Horizontal ? ListView.Vertical : ListView.Horizontal
                         }
                     }
 
-                    Action
+                    //            MenuItem
+                    //            {
+                    //                icon.name:  "zoom-fit-width"
+                    //                text: i18n("Fill")
+                    //                checkable: true
+                    //                checked: currentViewer.fitWidth
+                    //                onTriggered:
+                    //                {
+                    //                    currentViewer.fitWidth= !currentViewer.fitWidth
+                    //                }
+                    //            }
+
+                    MenuItem
                     {
-                        icon.name: "document-share"
-                        text: i18n("Share")
-
-                        onTriggered:
-                        {
-                            Maui.Platform.shareFiles([control.currentPath])
-                        }
+                        text: i18n("Fullscreen")
+                        checkable: true
+                        checked: root.visibility === Window.FullScreen
+                        icon.name: "view-fullscreen"
+                        onTriggered: root.visibility = (root.visibility === Window.FullScreen  ? Window.Windowed : Window.FullScreen)
                     }
-                }
-
-                MenuSeparator {}
-
-                MenuItem
-                {
-                    icon.name: "view-right-new"
-                    text: i18n("Browse Horizontally")
-
-                    checkable: true
-                    checked:  currentViewer.orientation === ListView.Horizontal
-                    onClicked:
-                    {
-                        currentViewer.orientation = currentViewer.orientation === ListView.Horizontal ? ListView.Vertical : ListView.Horizontal
-                    }
-                }
-
-                //            MenuItem
-                //            {
-                //                icon.name:  "zoom-fit-width"
-                //                text: i18n("Fill")
-                //                checkable: true
-                //                checked: currentViewer.fitWidth
-                //                onTriggered:
-                //                {
-                //                    currentViewer.fitWidth= !currentViewer.fitWidth
-                //                }
-                //            }
-
-                MenuItem
-                {
-                    text: i18n("Fullscreen")
-                    checkable: true
-                    checked: root.visibility === Window.FullScreen
-                    icon.name: "view-fullscreen"
-                    onTriggered: root.visibility = (root.visibility === Window.FullScreen  ? Window.Windowed : Window.FullScreen)
                 }
             }
-        }
-
+        ]
     }
 
     Component
@@ -156,6 +154,7 @@ Item
         {
             Maui.Controls.title: title
             Maui.Controls.toolTipText: path
+            headBar.visible: false
 
             onGoBackTriggered: _stackView.pop()
         }
