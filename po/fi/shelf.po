@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
-# Tommi Nieminen <translator@legisign.org>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-30 01:49+0000\n"
-"PO-Revision-Date: 2023-11-19 19:36+0200\n"
+"PO-Revision-Date: 2024-12-01 14:57+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -277,10 +278,9 @@ msgid "Drop or open a document to view."
 msgstr "Avaa tai pudota näytettävä tiedosto."
 
 #: src/views/Viewer/Viewer.qml:56
-#, fuzzy, kde-format
-#| msgid "Drop or open a document to view."
+#, kde-format
 msgid "Open a document file to view it"
-msgstr "Avaa tai pudota näytettävä tiedosto."
+msgstr "Katsele tiedostoa avaamalla se"
 
 #: src/views/Viewer/Viewer.qml:62
 #, kde-format
