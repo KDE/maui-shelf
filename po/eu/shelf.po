@@ -1,16 +1,16 @@
 # Translation for maui-shelf.po to Euskara/Basque (eu).
-# Copyright (C) 2022-2023 This file is copyright:
+# Copyright (C) 2022-2024 This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
-# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-30 01:49+0000\n"
-"PO-Revision-Date: 2023-10-28 12:03+0200\n"
+"PO-Revision-Date: 2024-12-26 18:07+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -281,10 +281,9 @@ msgid "Drop or open a document to view."
 msgstr "Jaregin edo ireki dokumentu hura bat ikusteko."
 
 #: src/views/Viewer/Viewer.qml:56
-#, fuzzy, kde-format
-#| msgid "Drop or open a document to view."
+#, kde-format
 msgid "Open a document file to view it"
-msgstr "Jaregin edo ireki dokumentu hura bat ikusteko."
+msgstr "Dokumentu-fitxategi bat ireki hura ikusteko"
 
 #: src/views/Viewer/Viewer.qml:62
 #, kde-format
