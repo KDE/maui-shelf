@@ -477,6 +477,18 @@ Maui.SideBarView
         {
             text: i18n("Export")
             icon.name: "document-export"
+            onTriggered:
+            {
+                _dialogLoader.sourceComponent = null
+                _dialogLoader.sourceComponent = _fileDialog
+                dialog.browser.settings.onlyDirs = true
+                dialog.singleSelection = true
+                dialog.callback = function(paths)
+                {
+                    FB.FM.copy(_selectionbar.uris, paths[0])
+                }
+                dialog.open()
+            }
         }
     }
 
@@ -512,7 +524,15 @@ function filterSelectedItems(path)
 
 function openFileDialog()
 {
+    _dialogLoader.sourceComponent = null
     _dialogLoader.sourceComponent = _fileDialog
+    _dialogLoader.item.browser.settings.filterType = FB.FMList.DOCUMENT
+    _dialogLoader.item.browser.settings.filters = [".cbz", ".cbr"]
+    _dialogLoader.item.callback = function(paths)
+    {
+        console.log(paths)
+        Shelf.Library.openFiles(paths)
+    }
     _dialogLoader.item.open()
 }
 

@@ -139,8 +139,9 @@ Maui.SettingsDialog
                 //                flat: true
                 onClicked:
                 {
+                    _dialogLoader.sourceComponent = null
                     _dialogLoader.sourceComponent = _fileDialog
-                    _dialogLoader.item.settings.onlyDirs = true
+                    _dialogLoader.item.browser.settings.onlyDirs = true
                     _dialogLoader.item.callback = function(urls)
                     {
                         Library.addSources(urls)

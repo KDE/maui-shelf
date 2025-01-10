@@ -39,14 +39,7 @@ Maui.ApplicationWindow
         id: _fileDialog
         FB.FileDialog
         {
-            mode: modes.OPEN
-            browser.settings.filterType: FB.FMList.DOCUMENT
-            browser.settings.filters: [".cbz", ".cbr"]
-            callback: function(paths)
-            {
-                console.log(paths)
-                Shelf.Library.openFiles(paths)
-            }
+            mode: FB.FileDialog.Open
         }
     }
 
