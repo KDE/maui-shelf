@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Shelf
+Name[ar]=الرف
 Name[ca]=Shelf
 Name[ca@valencia]=Shelf
 Name[cs]=Shelf
@@ -35,6 +36,7 @@ Name[x-test]=xxShelfxx
 Name[zh_CN]=Shelf
 Name[zh_TW]=Shelf
 Comment=Document viewer
+Comment[ar]=عارض المستندات
 Comment[ca]=Visualitzador de documents
 Comment[ca@valencia]=Visor de documents
 Comment[cs]=Prohlížeč dokumentů
@@ -67,6 +69,7 @@ Terminal=false
 Type=Application
 Categories=Qt;KDE;Graphics;Office;Viewer;
 GenericName=Document Viewer
+GenericName[ar]=عارض مستندات
 GenericName[ca]=Visualitzador de documents
 GenericName[ca@valencia]=Visor de documents
 GenericName[cs]=Prohlížeč dokumentů
