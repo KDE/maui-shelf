@@ -8,6 +8,7 @@ SPDX-License-Identifier: CC0-1.0
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LGPL-3.0</project_license>
   <name>Shelf</name>
+  <name xml:lang="ar">الرف</name>
   <name xml:lang="ca">Shelf</name>
   <name xml:lang="ca-valencia">Shelf</name>
   <name xml:lang="cs">Shelf</name>
@@ -39,6 +40,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="zh-CN">Shelf</name>
   <name xml:lang="zh-TW">Shelf</name>
   <summary>Browse and view your documents</summary>
+  <summary xml:lang="ar">تصفح وعرض مستنداتك</summary>
   <summary xml:lang="ca">Navegueu i visualitzeu els vostres documents</summary>
   <summary xml:lang="ca-valencia">Navegueu i visualitzeu els vostres documents</summary>
   <summary xml:lang="cs">Procházejte a prohlížejte svoje dokumenty</summary>
@@ -68,6 +70,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="zh-TW">瀏覽並檢視您的文件</summary>
   <description>
     <p>Shelf is a simple PDF and EPUB document browser and viewer.</p>
+    <p xml:lang="ar">الرف هو متصفح وعارض مستندات بي دي اف و EPUB بسيط.</p>
     <p xml:lang="ca">El Shelf és un navegador i visualitzador de documents PDF i EPUB.</p>
     <p xml:lang="ca-valencia">Shelf és un navegador i visor de documents PDF i EPUB.</p>
     <p xml:lang="cs">Shelf je jednoduchý prohlížeč dokumentů PDF a EPUB.</p>
@@ -102,6 +105,7 @@ SPDX-License-Identifier: CC0-1.0
   <screenshots>
     <screenshot type="default">
       <caption>Shelf</caption>
+      <caption xml:lang="ar">الرف</caption>
       <caption xml:lang="ca">Shelf</caption>
       <caption xml:lang="ca-valencia">Shelf</caption>
       <caption xml:lang="cs">Shelf</caption>
