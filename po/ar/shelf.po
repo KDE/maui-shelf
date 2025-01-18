@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
+# SPDX-FileCopyrightText: 2023, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-30 01:49+0000\n"
-"PO-Revision-Date: 2023-05-11 11:05+0400\n"
+"PO-Revision-Date: 2025-01-17 07:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,11 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: src/main.cpp:48
 #, kde-format
 msgid "Browse and view your documents."
-msgstr ""
+msgstr "تصفح وعرض مستنداتك."
 
 #: src/main.cpp:53
 #, kde-format
@@ -30,12 +31,12 @@ msgstr "مطوّر"
 #: src/main.cpp:60
 #, kde-format
 msgid "Peruse Developers"
-msgstr ""
+msgstr "مطوري Peruse"
 
 #: src/models/placesmodel.cpp:8
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "المفضّلة"
 
 #: src/models/placesmodel.cpp:9
 #, kde-format
@@ -50,17 +51,17 @@ msgstr "المستندات"
 #: src/models/placesmodel.cpp:11
 #, kde-format
 msgid "Comics"
-msgstr ""
+msgstr "قصص مصورة"
 
 #: src/models/placesmodel.cpp:12
 #, kde-format
 msgid "PDFs"
-msgstr ""
+msgstr "بي دي اف"
 
 #: src/models/placesmodel.cpp:13
 #, kde-format
 msgid "Collection"
-msgstr ""
+msgstr "التّجميعة"
 
 #: src/models/placesmodel.cpp:18 src/models/placesmodel.cpp:45
 #: src/views/library/LibraryMenu.qml:48
@@ -96,7 +97,7 @@ msgstr "الحجم"
 #: src/views/library/LibraryMenu.qml:39
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "أزل التفضيل"
 
 #: src/views/library/LibraryMenu.qml:60
 #, kde-format
@@ -142,7 +143,7 @@ msgstr "أزل"
 #: src/views/library/LibraryView.qml:78
 #, kde-format
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "تبديل الشريط الجانبي"
 
 #: src/views/library/LibraryView.qml:89 src/views/library/LibraryView.qml:445
 #, kde-format
@@ -152,7 +153,7 @@ msgstr "افتح"
 #: src/views/library/LibraryView.qml:98
 #, kde-format
 msgid "List"
-msgstr ""
+msgstr "قائمة"
 
 #: src/views/library/LibraryView.qml:107
 #, kde-format
@@ -192,12 +193,12 @@ msgstr "رشّح..."
 #: src/views/library/LibraryView.qml:209
 #, kde-format
 msgid "Nothing here!"
-msgstr ""
+msgstr "لا يوجد شيء هنا!"
 
 #: src/views/library/LibraryView.qml:210
 #, kde-format
 msgid "Add new sources to manage your documents."
-msgstr ""
+msgstr "أضف مصادر جديدة لإدارة مستنداتك."
 
 #: src/views/library/LibraryView.qml:216
 #, kde-format
@@ -207,7 +208,7 @@ msgstr "افتح الملفّ"
 #: src/views/library/LibraryView.qml:222
 #, kde-format
 msgid "Add sources"
-msgstr ""
+msgstr "أضف مصادر"
 
 #: src/views/library/LibraryView.qml:455
 #, kde-format
@@ -222,7 +223,7 @@ msgstr "الوسوم!"
 #: src/views/library/Sidebar.qml:52
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "ستدرج وسومك هنا"
 
 #: src/views/SettingsDialog.qml:53
 #, kde-format
@@ -232,28 +233,28 @@ msgstr "عامّ"
 #: src/views/SettingsDialog.qml:71
 #, kde-format
 msgid "Auto Scan"
-msgstr ""
+msgstr "مسح آليّ"
 
 #: src/views/SettingsDialog.qml:72
 #, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
-msgstr ""
+msgstr "امسح جميع مصادر المستندات عند بدء التشغيل لإبقاء مجموعتك محدثة."
 
 #: src/views/SettingsDialog.qml:85
 #, kde-format
 msgid "Previews"
-msgstr ""
+msgstr "المعاينات"
 
 #: src/views/SettingsDialog.qml:86
 #, kde-format
 msgid "Display thumbnail previews."
-msgstr ""
+msgstr "اعرض معاينات المصغرات"
 
 #: src/views/SettingsDialog.qml:99
 #, kde-format
 msgid "Sources"
-msgstr ""
+msgstr "المصادر"
 
 #: src/views/SettingsDialog.qml:138
 #, kde-format
@@ -263,22 +264,22 @@ msgstr "أضف"
 #: src/views/SettingsDialog.qml:155
 #, kde-format
 msgid "Scan now"
-msgstr ""
+msgstr "امسح الآن"
 
 #: src/views/Viewer/Viewer.qml:41 src/views/Viewer/Viewer.qml:55
 #, kde-format
 msgid "Nothing here"
-msgstr ""
+msgstr "لا يوجد شيء هنا"
 
 #: src/views/Viewer/Viewer.qml:42
 #, kde-format
 msgid "Drop or open a document to view."
-msgstr ""
+msgstr "اسحب أو افتح مستندًا لعرضه"
 
 #: src/views/Viewer/Viewer.qml:56
 #, kde-format
 msgid "Open a document file to view it"
-msgstr ""
+msgstr "افتح مستندًا لعرضه"
 
 #: src/views/Viewer/Viewer.qml:62
 #, kde-format
@@ -288,12 +289,12 @@ msgstr "المتصفّح"
 #: src/views/Viewer/Viewer.qml:88
 #, kde-format
 msgid "Doodle"
-msgstr ""
+msgstr "دودل"
 
 #: src/views/Viewer/Viewer.qml:114
 #, kde-format
 msgid "Browse Horizontally"
-msgstr ""
+msgstr "تصفح أفقيًّا"
 
 #: src/views/Viewer/Viewer.qml:138
 #, kde-format
