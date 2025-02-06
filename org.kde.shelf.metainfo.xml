@@ -25,6 +25,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="it">Shelf</name>
   <name xml:lang="ka">Shelf</name>
   <name xml:lang="ko">Shelf</name>
+  <name xml:lang="lv">Shelf</name>
   <name xml:lang="my">စာအုပ်စင်</name>
   <name xml:lang="nl">Shelf</name>
   <name xml:lang="pl">Shelf</name>
@@ -56,6 +57,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="it">Sfoglia e visualizza i tuoi documenti</summary>
   <summary xml:lang="ka">მოძებნეთ და დაათვალიერეთ თქვენი დოკუმენტები</summary>
   <summary xml:lang="ko">문서를 탐색하고 보기</summary>
+  <summary xml:lang="lv">Pārlūkojiet un skatiet dokumentus</summary>
   <summary xml:lang="nl">Uw documenten door bladeren en bekijken.</summary>
   <summary xml:lang="pl">Przeglądaj i oglądaj swoje dokumenty</summary>
   <summary xml:lang="pt">Navegue e veja os seus documentos</summary>
@@ -86,6 +88,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="it">Shelf è un semplice navigatore e visore di documenti PDF ed EPUB.</p>
     <p xml:lang="ka">Shelf PDF და EPUB დოკუმენტების ნახვის მარტივი პროგრამაა.</p>
     <p xml:lang="ko">Shelf는 간단한 PDF와 EPUB 문서 뷰어와 탐색기입니다.</p>
+    <p xml:lang="lv">„Shelf“ ir vienkāršs PDF un EPUB dokumentu pārlūks un skatītājs.</p>
     <p xml:lang="nl">Shelf is een eenvoudige PDF en EPUB documentbrowser en viewer.</p>
     <p xml:lang="pl">Shelf jest prostą przeglądarką dokumentów PDF oraz EPUB.</p>
     <p xml:lang="pt">O Shelf é um navegador e visualizador simples de documentos PDF e EPUB.</p>
@@ -122,6 +125,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="it">Shelf</caption>
       <caption xml:lang="ka">Shelf</caption>
       <caption xml:lang="ko">Shelf</caption>
+      <caption xml:lang="lv">Shelf</caption>
       <caption xml:lang="my">စာအုပ်စင်</caption>
       <caption xml:lang="nl">Shelf</caption>
       <caption xml:lang="pl">Shelf</caption>
