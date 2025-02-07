@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2023.
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-30 01:49+0000\n"
-"PO-Revision-Date: 2023-11-14 11:56-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2025-02-05 23:39-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -278,10 +279,9 @@ msgid "Drop or open a document to view."
 msgstr "Solte ou abra um documento para visualizá-lo."
 
 #: src/views/Viewer/Viewer.qml:56
-#, fuzzy, kde-format
-#| msgid "Drop or open a document to view."
+#, kde-format
 msgid "Open a document file to view it"
-msgstr "Solte ou abra um documento para visualizá-lo."
+msgstr "Abra um documento para visualizá-lo"
 
 #: src/views/Viewer/Viewer.qml:62
 #, kde-format
