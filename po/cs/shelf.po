@@ -277,10 +277,9 @@ msgid "Drop or open a document to view."
 msgstr "Zde upusťte dokument, který chcete prohlížet."
 
 #: src/views/Viewer/Viewer.qml:56
-#, fuzzy, kde-format
-#| msgid "Drop or open a document to view."
+#, kde-format
 msgid "Open a document file to view it"
-msgstr "Zde upusťte dokument, který chcete prohlížet."
+msgstr ""
 
 #: src/views/Viewer/Viewer.qml:62
 #, kde-format
