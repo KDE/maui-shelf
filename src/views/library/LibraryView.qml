@@ -58,8 +58,9 @@ Maui.SideBarView
                     if(!active)
                     {
                         let newX = Math.abs(_floatingViewer.x - (_pageLayout.width - _floatingViewer.implicitWidth - 20))
-                        _floatingViewer.y = Qt.binding(()=> { return _pageLayout.height - _floatingViewer.implicitHeight - 20})
                         _floatingViewer.x = Qt.binding(()=> { return (_pageLayout.width - _floatingViewer.implicitWidth - 20 - newX) < 0 ? 20 : _pageLayout.width - _floatingViewer.implicitWidth - 20 - newX})
+                        _floatingViewer.y = Qt.binding(()=> { return _floatingViewer.parent.height - _floatingViewer.implicitHeight - 20})
+
                     }
                 }
             }
