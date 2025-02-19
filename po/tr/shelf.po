@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-30 01:49+0000\n"
+"POT-Creation-Date: 2025-02-19 00:40+0000\n"
 "PO-Revision-Date: 2025-02-15 21:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr "Koleksiyon"
 msgid "Tags"
 msgstr "Etiketler"
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:118
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:119
 #, kde-format
 msgid "Title"
 msgstr "Başlık"
@@ -88,7 +88,7 @@ msgstr "Oluşturma tarihi"
 msgid "Format"
 msgstr "Biçim"
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:134
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:135
 #, kde-format
 msgid "Size"
 msgstr "Boyut"
@@ -103,7 +103,7 @@ msgstr "Sık Kullanılanlardan Kaldır"
 msgid "Info"
 msgstr "Bilgi"
 
-#: src/views/library/LibraryMenu.qml:70 src/views/library/LibraryView.qml:467
+#: src/views/library/LibraryMenu.qml:70 src/views/library/LibraryView.qml:468
 #: src/views/Viewer/Viewer.qml:100
 #, kde-format
 msgid "Share"
@@ -114,7 +114,7 @@ msgstr "Paylaş"
 msgid "Select"
 msgstr "Seç"
 
-#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:477
+#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:478
 #, kde-format
 msgid "Export"
 msgstr "Dışa Aktar"
@@ -139,77 +139,77 @@ msgstr "Konum Aç"
 msgid "Remove"
 msgstr "Kaldır"
 
-#: src/views/library/LibraryView.qml:78
+#: src/views/library/LibraryView.qml:79
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "Kenar çubuğunu aç/kapat"
 
-#: src/views/library/LibraryView.qml:89 src/views/library/LibraryView.qml:445
+#: src/views/library/LibraryView.qml:90 src/views/library/LibraryView.qml:446
 #, kde-format
 msgid "Open"
 msgstr "Aç"
 
-#: src/views/library/LibraryView.qml:98
+#: src/views/library/LibraryView.qml:99
 #, kde-format
 msgid "List"
 msgstr "Liste"
 
-#: src/views/library/LibraryView.qml:107
+#: src/views/library/LibraryView.qml:108
 #, kde-format
 msgid "Grid"
 msgstr "Izgara"
 
-#: src/views/library/LibraryView.qml:126
+#: src/views/library/LibraryView.qml:127
 #, kde-format
 msgid "Date"
 msgstr "Tarih"
 
-#: src/views/library/LibraryView.qml:144
+#: src/views/library/LibraryView.qml:145
 #, kde-format
 msgid "Ascending"
 msgstr "Artan"
 
-#: src/views/library/LibraryView.qml:151
+#: src/views/library/LibraryView.qml:152
 #, kde-format
 msgid "Descending"
 msgstr "Azalan"
 
-#: src/views/library/LibraryView.qml:160
+#: src/views/library/LibraryView.qml:161
 #, kde-format
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: src/views/library/LibraryView.qml:167
+#: src/views/library/LibraryView.qml:168
 #, kde-format
 msgid "About"
 msgstr "Hakkında"
 
-#: src/views/library/LibraryView.qml:179
+#: src/views/library/LibraryView.qml:180
 #, kde-format
 msgid "Filter..."
 msgstr "Süz…"
 
-#: src/views/library/LibraryView.qml:209
+#: src/views/library/LibraryView.qml:210
 #, kde-format
 msgid "Nothing here!"
 msgstr "Burada bir şey yok!"
 
-#: src/views/library/LibraryView.qml:210
+#: src/views/library/LibraryView.qml:211
 #, kde-format
 msgid "Add new sources to manage your documents."
 msgstr "Belgelerinizi yönetmek için yeni kaynaklar ekleyin."
 
-#: src/views/library/LibraryView.qml:216
+#: src/views/library/LibraryView.qml:217
 #, kde-format
 msgid "Open file"
 msgstr "Dosya aç"
 
-#: src/views/library/LibraryView.qml:222
+#: src/views/library/LibraryView.qml:223
 #, kde-format
 msgid "Add sources"
 msgstr "Kaynaklar ekle"
 
-#: src/views/library/LibraryView.qml:455
+#: src/views/library/LibraryView.qml:456
 #, kde-format
 msgid "Tag"
 msgstr "Etiket"
