@@ -35,6 +35,8 @@ Loader
         id: _floatingViewer
         Maui.Controls.badgeText: viewerView.tabView.count
 
+        padding: Maui.Style.defaultPadding
+
         implicitHeight: miniArtwork.paintedHeight + topPadding + bottomPadding
         implicitWidth: miniArtwork.paintedWidth + leftPadding + rightPadding
 
@@ -55,25 +57,19 @@ Loader
                 return;
             }
         }
-        Label
-        {
-            text: miniArtwork.paintedHeight + " / " + miniArtwork.paintedWidth
-        }
 
         background: Rectangle
         {
-            color: Maui.Theme.backgroundColor
+            color: "white"
 
             radius: Maui.Style.radiusV
-            // property color borderColor: Maui.Theme.textColor
-            // border.color: Maui.Style.trueBlack ? Qt.rgba(borderColor.r, borderColor.g, borderColor.b, 0.3) : undefined
-            // layer.enabled: GraphicsInfo.api !== GraphicsInfo.Software
-            // layer.effect: MultiEffect
-            // {
-            //     autoPaddingEnabled: true
-            //     shadowEnabled: true
-            //     shadowColor: "#000000"
-            // }
+            layer.enabled: GraphicsInfo.api !== GraphicsInfo.Software
+            layer.effect: MultiEffect
+            {
+                autoPaddingEnabled: true
+                shadowEnabled: true
+                shadowColor: "#000000"
+            }
         }
 
         Loader
