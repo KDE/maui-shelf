@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2025-01-25 12:50+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -115,27 +115,28 @@ msgstr "Udostępnij"
 msgid "Select"
 msgstr "Wybierz"
 
-#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:478
-#, kde-format
-msgid "Export"
-msgstr "Wyeksportuj"
+#: src/views/library/LibraryMenu.qml:100
+#, fuzzy, kde-format
+#| msgid "Save"
+msgid "Save as"
+msgstr "Zapisz"
 
-#: src/views/library/LibraryMenu.qml:118
+#: src/views/library/LibraryMenu.qml:122
 #, kde-format
 msgid "Open with"
 msgstr "Otwórz w"
 
-#: src/views/library/LibraryMenu.qml:135
+#: src/views/library/LibraryMenu.qml:139
 #, kde-format
 msgid "Go to Folder"
 msgstr "Przejdź do katalogu"
 
-#: src/views/library/LibraryMenu.qml:147
+#: src/views/library/LibraryMenu.qml:151
 #, kde-format
 msgid "Open Location"
 msgstr "Otwórz miejsce"
 
-#: src/views/library/LibraryMenu.qml:159
+#: src/views/library/LibraryMenu.qml:163
 #, kde-format
 msgid "Remove"
 msgstr "Usuń"
@@ -215,6 +216,11 @@ msgstr "Dodaj źródła"
 msgid "Tag"
 msgstr "Znacznik"
 
+#: src/views/library/LibraryView.qml:478
+#, kde-format
+msgid "Export"
+msgstr "Wyeksportuj"
+
 #: src/views/library/Sidebar.qml:51
 #, kde-format
 msgid "Tags!"
@@ -263,7 +269,7 @@ msgstr "Źródła"
 msgid "Add"
 msgstr "Dodaj"
 
-#: src/views/SettingsDialog.qml:155
+#: src/views/SettingsDialog.qml:156
 #, kde-format
 msgid "Scan now"
 msgstr "Przeszukaj teraz"
@@ -350,9 +356,6 @@ msgstr "Pełny ekran"
 
 #~ msgid "Save new bookmark as"
 #~ msgstr "Zapisz nową zakładkę jako"
-
-#~ msgid "Save"
-#~ msgstr "Zapisz"
 
 #~ msgid "Library"
 #~ msgstr "Biblioteka"

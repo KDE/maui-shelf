@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2024-12-25 22:33+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -115,27 +115,27 @@ msgstr "გაზიარება"
 msgid "Select"
 msgstr "აირჩიეთ"
 
-#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:478
+#: src/views/library/LibraryMenu.qml:100
 #, kde-format
-msgid "Export"
-msgstr "გატანა"
+msgid "Save as"
+msgstr ""
 
-#: src/views/library/LibraryMenu.qml:118
+#: src/views/library/LibraryMenu.qml:122
 #, kde-format
 msgid "Open with"
 msgstr "გამხსნელი პროგრამა"
 
-#: src/views/library/LibraryMenu.qml:135
+#: src/views/library/LibraryMenu.qml:139
 #, kde-format
 msgid "Go to Folder"
 msgstr "საქაღალდეზე გადასვლა"
 
-#: src/views/library/LibraryMenu.qml:147
+#: src/views/library/LibraryMenu.qml:151
 #, kde-format
 msgid "Open Location"
 msgstr "მდებარეობის გახსნა"
 
-#: src/views/library/LibraryMenu.qml:159
+#: src/views/library/LibraryMenu.qml:163
 #, kde-format
 msgid "Remove"
 msgstr "წაშლა"
@@ -215,6 +215,11 @@ msgstr "წყაროების დამატება"
 msgid "Tag"
 msgstr "ჭდე"
 
+#: src/views/library/LibraryView.qml:478
+#, kde-format
+msgid "Export"
+msgstr "გატანა"
+
 #: src/views/library/Sidebar.qml:51
 #, kde-format
 msgid "Tags!"
@@ -263,7 +268,7 @@ msgstr "წყაროები"
 msgid "Add"
 msgstr "დამატება"
 
-#: src/views/SettingsDialog.qml:155
+#: src/views/SettingsDialog.qml:156
 #, kde-format
 msgid "Scan now"
 msgstr "ახლა სკანირება"

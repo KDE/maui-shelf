@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2024-12-27 10:42+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -115,27 +115,27 @@ msgstr "Kunhavigi"
 msgid "Select"
 msgstr "Elekti"
 
-#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:478
+#: src/views/library/LibraryMenu.qml:100
 #, kde-format
-msgid "Export"
-msgstr "Eksporti"
+msgid "Save as"
+msgstr ""
 
-#: src/views/library/LibraryMenu.qml:118
+#: src/views/library/LibraryMenu.qml:122
 #, kde-format
 msgid "Open with"
 msgstr "Malfermi kun"
 
-#: src/views/library/LibraryMenu.qml:135
+#: src/views/library/LibraryMenu.qml:139
 #, kde-format
 msgid "Go to Folder"
 msgstr "Iri al Dosierujo"
 
-#: src/views/library/LibraryMenu.qml:147
+#: src/views/library/LibraryMenu.qml:151
 #, kde-format
 msgid "Open Location"
 msgstr "Malfermi lokon"
 
-#: src/views/library/LibraryMenu.qml:159
+#: src/views/library/LibraryMenu.qml:163
 #, kde-format
 msgid "Remove"
 msgstr "Forigi"
@@ -215,6 +215,11 @@ msgstr "Aldoni fontojn"
 msgid "Tag"
 msgstr "Etikedo"
 
+#: src/views/library/LibraryView.qml:478
+#, kde-format
+msgid "Export"
+msgstr "Eksporti"
+
 #: src/views/library/Sidebar.qml:51
 #, kde-format
 msgid "Tags!"
@@ -261,7 +266,7 @@ msgstr "Fontoj"
 msgid "Add"
 msgstr "Aldoni"
 
-#: src/views/SettingsDialog.qml:155
+#: src/views/SettingsDialog.qml:156
 #, kde-format
 msgid "Scan now"
 msgstr "Skani nun"

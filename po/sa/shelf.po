@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2024-12-29 16:04+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -114,27 +114,27 @@ msgstr "संविभागः"
 msgid "Select"
 msgstr "विचि"
 
-#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:478
+#: src/views/library/LibraryMenu.qml:100
 #, kde-format
-msgid "Export"
-msgstr "निर्यात"
+msgid "Save as"
+msgstr ""
 
-#: src/views/library/LibraryMenu.qml:118
+#: src/views/library/LibraryMenu.qml:122
 #, kde-format
 msgid "Open with"
 msgstr "सह उद्घाटयतु"
 
-#: src/views/library/LibraryMenu.qml:135
+#: src/views/library/LibraryMenu.qml:139
 #, kde-format
 msgid "Go to Folder"
 msgstr "Folder इत्यत्र गच्छन्तु"
 
-#: src/views/library/LibraryMenu.qml:147
+#: src/views/library/LibraryMenu.qml:151
 #, kde-format
 msgid "Open Location"
 msgstr "स्थानं उद्घाटयतु"
 
-#: src/views/library/LibraryMenu.qml:159
+#: src/views/library/LibraryMenu.qml:163
 #, kde-format
 msgid "Remove"
 msgstr "अपाकरोति"
@@ -214,6 +214,11 @@ msgstr "स्रोतांसि योजयतु"
 msgid "Tag"
 msgstr "सूचकपत्त्र"
 
+#: src/views/library/LibraryView.qml:478
+#, kde-format
+msgid "Export"
+msgstr "निर्यात"
+
 #: src/views/library/Sidebar.qml:51
 #, kde-format
 msgid "Tags!"
@@ -260,7 +265,7 @@ msgstr "स्रोतः"
 msgid "Add"
 msgstr "संयोजयति"
 
-#: src/views/SettingsDialog.qml:155
+#: src/views/SettingsDialog.qml:156
 #, kde-format
 msgid "Scan now"
 msgstr "अधुना स्कैन् कुर्वन्तु"

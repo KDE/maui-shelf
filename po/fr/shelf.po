@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2024-11-30 15:58+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -112,27 +112,28 @@ msgstr "Partager"
 msgid "Select"
 msgstr "Sélectionner"
 
-#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:478
-#, kde-format
-msgid "Export"
-msgstr "Exporter"
+#: src/views/library/LibraryMenu.qml:100
+#, fuzzy, kde-format
+#| msgid "Save"
+msgid "Save as"
+msgstr "Enregistrer"
 
-#: src/views/library/LibraryMenu.qml:118
+#: src/views/library/LibraryMenu.qml:122
 #, kde-format
 msgid "Open with"
 msgstr "Ouvrir avec"
 
-#: src/views/library/LibraryMenu.qml:135
+#: src/views/library/LibraryMenu.qml:139
 #, kde-format
 msgid "Go to Folder"
 msgstr "Se déplacer dans un dossier"
 
-#: src/views/library/LibraryMenu.qml:147
+#: src/views/library/LibraryMenu.qml:151
 #, kde-format
 msgid "Open Location"
 msgstr "Ouvrir un emplacement"
 
-#: src/views/library/LibraryMenu.qml:159
+#: src/views/library/LibraryMenu.qml:163
 #, kde-format
 msgid "Remove"
 msgstr "Supprimer"
@@ -212,6 +213,11 @@ msgstr "Ajouter des sources"
 msgid "Tag"
 msgstr "Étiquette"
 
+#: src/views/library/LibraryView.qml:478
+#, kde-format
+msgid "Export"
+msgstr "Exporter"
+
 #: src/views/library/Sidebar.qml:51
 #, kde-format
 msgid "Tags!"
@@ -260,7 +266,7 @@ msgstr "Sources"
 msgid "Add"
 msgstr "Ajouter"
 
-#: src/views/SettingsDialog.qml:155
+#: src/views/SettingsDialog.qml:156
 #, kde-format
 msgid "Scan now"
 msgstr "Analyser maintenant"
@@ -348,9 +354,6 @@ msgstr "Plein écran"
 
 #~ msgid "Save new bookmark as"
 #~ msgstr "Enregistrer un nouveau signet comme"
-
-#~ msgid "Save"
-#~ msgstr "Enregistrer"
 
 #~ msgid "Library"
 #~ msgstr "Bibliothèque"

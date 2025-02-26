@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2025-02-04 20:49+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -115,27 +115,27 @@ msgstr "Kopīgot"
 msgid "Select"
 msgstr "Atlasīt"
 
-#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:478
+#: src/views/library/LibraryMenu.qml:100
 #, kde-format
-msgid "Export"
-msgstr "Eksportēt"
+msgid "Save as"
+msgstr ""
 
-#: src/views/library/LibraryMenu.qml:118
+#: src/views/library/LibraryMenu.qml:122
 #, kde-format
 msgid "Open with"
 msgstr "Atvērt ar"
 
-#: src/views/library/LibraryMenu.qml:135
+#: src/views/library/LibraryMenu.qml:139
 #, kde-format
 msgid "Go to Folder"
 msgstr "Iet uz mapi"
 
-#: src/views/library/LibraryMenu.qml:147
+#: src/views/library/LibraryMenu.qml:151
 #, kde-format
 msgid "Open Location"
 msgstr "Atvērt atrašanās vietu"
 
-#: src/views/library/LibraryMenu.qml:159
+#: src/views/library/LibraryMenu.qml:163
 #, kde-format
 msgid "Remove"
 msgstr "Noņemt"
@@ -215,6 +215,11 @@ msgstr "Pievienot avotus"
 msgid "Tag"
 msgstr "Birka"
 
+#: src/views/library/LibraryView.qml:478
+#, kde-format
+msgid "Export"
+msgstr "Eksportēt"
+
 #: src/views/library/Sidebar.qml:51
 #, kde-format
 msgid "Tags!"
@@ -262,7 +267,7 @@ msgstr "Avoti"
 msgid "Add"
 msgstr "Pievienot"
 
-#: src/views/SettingsDialog.qml:155
+#: src/views/SettingsDialog.qml:156
 #, kde-format
 msgid "Scan now"
 msgstr "Skenēt"

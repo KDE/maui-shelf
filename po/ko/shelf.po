@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2024-12-24 17:58+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -114,27 +114,28 @@ msgstr "공유"
 msgid "Select"
 msgstr "선택"
 
-#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:478
-#, kde-format
-msgid "Export"
-msgstr "내보내기"
+#: src/views/library/LibraryMenu.qml:100
+#, fuzzy, kde-format
+#| msgid "Save"
+msgid "Save as"
+msgstr "저장"
 
-#: src/views/library/LibraryMenu.qml:118
+#: src/views/library/LibraryMenu.qml:122
 #, kde-format
 msgid "Open with"
 msgstr "다음으로 열기"
 
-#: src/views/library/LibraryMenu.qml:135
+#: src/views/library/LibraryMenu.qml:139
 #, kde-format
 msgid "Go to Folder"
 msgstr "폴더로 이동"
 
-#: src/views/library/LibraryMenu.qml:147
+#: src/views/library/LibraryMenu.qml:151
 #, kde-format
 msgid "Open Location"
 msgstr "위치 열기"
 
-#: src/views/library/LibraryMenu.qml:159
+#: src/views/library/LibraryMenu.qml:163
 #, kde-format
 msgid "Remove"
 msgstr "삭제"
@@ -214,6 +215,11 @@ msgstr "원본 추가"
 msgid "Tag"
 msgstr "태그"
 
+#: src/views/library/LibraryView.qml:478
+#, kde-format
+msgid "Export"
+msgstr "내보내기"
+
 #: src/views/library/Sidebar.qml:51
 #, kde-format
 msgid "Tags!"
@@ -260,7 +266,7 @@ msgstr "원본"
 msgid "Add"
 msgstr "추가"
 
-#: src/views/SettingsDialog.qml:155
+#: src/views/SettingsDialog.qml:156
 #, kde-format
 msgid "Scan now"
 msgstr "지금 검색"
@@ -341,9 +347,6 @@ msgstr "전체 화면"
 
 #~ msgid "Save new bookmark as"
 #~ msgstr "다른 이름으로 새 책갈피 저장"
-
-#~ msgid "Save"
-#~ msgstr "저장"
 
 #~ msgid "Library"
 #~ msgstr "라이브러리"

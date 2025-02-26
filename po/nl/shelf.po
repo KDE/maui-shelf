@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:40+0000\n"
 "PO-Revision-Date: 2024-11-30 14:02+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -114,27 +114,28 @@ msgstr "Delen"
 msgid "Select"
 msgstr "Selecteren"
 
-#: src/views/library/LibraryMenu.qml:100 src/views/library/LibraryView.qml:478
-#, kde-format
-msgid "Export"
-msgstr "Exporteren"
+#: src/views/library/LibraryMenu.qml:100
+#, fuzzy, kde-format
+#| msgid "Save"
+msgid "Save as"
+msgstr "Opslaan"
 
-#: src/views/library/LibraryMenu.qml:118
+#: src/views/library/LibraryMenu.qml:122
 #, kde-format
 msgid "Open with"
 msgstr "Openen met"
 
-#: src/views/library/LibraryMenu.qml:135
+#: src/views/library/LibraryMenu.qml:139
 #, kde-format
 msgid "Go to Folder"
 msgstr "Ga naar map"
 
-#: src/views/library/LibraryMenu.qml:147
+#: src/views/library/LibraryMenu.qml:151
 #, kde-format
 msgid "Open Location"
 msgstr "Locatie openen"
 
-#: src/views/library/LibraryMenu.qml:159
+#: src/views/library/LibraryMenu.qml:163
 #, kde-format
 msgid "Remove"
 msgstr "Verwijderen"
@@ -214,6 +215,11 @@ msgstr "Bronnen toevoegen"
 msgid "Tag"
 msgstr "Tag"
 
+#: src/views/library/LibraryView.qml:478
+#, kde-format
+msgid "Export"
+msgstr "Exporteren"
+
 #: src/views/library/Sidebar.qml:51
 #, kde-format
 msgid "Tags!"
@@ -262,7 +268,7 @@ msgstr "Bronnen"
 msgid "Add"
 msgstr "Toevoegen"
 
-#: src/views/SettingsDialog.qml:155
+#: src/views/SettingsDialog.qml:156
 #, kde-format
 msgid "Scan now"
 msgstr "Nu scannen"
@@ -349,9 +355,6 @@ msgstr "Volledig scherm"
 
 #~ msgid "Save new bookmark as"
 #~ msgstr "Nieuwe bladwijzer opslaan als"
-
-#~ msgid "Save"
-#~ msgstr "Opslaan"
 
 #~ msgid "Library"
 #~ msgstr "Bibliotheek"
