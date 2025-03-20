@@ -117,7 +117,7 @@ msgstr "Vybrat"
 #: src/views/library/LibraryMenu.qml:100
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Uložit jako"
 
 #: src/views/library/LibraryMenu.qml:122
 #, kde-format
