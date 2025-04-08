@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-26 00:40+0000\n"
-"PO-Revision-Date: 2024-12-24 17:58+0100\n"
+"PO-Revision-Date: 2025-04-07 23:58+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -115,10 +115,9 @@ msgid "Select"
 msgstr "선택"
 
 #: src/views/library/LibraryMenu.qml:100
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgid "Save as"
-msgstr "저장"
+msgstr "다른 이름으로 저장"
 
 #: src/views/library/LibraryMenu.qml:122
 #, kde-format
