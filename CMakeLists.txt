@@ -71,6 +71,9 @@ ecm_setup_version(${SHELF_VERSION}
     VARIABLE_PREFIX SHELF
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/shelf_version.h")
 
+qt_policy(SET QTP0001 OLD)
+qt_policy(SET QTP0004 NEW)
+
 add_subdirectory(src)
 ki18n_install(po)
 

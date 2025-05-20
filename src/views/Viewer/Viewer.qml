@@ -25,6 +25,7 @@ Item
         {
             sourceItem: currentViewer.currentItem
             hint: 1
+            onClosed: destroy()
         }
     }
 
@@ -48,10 +49,11 @@ Item
         id: _tabView
         anchors.fill: parent
 
+        Maui.Controls.showCSD: control.Maui.Controls.showCSD
         onCloseTabClicked: _tabView.closeTab(index)
         tabBar.visible: true
         tabBar.showNewTabButton: false
-
+        tabBarMargins: Maui.Style.defaultPadding
         holder.title: i18n("Nothing here")
         holder.body: i18n("Open a document file to view it")
         holder.emoji: "folder-open"
@@ -89,7 +91,7 @@ Item
 
                             onTriggered:
                             {
-                                _dialogLoader.sourceComponent = _doodleComponent
+                                var dialog = _doodleComponent.createObject(root)
                                 dialog.open()
                             }
                         }

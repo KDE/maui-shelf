@@ -37,6 +37,7 @@ Maui.SideBarView
         anchors.fill: parent
         split: !root.isWide
         altHeader: Maui.Handy.isMobile
+        headerMargins: Maui.Style.defaultPadding
 
         FloatingViewer
         {
@@ -66,7 +67,6 @@ Maui.SideBarView
             }
         }
 
-        headBar.forceCenterMiddleContent: root.isWide
         leftContent: [ToolButton
             {
                 visible: control.sideBar.collapsed
@@ -192,6 +192,7 @@ Maui.SideBarView
             gridView.itemSize: Math.min(180, Math.floor(gridView.availableWidth/3))
             gridView.itemHeight: 220
             viewType: viewerSettings.viewType
+            headBar.visible: false
 
             Connections
             {
@@ -455,12 +456,7 @@ Maui.SideBarView
         {
             text: i18n("Tag")
             icon.name: "tag"
-            onTriggered:
-            {
-                _dialogLoader.sourceComponent = tagsDialogComponent
-                dialog.composerList.urls = _selectionbar.uris
-                dialog.open()
-            }
+            onTriggered: tagUrls(_selectionbar.uris)
         }
 
         Action
@@ -477,18 +473,7 @@ Maui.SideBarView
         {
             text: i18n("Export")
             icon.name: "document-export"
-            onTriggered:
-            {
-                _dialogLoader.sourceComponent = null
-                _dialogLoader.sourceComponent = _fileDialog
-                dialog.browser.settings.onlyDirs = true
-                dialog.singleSelection = true
-                dialog.callback = function(paths)
-                {
-                    FB.FM.copy(_selectionbar.uris, paths[0])
-                }
-                dialog.open()
-            }
+            onTriggered: saveFilesAs(_selectionbar.uris)
         }
     }
 
@@ -524,22 +509,21 @@ function filterSelectedItems(path)
 
 function openFileDialog()
 {
-    _dialogLoader.sourceComponent = null
-    _dialogLoader.sourceComponent = _fileDialog
-    _dialogLoader.item.browser.settings.filterType = FB.FMList.DOCUMENT
-    _dialogLoader.item.browser.settings.filters = [".cbz", ".cbr"]
-    _dialogLoader.item.callback = function(paths)
-    {
-        console.log(paths)
-        Shelf.Library.openFiles(paths)
-    }
-    _dialogLoader.item.open()
+    var props =({'browser.settings.filterType' : FB.FMList.DOCUMENT,
+                    'browser.settings.filters' :[".cbz", ".cbr"],
+                    'callback' : function(paths)
+                    {
+                        console.log(paths)
+                        Shelf.Library.openFiles(paths)
+                    }})
+    var dialog = _fileDialog.createObject(root, props)
+    dialog.open()
 }
 
 function openSettingsDialog()
 {
-    _dialogLoader.sourceComponent = _settingsDialogComponent
-    _dialogLoader.item.open()
+    var dialog = _settingsDialogComponent.createObject(root)
+    dialog.open()
 }
 
 }

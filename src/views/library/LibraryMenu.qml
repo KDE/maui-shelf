@@ -47,12 +47,7 @@ Maui.ContextualMenu
         {
             text: i18n("Tags")
             icon.name: "tag"
-            onTriggered:
-            {
-                _dialogLoader.sourceComponent = tagsDialogComponent
-                dialog.composerList.urls = filterSelection(item.url)
-                dialog.open()
-            }
+            onTriggered: tagUrls(filterSelection(item.url))
         }
 
         Action
@@ -71,7 +66,7 @@ Maui.ContextualMenu
             icon.name: "document-share"
             onTriggered:
             {
-               Maui.Platform.shareFiles(filterSelection(item.url))
+                Maui.Platform.shareFiles(filterSelection(item.url))
             }
         }
 
@@ -99,22 +94,7 @@ Maui.ContextualMenu
     {
         text: i18n("Save as")
         icon.name: "document-save-as"
-        onTriggered:
-        {
-            var pic = item.url
-            _dialogLoader.sourceComponent = null
-            _dialogLoader.sourceComponent = _fileDialog
-            dialog.mode = FB.FileDialog.Save
-            dialog.browser.settings.filterType = FB.FMList.DOCUMENT
-            dialog.browser.settings.filters = [".cbz", ".cbr"]
-            dialog.singleSelection = true
-            dialog.suggestedFileName = FB.FM.getFileInfo(item.url).label
-            dialog.callback = function(paths)
-            {
-                FB.FM.copy([pic], paths[0])
-            }
-            dialog.open()
-        }
+        onTriggered: saveFilesAs([item.url])
     }
 
     MenuItem
@@ -141,7 +121,7 @@ Maui.ContextualMenu
         onTriggered:
         {
             var url = FB.FM.fileDir(item.url)
-           openFolders([url])
+            openFolders([url])
         }
     }
 

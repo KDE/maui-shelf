@@ -17,7 +17,6 @@ Maui.ApplicationWindow
     title: viewerView.title
 
     property bool selectionMode: false
-    property alias dialog :_dialogLoader.item
 
     Settings
     {
@@ -31,7 +30,10 @@ Maui.ApplicationWindow
     {
         id: _settingsDialogComponent
 
-        SettingsDialog {}
+        SettingsDialog
+        {
+            onClosed: destroy()
+        }
     }
 
     Component
@@ -40,6 +42,7 @@ Maui.ApplicationWindow
         FB.FileDialog
         {
             mode: FB.FileDialog.Open
+            onClosed: destroy()
         }
     }
 
@@ -48,6 +51,7 @@ Maui.ApplicationWindow
         id: _openWithDialog
     }
 
+    property FB.TagsDialog tagsDialog: null
     Component
     {
         id: tagsDialogComponent
@@ -56,11 +60,6 @@ Maui.ApplicationWindow
             onTagsReady: (tags) => composerList.updateToUrls(tags)
             composerList.strict: false
         }
-    }
-
-    Loader
-    {
-        id: _dialogLoader
     }
 
     StackView
@@ -74,6 +73,7 @@ Maui.ApplicationWindow
         {
             id: viewerView
             visible: StackView.status === StackView.Active
+            Maui.Controls.showCSD: true
         }
 
         Component
@@ -82,7 +82,7 @@ Maui.ApplicationWindow
 
             LibraryView
             {
-                Maui.Controls.showCSD: initModule === "collection"
+                Maui.Controls.showCSD: true
             }
         }
     }
@@ -136,5 +136,31 @@ Maui.ApplicationWindow
             Maui.Android.statusbarColor( Maui.Theme.backgroundColor, !viewerSettings.darkMode)
             Maui.Android.navBarColor(Maui.Theme.backgroundColor,  !viewerSettings.darkMode)
         }
+    }
+
+    function tagUrls(urls)
+    {
+        if(!root.tagsDialog)
+        {
+            root.tagsDialog = tagsDialogComponent.createObject(root)
+        }
+
+        root.tagsDialog.composerList.urls = urls
+        root.tagsDialog.open()
+    }
+
+    function saveFilesAs(urls)
+    {
+        var props = ({'mode' : FB.FileDialog.Save,
+                         'browser.settings.filterType' : FB.FMList.DOCUMENT,
+                         'browser.settings.filters' : [".cbz", ".cbr"],
+                         'singleSelection' : true,
+                         'suggestedFileName' : FB.FM.getFileInfo(urls[0]).label,
+                         'callback' : function(paths)
+                         {
+                             FB.FM.copy(urls, paths[0])
+                         }})
+        var dialog = _fileDialog.createObject(root, props)
+        dialog.open()
     }
 }

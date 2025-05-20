@@ -51,20 +51,20 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("General")
-//        description: i18n("Configure the app plugins and behavior.")
+        //        description: i18n("Configure the app plugins and behavior.")
 
-//        Maui.SectionItem
-//        {
-//            label1.text: i18n("Thumbnails")
-//            label2.text: i18n("Show thumbnail previews")
+        //        Maui.SectionItem
+        //        {
+        //            label1.text: i18n("Thumbnails")
+        //            label2.text: i18n("Show thumbnail previews")
 
-//            Switch
-//            {
-//                checkable: true
-//                checked: viewerSettings.fetchArtwork
-//                onToggled:  viewerSettings.fetchArtwork = !viewerSettings.fetchArtwork
-//            }
-//        }
+        //            Switch
+        //            {
+        //                checkable: true
+        //                checked: viewerSettings.fetchArtwork
+        //                onToggled:  viewerSettings.fetchArtwork = !viewerSettings.fetchArtwork
+        //            }
+        //        }
 
         Maui.FlexSectionItem
         {
@@ -97,7 +97,7 @@ Maui.SettingsDialog
     Maui.SectionGroup
     {
         title: i18n("Sources")
-//        description: i18n("Add or remove sources")
+        //        description: i18n("Add or remove sources")
 
         ColumnLayout
         {
@@ -139,14 +139,13 @@ Maui.SettingsDialog
                 //                flat: true
                 onClicked:
                 {
-                    _dialogLoader.sourceComponent = null
-                    _dialogLoader.sourceComponent = _fileDialog
-                    _dialogLoader.item.browser.settings.onlyDirs = true
-                    _dialogLoader.item.callback = function(urls)
-                    {
-                        Library.addSources(urls)
-                    }
-                    _dialogLoader.item.open()
+                    var props = ({'browser.settings.onlyDirs' : true,
+                                     'callback' : function(urls)
+                                     {
+                                         Library.addSources(urls)
+                                     }})
+                    var dialog = _fileDialog.createObject(root, props)
+                    dialog.open()
                 }
             }
 
