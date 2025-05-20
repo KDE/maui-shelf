@@ -194,7 +194,7 @@ Item
         console.log("CHECKING IF DOC FILE EXISTS", path)
         if(FB.FM.fileExists(path))
         {
-            if(!viewerView.visible)
+            if(!viewerView.active)
             {
                 toggleViewer()
             }

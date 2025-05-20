@@ -15,6 +15,7 @@ Maui.ApplicationWindow
 {
     id: root
     title: viewerView.title
+    Maui.Style.styleType: viewerView.active ? Maui.Style.Dark : undefined
 
     property bool selectionMode: false
 
@@ -72,8 +73,9 @@ Maui.ApplicationWindow
         Viewer
         {
             id: viewerView
-            visible: StackView.status === StackView.Active
+            readonly property bool active : StackView.status === StackView.Active
             Maui.Controls.showCSD: true
+            clip: true
         }
 
         Component
@@ -83,6 +85,7 @@ Maui.ApplicationWindow
             LibraryView
             {
                 Maui.Controls.showCSD: true
+                clip: true
             }
         }
     }
@@ -110,7 +113,7 @@ Maui.ApplicationWindow
 
     function toggleViewer()
     {
-        if(viewerView.visible)
+        if(viewerView.active)
         {
             if(_stackView.depth === 1)
             {

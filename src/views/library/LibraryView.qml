@@ -15,12 +15,15 @@ Maui.SideBarView
     property alias flickable : _browser.flickable
     property alias sources : _libraryList.sources
 
+    background: null
+
     sideBar.preferredWidth: 200
     sideBar.minimumWidth: 200
     sideBar.resizeable: false
     sideBar.content: Sidebar
     {
         anchors.fill: parent
+        anchors.margins: Maui.Style.contentMargins
     }
 
     LibraryMenu
@@ -38,6 +41,7 @@ Maui.SideBarView
         split: !root.isWide
         altHeader: Maui.Handy.isMobile
         headerMargins: Maui.Style.defaultPadding
+        background: null
 
         FloatingViewer
         {
@@ -489,7 +493,7 @@ function filterSelection(url)
 {
     if(_selectionbar.contains(url))
     {
-        return selectionBox.uris
+        return _selectionbar.uris
     }else
     {
         return [url]
