@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-05-21 00:41+0000\n"
 "PO-Revision-Date: 2024-12-27 10:42+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -69,7 +69,7 @@ msgstr "Kolekto"
 msgid "Tags"
 msgstr "Etikedoj"
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:119
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:123
 #, kde-format
 msgid "Title"
 msgstr "Titolo"
@@ -89,7 +89,7 @@ msgstr "Kreodato"
 msgid "Format"
 msgstr "Formato"
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:135
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:139
 #, kde-format
 msgid "Size"
 msgstr "Grandeco"
@@ -99,118 +99,118 @@ msgstr "Grandeco"
 msgid "UnFav it"
 msgstr "MalFavi ĝin"
 
-#: src/views/library/LibraryMenu.qml:60
+#: src/views/library/LibraryMenu.qml:55
 #, kde-format
 msgid "Info"
 msgstr "Informo"
 
-#: src/views/library/LibraryMenu.qml:70 src/views/library/LibraryView.qml:468
-#: src/views/Viewer/Viewer.qml:100
+#: src/views/library/LibraryMenu.qml:65 src/views/library/LibraryView.qml:468
+#: src/views/Viewer/Viewer.qml:102
 #, kde-format
 msgid "Share"
 msgstr "Kunhavigi"
 
-#: src/views/library/LibraryMenu.qml:84
+#: src/views/library/LibraryMenu.qml:79
 #, kde-format
 msgid "Select"
 msgstr "Elekti"
 
-#: src/views/library/LibraryMenu.qml:100
+#: src/views/library/LibraryMenu.qml:95
 #, kde-format
 msgid "Save as"
 msgstr ""
 
-#: src/views/library/LibraryMenu.qml:122
+#: src/views/library/LibraryMenu.qml:102
 #, kde-format
 msgid "Open with"
 msgstr "Malfermi kun"
 
-#: src/views/library/LibraryMenu.qml:139
+#: src/views/library/LibraryMenu.qml:119
 #, kde-format
 msgid "Go to Folder"
 msgstr "Iri al Dosierujo"
 
-#: src/views/library/LibraryMenu.qml:151
+#: src/views/library/LibraryMenu.qml:131
 #, kde-format
 msgid "Open Location"
 msgstr "Malfermi lokon"
 
-#: src/views/library/LibraryMenu.qml:163
+#: src/views/library/LibraryMenu.qml:143
 #, kde-format
 msgid "Remove"
 msgstr "Forigi"
 
-#: src/views/library/LibraryView.qml:79
+#: src/views/library/LibraryView.qml:83
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "Baskuligi flankbreton"
 
-#: src/views/library/LibraryView.qml:90 src/views/library/LibraryView.qml:446
+#: src/views/library/LibraryView.qml:94 src/views/library/LibraryView.qml:451
 #, kde-format
 msgid "Open"
 msgstr "Malfermi"
 
-#: src/views/library/LibraryView.qml:99
+#: src/views/library/LibraryView.qml:103
 #, kde-format
 msgid "List"
 msgstr "Listo"
 
-#: src/views/library/LibraryView.qml:108
+#: src/views/library/LibraryView.qml:112
 #, kde-format
 msgid "Grid"
 msgstr "Krado"
 
-#: src/views/library/LibraryView.qml:127
+#: src/views/library/LibraryView.qml:131
 #, kde-format
 msgid "Date"
 msgstr "Dato"
 
-#: src/views/library/LibraryView.qml:145
+#: src/views/library/LibraryView.qml:149
 #, kde-format
 msgid "Ascending"
 msgstr "Kreskante"
 
-#: src/views/library/LibraryView.qml:152
+#: src/views/library/LibraryView.qml:156
 #, kde-format
 msgid "Descending"
 msgstr "Malkreskanta"
 
-#: src/views/library/LibraryView.qml:161
+#: src/views/library/LibraryView.qml:165
 #, kde-format
 msgid "Settings"
 msgstr "Agordoj"
 
-#: src/views/library/LibraryView.qml:168
+#: src/views/library/LibraryView.qml:172
 #, kde-format
 msgid "About"
 msgstr "Pri"
 
-#: src/views/library/LibraryView.qml:180
+#: src/views/library/LibraryView.qml:184
 #, kde-format
 msgid "Filter..."
 msgstr "Filtri..."
 
-#: src/views/library/LibraryView.qml:210
+#: src/views/library/LibraryView.qml:215
 #, kde-format
 msgid "Nothing here!"
 msgstr "Nenio ĉi tie!"
 
-#: src/views/library/LibraryView.qml:211
+#: src/views/library/LibraryView.qml:216
 #, kde-format
 msgid "Add new sources to manage your documents."
 msgstr "Aldoni novajn fontojn por administri viajn dokumentojn."
 
-#: src/views/library/LibraryView.qml:217
+#: src/views/library/LibraryView.qml:222
 #, kde-format
 msgid "Open file"
 msgstr "Malfermi dosieron"
 
-#: src/views/library/LibraryView.qml:223
+#: src/views/library/LibraryView.qml:228
 #, kde-format
 msgid "Add sources"
 msgstr "Aldoni fontojn"
 
-#: src/views/library/LibraryView.qml:456
+#: src/views/library/LibraryView.qml:461
 #, kde-format
 msgid "Tag"
 msgstr "Etikedo"
@@ -220,12 +220,12 @@ msgstr "Etikedo"
 msgid "Export"
 msgstr "Eksporti"
 
-#: src/views/library/Sidebar.qml:51
+#: src/views/library/Sidebar.qml:60
 #, kde-format
 msgid "Tags!"
 msgstr "Etikedoj!"
 
-#: src/views/library/Sidebar.qml:52
+#: src/views/library/Sidebar.qml:61
 #, kde-format
 msgid "Your tags will be listed here"
 msgstr "Viaj etikedoj estos listigitaj ĉi tie"
@@ -266,42 +266,42 @@ msgstr "Fontoj"
 msgid "Add"
 msgstr "Aldoni"
 
-#: src/views/SettingsDialog.qml:156
+#: src/views/SettingsDialog.qml:155
 #, kde-format
 msgid "Scan now"
 msgstr "Skani nun"
 
-#: src/views/Viewer/Viewer.qml:41 src/views/Viewer/Viewer.qml:55
+#: src/views/Viewer/Viewer.qml:42 src/views/Viewer/Viewer.qml:57
 #, kde-format
 msgid "Nothing here"
 msgstr "Nenio ĉi tie"
 
-#: src/views/Viewer/Viewer.qml:42
+#: src/views/Viewer/Viewer.qml:43
 #, kde-format
 msgid "Drop or open a document to view."
 msgstr "Faligi aŭ malfermi dokumenton por vidi."
 
-#: src/views/Viewer/Viewer.qml:56
+#: src/views/Viewer/Viewer.qml:58
 #, kde-format
 msgid "Open a document file to view it"
 msgstr "Malfermi dokumenton por rigardi ĝin"
 
-#: src/views/Viewer/Viewer.qml:62
+#: src/views/Viewer/Viewer.qml:64
 #, kde-format
 msgid "Browser"
 msgstr "Retumilo"
 
-#: src/views/Viewer/Viewer.qml:88
+#: src/views/Viewer/Viewer.qml:90
 #, kde-format
 msgid "Doodle"
 msgstr "Doodle"
 
-#: src/views/Viewer/Viewer.qml:114
+#: src/views/Viewer/Viewer.qml:116
 #, kde-format
 msgid "Browse Horizontally"
 msgstr "Foliumi Horizontale"
 
-#: src/views/Viewer/Viewer.qml:138
+#: src/views/Viewer/Viewer.qml:140
 #, kde-format
 msgid "Fullscreen"
 msgstr "Plenekrane"

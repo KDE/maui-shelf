@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-05-21 00:41+0000\n"
 "PO-Revision-Date: 2025-02-26 09:32+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -70,7 +70,7 @@ msgstr "Col·lecció"
 msgid "Tags"
 msgstr "Etiquetes"
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:119
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:123
 #, kde-format
 msgid "Title"
 msgstr "Títol"
@@ -90,7 +90,7 @@ msgstr "Data de creació"
 msgid "Format"
 msgstr "Format"
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:135
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:139
 #, kde-format
 msgid "Size"
 msgstr "Mida"
@@ -100,118 +100,118 @@ msgstr "Mida"
 msgid "UnFav it"
 msgstr "Desmarca com a preferit"
 
-#: src/views/library/LibraryMenu.qml:60
+#: src/views/library/LibraryMenu.qml:55
 #, kde-format
 msgid "Info"
 msgstr "Informació"
 
-#: src/views/library/LibraryMenu.qml:70 src/views/library/LibraryView.qml:468
-#: src/views/Viewer/Viewer.qml:100
+#: src/views/library/LibraryMenu.qml:65 src/views/library/LibraryView.qml:468
+#: src/views/Viewer/Viewer.qml:102
 #, kde-format
 msgid "Share"
 msgstr "Compartix"
 
-#: src/views/library/LibraryMenu.qml:84
+#: src/views/library/LibraryMenu.qml:79
 #, kde-format
 msgid "Select"
 msgstr "Selecciona"
 
-#: src/views/library/LibraryMenu.qml:100
+#: src/views/library/LibraryMenu.qml:95
 #, kde-format
 msgid "Save as"
 msgstr "Anomena i guarda"
 
-#: src/views/library/LibraryMenu.qml:122
+#: src/views/library/LibraryMenu.qml:102
 #, kde-format
 msgid "Open with"
 msgstr "Obri amb"
 
-#: src/views/library/LibraryMenu.qml:139
+#: src/views/library/LibraryMenu.qml:119
 #, kde-format
 msgid "Go to Folder"
 msgstr "Ves fins a la carpeta"
 
-#: src/views/library/LibraryMenu.qml:151
+#: src/views/library/LibraryMenu.qml:131
 #, kde-format
 msgid "Open Location"
 msgstr "Obri la ubicació"
 
-#: src/views/library/LibraryMenu.qml:163
+#: src/views/library/LibraryMenu.qml:143
 #, kde-format
 msgid "Remove"
 msgstr "Elimina"
 
-#: src/views/library/LibraryView.qml:79
+#: src/views/library/LibraryView.qml:83
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "Mostra o oculta la barra lateral"
 
-#: src/views/library/LibraryView.qml:90 src/views/library/LibraryView.qml:446
+#: src/views/library/LibraryView.qml:94 src/views/library/LibraryView.qml:451
 #, kde-format
 msgid "Open"
 msgstr "Obri"
 
-#: src/views/library/LibraryView.qml:99
+#: src/views/library/LibraryView.qml:103
 #, kde-format
 msgid "List"
 msgstr "Llista"
 
-#: src/views/library/LibraryView.qml:108
+#: src/views/library/LibraryView.qml:112
 #, kde-format
 msgid "Grid"
 msgstr "Quadrícula"
 
-#: src/views/library/LibraryView.qml:127
+#: src/views/library/LibraryView.qml:131
 #, kde-format
 msgid "Date"
 msgstr "Data"
 
-#: src/views/library/LibraryView.qml:145
+#: src/views/library/LibraryView.qml:149
 #, kde-format
 msgid "Ascending"
 msgstr "Ascendent"
 
-#: src/views/library/LibraryView.qml:152
+#: src/views/library/LibraryView.qml:156
 #, kde-format
 msgid "Descending"
 msgstr "Descendent"
 
-#: src/views/library/LibraryView.qml:161
+#: src/views/library/LibraryView.qml:165
 #, kde-format
 msgid "Settings"
 msgstr "Configuració"
 
-#: src/views/library/LibraryView.qml:168
+#: src/views/library/LibraryView.qml:172
 #, kde-format
 msgid "About"
 msgstr "Quant a"
 
-#: src/views/library/LibraryView.qml:180
+#: src/views/library/LibraryView.qml:184
 #, kde-format
 msgid "Filter..."
 msgstr "Filtre…"
 
-#: src/views/library/LibraryView.qml:210
+#: src/views/library/LibraryView.qml:215
 #, kde-format
 msgid "Nothing here!"
 msgstr "Res ací!"
 
-#: src/views/library/LibraryView.qml:211
+#: src/views/library/LibraryView.qml:216
 #, kde-format
 msgid "Add new sources to manage your documents."
 msgstr "Afig fonts noves per a gestionar els vostres documents."
 
-#: src/views/library/LibraryView.qml:217
+#: src/views/library/LibraryView.qml:222
 #, kde-format
 msgid "Open file"
 msgstr "Obri un fitxer"
 
-#: src/views/library/LibraryView.qml:223
+#: src/views/library/LibraryView.qml:228
 #, kde-format
 msgid "Add sources"
 msgstr "Afig fonts"
 
-#: src/views/library/LibraryView.qml:456
+#: src/views/library/LibraryView.qml:461
 #, kde-format
 msgid "Tag"
 msgstr "Etiqueta"
@@ -221,12 +221,12 @@ msgstr "Etiqueta"
 msgid "Export"
 msgstr "Exporta"
 
-#: src/views/library/Sidebar.qml:51
+#: src/views/library/Sidebar.qml:60
 #, kde-format
 msgid "Tags!"
 msgstr "Etiquetes!"
 
-#: src/views/library/Sidebar.qml:52
+#: src/views/library/Sidebar.qml:61
 #, kde-format
 msgid "Your tags will be listed here"
 msgstr "Ací es llistaran les etiquetes"
@@ -269,42 +269,42 @@ msgstr "Fonts"
 msgid "Add"
 msgstr "Afig"
 
-#: src/views/SettingsDialog.qml:156
+#: src/views/SettingsDialog.qml:155
 #, kde-format
 msgid "Scan now"
 msgstr "Explora ara"
 
-#: src/views/Viewer/Viewer.qml:41 src/views/Viewer/Viewer.qml:55
+#: src/views/Viewer/Viewer.qml:42 src/views/Viewer/Viewer.qml:57
 #, kde-format
 msgid "Nothing here"
 msgstr "Res ací"
 
-#: src/views/Viewer/Viewer.qml:42
+#: src/views/Viewer/Viewer.qml:43
 #, kde-format
 msgid "Drop or open a document to view."
 msgstr "Deixeu anar o obriu un document que s'haja de visualitzar."
 
-#: src/views/Viewer/Viewer.qml:56
+#: src/views/Viewer/Viewer.qml:58
 #, kde-format
 msgid "Open a document file to view it"
 msgstr "Obriu un fitxer de document per a veure'l"
 
-#: src/views/Viewer/Viewer.qml:62
+#: src/views/Viewer/Viewer.qml:64
 #, kde-format
 msgid "Browser"
 msgstr "Navegador"
 
-#: src/views/Viewer/Viewer.qml:88
+#: src/views/Viewer/Viewer.qml:90
 #, kde-format
 msgid "Doodle"
 msgstr "Gargot"
 
-#: src/views/Viewer/Viewer.qml:114
+#: src/views/Viewer/Viewer.qml:116
 #, kde-format
 msgid "Browse Horizontally"
 msgstr "Navega horitzontalment"
 
-#: src/views/Viewer/Viewer.qml:138
+#: src/views/Viewer/Viewer.qml:140
 #, kde-format
 msgid "Fullscreen"
 msgstr "Pantalla completa"

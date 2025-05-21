@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:40+0000\n"
+"POT-Creation-Date: 2025-05-21 00:41+0000\n"
 "PO-Revision-Date: 2024-05-24 19:10+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -68,7 +68,7 @@ msgstr "Collection"
 msgid "Tags"
 msgstr "Tags"
 
-#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:119
+#: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:123
 #, kde-format
 msgid "Title"
 msgstr "Title"
@@ -88,7 +88,7 @@ msgstr "Creation date"
 msgid "Format"
 msgstr "Format"
 
-#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:135
+#: src/views/cloud/CloudView.qml:54 src/views/library/LibraryView.qml:139
 #, kde-format
 msgid "Size"
 msgstr "Size"
@@ -98,119 +98,119 @@ msgstr "Size"
 msgid "UnFav it"
 msgstr "UnFav it"
 
-#: src/views/library/LibraryMenu.qml:60
+#: src/views/library/LibraryMenu.qml:55
 #, kde-format
 msgid "Info"
 msgstr "Info"
 
-#: src/views/library/LibraryMenu.qml:70 src/views/library/LibraryView.qml:468
-#: src/views/Viewer/Viewer.qml:100
+#: src/views/library/LibraryMenu.qml:65 src/views/library/LibraryView.qml:468
+#: src/views/Viewer/Viewer.qml:102
 #, kde-format
 msgid "Share"
 msgstr "Share"
 
-#: src/views/library/LibraryMenu.qml:84
+#: src/views/library/LibraryMenu.qml:79
 #, kde-format
 msgid "Select"
 msgstr "Select"
 
-#: src/views/library/LibraryMenu.qml:100
+#: src/views/library/LibraryMenu.qml:95
 #, fuzzy, kde-format
 #| msgid "Save"
 msgid "Save as"
 msgstr "Save"
 
-#: src/views/library/LibraryMenu.qml:122
+#: src/views/library/LibraryMenu.qml:102
 #, kde-format
 msgid "Open with"
 msgstr "Open with"
 
-#: src/views/library/LibraryMenu.qml:139
+#: src/views/library/LibraryMenu.qml:119
 #, kde-format
 msgid "Go to Folder"
 msgstr "Go to Folder"
 
-#: src/views/library/LibraryMenu.qml:151
+#: src/views/library/LibraryMenu.qml:131
 #, kde-format
 msgid "Open Location"
 msgstr "Open Location"
 
-#: src/views/library/LibraryMenu.qml:163
+#: src/views/library/LibraryMenu.qml:143
 #, kde-format
 msgid "Remove"
 msgstr "Remove"
 
-#: src/views/library/LibraryView.qml:79
+#: src/views/library/LibraryView.qml:83
 #, kde-format
 msgid "Toggle sidebar"
 msgstr "Toggle sidebar"
 
-#: src/views/library/LibraryView.qml:90 src/views/library/LibraryView.qml:446
+#: src/views/library/LibraryView.qml:94 src/views/library/LibraryView.qml:451
 #, kde-format
 msgid "Open"
 msgstr "Open"
 
-#: src/views/library/LibraryView.qml:99
+#: src/views/library/LibraryView.qml:103
 #, kde-format
 msgid "List"
 msgstr "List"
 
-#: src/views/library/LibraryView.qml:108
+#: src/views/library/LibraryView.qml:112
 #, kde-format
 msgid "Grid"
 msgstr "Grid"
 
-#: src/views/library/LibraryView.qml:127
+#: src/views/library/LibraryView.qml:131
 #, kde-format
 msgid "Date"
 msgstr "Date"
 
-#: src/views/library/LibraryView.qml:145
+#: src/views/library/LibraryView.qml:149
 #, kde-format
 msgid "Ascending"
 msgstr "Ascending"
 
-#: src/views/library/LibraryView.qml:152
+#: src/views/library/LibraryView.qml:156
 #, kde-format
 msgid "Descending"
 msgstr "Descending"
 
-#: src/views/library/LibraryView.qml:161
+#: src/views/library/LibraryView.qml:165
 #, kde-format
 msgid "Settings"
 msgstr "Settings"
 
-#: src/views/library/LibraryView.qml:168
+#: src/views/library/LibraryView.qml:172
 #, kde-format
 msgid "About"
 msgstr "About"
 
-#: src/views/library/LibraryView.qml:180
+#: src/views/library/LibraryView.qml:184
 #, kde-format
 msgid "Filter..."
 msgstr "Filter..."
 
-#: src/views/library/LibraryView.qml:210
+#: src/views/library/LibraryView.qml:215
 #, kde-format
 msgid "Nothing here!"
 msgstr "Nothing here!"
 
-#: src/views/library/LibraryView.qml:211
+#: src/views/library/LibraryView.qml:216
 #, kde-format
 msgid "Add new sources to manage your documents."
 msgstr "Add new sources to manage your documents."
 
-#: src/views/library/LibraryView.qml:217
+#: src/views/library/LibraryView.qml:222
 #, kde-format
 msgid "Open file"
 msgstr "Open file"
 
-#: src/views/library/LibraryView.qml:223
+#: src/views/library/LibraryView.qml:228
 #, kde-format
 msgid "Add sources"
 msgstr "Add sources"
 
-#: src/views/library/LibraryView.qml:456
+#: src/views/library/LibraryView.qml:461
 #, kde-format
 msgid "Tag"
 msgstr "Tag"
@@ -220,12 +220,12 @@ msgstr "Tag"
 msgid "Export"
 msgstr "Export"
 
-#: src/views/library/Sidebar.qml:51
+#: src/views/library/Sidebar.qml:60
 #, kde-format
 msgid "Tags!"
 msgstr "Tags!"
 
-#: src/views/library/Sidebar.qml:52
+#: src/views/library/Sidebar.qml:61
 #, kde-format
 msgid "Your tags will be listed here"
 msgstr "Your tags will be listed here"
@@ -267,43 +267,43 @@ msgstr "Sources"
 msgid "Add"
 msgstr "Add"
 
-#: src/views/SettingsDialog.qml:156
+#: src/views/SettingsDialog.qml:155
 #, kde-format
 msgid "Scan now"
 msgstr "Scan now"
 
-#: src/views/Viewer/Viewer.qml:41 src/views/Viewer/Viewer.qml:55
+#: src/views/Viewer/Viewer.qml:42 src/views/Viewer/Viewer.qml:57
 #, kde-format
 msgid "Nothing here"
 msgstr "Nothing here"
 
-#: src/views/Viewer/Viewer.qml:42
+#: src/views/Viewer/Viewer.qml:43
 #, kde-format
 msgid "Drop or open a document to view."
 msgstr "Drop or open a document to view."
 
-#: src/views/Viewer/Viewer.qml:56
+#: src/views/Viewer/Viewer.qml:58
 #, fuzzy, kde-format
 #| msgid "Drop or open a document to view."
 msgid "Open a document file to view it"
 msgstr "Drop or open a document to view."
 
-#: src/views/Viewer/Viewer.qml:62
+#: src/views/Viewer/Viewer.qml:64
 #, kde-format
 msgid "Browser"
 msgstr "Browser"
 
-#: src/views/Viewer/Viewer.qml:88
+#: src/views/Viewer/Viewer.qml:90
 #, kde-format
 msgid "Doodle"
 msgstr "Doodle"
 
-#: src/views/Viewer/Viewer.qml:114
+#: src/views/Viewer/Viewer.qml:116
 #, kde-format
 msgid "Browse Horizontally"
 msgstr "Browse Horizontally"
 
-#: src/views/Viewer/Viewer.qml:138
+#: src/views/Viewer/Viewer.qml:140
 #, kde-format
 msgid "Fullscreen"
 msgstr "Fullscreen"
