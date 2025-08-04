@@ -244,7 +244,7 @@ msgstr "مسح آليّ"
 #, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
-msgstr "امسح جميع مصادر المستندات عند بدء التشغيل لإبقاء مجموعتك محدثة."
+msgstr "امحُ جميع مصادر المستندات عند بدء التشغيل لإبقاء مجموعتك محدثة."
 
 #: src/views/SettingsDialog.qml:85
 #, kde-format
@@ -269,7 +269,7 @@ msgstr "أضف"
 #: src/views/SettingsDialog.qml:155
 #, kde-format
 msgid "Scan now"
-msgstr "امسح الآن"
+msgstr "امحُ الآن"
 
 #: src/views/Viewer/Viewer.qml:42 src/views/Viewer/Viewer.qml:57
 #, kde-format
