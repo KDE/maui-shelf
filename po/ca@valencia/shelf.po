@@ -114,7 +114,7 @@ msgstr "Compartix"
 #: src/views/library/LibraryMenu.qml:79
 #, kde-format
 msgid "Select"
-msgstr "Selecciona"
+msgstr "Tria"
 
 #: src/views/library/LibraryMenu.qml:95
 #, kde-format
