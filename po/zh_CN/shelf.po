@@ -117,7 +117,7 @@ msgstr ""
 #: src/views/library/LibraryMenu.qml:95
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "另存为"
 
 #: src/views/library/LibraryMenu.qml:102
 #, kde-format
