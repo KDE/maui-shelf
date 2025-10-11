@@ -1,6 +1,6 @@
-# Burkhard Lück <lueck@hube-lueck.de>, 2021.
-# Alois Spitzbart <spitz234@hotmail.com>, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2022, 2023.
+# SPDX-FileCopyrightText: 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2021 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: shelf\n"
