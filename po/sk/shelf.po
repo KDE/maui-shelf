@@ -12,8 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.08.2\n"
 
 #: src/main.cpp:48
 #, kde-format
@@ -26,46 +26,45 @@ msgid "Developer"
 msgstr "Vývojár"
 
 #: src/main.cpp:60
-#, fuzzy, kde-format
-#| msgid "Developer"
+#, kde-format
 msgid "Peruse Developers"
 msgstr "Vývojár"
 
 #: src/models/placesmodel.cpp:8
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Obľúbené"
 
 #: src/models/placesmodel.cpp:9
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Preberania"
 
 #: src/models/placesmodel.cpp:10
 #, kde-format
 msgid "Documents"
-msgstr ""
+msgstr "Dokumenty"
 
 #: src/models/placesmodel.cpp:11
 #, kde-format
 msgid "Comics"
-msgstr ""
+msgstr "Comics"
 
 #: src/models/placesmodel.cpp:12
 #, kde-format
 msgid "PDFs"
-msgstr ""
+msgstr "PDFs"
 
 #: src/models/placesmodel.cpp:13
 #, kde-format
 msgid "Collection"
-msgstr ""
+msgstr "Kolekcia"
 
 #: src/models/placesmodel.cpp:18 src/models/placesmodel.cpp:45
 #: src/views/library/LibraryMenu.qml:48
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Značky"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:123
 #, kde-format
@@ -75,7 +74,7 @@ msgstr "Názov"
 #: src/views/cloud/CloudView.qml:36
 #, kde-format
 msgid "Add date"
-msgstr ""
+msgstr "Pridať dátum"
 
 #: src/views/cloud/CloudView.qml:42
 #, kde-format
@@ -100,7 +99,7 @@ msgstr ""
 #: src/views/library/LibraryMenu.qml:55
 #, kde-format
 msgid "Info"
-msgstr ""
+msgstr "Informácie"
 
 #: src/views/library/LibraryMenu.qml:65 src/views/library/LibraryView.qml:468
 #: src/views/Viewer/Viewer.qml:102
@@ -111,39 +110,37 @@ msgstr "Zdieľať"
 #: src/views/library/LibraryMenu.qml:79
 #, kde-format
 msgid "Select"
-msgstr ""
+msgstr "Vybrať"
 
 #: src/views/library/LibraryMenu.qml:95
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgid "Save as"
-msgstr "Uložiť"
+msgstr "Uložiť ako"
 
 #: src/views/library/LibraryMenu.qml:102
-#, fuzzy, kde-format
-#| msgid "Open"
+#, kde-format
 msgid "Open with"
-msgstr "Otvoriť"
+msgstr "Otvorí pomocou"
 
 #: src/views/library/LibraryMenu.qml:119
 #, kde-format
 msgid "Go to Folder"
-msgstr ""
+msgstr "Zobraziť v priečinku"
 
 #: src/views/library/LibraryMenu.qml:131
 #, kde-format
 msgid "Open Location"
-msgstr ""
+msgstr "Open Location"
 
 #: src/views/library/LibraryMenu.qml:143
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Odstrániť"
 
 #: src/views/library/LibraryView.qml:83
 #, kde-format
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "Prepnúť bočný panel"
 
 #: src/views/library/LibraryView.qml:94 src/views/library/LibraryView.qml:451
 #, kde-format
@@ -178,12 +175,12 @@ msgstr "Zostupne"
 #: src/views/library/LibraryView.qml:165
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "Nastavenia"
 
 #: src/views/library/LibraryView.qml:172
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "O aplikácii"
 
 #: src/views/library/LibraryView.qml:184
 #, kde-format
@@ -193,7 +190,7 @@ msgstr "Filter..."
 #: src/views/library/LibraryView.qml:215
 #, kde-format
 msgid "Nothing here!"
-msgstr ""
+msgstr "Odkaz sem"
 
 #: src/views/library/LibraryView.qml:216
 #, kde-format
@@ -201,20 +198,19 @@ msgid "Add new sources to manage your documents."
 msgstr ""
 
 #: src/views/library/LibraryView.qml:222
-#, fuzzy, kde-format
-#| msgid "Open"
+#, kde-format
 msgid "Open file"
-msgstr "Otvoriť"
+msgstr "Otvoriť súbor"
 
 #: src/views/library/LibraryView.qml:228
 #, kde-format
 msgid "Add sources"
-msgstr ""
+msgstr "Zdroje"
 
 #: src/views/library/LibraryView.qml:461
 #, kde-format
 msgid "Tag"
-msgstr ""
+msgstr "Značka"
 
 #: src/views/library/LibraryView.qml:478
 #, kde-format
@@ -224,7 +220,7 @@ msgstr "Exportovať"
 #: src/views/library/Sidebar.qml:60
 #, kde-format
 msgid "Tags!"
-msgstr ""
+msgstr "Značky"
 
 #: src/views/library/Sidebar.qml:61
 #, kde-format
@@ -234,12 +230,12 @@ msgstr ""
 #: src/views/SettingsDialog.qml:53
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "Všeobecné"
 
 #: src/views/SettingsDialog.qml:71
 #, kde-format
 msgid "Auto Scan"
-msgstr ""
+msgstr "Auto Scan"
 
 #: src/views/SettingsDialog.qml:72
 #, kde-format
@@ -250,7 +246,7 @@ msgstr ""
 #: src/views/SettingsDialog.qml:85
 #, kde-format
 msgid "Previews"
-msgstr ""
+msgstr "Previews"
 
 #: src/views/SettingsDialog.qml:86
 #, kde-format
@@ -260,12 +256,12 @@ msgstr ""
 #: src/views/SettingsDialog.qml:99
 #, kde-format
 msgid "Sources"
-msgstr ""
+msgstr "Zdroje"
 
 #: src/views/SettingsDialog.qml:138
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Pridať"
 
 #: src/views/SettingsDialog.qml:155
 #, kde-format
@@ -290,22 +286,22 @@ msgstr ""
 #: src/views/Viewer/Viewer.qml:64
 #, kde-format
 msgid "Browser"
-msgstr ""
+msgstr "Prehliadač"
 
 #: src/views/Viewer/Viewer.qml:90
 #, kde-format
 msgid "Doodle"
-msgstr ""
+msgstr "Doodle"
 
 #: src/views/Viewer/Viewer.qml:116
 #, kde-format
 msgid "Browse Horizontally"
-msgstr ""
+msgstr "Browse Horizontally"
 
 #: src/views/Viewer/Viewer.qml:140
 #, kde-format
 msgid "Fullscreen"
-msgstr ""
+msgstr "Celá obrazovka"
 
 #~ msgid "Shelf"
 #~ msgstr "Shelf"
@@ -314,7 +310,6 @@ msgstr ""
 #~ msgstr "Camilo Higuita"
 
 #, fuzzy
-#~| msgid "Viewer"
 #~ msgid "View type"
 #~ msgstr "Prehliadač"
 
@@ -322,7 +317,6 @@ msgstr ""
 #~ msgstr "Nová záložka..."
 
 #, fuzzy
-#~| msgid "New Bookmark..."
 #~ msgid "Bookmark #"
 #~ msgstr "Nová záložka..."
 
