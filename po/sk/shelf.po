@@ -18,7 +18,7 @@ msgstr ""
 #: src/main.cpp:48
 #, kde-format
 msgid "Browse and view your documents."
-msgstr ""
+msgstr "Prechádzajte a zobrazujte vaše dokumenty."
 
 #: src/main.cpp:53
 #, kde-format
@@ -94,7 +94,7 @@ msgstr "Veľkosť"
 #: src/views/library/LibraryMenu.qml:39
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "Odstrániť z obľúbených"
 
 #: src/views/library/LibraryMenu.qml:55
 #, kde-format
@@ -195,7 +195,7 @@ msgstr "Odkaz sem"
 #: src/views/library/LibraryView.qml:216
 #, kde-format
 msgid "Add new sources to manage your documents."
-msgstr ""
+msgstr "Pridajte nové zdroje na správu vašich dokumentov."
 
 #: src/views/library/LibraryView.qml:222
 #, kde-format
@@ -225,7 +225,7 @@ msgstr "Značky"
 #: src/views/library/Sidebar.qml:61
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Vaše značky budú zobrazené tu"
 
 #: src/views/SettingsDialog.qml:53
 #, kde-format
@@ -242,6 +242,8 @@ msgstr "Auto Scan"
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
+"Skenovať všetky zdroje dokumentov pri spustení na udržanie aktuálnosti "
+"zbierky."
 
 #: src/views/SettingsDialog.qml:85
 #, kde-format
@@ -251,7 +253,7 @@ msgstr "Previews"
 #: src/views/SettingsDialog.qml:86
 #, kde-format
 msgid "Display thumbnail previews."
-msgstr ""
+msgstr "Zobraziť miniatúrne náhľady."
 
 #: src/views/SettingsDialog.qml:99
 #, kde-format
@@ -266,22 +268,22 @@ msgstr "Pridať"
 #: src/views/SettingsDialog.qml:155
 #, kde-format
 msgid "Scan now"
-msgstr ""
+msgstr "Skenovať teraz"
 
 #: src/views/Viewer/Viewer.qml:42 src/views/Viewer/Viewer.qml:57
 #, kde-format
 msgid "Nothing here"
-msgstr ""
+msgstr "Nič tu nie je"
 
 #: src/views/Viewer/Viewer.qml:43
 #, kde-format
 msgid "Drop or open a document to view."
-msgstr ""
+msgstr "Presuňte alebo otvorte dokument na zobrazenie."
 
 #: src/views/Viewer/Viewer.qml:58
 #, kde-format
 msgid "Open a document file to view it"
-msgstr ""
+msgstr "Otvorte súbor dokumentu na jeho zobrazenie"
 
 #: src/views/Viewer/Viewer.qml:64
 #, kde-format
