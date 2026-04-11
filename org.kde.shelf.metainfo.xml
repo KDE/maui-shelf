@@ -62,6 +62,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="pt">Navegue e veja os seus documentos</summary>
   <summary xml:lang="pt-BR">Navegue e visualize seus documentos</summary>
   <summary xml:lang="sa">ब्राउज् कृत्वा स्वदस्तावेजान् पश्यन्तु</summary>
+  <summary xml:lang="sk">Prechádzajte a zobrazujte vaše dokumenty</summary>
   <summary xml:lang="sl">Brskajte in ogledujete si vaše dokumente</summary>
   <summary xml:lang="sv">Bläddra bland och visa dina dokument</summary>
   <summary xml:lang="tr">Belgelerinize göz atın ve onları görüntüleyin</summary>
@@ -92,6 +93,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="pt">O Shelf é um navegador e visualizador simples de documentos PDF e EPUB.</p>
     <p xml:lang="pt-BR">Shelf é um navegador e visualizador simples de documentos PDF e EPUB.</p>
     <p xml:lang="sa">शेल्फः सरलः PDF तथा EPUB दस्तावेजब्राउजरः दर्शकः च अस्ति ।</p>
+    <p xml:lang="sk">Shelf je jednoduchý prehliadač a zobrazovač dokumentov PDF a EPUB.</p>
     <p xml:lang="sl">Shelf je preprost brskalnik in pregledovalnik dokumentov PDF in EPUB.</p>
     <p xml:lang="sv">Shelf är en enkel PDF- och EPUB-dokumentbläddrare och visare.</p>
     <p xml:lang="tr">Raf, yalın bir PDF ve EPUB belge tarayıcı ve görüntüleyicidir.</p>
