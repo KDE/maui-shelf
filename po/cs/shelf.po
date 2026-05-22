@@ -1,26 +1,27 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the maui-shelf package.
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2025 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <libor.filipek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2023-10-31 16:28+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-05-21 23:36+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Poedit 3.8\n"
 
 #: src/main.cpp:48
 #, kde-format
 msgid "Browse and view your documents."
-msgstr "Procházejte a prohlížejte svoje dokumenty"
+msgstr "Procházejte a prohlížejte svoje dokumenty."
 
 #: src/main.cpp:53
 #, kde-format
@@ -96,7 +97,7 @@ msgstr "Velikost"
 #: src/views/library/LibraryMenu.qml:39
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "Z oblíbených"
 
 #: src/views/library/LibraryMenu.qml:55
 #, kde-format
@@ -192,7 +193,7 @@ msgstr "Filtr..."
 #: src/views/library/LibraryView.qml:215
 #, kde-format
 msgid "Nothing here!"
-msgstr "Zde nic není."
+msgstr "Zde nic není!"
 
 #: src/views/library/LibraryView.qml:216
 #, kde-format
@@ -254,7 +255,7 @@ msgstr "Náhledy"
 #: src/views/SettingsDialog.qml:86
 #, kde-format
 msgid "Display thumbnail previews."
-msgstr "Zobrazit náhledy"
+msgstr "Zobrazit náhledy."
 
 #: src/views/SettingsDialog.qml:99
 #, kde-format
@@ -274,7 +275,7 @@ msgstr "Prozkoumat nyní"
 #: src/views/Viewer/Viewer.qml:42 src/views/Viewer/Viewer.qml:57
 #, kde-format
 msgid "Nothing here"
-msgstr "Zde nic není."
+msgstr "Zde nic není"
 
 #: src/views/Viewer/Viewer.qml:43
 #, kde-format
@@ -284,7 +285,7 @@ msgstr "Zde upusťte dokument, který chcete prohlížet."
 #: src/views/Viewer/Viewer.qml:58
 #, kde-format
 msgid "Open a document file to view it"
-msgstr ""
+msgstr "Otevřete soubor s dokumentem a prohlédněte si jej"
 
 #: src/views/Viewer/Viewer.qml:64
 #, kde-format
