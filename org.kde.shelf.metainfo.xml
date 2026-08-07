@@ -28,6 +28,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="lv">Shelf</name>
   <name xml:lang="my">စာအုပ်စင်</name>
   <name xml:lang="nl">Shelf</name>
+  <name xml:lang="nn">Shelf</name>
   <name xml:lang="pl">Shelf</name>
   <name xml:lang="pt">Shelf</name>
   <name xml:lang="pt-BR">Shelf</name>
@@ -58,6 +59,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="ko">문서를 탐색하고 보기</summary>
   <summary xml:lang="lv">Pārlūkojiet un skatiet dokumentus</summary>
   <summary xml:lang="nl">Uw documenten door bladeren en bekijken.</summary>
+  <summary xml:lang="nn">Bla gjennom og vis dokument</summary>
   <summary xml:lang="pl">Przeglądaj i oglądaj swoje dokumenty</summary>
   <summary xml:lang="pt">Navegue e veja os seus documentos</summary>
   <summary xml:lang="pt-BR">Navegue e visualize seus documentos</summary>
@@ -128,6 +130,7 @@ SPDX-License-Identifier: CC0-1.0
       <caption xml:lang="lv">Shelf</caption>
       <caption xml:lang="my">စာအုပ်စင်</caption>
       <caption xml:lang="nl">Shelf</caption>
+      <caption xml:lang="nn">Shelf</caption>
       <caption xml:lang="pl">Shelf</caption>
       <caption xml:lang="pt">Shelf</caption>
       <caption xml:lang="pt-BR">Shelf</caption>
