@@ -1,12 +1,12 @@
 # Translation of shelf to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021.
+# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: maui-shelf\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2021-02-06 13:59+0100\n"
+"PO-Revision-Date: 2026-08-08 12:54+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.03.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: src/main.cpp:48
 #, kde-format
 msgid "Browse and view your documents."
-msgstr ""
+msgstr "Bla gjennom og vis dokument."
 
 #: src/main.cpp:53
 #, kde-format
@@ -32,43 +32,43 @@ msgstr "Utviklar"
 #: src/main.cpp:60
 #, kde-format
 msgid "Peruse Developers"
-msgstr ""
+msgstr "Peruse-utviklarar"
 
 #: src/models/placesmodel.cpp:8
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Favorittar"
 
 #: src/models/placesmodel.cpp:9
 #, kde-format
 msgid "Downloads"
-msgstr ""
+msgstr "Nedlastingar"
 
 #: src/models/placesmodel.cpp:10
 #, kde-format
 msgid "Documents"
-msgstr ""
+msgstr "Dokument"
 
 #: src/models/placesmodel.cpp:11
 #, kde-format
 msgid "Comics"
-msgstr ""
+msgstr "Teikneseriar"
 
 #: src/models/placesmodel.cpp:12
 #, kde-format
 msgid "PDFs"
-msgstr ""
+msgstr "PDF-ar"
 
 #: src/models/placesmodel.cpp:13
 #, kde-format
 msgid "Collection"
-msgstr ""
+msgstr "Samling"
 
 #: src/models/placesmodel.cpp:18 src/models/placesmodel.cpp:45
 #: src/views/library/LibraryMenu.qml:48
 #, kde-format
 msgid "Tags"
-msgstr ""
+msgstr "Merkelappar"
 
 #: src/views/cloud/CloudView.qml:30 src/views/library/LibraryView.qml:123
 #, kde-format
@@ -98,12 +98,12 @@ msgstr "Storleik"
 #: src/views/library/LibraryMenu.qml:39
 #, kde-format
 msgid "UnFav it"
-msgstr ""
+msgstr "Fjern som favoritt"
 
 #: src/views/library/LibraryMenu.qml:55
 #, kde-format
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: src/views/library/LibraryMenu.qml:65 src/views/library/LibraryView.qml:468
 #: src/views/Viewer/Viewer.qml:102
@@ -114,37 +114,37 @@ msgstr "Del"
 #: src/views/library/LibraryMenu.qml:79
 #, kde-format
 msgid "Select"
-msgstr ""
+msgstr "Vel"
 
 #: src/views/library/LibraryMenu.qml:95
 #, kde-format
 msgid "Save as"
-msgstr ""
+msgstr "Lagra som"
 
 #: src/views/library/LibraryMenu.qml:102
 #, kde-format
 msgid "Open with"
-msgstr ""
+msgstr "Opna med"
 
 #: src/views/library/LibraryMenu.qml:119
 #, kde-format
 msgid "Go to Folder"
-msgstr ""
+msgstr "Gå til mappe"
 
 #: src/views/library/LibraryMenu.qml:131
 #, kde-format
 msgid "Open Location"
-msgstr ""
+msgstr "Opna mappe"
 
 #: src/views/library/LibraryMenu.qml:143
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Fjern"
 
 #: src/views/library/LibraryView.qml:83
 #, kde-format
 msgid "Toggle sidebar"
-msgstr ""
+msgstr "Vis/gøym sidestolpe"
 
 #: src/views/library/LibraryView.qml:94 src/views/library/LibraryView.qml:451
 #, kde-format
@@ -179,12 +179,12 @@ msgstr "Synkande"
 #: src/views/library/LibraryView.qml:165
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "Innstillingar"
 
 #: src/views/library/LibraryView.qml:172
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #: src/views/library/LibraryView.qml:184
 #, kde-format
@@ -194,27 +194,27 @@ msgstr "Filtrer …"
 #: src/views/library/LibraryView.qml:215
 #, kde-format
 msgid "Nothing here!"
-msgstr ""
+msgstr "Ingenting her!"
 
 #: src/views/library/LibraryView.qml:216
 #, kde-format
 msgid "Add new sources to manage your documents."
-msgstr ""
+msgstr "Legg til nye kjelder for å handsama dokumenta dine."
 
 #: src/views/library/LibraryView.qml:222
 #, kde-format
 msgid "Open file"
-msgstr ""
+msgstr "Opna fil"
 
 #: src/views/library/LibraryView.qml:228
 #, kde-format
 msgid "Add sources"
-msgstr ""
+msgstr "Legg til kjelder"
 
 #: src/views/library/LibraryView.qml:461
 #, kde-format
 msgid "Tag"
-msgstr ""
+msgstr "Merkelapp"
 
 #: src/views/library/LibraryView.qml:478
 #, kde-format
@@ -224,53 +224,55 @@ msgstr "Eksporter"
 #: src/views/library/Sidebar.qml:60
 #, kde-format
 msgid "Tags!"
-msgstr ""
+msgstr "Merkelappar!"
 
 #: src/views/library/Sidebar.qml:61
 #, kde-format
 msgid "Your tags will be listed here"
-msgstr ""
+msgstr "Merkelappane dine vert viste her"
 
 #: src/views/SettingsDialog.qml:53
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "Generelt"
 
 #: src/views/SettingsDialog.qml:71
 #, kde-format
 msgid "Auto Scan"
-msgstr ""
+msgstr "Søk gjennom automatisk"
 
 #: src/views/SettingsDialog.qml:72
 #, kde-format
 msgid ""
 "Scan all the document sources on startup to keep your collection up to date."
 msgstr ""
+"Søk gjennom alle dokument­kjeldene ved oppstart for å halda samlinga "
+"oppdatert."
 
 #: src/views/SettingsDialog.qml:85
 #, kde-format
 msgid "Previews"
-msgstr ""
+msgstr "Førehandsvisingar"
 
 #: src/views/SettingsDialog.qml:86
 #, kde-format
 msgid "Display thumbnail previews."
-msgstr ""
+msgstr "Vis førehandsvisingar av miniatyrbilete."
 
 #: src/views/SettingsDialog.qml:99
 #, kde-format
 msgid "Sources"
-msgstr ""
+msgstr "Kjelder"
 
 #: src/views/SettingsDialog.qml:138
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Legg til"
 
 #: src/views/SettingsDialog.qml:155
 #, kde-format
 msgid "Scan now"
-msgstr ""
+msgstr "Søk gjennom no"
 
 #: src/views/Viewer/Viewer.qml:42 src/views/Viewer/Viewer.qml:57
 #, kde-format
@@ -285,24 +287,24 @@ msgstr "Dra eller opna eit dokument for å visa det."
 #: src/views/Viewer/Viewer.qml:58
 #, kde-format
 msgid "Open a document file to view it"
-msgstr ""
+msgstr "Opna ei dokumentfil for å visa ho"
 
 #: src/views/Viewer/Viewer.qml:64
 #, kde-format
 msgid "Browser"
-msgstr ""
+msgstr "Nettlesar"
 
 #: src/views/Viewer/Viewer.qml:90
 #, kde-format
 msgid "Doodle"
-msgstr ""
+msgstr "Krusedull"
 
 #: src/views/Viewer/Viewer.qml:116
 #, kde-format
 msgid "Browse Horizontally"
-msgstr ""
+msgstr "Bla gjennom vassrett"
 
 #: src/views/Viewer/Viewer.qml:140
 #, kde-format
 msgid "Fullscreen"
-msgstr ""
+msgstr "Fullskjerm"
